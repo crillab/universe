@@ -1,0 +1,3 @@
+[submodule "libs/easy-jni"]
+	path = libs/easy-jni
+	url = https://github.com/crillab/easyjni.git

@@ -74,6 +74,6 @@ JavaObject JavaBigInteger::operator*() {
 }
 
 BigInteger JavaBigInteger::asBigInteger() {
-    auto longValue = bigIntegerClass->getLongMethod("longValue");
-    return longValue.invoke(rawBigInteger);
+    auto str = rawBigInteger.toString();
+    return bigIntegerValueOf(str);
 }

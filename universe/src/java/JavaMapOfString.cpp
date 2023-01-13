@@ -51,7 +51,7 @@ void JavaMapOfString::loadClasses() {
         mapInterface = new JavaClass(
                 JavaVirtualMachineRegistry::get()->loadClass("java/util/Map"));
         entryInterface = new JavaClass(
-                JavaVirtualMachineRegistry::get()->loadClass("java/util/Map/Entry"));
+                JavaVirtualMachineRegistry::get()->loadClass("java/util/Map$Entry"));
         hashMapClass = new JavaClass(
                 JavaVirtualMachineRegistry::get()->loadClass("java/util/HashMap"));
     }
@@ -63,6 +63,7 @@ JavaMapOfString JavaMapOfString::newInstance() {
 }
 
 JavaMapOfString JavaMapOfString::of(JavaObject jMap) {
+    loadClasses();
     return JavaMapOfString(jMap);
 }
 

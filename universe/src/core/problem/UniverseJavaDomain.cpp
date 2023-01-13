@@ -55,6 +55,7 @@ void UniverseJavaDomain::loadClass() {
 }
 
 IUniverseDomain *UniverseJavaDomain::of(JavaObject domain) {
+    loadClass();
     return new UniverseJavaDomain(domain);
 }
 
@@ -92,6 +93,6 @@ BigInteger UniverseJavaDomain::max() const {
 }
 
 size_t UniverseJavaDomain::size() const {
-    auto mtd = domainInterface->getIntMethod("size");
+    auto mtd = domainInterface->getLongMethod("size");
     return mtd.invoke(rawDomain);
 }

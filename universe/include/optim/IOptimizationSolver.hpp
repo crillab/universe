@@ -29,7 +29,9 @@ namespace Universe {
     class IOptimizationSolver {
 
     public:
+        virtual BigInteger getLowerBound()=0;
         virtual void setLowerBound(const BigInteger& lb)=0;
+        virtual BigInteger getUpperBound()=0;
         virtual void setUpperBound(const BigInteger& ub)=0;
         virtual void setBounds(const BigInteger& lb,const BigInteger& ub)=0;
         virtual BigInteger getCurrentBound()=0;

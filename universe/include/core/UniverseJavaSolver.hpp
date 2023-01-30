@@ -190,6 +190,13 @@ namespace Universe {
          */
         std::map<std::string, Universe::BigInteger> mapSolution() override;
 
+        /**
+         * Casts this solver into an IOptimizationSolver.
+         *
+         * @return The casted optimization solver.
+         */
+        explicit operator Universe::IOptimizationSolver *() override;
+
     protected:
 
         /**

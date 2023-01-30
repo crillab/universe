@@ -38,6 +38,7 @@
 #include "../../include/java/JavaList.hpp"
 #include "../../include/java/JavaMapOfString.hpp"
 #include "../../include/core/problem/UniverseJavaVariable.hpp"
+#include "../../include/optim/JavaOptimizationSolver.hpp"
 
 using namespace easyjni;
 using namespace std;
@@ -160,6 +161,10 @@ map<string, BigInteger> UniverseJavaSolver::mapSolution() {
         return JavaBigInteger::of(o).asBigInteger();
     };
     return jMap.asMap(toBigInteger);
+}
+
+UniverseJavaSolver::operator IOptimizationSolver *() {
+    return JavaOptimizationSolver::of(this);
 }
 
 UniverseSolverResult UniverseJavaSolver::toUniverseSolverResult(JavaObject javaResult) {

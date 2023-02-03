@@ -71,7 +71,7 @@ BigInteger JavaOptimizationSolver::getLowerBound() {
 void JavaOptimizationSolver::setLowerBound(const BigInteger &lb) {
     auto mtd = interface->getMethod("setLowerBound", METHOD(VOID, CLASS(java/math/BigInteger)));
     auto bound = JavaBigInteger::newInstance(lb);
-    mtd.invoke(object, *bound);
+    mtd.invoke(object, **bound);
 }
 
 BigInteger JavaOptimizationSolver::getUpperBound() {
@@ -84,19 +84,19 @@ BigInteger JavaOptimizationSolver::getUpperBound() {
 void JavaOptimizationSolver::setUpperBound(const BigInteger &ub) {
     auto mtd = interface->getMethod("setUpperBound", METHOD(VOID, CLASS(java/math/BigInteger)));
     auto bound = JavaBigInteger::newInstance(ub);
-    mtd.invoke(object, *bound);
+    mtd.invoke(object, **bound);
 }
 
 void JavaOptimizationSolver::setBounds(const BigInteger &lb, const BigInteger &ub) {
     auto mtd = interface->getMethod("setBounds", METHOD(VOID, CLASS(java/math/BigInteger) CLASS(java/math/BigInteger)));
     auto lower = JavaBigInteger::newInstance(lb);
     auto upper = JavaBigInteger::newInstance(ub);
-    mtd.invoke(object, *lower, *upper);
+    mtd.invoke(object, **lower, **upper);
 }
 
 void JavaOptimizationSolver::loadInterface() {
     if (interface == nullptr) {
         interface = new JavaClass(
-                JavaVirtualMachineRegistry::get()->loadClass("fr/univartois/cril/juniverse/sat/IUniverseSatSolver"));
+                JavaVirtualMachineRegistry::get()->loadClass("fr/univartois/cril/juniverse/optim/IOptimizationSolver"));
     }
 }

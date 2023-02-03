@@ -29,7 +29,7 @@
  */
 
 #include <stdexcept>
-
+#include <iostream>
 #include "../../../libs/easy-jni/easyjni/JavaMethod.h"
 #include "../../../libs/easy-jni/easyjni/JavaVirtualMachineRegistry.h"
 
@@ -163,7 +163,8 @@ map<string, BigInteger> UniverseJavaSolver::mapSolution() {
     return jMap.asMap(toBigInteger);
 }
 
-UniverseJavaSolver::operator IOptimizationSolver *() {
+IOptimizationSolver * UniverseJavaSolver::toOptimizationSolver() {
+    std::cout<<"coucou c'est moi"<<std::endl;
     return JavaOptimizationSolver::of(this);
 }
 

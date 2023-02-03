@@ -32,6 +32,6 @@
 
 using namespace Universe;
 
-IUniverseSolver::operator IOptimizationSolver *() {
+IOptimizationSolver *IUniverseSolver::toOptimizationSolver() {
     return dynamic_cast<IOptimizationSolver*>(this);
 }

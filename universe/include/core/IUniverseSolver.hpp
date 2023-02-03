@@ -163,7 +163,7 @@ namespace Universe {
          *
          * @return The casted optimization solver.
          */
-        virtual explicit operator Universe::IOptimizationSolver *();
+        virtual Universe::IOptimizationSolver *toOptimizationSolver();
 
     };
 

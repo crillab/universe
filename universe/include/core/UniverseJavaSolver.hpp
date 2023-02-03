@@ -195,7 +195,7 @@ namespace Universe {
          *
          * @return The casted optimization solver.
          */
-        explicit operator Universe::IOptimizationSolver *() override;
+        Universe::IOptimizationSolver *toOptimizationSolver() override;
 
     protected:
 

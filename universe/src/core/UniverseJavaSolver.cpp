@@ -164,7 +164,6 @@ map<string, BigInteger> UniverseJavaSolver::mapSolution() {
 }
 
 IOptimizationSolver * UniverseJavaSolver::toOptimizationSolver() {
-    std::cout<<"coucou c'est moi"<<std::endl;
     return JavaOptimizationSolver::of(this);
 }
 

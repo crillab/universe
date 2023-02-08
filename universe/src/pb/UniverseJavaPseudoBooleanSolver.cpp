@@ -141,8 +141,11 @@ UniverseSolverResult UniverseJavaPseudoBooleanSolver::solve(
     return UniverseJavaSatSolver::solve(assumptions);
 }
 
-JavaList UniverseJavaPseudoBooleanSolver::asList(const vector<BigInteger> &integers) {
-    function<JavaObject(BigInteger)> fct = [] (auto c) {
+JavaList UniverseJavaPseudoBooleanSolver::asList(const vector<BigInteger> &integers,bool hasStar) {
+    function<JavaObject(BigInteger)> fct = [hasStar] (auto c) {
+        if(hasStar && c ==-1){
+            return JavaObject::null();
+        }
         auto bigC = JavaBigInteger::newInstance(c);
         return *bigC;
     };

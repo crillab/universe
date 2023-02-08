@@ -130,7 +130,7 @@ IUniverseIntensionConstraint *UniverseJavaIntensionConstraintFactory::ite(IUnive
 void UniverseJavaIntensionConstraintFactory::loadClasses() {
     if (jClass == nullptr) {
         jClass = new JavaClass(JavaVirtualMachineRegistry::get()->loadClass(
-                "fr/univartois/cril/juniverse/csp/intension/AbstractUniverseIntensionConstraintFactory"));
+                "fr/univartois/cril/juniverse/csp/intension/IntensionConstraintFactory"));
         jArithmetic = new JavaClass(JavaVirtualMachineRegistry::get()->loadClass(
                 "fr/univartois/cril/juniverse/csp/operator/UniverseArithmeticOperator"));
         jBoolean = new JavaClass(JavaVirtualMachineRegistry::get()->loadClass(

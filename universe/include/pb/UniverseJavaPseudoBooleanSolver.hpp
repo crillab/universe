@@ -221,7 +221,7 @@ namespace Universe {
          *
          * @return The created list.
          */
-        static Universe::JavaList asList(const std::vector<Universe::BigInteger> &integers);
+        static Universe::JavaList asList(const std::vector<Universe::BigInteger> &integers,bool hasStar=false);
 
     };
 

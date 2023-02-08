@@ -956,7 +956,7 @@ namespace Universe {
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
         virtual void addSupport(const std::vector<std::string> &variableTuple,
-                const std::vector<std::vector<Universe::BigInteger>> &allowedValues) = 0;
+                const std::vector<std::vector<Universe::BigInteger>> &allowedValues,bool hasStar) = 0;
 
         /**
          * Adds to this solver an extension constraint describing the conflicts of a tuple of variables.
@@ -978,7 +978,7 @@ namespace Universe {
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
         virtual void addConflicts(const std::vector<std::string> &variableTuple,
-                const std::vector<std::vector<Universe::BigInteger>> &forbiddenValues) = 0;
+                const std::vector<std::vector<Universe::BigInteger>> &forbiddenValues,bool hasStar) = 0;
 
         /**
          * Adds to this solver an intension constraint.

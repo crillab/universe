@@ -968,7 +968,7 @@ namespace Universe {
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
         void addSupport(const std::vector<std::string> &variableTuple,
-                const std::vector<std::vector<Universe::BigInteger>> &allowedValues) override;
+                const std::vector<std::vector<Universe::BigInteger>> &allowedValues,bool hasStar) override;
 
         /**
          * Adds to this solver an extension constraint describing the conflicts of a tuple of variables.
@@ -990,7 +990,7 @@ namespace Universe {
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
         void addConflicts(const std::vector<std::string> &variableTuple,
-                const std::vector<std::vector<Universe::BigInteger>> &forbiddenValues) override;
+                const std::vector<std::vector<Universe::BigInteger>> &forbiddenValues,bool hasStar) override;
 
         /**
          * Adds to this solver an intension constraint.
@@ -2065,7 +2065,7 @@ namespace Universe {
          *
          * @return The created list.
          */
-        static Universe::JavaList asList(const std::vector<std::vector<Universe::BigInteger>> &matrix);
+        static Universe::JavaList asList(const std::vector<std::vector<Universe::BigInteger>> &matrix,bool hasStar=false);
 
         /**
          * Creates a JavaList corresponding to the given vector of strings.

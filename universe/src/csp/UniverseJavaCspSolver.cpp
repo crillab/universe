@@ -749,11 +749,11 @@ void UniverseJavaCspSolver::addSupport(const string &variable, const vector<BigI
 }
 
 void UniverseJavaCspSolver::addSupport(
-        const vector<string> &variableTuple, const vector<vector<BigInteger>> &allowedValues) {
+        const vector<string> &variableTuple, const vector<vector<BigInteger>> &allowedValues,bool hasStar) {
     auto mtd = interface->getMethod("addSupport",
             METHOD(VOID, CLASS(java/util/List) CLASS(java/util/List)));
     auto jVariableTuple = UniverseJavaCspSolver::asList(variableTuple);
-    auto jAllowedValues = UniverseJavaCspSolver::asList(allowedValues);
+    auto jAllowedValues = UniverseJavaCspSolver::asList(allowedValues,hasStar);
     mtd.invoke(object, **jVariableTuple, **jAllowedValues);
 }
 
@@ -766,11 +766,11 @@ void UniverseJavaCspSolver::addConflicts(const string &variable, const vector<Bi
 }
 
 void UniverseJavaCspSolver::addConflicts(
-        const vector<string> &variableTuple, const vector<vector<BigInteger>> &forbiddenValues) {
+        const vector<string> &variableTuple, const vector<vector<BigInteger>> &forbiddenValues,bool hasStar) {
     auto mtd = interface->getMethod("addConflicts",
             METHOD(VOID, CLASS(java/util/List) CLASS(java/util/List)));
     auto jVariableTuple = UniverseJavaCspSolver::asList(variableTuple);
-    auto jForbiddenValues = UniverseJavaCspSolver::asList(forbiddenValues);
+    auto jForbiddenValues = UniverseJavaCspSolver::asList(forbiddenValues,hasStar);
     mtd.invoke(object, **jVariableTuple, **jForbiddenValues);
 }
 
@@ -1731,9 +1731,9 @@ JavaObject UniverseJavaCspSolver::toJavaSetBelongingOperator(UniverseSetBelongin
     throw JniException("Could not find enumeration constant for set-belonging operator");
 }
 
-JavaList UniverseJavaCspSolver::asList(const vector<vector<BigInteger>> &matrix) {
-    function<JavaObject(vector<BigInteger>)> fct = [] (const vector<BigInteger> &m) {
-        return *UniverseJavaPseudoBooleanSolver::asList(m);
+JavaList UniverseJavaCspSolver::asList(const vector<vector<BigInteger>> &matrix,bool hasStar) {
+    function<JavaObject(vector<BigInteger>)> fct = [hasStar] (const vector<BigInteger> &m) {
+        return *UniverseJavaPseudoBooleanSolver::asList(m,hasStar);
     };
     return JavaList::from(matrix, fct);
 }

@@ -143,7 +143,7 @@ UniverseSolverResult UniverseJavaPseudoBooleanSolver::solve(
 
 JavaList UniverseJavaPseudoBooleanSolver::asList(const vector<BigInteger> &integers,bool hasStar) {
     function<JavaObject(BigInteger)> fct = [hasStar] (auto c) {
-        if(hasStar && c ==-1){
+        if(hasStar && c ==INT_MAX){
             return JavaObject::null();
         }
         auto bigC = JavaBigInteger::newInstance(c);

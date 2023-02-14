@@ -103,6 +103,13 @@ void UniverseJavaSolver::setLogFile(const string &filename) {
     mtd.invoke(object, *str);
 }
 
+void UniverseJavaSolver::loadInstance(const string &filename) {
+    auto str = JavaVirtualMachineRegistry::get()->toJavaString(filename);
+    auto mtd = interface->getMethod("loadInstance", METHOD(VOID, CLASS(java/lang/String)));
+    mtd.invoke(object, *str);
+}
+
+
 UniverseSolverResult UniverseJavaSolver::solve() {
     auto mtd = interface->getObjectMethod("solve",
             METHOD(CLASS(fr/univartois/cril/juniverse/core/UniverseSolverResult)));
@@ -183,3 +190,5 @@ UniverseSolverResult UniverseJavaSolver::toUniverseSolverResult(JavaObject javaR
     }
     return UniverseSolverResult::UNKNOWN;
 }
+
+

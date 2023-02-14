@@ -111,6 +111,9 @@ namespace Universe {
          */
         virtual void setLogFile(const std::string &filename) = 0;
 
+
+        virtual void loadInstance(const std::string &filename)=0;
+
         /**
          * Solves the problem associated to this solver.
          *

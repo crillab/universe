@@ -144,6 +144,9 @@ namespace Universe {
          */
         void setLogFile(const std::string &filename) override;
 
+
+        void loadInstance(const std::string &filename) override;
+
         /**
          * Solves the problem associated to this solver.
          *

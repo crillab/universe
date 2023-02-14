@@ -147,6 +147,8 @@ namespace Universe {
 
         void loadInstance(const std::string &filename) override;
 
+        bool isOptimization() override;
+
         /**
          * Solves the problem associated to this solver.
          *

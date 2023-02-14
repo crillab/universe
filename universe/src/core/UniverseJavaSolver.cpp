@@ -109,6 +109,10 @@ void UniverseJavaSolver::loadInstance(const string &filename) {
     mtd.invoke(object, *str);
 }
 
+bool UniverseJavaSolver::isOptimization() {
+    auto mtd = interface->getBooleanMethod("isOptimization");
+    return mtd.invoke(object);
+}
 
 UniverseSolverResult UniverseJavaSolver::solve() {
     auto mtd = interface->getObjectMethod("solve",
@@ -190,5 +194,7 @@ UniverseSolverResult UniverseJavaSolver::toUniverseSolverResult(JavaObject javaR
     }
     return UniverseSolverResult::UNKNOWN;
 }
+
+
 
 

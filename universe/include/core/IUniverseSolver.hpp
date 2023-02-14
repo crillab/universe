@@ -114,6 +114,8 @@ namespace Universe {
 
         virtual void loadInstance(const std::string &filename)=0;
 
+        virtual bool isOptimization()=0;
+
         /**
          * Solves the problem associated to this solver.
          *

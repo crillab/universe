@@ -27,7 +27,7 @@
  * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
-
+#include <bits/stdc++.h>
 #include "../../../libs/easy-jni/easyjni/JavaMethod.h"
 #include "../../../libs/easy-jni/easyjni/JavaVirtualMachineRegistry.h"
 

@@ -144,7 +144,7 @@ set(LIBRARY_NAME universe)
 
 
 # Adding the library to the build targets.
-add_library(${LIBRARY_NAME} ${SOURCES} ${HEADERS})
+add_library(${LIBRARY_NAME} ${SOURCES} ${HEADERS} universe/src/optim/JavaOptimizationSolver.cpp universe/include/optim/JavaOptimizationSolver.hpp universe/src/core/IUniverseSolver.cpp)
 set_target_properties(${LIBRARY_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 target_link_libraries(${LIBRARY_NAME} ${JNI_LIBRARIES})
 

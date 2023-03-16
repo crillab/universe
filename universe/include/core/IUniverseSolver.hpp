@@ -35,6 +35,7 @@
 #include <string>
 #include <vector>
 
+#include "../optim/IOptimizationSolver.hpp"
 #include "problem/IUniverseVariable.hpp"
 #include "UniverseAssumption.hpp"
 #include "UniverseSolverResult.hpp"
@@ -156,6 +157,13 @@ namespace Universe {
          * @return The solution found by this solver.
          */
         virtual std::map<std::string, Universe::BigInteger> mapSolution() = 0;
+
+        /**
+         * Casts this solver into an IOptimizationSolver.
+         *
+         * @return The casted optimization solver.
+         */
+        virtual Universe::IOptimizationSolver *toOptimizationSolver();
 
     };
 

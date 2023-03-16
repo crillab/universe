@@ -1,6 +1,7 @@
 [submodule "libs/easy-jni"]
 	path = libs/easy-jni
 	url = https://github.com/crillab/easyjni.git
+	branch = main
 [submodule "doc/doxygen-awesome-css"]
 	path = doc/doxygen-awesome-css
 	url = https://github.com/jothepro/doxygen-awesome-css.git

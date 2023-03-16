@@ -46,6 +46,12 @@
 namespace Universe {
 
     /**
+     * Forward declaration of JavaOptimizationSolver, which defines an implementation of an
+     * IOptimizationSolver in Java (using JNI).
+     */
+    class JavaOptimizationSolver;
+
+    /**
      * The UniverseJavaSolver class defines an adapter for an IUniverseSolver written
      * in Java (and implementing the JUniverse interface).
      * The solver is run through the Java Native Interface (JNI).
@@ -184,6 +190,13 @@ namespace Universe {
          */
         std::map<std::string, Universe::BigInteger> mapSolution() override;
 
+        /**
+         * Casts this solver into an IOptimizationSolver.
+         *
+         * @return The casted optimization solver.
+         */
+        Universe::IOptimizationSolver *toOptimizationSolver() override;
+
     protected:
 
         /**
@@ -222,6 +235,12 @@ namespace Universe {
          * @return The UniverseSolverResult corresponding to the given object.
          */
         static Universe::UniverseSolverResult toUniverseSolverResult(easyjni::JavaObject javaResult);
+
+        /**
+         * The JavaOptimizationSolver is a friend class, which allows to "cast" a UniverseJavaSolver
+         * into a IOptimizationSolver.
+         */
+        friend class JavaOptimizationSolver;
 
     };
 

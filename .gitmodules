@@ -1,3 +1,6 @@
 [submodule "libs/easy-jni"]
 	path = libs/easy-jni
 	url = https://github.com/crillab/easyjni.git
+[submodule "doc/doxygen-awesome-css"]
+	path = doc/doxygen-awesome-css
+	url = https://github.com/jothepro/doxygen-awesome-css.git

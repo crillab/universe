@@ -17,11 +17,11 @@ jobs:
         with:
             packages: dia doxygen doxygen-doc doxygen-gui doxygen-latex graphviz mscgen
       - name: Build
-        run:
-          - mkdir build
-          - cd build
-          - cmake .. -DCMAKE_BUILD_TYPE=RELEASE
-          - cmake --build . --target doc
+        run: |
+          mkdir build
+          cd build
+          cmake .. -DCMAKE_BUILD_TYPE=RELEASE
+          cmake --build . --target doc
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:

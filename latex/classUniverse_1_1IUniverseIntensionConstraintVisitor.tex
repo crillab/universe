@@ -1,0 +1,129 @@
+\hypertarget{classUniverse_1_1IUniverseIntensionConstraintVisitor}{}\doxysection{Universe\+::IUniverse\+Intension\+Constraint\+Visitor Class Reference}
+\label{classUniverse_1_1IUniverseIntensionConstraintVisitor}\index{Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}}
+
+
+{\ttfamily \#include $<$IUniverse\+Intension\+Constraint\+Visitor.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor_a2dab22d0831df8baa235f4c8a13a6544}{$\sim$\+IUniverse\+Intension\+Constraint\+Visitor}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor_a69e5c30757e17dce6deb9b311eb71505}{visit}} (\mbox{\hyperlink{classUniverse_1_1UniverseBinaryIntensionConstraint}{Universe\+::\+Universe\+Binary\+Intension\+Constraint}} $\ast$constraint)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor_a08ec8db11c60cf25ca0832678de1bcf6}{visit}} (\mbox{\hyperlink{classUniverse_1_1UniverseConstantIntensionConstraint}{Universe\+::\+Universe\+Constant\+Intension\+Constraint}} $\ast$constant)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor_a958ac7250ec474f2ec5511ddf4eabf5b}{visit}} (\mbox{\hyperlink{classUniverse_1_1UniverseIfThenElseIntensionConstraint}{Universe\+::\+Universe\+If\+Then\+Else\+Intension\+Constraint}} $\ast$if\+Then\+Else)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor_a324e4164ceda0e1a1b3a25071ac081a4}{visit}} (\mbox{\hyperlink{classUniverse_1_1UniverseNaryIntensionConstraint}{Universe\+::\+Universe\+Nary\+Intension\+Constraint}} $\ast$constraint)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor_a9ae629f4d9f6e1c0d6711a4f964165e8}{visit}} (\mbox{\hyperlink{classUniverse_1_1UniverseUnaryIntensionConstraint}{Universe\+::\+Universe\+Unary\+Intension\+Constraint}} $\ast$constraint)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor_a2ab24aca1de2c365e194325a0e6d4b98}{visit}} (\mbox{\hyperlink{classUniverse_1_1UniverseVariableIntensionConstraint}{Universe\+::\+Universe\+Variable\+Intension\+Constraint}} $\ast$variable)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor}{IUniverse\+Intension\+Constraint\+Visitor}} defines an interface for visiting intension constraints. 
+
+Definition at line 76 of file IUniverse\+Intension\+Constraint\+Visitor.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseIntensionConstraintVisitor_a2dab22d0831df8baa235f4c8a13a6544}\label{classUniverse_1_1IUniverseIntensionConstraintVisitor_a2dab22d0831df8baa235f4c8a13a6544}} 
+\index{Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}!````~IUniverseIntensionConstraintVisitor@{$\sim$IUniverseIntensionConstraintVisitor}}
+\index{````~IUniverseIntensionConstraintVisitor@{$\sim$IUniverseIntensionConstraintVisitor}!Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}}
+\doxysubsubsection{\texorpdfstring{$\sim$IUniverseIntensionConstraintVisitor()}{~IUniverseIntensionConstraintVisitor()}}
+{\footnotesize\ttfamily virtual Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor\+::$\sim$\+IUniverse\+Intension\+Constraint\+Visitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destroys this \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor}{IUniverse\+Intension\+Constraint\+Visitor}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseIntensionConstraintVisitor_a69e5c30757e17dce6deb9b311eb71505}\label{classUniverse_1_1IUniverseIntensionConstraintVisitor_a69e5c30757e17dce6deb9b311eb71505}} 
+\index{Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}!visit@{visit}}
+\index{visit@{visit}!Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1UniverseBinaryIntensionConstraint}{Universe\+::\+Universe\+Binary\+Intension\+Constraint}} $\ast$}]{constraint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Visits a binary constraint that appears in an intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint} & The constraint to visit. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseIntensionConstraintVisitor_a08ec8db11c60cf25ca0832678de1bcf6}\label{classUniverse_1_1IUniverseIntensionConstraintVisitor_a08ec8db11c60cf25ca0832678de1bcf6}} 
+\index{Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}!visit@{visit}}
+\index{visit@{visit}!Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1UniverseConstantIntensionConstraint}{Universe\+::\+Universe\+Constant\+Intension\+Constraint}} $\ast$}]{constant }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Visits a constant that appears in an intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constant} & The constant to visit. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by Universe\+::\+Universe\+Binary\+Intension\+Constraint\+::accept(), Universe\+::\+Universe\+Constant\+Intension\+Constraint\+::accept(), Universe\+::\+Universe\+If\+Then\+Else\+Intension\+Constraint\+::accept(), Universe\+::\+Universe\+Nary\+Intension\+Constraint\+::accept(), Universe\+::\+Universe\+Unary\+Intension\+Constraint\+::accept(), and Universe\+::\+Universe\+Variable\+Intension\+Constraint\+::accept().
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseIntensionConstraintVisitor_a958ac7250ec474f2ec5511ddf4eabf5b}\label{classUniverse_1_1IUniverseIntensionConstraintVisitor_a958ac7250ec474f2ec5511ddf4eabf5b}} 
+\index{Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}!visit@{visit}}
+\index{visit@{visit}!Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1UniverseIfThenElseIntensionConstraint}{Universe\+::\+Universe\+If\+Then\+Else\+Intension\+Constraint}} $\ast$}]{if\+Then\+Else }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Visits an if-\/then-\/else constraint that appears in an intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em if\+Then\+Else} & The constraint to visit. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseIntensionConstraintVisitor_a324e4164ceda0e1a1b3a25071ac081a4}\label{classUniverse_1_1IUniverseIntensionConstraintVisitor_a324e4164ceda0e1a1b3a25071ac081a4}} 
+\index{Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}!visit@{visit}}
+\index{visit@{visit}!Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1UniverseNaryIntensionConstraint}{Universe\+::\+Universe\+Nary\+Intension\+Constraint}} $\ast$}]{constraint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Visits an n-\/ary constraint that appears in an intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint} & The constraint to visit. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseIntensionConstraintVisitor_a9ae629f4d9f6e1c0d6711a4f964165e8}\label{classUniverse_1_1IUniverseIntensionConstraintVisitor_a9ae629f4d9f6e1c0d6711a4f964165e8}} 
+\index{Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}!visit@{visit}}
+\index{visit@{visit}!Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1UniverseUnaryIntensionConstraint}{Universe\+::\+Universe\+Unary\+Intension\+Constraint}} $\ast$}]{constraint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Visits a unary constraint that appears in an intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint} & The constraint to visit. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseIntensionConstraintVisitor_a2ab24aca1de2c365e194325a0e6d4b98}\label{classUniverse_1_1IUniverseIntensionConstraintVisitor_a2ab24aca1de2c365e194325a0e6d4b98}} 
+\index{Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}!visit@{visit}}
+\index{visit@{visit}!Universe::IUniverseIntensionConstraintVisitor@{Universe::IUniverseIntensionConstraintVisitor}}
+\doxysubsubsection{\texorpdfstring{visit()}{visit()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor\+::visit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1UniverseVariableIntensionConstraint}{Universe\+::\+Universe\+Variable\+Intension\+Constraint}} $\ast$}]{variable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Visits a variable that appears in an intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em variable} & The variable to visit. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{IUniverseIntensionConstraintVisitor_8hpp}{IUniverse\+Intension\+Constraint\+Visitor.\+hpp}}\end{DoxyCompactItemize}

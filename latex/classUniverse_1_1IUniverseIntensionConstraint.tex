@@ -1,0 +1,64 @@
+\hypertarget{classUniverse_1_1IUniverseIntensionConstraint}{}\doxysection{Universe\+::IUniverse\+Intension\+Constraint Class Reference}
+\label{classUniverse_1_1IUniverseIntensionConstraint}\index{Universe::IUniverseIntensionConstraint@{Universe::IUniverseIntensionConstraint}}
+
+
+{\ttfamily \#include $<$IUniverse\+Intension\+Constraint.\+hpp$>$}
+
+Inheritance diagram for Universe\+::IUniverse\+Intension\+Constraint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.150685cm]{classUniverse_1_1IUniverseIntensionConstraint}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint_a98a340b5460856966d0e10bcc52bfdf9}{$\sim$\+IUniverse\+Intension\+Constraint}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint_aaab7beea02c8cd75bd7a847f4268e8e4}{accept}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor}{IUniverse\+Intension\+Constraint\+Visitor}} $\ast$visitor)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} class defines an interface for representing intension constraints. 
+
+Definition at line 42 of file IUniverse\+Intension\+Constraint.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseIntensionConstraint_a98a340b5460856966d0e10bcc52bfdf9}\label{classUniverse_1_1IUniverseIntensionConstraint_a98a340b5460856966d0e10bcc52bfdf9}} 
+\index{Universe::IUniverseIntensionConstraint@{Universe::IUniverseIntensionConstraint}!````~IUniverseIntensionConstraint@{$\sim$IUniverseIntensionConstraint}}
+\index{````~IUniverseIntensionConstraint@{$\sim$IUniverseIntensionConstraint}!Universe::IUniverseIntensionConstraint@{Universe::IUniverseIntensionConstraint}}
+\doxysubsubsection{\texorpdfstring{$\sim$IUniverseIntensionConstraint()}{~IUniverseIntensionConstraint()}}
+{\footnotesize\ttfamily virtual Universe\+::\+IUniverse\+Intension\+Constraint\+::$\sim$\+IUniverse\+Intension\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destroys this \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseIntensionConstraint_aaab7beea02c8cd75bd7a847f4268e8e4}\label{classUniverse_1_1IUniverseIntensionConstraint_aaab7beea02c8cd75bd7a847f4268e8e4}} 
+\index{Universe::IUniverseIntensionConstraint@{Universe::IUniverseIntensionConstraint}!accept@{accept}}
+\index{accept@{accept}!Universe::IUniverseIntensionConstraint@{Universe::IUniverseIntensionConstraint}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Intension\+Constraint\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor}{IUniverse\+Intension\+Constraint\+Visitor}} $\ast$}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Accepts an \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor}{IUniverse\+Intension\+Constraint\+Visitor}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em visitor} & The visitor to accept. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseVariableIntensionConstraint_a6ed94200b02aeb7be2ab175346256b3c}{Universe\+::\+Universe\+Variable\+Intension\+Constraint}}, \mbox{\hyperlink{classUniverse_1_1UniverseUnaryIntensionConstraint_a9c91488b16e825338d95d3699c11c46e}{Universe\+::\+Universe\+Unary\+Intension\+Constraint}}, \mbox{\hyperlink{classUniverse_1_1UniverseNaryIntensionConstraint_ae3dec8dba3ca0419b37a078868d413b8}{Universe\+::\+Universe\+Nary\+Intension\+Constraint}}, \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraint_a69dda9818d04d49c61aee0c236c1f7a9}{Universe\+::\+Universe\+Java\+Intension\+Constraint}}, \mbox{\hyperlink{classUniverse_1_1UniverseIfThenElseIntensionConstraint_aeab3bb47a8db6be11dde9fe3622a989a}{Universe\+::\+Universe\+If\+Then\+Else\+Intension\+Constraint}}, \mbox{\hyperlink{classUniverse_1_1UniverseConstantIntensionConstraint_a8bc5388e4987c9c5e693e8a4779fa36e}{Universe\+::\+Universe\+Constant\+Intension\+Constraint}}, and \mbox{\hyperlink{classUniverse_1_1UniverseBinaryIntensionConstraint_a4c120539350df2864705d4b9b48ea6a3}{Universe\+::\+Universe\+Binary\+Intension\+Constraint}}.
+
+
+
+Referenced by Universe\+::\+Universe\+Binary\+Intension\+Constraint\+::accept(), Universe\+::\+Universe\+If\+Then\+Else\+Intension\+Constraint\+::accept(), and Universe\+::\+Universe\+Unary\+Intension\+Constraint\+::accept().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{IUniverseIntensionConstraint_8hpp}{IUniverse\+Intension\+Constraint.\+hpp}}\end{DoxyCompactItemize}

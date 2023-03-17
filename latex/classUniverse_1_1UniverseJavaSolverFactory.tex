@@ -1,0 +1,146 @@
+\hypertarget{classUniverse_1_1UniverseJavaSolverFactory}{}\doxysection{Universe\+::Universe\+Java\+Solver\+Factory Class Reference}
+\label{classUniverse_1_1UniverseJavaSolverFactory}\index{Universe::UniverseJavaSolverFactory@{Universe::UniverseJavaSolverFactory}}
+
+
+{\ttfamily \#include $<$Universe\+Java\+Solver\+Factory.\+hpp$>$}
+
+Inheritance diagram for Universe\+::Universe\+Java\+Solver\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUniverse_1_1UniverseJavaSolverFactory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUniverse_1_1UniverseJavaSolverFactory_ad453fc1fae0d0843a0fe6be50c20ba14}{Universe\+Java\+Solver\+Factory}} (std\+::string class\+Name)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseCspSolver}{Universe\+::\+IUniverse\+Csp\+Solver}} $\ast$ \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolverFactory_a36c39cef33df12baef7f5b7b4932340d}{create\+Csp\+Solver}} () override
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver}{Universe\+::\+IUniverse\+Pseudo\+Boolean\+Solver}} $\ast$ \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolverFactory_a0f461f822753c710dccd76126aea5da5}{create\+Pseudo\+Boolean\+Solver}} () override
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseSatSolver}{Universe\+::\+IUniverse\+Sat\+Solver}} $\ast$ \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolverFactory_a0b775c3cb2f83c67580632fe2beead60}{create\+Sat\+Solver}} () override
+\item 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolverFactory_a262593fe30976a94320f37aa41853a69}{create\+Solver}} (const std\+::string \&name, easyjni\+::\+Java\+Class $\ast$clazz)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolverFactory}{Universe\+Java\+Solver\+Factory}} class defines an adapter for a Universe\+Solver\+Factory written in Java (and implementing the JUniverse interface). The factory is invoked through the Java Native Interface (JNI). 
+
+Definition at line 48 of file Universe\+Java\+Solver\+Factory.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaSolverFactory_ad453fc1fae0d0843a0fe6be50c20ba14}\label{classUniverse_1_1UniverseJavaSolverFactory_ad453fc1fae0d0843a0fe6be50c20ba14}} 
+\index{Universe::UniverseJavaSolverFactory@{Universe::UniverseJavaSolverFactory}!UniverseJavaSolverFactory@{UniverseJavaSolverFactory}}
+\index{UniverseJavaSolverFactory@{UniverseJavaSolverFactory}!Universe::UniverseJavaSolverFactory@{Universe::UniverseJavaSolverFactory}}
+\doxysubsubsection{\texorpdfstring{UniverseJavaSolverFactory()}{UniverseJavaSolverFactory()}}
+{\footnotesize\ttfamily Universe\+Java\+Solver\+Factory\+::\+Universe\+Java\+Solver\+Factory (\begin{DoxyParamCaption}\item[{std\+::string}]{class\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Creates a new \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolverFactory}{Universe\+Java\+Solver\+Factory}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+Name} & The name of the Java class implementing the solver factory bound to this one. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file Universe\+Java\+Solver\+Factory.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaSolverFactory_a36c39cef33df12baef7f5b7b4932340d}\label{classUniverse_1_1UniverseJavaSolverFactory_a36c39cef33df12baef7f5b7b4932340d}} 
+\index{Universe::UniverseJavaSolverFactory@{Universe::UniverseJavaSolverFactory}!createCspSolver@{createCspSolver}}
+\index{createCspSolver@{createCspSolver}!Universe::UniverseJavaSolverFactory@{Universe::UniverseJavaSolverFactory}}
+\doxysubsubsection{\texorpdfstring{createCspSolver()}{createCspSolver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseCspSolver}{IUniverse\+Csp\+Solver}} $\ast$ Universe\+Java\+Solver\+Factory\+::create\+Csp\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates a CSP solver implementing Universe\textquotesingle{}s interface.
+
+\begin{DoxyReturn}{Returns}
+The created solver. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IUniverseSolverFactory_a137523329dbc3f3f1aa0fb9ad0e3b65e}{Universe\+::\+IUniverse\+Solver\+Factory}}.
+
+
+
+Definition at line 72 of file Universe\+Java\+Solver\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaSolverFactory_a0f461f822753c710dccd76126aea5da5}\label{classUniverse_1_1UniverseJavaSolverFactory_a0f461f822753c710dccd76126aea5da5}} 
+\index{Universe::UniverseJavaSolverFactory@{Universe::UniverseJavaSolverFactory}!createPseudoBooleanSolver@{createPseudoBooleanSolver}}
+\index{createPseudoBooleanSolver@{createPseudoBooleanSolver}!Universe::UniverseJavaSolverFactory@{Universe::UniverseJavaSolverFactory}}
+\doxysubsubsection{\texorpdfstring{createPseudoBooleanSolver()}{createPseudoBooleanSolver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver}{IUniverse\+Pseudo\+Boolean\+Solver}} $\ast$ Universe\+Java\+Solver\+Factory\+::create\+Pseudo\+Boolean\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates a pseudo-\/\+Boolean solver implementing Universe\textquotesingle{}s interface.
+
+\begin{DoxyReturn}{Returns}
+The created solver. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IUniverseSolverFactory_a0e795c776b17e738be181a10c2fea450}{Universe\+::\+IUniverse\+Solver\+Factory}}.
+
+
+
+Definition at line 66 of file Universe\+Java\+Solver\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaSolverFactory_a0b775c3cb2f83c67580632fe2beead60}\label{classUniverse_1_1UniverseJavaSolverFactory_a0b775c3cb2f83c67580632fe2beead60}} 
+\index{Universe::UniverseJavaSolverFactory@{Universe::UniverseJavaSolverFactory}!createSatSolver@{createSatSolver}}
+\index{createSatSolver@{createSatSolver}!Universe::UniverseJavaSolverFactory@{Universe::UniverseJavaSolverFactory}}
+\doxysubsubsection{\texorpdfstring{createSatSolver()}{createSatSolver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseSatSolver}{IUniverse\+Sat\+Solver}} $\ast$ Universe\+Java\+Solver\+Factory\+::create\+Sat\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates a SAT solver implementing Universe\textquotesingle{}s interface.
+
+\begin{DoxyReturn}{Returns}
+The created solver. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IUniverseSolverFactory_a540985feeeee722a3df992e441a1d6de}{Universe\+::\+IUniverse\+Solver\+Factory}}.
+
+
+
+Definition at line 60 of file Universe\+Java\+Solver\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaSolverFactory_a262593fe30976a94320f37aa41853a69}\label{classUniverse_1_1UniverseJavaSolverFactory_a262593fe30976a94320f37aa41853a69}} 
+\index{Universe::UniverseJavaSolverFactory@{Universe::UniverseJavaSolverFactory}!createSolver@{createSolver}}
+\index{createSolver@{createSolver}!Universe::UniverseJavaSolverFactory@{Universe::UniverseJavaSolverFactory}}
+\doxysubsubsection{\texorpdfstring{createSolver()}{createSolver()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ Universe\+::\+Universe\+Java\+Solver\+Factory\+::create\+Solver (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{easyjni\+::\+Java\+Class $\ast$}]{clazz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a solver implementing Universe\textquotesingle{}s interface.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of the solver to create (it may be a Java adapter for either a SAT, pseudo-\/\+Boolean or CSP solver).\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the solver to create. \\
+\hline
+{\em clazz} & The most specific interface implemented by the class of the solver to create (the Java equivalent of the type T).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created solver. 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file Universe\+Java\+Solver\+Factory.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{UniverseJavaSolverFactory_8hpp}{Universe\+Java\+Solver\+Factory.\+hpp}}\item 
+\mbox{\hyperlink{UniverseJavaSolverFactory_8cpp}{Universe\+Java\+Solver\+Factory.\+cpp}}\end{DoxyCompactItemize}

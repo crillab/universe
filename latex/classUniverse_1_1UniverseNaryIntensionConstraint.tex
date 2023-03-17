@@ -1,0 +1,108 @@
+\hypertarget{classUniverse_1_1UniverseNaryIntensionConstraint}{}\doxysection{Universe\+::Universe\+Nary\+Intension\+Constraint Class Reference}
+\label{classUniverse_1_1UniverseNaryIntensionConstraint}\index{Universe::UniverseNaryIntensionConstraint@{Universe::UniverseNaryIntensionConstraint}}
+
+
+{\ttfamily \#include $<$Universe\+Nary\+Intension\+Constraint.\+hpp$>$}
+
+Inheritance diagram for Universe\+::Universe\+Nary\+Intension\+Constraint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classUniverse_1_1UniverseNaryIntensionConstraint}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUniverse_1_1UniverseNaryIntensionConstraint_aca43e440b22078f5bd4bfbb9fca83dcb}{Universe\+Nary\+Intension\+Constraint}} (\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}} op, std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$ children)
+\item 
+\mbox{\hyperlink{classUniverse_1_1UniverseNaryIntensionConstraint_ac45de5ff5f8acc4bdd86d2aa8143a1ad}{$\sim$\+Universe\+Nary\+Intension\+Constraint}} () override=default
+\item 
+void \mbox{\hyperlink{classUniverse_1_1UniverseNaryIntensionConstraint_ae3dec8dba3ca0419b37a078868d413b8}{accept}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor}{Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor}} $\ast$visitor) override
+\item 
+int \mbox{\hyperlink{classUniverse_1_1UniverseNaryIntensionConstraint_a28546ea2b976e313978371f6a9e22e05}{get\+Arity}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1UniverseNaryIntensionConstraint}{Universe\+Nary\+Intension\+Constraint}} is an intension constraint that applies an operator on several intension constraints. 
+
+Definition at line 44 of file Universe\+Nary\+Intension\+Constraint.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1UniverseNaryIntensionConstraint_aca43e440b22078f5bd4bfbb9fca83dcb}\label{classUniverse_1_1UniverseNaryIntensionConstraint_aca43e440b22078f5bd4bfbb9fca83dcb}} 
+\index{Universe::UniverseNaryIntensionConstraint@{Universe::UniverseNaryIntensionConstraint}!UniverseNaryIntensionConstraint@{UniverseNaryIntensionConstraint}}
+\index{UniverseNaryIntensionConstraint@{UniverseNaryIntensionConstraint}!Universe::UniverseNaryIntensionConstraint@{Universe::UniverseNaryIntensionConstraint}}
+\doxysubsubsection{\texorpdfstring{UniverseNaryIntensionConstraint()}{UniverseNaryIntensionConstraint()}}
+{\footnotesize\ttfamily Universe\+Nary\+Intension\+Constraint\+::\+Universe\+Nary\+Intension\+Constraint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}}}]{op,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$}]{children }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Creates a new \mbox{\hyperlink{classUniverse_1_1UniverseNaryIntensionConstraint}{Universe\+Nary\+Intension\+Constraint}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & The operator applied by the constraint. \\
+\hline
+{\em children} & The intension constraints on which the operator is applied. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file Universe\+Nary\+Intension\+Constraint.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseNaryIntensionConstraint_ac45de5ff5f8acc4bdd86d2aa8143a1ad}\label{classUniverse_1_1UniverseNaryIntensionConstraint_ac45de5ff5f8acc4bdd86d2aa8143a1ad}} 
+\index{Universe::UniverseNaryIntensionConstraint@{Universe::UniverseNaryIntensionConstraint}!````~UniverseNaryIntensionConstraint@{$\sim$UniverseNaryIntensionConstraint}}
+\index{````~UniverseNaryIntensionConstraint@{$\sim$UniverseNaryIntensionConstraint}!Universe::UniverseNaryIntensionConstraint@{Universe::UniverseNaryIntensionConstraint}}
+\doxysubsubsection{\texorpdfstring{$\sim$UniverseNaryIntensionConstraint()}{~UniverseNaryIntensionConstraint()}}
+{\footnotesize\ttfamily Universe\+::\+Universe\+Nary\+Intension\+Constraint\+::$\sim$\+Universe\+Nary\+Intension\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Destroys this \mbox{\hyperlink{classUniverse_1_1UniverseNaryIntensionConstraint}{Universe\+Nary\+Intension\+Constraint}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1UniverseNaryIntensionConstraint_ae3dec8dba3ca0419b37a078868d413b8}\label{classUniverse_1_1UniverseNaryIntensionConstraint_ae3dec8dba3ca0419b37a078868d413b8}} 
+\index{Universe::UniverseNaryIntensionConstraint@{Universe::UniverseNaryIntensionConstraint}!accept@{accept}}
+\index{accept@{accept}!Universe::UniverseNaryIntensionConstraint@{Universe::UniverseNaryIntensionConstraint}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Universe\+Nary\+Intension\+Constraint\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor}{Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor}} $\ast$}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Accepts an \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor}{IUniverse\+Intension\+Constraint\+Visitor}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em visitor} & The visitor to accept. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint_aaab7beea02c8cd75bd7a847f4268e8e4}{Universe\+::\+IUniverse\+Intension\+Constraint}}.
+
+
+
+Definition at line 47 of file Universe\+Nary\+Intension\+Constraint.\+cpp.
+
+
+
+References Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor\+::visit().
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseNaryIntensionConstraint_a28546ea2b976e313978371f6a9e22e05}\label{classUniverse_1_1UniverseNaryIntensionConstraint_a28546ea2b976e313978371f6a9e22e05}} 
+\index{Universe::UniverseNaryIntensionConstraint@{Universe::UniverseNaryIntensionConstraint}!getArity@{getArity}}
+\index{getArity@{getArity}!Universe::UniverseNaryIntensionConstraint@{Universe::UniverseNaryIntensionConstraint}}
+\doxysubsubsection{\texorpdfstring{getArity()}{getArity()}}
+{\footnotesize\ttfamily int Universe\+::\+Universe\+Nary\+Intension\+Constraint\+::get\+Arity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gives the arity of this constraint.
+
+\begin{DoxyReturn}{Returns}
+The number of intension constraints on which the operator is applied. 
+\end{DoxyReturn}
+
+
+Definition at line 43 of file Universe\+Nary\+Intension\+Constraint.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Universe\+Nary\+Intension\+Constraint.\+hpp\item 
+Universe\+Nary\+Intension\+Constraint.\+cpp\end{DoxyCompactItemize}

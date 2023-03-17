@@ -1,0 +1,309 @@
+\hypertarget{classUniverse_1_1IUniverseSolver}{}\doxysection{Universe\+::IUniverse\+Solver Class Reference}
+\label{classUniverse_1_1IUniverseSolver}\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+
+
+{\ttfamily \#include $<$IUniverse\+Solver.\+hpp$>$}
+
+Inheritance diagram for Universe\+::IUniverse\+Solver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.508961cm]{classUniverse_1_1IUniverseSolver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_a7f47ace46bb113eabe4b9ecae5598c03}{$\sim$\+IUniverse\+Solver}} ()=default
+\item 
+virtual const std\+::map$<$ std\+::string, \mbox{\hyperlink{classUniverse_1_1IUniverseVariable}{Universe\+::\+IUniverse\+Variable}} $\ast$ $>$ \& \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_ae083822fe0cc090e6f4dc5adf4fb59cc}{get\+Variables\+Mapping}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_ac0dc1989f6cb78a4310b7553c87fc5c2}{interrupt}} ()=0
+\item 
+virtual std\+::map$<$ std\+::string, \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_a87a9a73eb177019fa6af6184fe328c19}{map\+Solution}} ()=0
+\item 
+virtual int \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_a9656d32867b57556d3cf4837dce42d86}{n\+Constraints}} ()=0
+\item 
+virtual int \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_a3825d87ddbdfb229a286d144c57b475d}{n\+Variables}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_adc17bd143d5a44ed9be59f5f6c54d4e8}{reset}} ()=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_ad459819c09ee1dcc1e6081361767d24d}{set\+Log\+File}} (const std\+::string \&filename)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_aab2de52dde22f996bfb19b57bb93e071}{set\+Timeout}} (long seconds)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_acb699799ca0af24d9cb5f565b2b86989}{set\+Timeout\+Ms}} (long mseconds)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_aedf95a3d774a714d097ff4848cdafa52}{set\+Verbosity}} (int level)=0
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_ac299de70183cb0b98b7b9ad57a8bb479}{solution}} ()=0
+\item 
+virtual \mbox{\hyperlink{UniverseSolverResult_8hpp_a5c0769554b7e93999912fdfb7b5093c4}{Universe\+Solver\+Result}} \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_a59cf64167b8a989036770c6e06cde820}{solve}} ()=0
+\item 
+virtual \mbox{\hyperlink{UniverseSolverResult_8hpp_a5c0769554b7e93999912fdfb7b5093c4}{Universe\+Solver\+Result}} \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_af7e13a36b917799f9fc9237604b0cb8b}{solve}} (const std\+::string \&filename)=0
+\item 
+virtual \mbox{\hyperlink{UniverseSolverResult_8hpp_a5c0769554b7e93999912fdfb7b5093c4}{Universe\+Solver\+Result}} \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_aa305ab4e5d3a2bc07eb5a3dc457ee0aa}{solve}} (const std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1UniverseAssumption}{Universe\+::\+Universe\+Assumption}}$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$$>$ \&assumptions)=0
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver}{Universe\+::\+IOptimization\+Solver}} $\ast$ \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_a20fbb6964d1d6b5035e5849036dd776e}{to\+Optimization\+Solver}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1IUniverseSolver}{IUniverse\+Solver}} interface is the root interface defining the base contract for all solvers. 
+
+Definition at line 49 of file IUniverse\+Solver.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_a7f47ace46bb113eabe4b9ecae5598c03}\label{classUniverse_1_1IUniverseSolver_a7f47ace46bb113eabe4b9ecae5598c03}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!````~IUniverseSolver@{$\sim$IUniverseSolver}}
+\index{````~IUniverseSolver@{$\sim$IUniverseSolver}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{$\sim$IUniverseSolver()}{~IUniverseSolver()}}
+{\footnotesize\ttfamily virtual Universe\+::\+IUniverse\+Solver\+::$\sim$\+IUniverse\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destroys this solver. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_ae083822fe0cc090e6f4dc5adf4fb59cc}\label{classUniverse_1_1IUniverseSolver_ae083822fe0cc090e6f4dc5adf4fb59cc}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!getVariablesMapping@{getVariablesMapping}}
+\index{getVariablesMapping@{getVariablesMapping}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{getVariablesMapping()}{getVariablesMapping()}}
+{\footnotesize\ttfamily virtual const std\+::map$<$std\+::string, \mbox{\hyperlink{classUniverse_1_1IUniverseVariable}{Universe\+::\+IUniverse\+Variable}} $\ast$$>$\& Universe\+::\+IUniverse\+Solver\+::get\+Variables\+Mapping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gives the mapping of the variables in this solver.
+
+\begin{DoxyReturn}{Returns}
+The mapping of the variables. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_ab238da06423c8060f7f6293cfb1fb2c0}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_ac0dc1989f6cb78a4310b7553c87fc5c2}\label{classUniverse_1_1IUniverseSolver_ac0dc1989f6cb78a4310b7553c87fc5c2}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!interrupt@{interrupt}}
+\index{interrupt@{interrupt}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{interrupt()}{interrupt()}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Solver\+::interrupt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Interrupts (asynchronously) the search currently performed by this solver. 
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_a2aee9cc3bde13f1c08b9ca24a3595a37}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_a87a9a73eb177019fa6af6184fe328c19}\label{classUniverse_1_1IUniverseSolver_a87a9a73eb177019fa6af6184fe328c19}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!mapSolution@{mapSolution}}
+\index{mapSolution@{mapSolution}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{mapSolution()}{mapSolution()}}
+{\footnotesize\ttfamily virtual std\+::map$<$std\+::string, \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}}$>$ Universe\+::\+IUniverse\+Solver\+::map\+Solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gives the mapping between the name of a variable and the assignment found for this variable by this solver (if any).
+
+\begin{DoxyReturn}{Returns}
+The solution found by this solver. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_a605b37a8a49fbf7c606608ed0ec18061}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_a9656d32867b57556d3cf4837dce42d86}\label{classUniverse_1_1IUniverseSolver_a9656d32867b57556d3cf4837dce42d86}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!nConstraints@{nConstraints}}
+\index{nConstraints@{nConstraints}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{nConstraints()}{nConstraints()}}
+{\footnotesize\ttfamily virtual int Universe\+::\+IUniverse\+Solver\+::n\+Constraints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gives the number of constraints defined in this solver.
+
+\begin{DoxyReturn}{Returns}
+The number of constraints. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_a1c07b9bd8137140fd57c185fde8f78e6}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_a3825d87ddbdfb229a286d144c57b475d}\label{classUniverse_1_1IUniverseSolver_a3825d87ddbdfb229a286d144c57b475d}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!nVariables@{nVariables}}
+\index{nVariables@{nVariables}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{nVariables()}{nVariables()}}
+{\footnotesize\ttfamily virtual int Universe\+::\+IUniverse\+Solver\+::n\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gives the number of variables defined in this solver.
+
+\begin{DoxyReturn}{Returns}
+The number of variables. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_af3e35ed5fa762770ebbe7d6eddca3362}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_adc17bd143d5a44ed9be59f5f6c54d4e8}\label{classUniverse_1_1IUniverseSolver_adc17bd143d5a44ed9be59f5f6c54d4e8}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!reset@{reset}}
+\index{reset@{reset}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Solver\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Resets this solver in its original state. 
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_ae5051d7a6857a1a1a0d27c6b5fe4600b}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_ad459819c09ee1dcc1e6081361767d24d}\label{classUniverse_1_1IUniverseSolver_ad459819c09ee1dcc1e6081361767d24d}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!setLogFile@{setLogFile}}
+\index{setLogFile@{setLogFile}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{setLogFile()}{setLogFile()}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Solver\+::set\+Log\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Sets the log file to be used by the solver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the log file. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_a76e5f579b2b45d19fc261a39dc61c2fc}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_aab2de52dde22f996bfb19b57bb93e071}\label{classUniverse_1_1IUniverseSolver_aab2de52dde22f996bfb19b57bb93e071}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!setTimeout@{setTimeout}}
+\index{setTimeout@{setTimeout}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{setTimeout()}{setTimeout()}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Solver\+::set\+Timeout (\begin{DoxyParamCaption}\item[{long}]{seconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Sets the time limit before interrupting the search.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & The time limit to set (in seconds). \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_a804012862944e4585df3150fca51e409}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_acb699799ca0af24d9cb5f565b2b86989}\label{classUniverse_1_1IUniverseSolver_acb699799ca0af24d9cb5f565b2b86989}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!setTimeoutMs@{setTimeoutMs}}
+\index{setTimeoutMs@{setTimeoutMs}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{setTimeoutMs()}{setTimeoutMs()}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Solver\+::set\+Timeout\+Ms (\begin{DoxyParamCaption}\item[{long}]{mseconds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Sets the time limit before interrupting the search.
+
+
+\begin{DoxyParams}{Parameters}
+{\em seconds} & The time limit to set (in milli-\/seconds). \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_ac241c3fc8d9fd5be9389307fbd1dc33f}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_aedf95a3d774a714d097ff4848cdafa52}\label{classUniverse_1_1IUniverseSolver_aedf95a3d774a714d097ff4848cdafa52}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!setVerbosity@{setVerbosity}}
+\index{setVerbosity@{setVerbosity}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{setVerbosity()}{setVerbosity()}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Solver\+::set\+Verbosity (\begin{DoxyParamCaption}\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Sets the verbosity level of the solver. Extreme values (outside the range expected by the underlying solver) should be handled silently as the minimum or maximum value supported by the solver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The verbosity level to set. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_a0dfbe8bdba1eb55ef002d3953d62cd62}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_ac299de70183cb0b98b7b9ad57a8bb479}\label{classUniverse_1_1IUniverseSolver_ac299de70183cb0b98b7b9ad57a8bb479}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!solution@{solution}}
+\index{solution@{solution}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{solution()}{solution()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$\mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}}$>$ Universe\+::\+IUniverse\+Solver\+::solution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gives the solution found by this solver (if any).
+
+\begin{DoxyReturn}{Returns}
+The solution found by this solver. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_a15e2990cb5c7fe18dab33fdc3e6d8718}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_a59cf64167b8a989036770c6e06cde820}\label{classUniverse_1_1IUniverseSolver_a59cf64167b8a989036770c6e06cde820}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!solve@{solve}}
+\index{solve@{solve}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{UniverseSolverResult_8hpp_a5c0769554b7e93999912fdfb7b5093c4}{Universe\+Solver\+Result}} Universe\+::\+IUniverse\+Solver\+::solve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Solves the problem associated to this solver.
+
+\begin{DoxyReturn}{Returns}
+The outcome of the search conducted by the solver. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_a5bc6e10fda7435f4a0f7f36ba7170160}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_af7e13a36b917799f9fc9237604b0cb8b}\label{classUniverse_1_1IUniverseSolver_af7e13a36b917799f9fc9237604b0cb8b}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!solve@{solve}}
+\index{solve@{solve}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{UniverseSolverResult_8hpp_a5c0769554b7e93999912fdfb7b5093c4}{Universe\+Solver\+Result}} Universe\+::\+IUniverse\+Solver\+::solve (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Solves the problem stored in the given file. The solver is expected to parse the problem itself.
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & The name of the file containing the problem to solve.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The outcome of the search conducted by the solver. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_a01f127ace8853e771d3fc5c2a67dafd5}{Universe\+::\+Universe\+Java\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_aa305ab4e5d3a2bc07eb5a3dc457ee0aa}\label{classUniverse_1_1IUniverseSolver_aa305ab4e5d3a2bc07eb5a3dc457ee0aa}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!solve@{solve}}
+\index{solve@{solve}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{UniverseSolverResult_8hpp_a5c0769554b7e93999912fdfb7b5093c4}{Universe\+Solver\+Result}} Universe\+::\+IUniverse\+Solver\+::solve (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1UniverseAssumption}{Universe\+::\+Universe\+Assumption}}$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$$>$ \&}]{assumptions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Solves the problem associated to this solver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em assumptions} & The assumptions to consider when solving.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The outcome of the search conducted by the solver. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_a52a5acb2942a8c9341392ddaf709c1c9}{Universe\+::\+Universe\+Java\+Solver}}, \mbox{\hyperlink{classUniverse_1_1UniverseJavaSatSolver_ad3ec031999e3ff2148052cb510f2740a}{Universe\+::\+Universe\+Java\+Sat\+Solver}}, \mbox{\hyperlink{classUniverse_1_1UniverseJavaPseudoBooleanSolver_ac51c26c1c0799e25deb9af5da4b39bf6}{Universe\+::\+Universe\+Java\+Pseudo\+Boolean\+Solver}}, \mbox{\hyperlink{classUniverse_1_1UniverseJavaCspSolver_a25f5468f899b8818bfb0836beeadcc03}{Universe\+::\+Universe\+Java\+Csp\+Solver}}, and \mbox{\hyperlink{classUniverse_1_1IUniverseSatSolver_a972c62945b69288a9e2c3e6cf3ab6b58}{Universe\+::\+IUniverse\+Sat\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSolver_a20fbb6964d1d6b5035e5849036dd776e}\label{classUniverse_1_1IUniverseSolver_a20fbb6964d1d6b5035e5849036dd776e}} 
+\index{Universe::IUniverseSolver@{Universe::IUniverseSolver}!toOptimizationSolver@{toOptimizationSolver}}
+\index{toOptimizationSolver@{toOptimizationSolver}!Universe::IUniverseSolver@{Universe::IUniverseSolver}}
+\doxysubsubsection{\texorpdfstring{toOptimizationSolver()}{toOptimizationSolver()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver}{IOptimization\+Solver}} $\ast$ IUniverse\+Solver\+::to\+Optimization\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Casts this solver into an \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver}{IOptimization\+Solver}}.
+
+\begin{DoxyReturn}{Returns}
+The casted optimization solver. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver_adbb1ecc296b843a37e97071ffb3830c1}{Universe\+::\+Universe\+Java\+Solver}}.
+
+
+
+Definition at line 35 of file IUniverse\+Solver.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{IUniverseSolver_8hpp}{IUniverse\+Solver.\+hpp}}\item 
+\mbox{\hyperlink{IUniverseSolver_8cpp}{IUniverse\+Solver.\+cpp}}\end{DoxyCompactItemize}

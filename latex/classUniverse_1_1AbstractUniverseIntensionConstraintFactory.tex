@@ -1,0 +1,747 @@
+\hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory}{}\doxysection{Universe\+::Abstract\+Universe\+Intension\+Constraint\+Factory Class Reference}
+\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory}\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+
+
+{\ttfamily \#include $<$Abstract\+Universe\+Intension\+Constraint\+Factory.\+hpp$>$}
+
+Inheritance diagram for Universe\+::Abstract\+Universe\+Intension\+Constraint\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.728395cm]{classUniverse_1_1AbstractUniverseIntensionConstraintFactory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_aaaaf48ebb03d864ae23eb9aeb5fd12b7}{abs}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$constraint)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_aa4ca76a777f7b712b0b4a18bd84fe08c}{add}} (std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$ constraints)
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_acb172651dc56c3c32cdfd06d9e96bb24}{binary}} (\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}} op, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$left, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$right)=0
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_afe1329c6cf6a4ed99fcef71256c10b49}{conjunction}} (std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$ constraints)
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a50388749409f1ea10db267f354ab0b89}{constant}} (const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&value)=0
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a0c49cc89e66f4d17131f00beb7cd2730}{constant}} (long value)=0
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a5f7f55a777d89d56e57cfc55ab8658ef}{disjunction}} (std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$ constraints)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a1f2898bdb7ec7f6b4ca91ca1d31dd13a}{dist}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$left, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$right)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a6ca356c03576373245e548a2853efb5c}{div}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$left, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$right)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a949ee5f4750f9e06654b9b2466d9f9aa}{eq}} (std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$ constraints)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_aac32b7b3112328ffcbeffad7ab9c894c}{equiv}} (std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$ constraints)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a267e12d5ca6f1df46a7626fce9f215e2}{ge}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$left, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$right)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a1f959ebac3d8fd299449022bb603241e}{gt}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$left, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$right)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a421e145aaf87786b83f0a7f016d4f7f7}{impl}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$left, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$right)
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a570f45021700e38b07670f9f18ce26c1}{ite}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$condition, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$if\+True, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$if\+False)=0
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a6bb8669cc651cd093f98f0d48b17801c}{le}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$left, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$right)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a65eb9a3babcc7196eb4138ec282a45fa}{lt}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$left, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$right)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_af2cf1365653cf37dccaae447ddbc812d}{max}} (std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$ constraints)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_afb298f343c8b9e12e893c1eb2452697e}{min}} (std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$ constraints)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a4a77bd6abdbc512bf40e25f0305a5b98}{mod}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$left, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$right)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_acaddf4172b2f8be6c8b03f69e783157c}{mult}} (std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$ constraints)
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a69b06db401288081dc5c7cc99732d411}{nary}} (\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}} op, std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$ constraints)=0
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a6c8aab735465c693cb2ec16c4e9edcd8}{neg}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$constraint)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a603f976d35be181415f11d326db9441a}{negation}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$constraint)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a69ab7ab84b1cf839a9f90f44e147591a}{neq}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$left, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$right)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_ad142c8922d07e8eb9f9b79cbe4e54480}{parity}} (std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$ constraints)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_aeb0c49651dd9e28cd8c8c6f0120b2898}{pow}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$constraint, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$exponent)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a0713bf552ebcac6687cc32fe54b0e2e8}{sqr}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$constraint)
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a668123aed7fd100f17aa83081b25331a}{sub}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$left, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$right)
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a2c0db6bd032d94cf709ae781bffeebba}{unary}} (\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}} op, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$constraint)=0
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a9d37996b8c0499ddb9ce4f4fe6faf5a6}{variable}} (std\+::string id)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory}{Abstract\+Universe\+Intension\+Constraint\+Factory}} makes easier the construction of intension constraints from the solver\textquotesingle{}s API, by providing a functional notation similar to that used to define the constraints using XCSP3. 
+
+Definition at line 58 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_aaaaf48ebb03d864ae23eb9aeb5fd12b7}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_aaaaf48ebb03d864ae23eb9aeb5fd12b7}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!abs@{abs}}
+\index{abs@{abs}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{abs()}{abs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::abs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{constraint }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the absolute-\/value operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint} & The constraint on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_aa4ca76a777f7b712b0b4a18bd84fe08c}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_aa4ca76a777f7b712b0b4a18bd84fe08c}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!add@{add}}
+\index{add@{add}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::add (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$}]{constraints }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the addition operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraints} & The constraints on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 46 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_acb172651dc56c3c32cdfd06d9e96bb24}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_acb172651dc56c3c32cdfd06d9e96bb24}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!binary@{binary}}
+\index{binary@{binary}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{binary()}{binary()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}}$\ast$ Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory\+::binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}}}]{op,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Creates a new binary intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & The operator applied by the constraint. \\
+\hline
+{\em left} & The left constraint on which the operator is applied. \\
+\hline
+{\em right} & The right constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_a3ca65e2039799a9296dce9e3084ca7ec}{Universe\+::\+Universe\+Java\+Intension\+Constraint\+Factory}}, and \mbox{\hyperlink{classUniverse_1_1UniverseIntensionConstraintFactory_a927047991352f57099d974370963a260}{Universe\+::\+Universe\+Intension\+Constraint\+Factory}}.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_afe1329c6cf6a4ed99fcef71256c10b49}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_afe1329c6cf6a4ed99fcef71256c10b49}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!conjunction@{conjunction}}
+\index{conjunction@{conjunction}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{conjunction()}{conjunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::conjunction (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$}]{constraints }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the conjunction operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraints} & The constraints on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a50388749409f1ea10db267f354ab0b89}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a50388749409f1ea10db267f354ab0b89}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!constant@{constant}}
+\index{constant@{constant}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{constant()}{constant()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}}$\ast$ Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory\+::constant (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Wraps a constant value in its representation as an intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value of the constant.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_afe409f4a93bb7e77443ec3e27e78d38c}{Universe\+::\+Universe\+Java\+Intension\+Constraint\+Factory}}, and \mbox{\hyperlink{classUniverse_1_1UniverseIntensionConstraintFactory_a30df28a6bb6f9a45a0c2bdbf25a261f7}{Universe\+::\+Universe\+Intension\+Constraint\+Factory}}.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a0c49cc89e66f4d17131f00beb7cd2730}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a0c49cc89e66f4d17131f00beb7cd2730}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!constant@{constant}}
+\index{constant@{constant}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{constant()}{constant()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}}$\ast$ Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory\+::constant (\begin{DoxyParamCaption}\item[{long}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Wraps a constant value in its representation as an intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value of the constant.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_ada15bee0e2df40558be7f26d43af7435}{Universe\+::\+Universe\+Java\+Intension\+Constraint\+Factory}}, and \mbox{\hyperlink{classUniverse_1_1UniverseIntensionConstraintFactory_a525791c6fd768139e9e2f9c95814b77d}{Universe\+::\+Universe\+Intension\+Constraint\+Factory}}.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a5f7f55a777d89d56e57cfc55ab8658ef}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a5f7f55a777d89d56e57cfc55ab8658ef}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!disjunction@{disjunction}}
+\index{disjunction@{disjunction}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{disjunction()}{disjunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::disjunction (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$}]{constraints }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the disjunction operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraints} & The constraints on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a1f2898bdb7ec7f6b4ca91ca1d31dd13a}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a1f2898bdb7ec7f6b4ca91ca1d31dd13a}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!dist@{dist}}
+\index{dist@{dist}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{dist()}{dist()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::dist (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the distance operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The left constraint on which the operator is applied. \\
+\hline
+{\em right} & The right constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a6ca356c03576373245e548a2853efb5c}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a6ca356c03576373245e548a2853efb5c}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!div@{div}}
+\index{div@{div}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{div()}{div()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::div (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the division operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The left constraint on which the operator is applied. \\
+\hline
+{\em right} & The right constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a949ee5f4750f9e06654b9b2466d9f9aa}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a949ee5f4750f9e06654b9b2466d9f9aa}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!eq@{eq}}
+\index{eq@{eq}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{eq()}{eq()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::eq (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$}]{constraints }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the equal operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraints} & The constraints on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_aac32b7b3112328ffcbeffad7ab9c894c}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_aac32b7b3112328ffcbeffad7ab9c894c}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!equiv@{equiv}}
+\index{equiv@{equiv}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{equiv()}{equiv()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::equiv (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$}]{constraints }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the equivalence operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraints} & The constraints on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 146 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a267e12d5ca6f1df46a7626fce9f215e2}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a267e12d5ca6f1df46a7626fce9f215e2}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!ge@{ge}}
+\index{ge@{ge}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{ge()}{ge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::ge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the greater-\/or-\/equal operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The left constraint on which the operator is applied. \\
+\hline
+{\em right} & The right constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a1f959ebac3d8fd299449022bb603241e}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a1f959ebac3d8fd299449022bb603241e}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!gt@{gt}}
+\index{gt@{gt}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{gt()}{gt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::gt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the greater-\/than operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The left constraint on which the operator is applied. \\
+\hline
+{\em right} & The right constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a421e145aaf87786b83f0a7f016d4f7f7}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a421e145aaf87786b83f0a7f016d4f7f7}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!impl@{impl}}
+\index{impl@{impl}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{impl()}{impl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::impl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the implication operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The left constraint on which the operator is applied. \\
+\hline
+{\em right} & The right constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 151 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a570f45021700e38b07670f9f18ce26c1}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a570f45021700e38b07670f9f18ce26c1}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!ite@{ite}}
+\index{ite@{ite}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{ite()}{ite()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}}$\ast$ Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory\+::ite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{condition,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{if\+True,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{if\+False }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Creates an intension constraint applying the if-\/then-\/else operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition} & The condition of the constraint. \\
+\hline
+{\em if\+True} & The intension constraint corresponding to the case in which the condition evaluates to true. \\
+\hline
+{\em if\+False} & The intension constraint corresponding to the case in which the condition evaluates to false.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_a49ae57f63c089d281be67fd3a8d4446d}{Universe\+::\+Universe\+Java\+Intension\+Constraint\+Factory}}, and \mbox{\hyperlink{classUniverse_1_1UniverseIntensionConstraintFactory_a98fd2774ed45d6b8eacabfc13ae28b15}{Universe\+::\+Universe\+Intension\+Constraint\+Factory}}.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a6bb8669cc651cd093f98f0d48b17801c}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a6bb8669cc651cd093f98f0d48b17801c}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!le@{le}}
+\index{le@{le}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{le()}{le()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::le (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the less-\/or-\/equal operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The left constraint on which the operator is applied. \\
+\hline
+{\em right} & The right constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a65eb9a3babcc7196eb4138ec282a45fa}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a65eb9a3babcc7196eb4138ec282a45fa}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!lt@{lt}}
+\index{lt@{lt}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{lt()}{lt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::lt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the less-\/than operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The left constraint on which the operator is applied. \\
+\hline
+{\em right} & The right constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_af2cf1365653cf37dccaae447ddbc812d}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_af2cf1365653cf37dccaae447ddbc812d}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!max@{max}}
+\index{max@{max}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::max (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$}]{constraints }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the maximum operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraints} & The constraints on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_afb298f343c8b9e12e893c1eb2452697e}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_afb298f343c8b9e12e893c1eb2452697e}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!min@{min}}
+\index{min@{min}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::min (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$}]{constraints }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the minimum operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraints} & The constraints on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a4a77bd6abdbc512bf40e25f0305a5b98}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a4a77bd6abdbc512bf40e25f0305a5b98}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!mod@{mod}}
+\index{mod@{mod}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{mod()}{mod()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::mod (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the modulo operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The left constraint on which the operator is applied. \\
+\hline
+{\em right} & The right constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 66 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_acaddf4172b2f8be6c8b03f69e783157c}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_acaddf4172b2f8be6c8b03f69e783157c}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!mult@{mult}}
+\index{mult@{mult}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{mult()}{mult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::mult (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$}]{constraints }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the multiplication operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraints} & The constraints on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a69b06db401288081dc5c7cc99732d411}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a69b06db401288081dc5c7cc99732d411}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!nary@{nary}}
+\index{nary@{nary}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{nary()}{nary()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}}$\ast$ Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory\+::nary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}}}]{op,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$}]{constraints }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Creates a new n-\/ary intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & The operator applied by the constraint. \\
+\hline
+{\em constraints} & The constraints on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_aada709ca789a7507480951aab620ae7d}{Universe\+::\+Universe\+Java\+Intension\+Constraint\+Factory}}, and \mbox{\hyperlink{classUniverse_1_1UniverseIntensionConstraintFactory_a96609d28ef1f6ea63cbbd064042d70d4}{Universe\+::\+Universe\+Intension\+Constraint\+Factory}}.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a6c8aab735465c693cb2ec16c4e9edcd8}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a6c8aab735465c693cb2ec16c4e9edcd8}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!neg@{neg}}
+\index{neg@{neg}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{neg()}{neg()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::neg (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{constraint }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the opposite operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint} & The constraint on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a603f976d35be181415f11d326db9441a}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a603f976d35be181415f11d326db9441a}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!negation@{negation}}
+\index{negation@{negation}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{negation()}{negation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::negation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{constraint }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the not operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint} & The constraint on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a69ab7ab84b1cf839a9f90f44e147591a}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a69ab7ab84b1cf839a9f90f44e147591a}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!neq@{neq}}
+\index{neq@{neq}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{neq()}{neq()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::neq (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the different operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The left constraint on which the operator is applied. \\
+\hline
+{\em right} & The right constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_ad142c8922d07e8eb9f9b79cbe4e54480}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_ad142c8922d07e8eb9f9b79cbe4e54480}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!parity@{parity}}
+\index{parity@{parity}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{parity()}{parity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::parity (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$}]{constraints }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the exclusive-\/disjunction operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraints} & The constraints on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 141 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_aeb0c49651dd9e28cd8c8c6f0120b2898}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_aeb0c49651dd9e28cd8c8c6f0120b2898}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!pow@{pow}}
+\index{pow@{pow}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{pow()}{pow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::pow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{constraint,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{exponent }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the power operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint} & The left constraint on which the operator is applied. \\
+\hline
+{\em exponent} & The exponent in the power operation\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a0713bf552ebcac6687cc32fe54b0e2e8}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a0713bf552ebcac6687cc32fe54b0e2e8}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!sqr@{sqr}}
+\index{sqr@{sqr}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{sqr()}{sqr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::sqr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{constraint }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the square operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint} & The constraint on which to apply the operator.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a668123aed7fd100f17aa83081b25331a}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a668123aed7fd100f17aa83081b25331a}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!sub@{sub}}
+\index{sub@{sub}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{sub()}{sub()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Abstract\+Universe\+Intension\+Constraint\+Factory\+::sub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{right }\end{DoxyParamCaption})}
+
+Creates an intension constraint applying the subtraction operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & The left constraint on which the operator is applied. \\
+\hline
+{\em right} & The right constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a2c0db6bd032d94cf709ae781bffeebba}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a2c0db6bd032d94cf709ae781bffeebba}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!unary@{unary}}
+\index{unary@{unary}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{unary()}{unary()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}}$\ast$ Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory\+::unary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}}}]{op,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{constraint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Creates a new unary intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & The operator applied by the constraint. \\
+\hline
+{\em constraint} & The constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_aeeb376901919d4ffd26cc93bcba3bb93}{Universe\+::\+Universe\+Java\+Intension\+Constraint\+Factory}}, and \mbox{\hyperlink{classUniverse_1_1UniverseIntensionConstraintFactory_a449545d25be6b3a91b763e61af7149e4}{Universe\+::\+Universe\+Intension\+Constraint\+Factory}}.
+
+\mbox{\Hypertarget{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a9d37996b8c0499ddb9ce4f4fe6faf5a6}\label{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a9d37996b8c0499ddb9ce4f4fe6faf5a6}} 
+\index{Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}!variable@{variable}}
+\index{variable@{variable}!Universe::AbstractUniverseIntensionConstraintFactory@{Universe::AbstractUniverseIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{variable()}{variable()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}}$\ast$ Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory\+::variable (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Wraps a variable in its representation as an intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The identifier of the variable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_a6aecac5059faddd545d6204642dca0da}{Universe\+::\+Universe\+Java\+Intension\+Constraint\+Factory}}, and \mbox{\hyperlink{classUniverse_1_1UniverseIntensionConstraintFactory_aa5a39cd01b9ed7bb8c7d1421dc5c8603}{Universe\+::\+Universe\+Intension\+Constraint\+Factory}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AbstractUniverseIntensionConstraintFactory_8hpp}{Abstract\+Universe\+Intension\+Constraint\+Factory.\+hpp}}\item 
+\mbox{\hyperlink{AbstractUniverseIntensionConstraintFactory_8cpp}{Abstract\+Universe\+Intension\+Constraint\+Factory.\+cpp}}\end{DoxyCompactItemize}

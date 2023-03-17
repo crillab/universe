@@ -1,0 +1,83 @@
+\hypertarget{classUniverse_1_1UniverseUnaryIntensionConstraint}{}\doxysection{Universe\+::Universe\+Unary\+Intension\+Constraint Class Reference}
+\label{classUniverse_1_1UniverseUnaryIntensionConstraint}\index{Universe::UniverseUnaryIntensionConstraint@{Universe::UniverseUnaryIntensionConstraint}}
+
+
+{\ttfamily \#include $<$Universe\+Unary\+Intension\+Constraint.\+hpp$>$}
+
+Inheritance diagram for Universe\+::Universe\+Unary\+Intension\+Constraint\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classUniverse_1_1UniverseUnaryIntensionConstraint}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUniverse_1_1UniverseUnaryIntensionConstraint_a8d6c1f986287ec4ab82f54b9523fd865}{Universe\+Unary\+Intension\+Constraint}} (\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}} op, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$child)
+\item 
+void \mbox{\hyperlink{classUniverse_1_1UniverseUnaryIntensionConstraint_a9c91488b16e825338d95d3699c11c46e}{accept}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor}{Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor}} $\ast$visitor) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1UniverseUnaryIntensionConstraint}{Universe\+Unary\+Intension\+Constraint}} is an intension constraint that applies an operator on a single intension constraint. 
+
+Definition at line 42 of file Universe\+Unary\+Intension\+Constraint.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1UniverseUnaryIntensionConstraint_a8d6c1f986287ec4ab82f54b9523fd865}\label{classUniverse_1_1UniverseUnaryIntensionConstraint_a8d6c1f986287ec4ab82f54b9523fd865}} 
+\index{Universe::UniverseUnaryIntensionConstraint@{Universe::UniverseUnaryIntensionConstraint}!UniverseUnaryIntensionConstraint@{UniverseUnaryIntensionConstraint}}
+\index{UniverseUnaryIntensionConstraint@{UniverseUnaryIntensionConstraint}!Universe::UniverseUnaryIntensionConstraint@{Universe::UniverseUnaryIntensionConstraint}}
+\doxysubsubsection{\texorpdfstring{UniverseUnaryIntensionConstraint()}{UniverseUnaryIntensionConstraint()}}
+{\footnotesize\ttfamily Universe\+Unary\+Intension\+Constraint\+::\+Universe\+Unary\+Intension\+Constraint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}}}]{op,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{child }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Creates a new \mbox{\hyperlink{classUniverse_1_1UniverseUnaryIntensionConstraint}{Universe\+Unary\+Intension\+Constraint}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & The operator applied by the constraint. \\
+\hline
+{\em child} & The intension constraint on which the operator is applied. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file Universe\+Unary\+Intension\+Constraint.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1UniverseUnaryIntensionConstraint_a9c91488b16e825338d95d3699c11c46e}\label{classUniverse_1_1UniverseUnaryIntensionConstraint_a9c91488b16e825338d95d3699c11c46e}} 
+\index{Universe::UniverseUnaryIntensionConstraint@{Universe::UniverseUnaryIntensionConstraint}!accept@{accept}}
+\index{accept@{accept}!Universe::UniverseUnaryIntensionConstraint@{Universe::UniverseUnaryIntensionConstraint}}
+\doxysubsubsection{\texorpdfstring{accept()}{accept()}}
+{\footnotesize\ttfamily void Universe\+Unary\+Intension\+Constraint\+::accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor}{Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor}} $\ast$}]{visitor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Accepts an \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraintVisitor}{IUniverse\+Intension\+Constraint\+Visitor}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em visitor} & The visitor to accept. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint_aaab7beea02c8cd75bd7a847f4268e8e4}{Universe\+::\+IUniverse\+Intension\+Constraint}}.
+
+
+
+Definition at line 42 of file Universe\+Unary\+Intension\+Constraint.\+cpp.
+
+
+
+References Universe\+::\+IUniverse\+Intension\+Constraint\+::accept(), and Universe\+::\+IUniverse\+Intension\+Constraint\+Visitor\+::visit().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{UniverseUnaryIntensionConstraint_8hpp}{Universe\+Unary\+Intension\+Constraint.\+hpp}}\item 
+\mbox{\hyperlink{UniverseUnaryIntensionConstraint_8cpp}{Universe\+Unary\+Intension\+Constraint.\+cpp}}\end{DoxyCompactItemize}

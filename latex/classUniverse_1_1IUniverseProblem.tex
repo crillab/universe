@@ -1,0 +1,91 @@
+\hypertarget{classUniverse_1_1IUniverseProblem}{}\doxysection{Universe\+::IUniverse\+Problem Class Reference}
+\label{classUniverse_1_1IUniverseProblem}\index{Universe::IUniverseProblem@{Universe::IUniverseProblem}}
+
+
+{\ttfamily \#include $<$IUniverse\+Problem.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseProblem_a32a73c3bf4a5a18f786189e39cc685c8}{$\sim$\+IUniverse\+Problem}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseProblem_a89e2c6c1108f76eb605cae507c2d3c61}{add\+Constraint}} (\mbox{\hyperlink{classUniverse_1_1IUniverseConstraint}{IUniverse\+Constraint}} $\ast$constraint)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseProblem_ac3c6aadfb99d74304dc6150fb2826a15}{add\+Variable}} (\mbox{\hyperlink{classUniverse_1_1IUniverseVariable}{IUniverse\+Variable}} $\ast$variable)=0
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseConstraint}{Universe\+::\+IUniverse\+Constraint}} $>$ \& \mbox{\hyperlink{classUniverse_1_1IUniverseProblem_a856c60852e93acab42b42641da463b59}{get\+Constraints}} () const =0
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseVariable}{Universe\+::\+IUniverse\+Variable}} $>$ \& \mbox{\hyperlink{classUniverse_1_1IUniverseProblem_a86cfea4f4c814c321bad14f69e81d332}{get\+Variables}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1IUniverseProblem}{IUniverse\+Problem}} class defines an interface for the problems to solve. 
+
+Definition at line 44 of file IUniverse\+Problem.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseProblem_a32a73c3bf4a5a18f786189e39cc685c8}\label{classUniverse_1_1IUniverseProblem_a32a73c3bf4a5a18f786189e39cc685c8}} 
+\index{Universe::IUniverseProblem@{Universe::IUniverseProblem}!````~IUniverseProblem@{$\sim$IUniverseProblem}}
+\index{````~IUniverseProblem@{$\sim$IUniverseProblem}!Universe::IUniverseProblem@{Universe::IUniverseProblem}}
+\doxysubsubsection{\texorpdfstring{$\sim$IUniverseProblem()}{~IUniverseProblem()}}
+{\footnotesize\ttfamily virtual Universe\+::\+IUniverse\+Problem\+::$\sim$\+IUniverse\+Problem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destroys this \mbox{\hyperlink{classUniverse_1_1IUniverseDomain}{IUniverse\+Domain}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseProblem_a89e2c6c1108f76eb605cae507c2d3c61}\label{classUniverse_1_1IUniverseProblem_a89e2c6c1108f76eb605cae507c2d3c61}} 
+\index{Universe::IUniverseProblem@{Universe::IUniverseProblem}!addConstraint@{addConstraint}}
+\index{addConstraint@{addConstraint}!Universe::IUniverseProblem@{Universe::IUniverseProblem}}
+\doxysubsubsection{\texorpdfstring{addConstraint()}{addConstraint()}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Problem\+::add\+Constraint (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseConstraint}{IUniverse\+Constraint}} $\ast$}]{constraint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds a constraint to this problem.
+
+
+\begin{DoxyParams}{Parameters}
+{\em constraint} & The constraint to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseProblem_ac3c6aadfb99d74304dc6150fb2826a15}\label{classUniverse_1_1IUniverseProblem_ac3c6aadfb99d74304dc6150fb2826a15}} 
+\index{Universe::IUniverseProblem@{Universe::IUniverseProblem}!addVariable@{addVariable}}
+\index{addVariable@{addVariable}!Universe::IUniverseProblem@{Universe::IUniverseProblem}}
+\doxysubsubsection{\texorpdfstring{addVariable()}{addVariable()}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Problem\+::add\+Variable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseVariable}{IUniverse\+Variable}} $\ast$}]{variable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds a variable to this problem.
+
+
+\begin{DoxyParams}{Parameters}
+{\em variable} & The variable to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseProblem_a856c60852e93acab42b42641da463b59}\label{classUniverse_1_1IUniverseProblem_a856c60852e93acab42b42641da463b59}} 
+\index{Universe::IUniverseProblem@{Universe::IUniverseProblem}!getConstraints@{getConstraints}}
+\index{getConstraints@{getConstraints}!Universe::IUniverseProblem@{Universe::IUniverseProblem}}
+\doxysubsubsection{\texorpdfstring{getConstraints()}{getConstraints()}}
+{\footnotesize\ttfamily virtual const std\+::vector$<$\mbox{\hyperlink{classUniverse_1_1IUniverseConstraint}{Universe\+::\+IUniverse\+Constraint}}$>$\& Universe\+::\+IUniverse\+Problem\+::get\+Constraints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gives the constraints in this problem.
+
+\begin{DoxyReturn}{Returns}
+The constraints in this problem. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseProblem_a86cfea4f4c814c321bad14f69e81d332}\label{classUniverse_1_1IUniverseProblem_a86cfea4f4c814c321bad14f69e81d332}} 
+\index{Universe::IUniverseProblem@{Universe::IUniverseProblem}!getVariables@{getVariables}}
+\index{getVariables@{getVariables}!Universe::IUniverseProblem@{Universe::IUniverseProblem}}
+\doxysubsubsection{\texorpdfstring{getVariables()}{getVariables()}}
+{\footnotesize\ttfamily virtual const std\+::vector$<$\mbox{\hyperlink{classUniverse_1_1IUniverseVariable}{Universe\+::\+IUniverse\+Variable}}$>$\& Universe\+::\+IUniverse\+Problem\+::get\+Variables (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gives the variables in this problem.
+
+\begin{DoxyReturn}{Returns}
+The variables in this problem. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{IUniverseProblem_8hpp}{IUniverse\+Problem.\+hpp}}\end{DoxyCompactItemize}

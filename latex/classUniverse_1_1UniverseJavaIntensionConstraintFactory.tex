@@ -1,0 +1,225 @@
+\hypertarget{classUniverse_1_1UniverseJavaIntensionConstraintFactory}{}\doxysection{Universe\+::Universe\+Java\+Intension\+Constraint\+Factory Class Reference}
+\label{classUniverse_1_1UniverseJavaIntensionConstraintFactory}\index{Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}}
+
+
+{\ttfamily \#include $<$Universe\+Java\+Intension\+Constraint\+Factory.\+hpp$>$}
+
+Inheritance diagram for Universe\+::Universe\+Java\+Intension\+Constraint\+Factory\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUniverse_1_1UniverseJavaIntensionConstraintFactory}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_a3ca65e2039799a9296dce9e3084ca7ec}{binary}} (\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}} op, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$left, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$right) override
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_afe409f4a93bb7e77443ec3e27e78d38c}{constant}} (const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&value) override
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_ada15bee0e2df40558be7f26d43af7435}{constant}} (long value) override
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_a49ae57f63c089d281be67fd3a8d4446d}{ite}} (\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$condition, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$if\+True, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$if\+False) override
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_aada709ca789a7507480951aab620ae7d}{nary}} (\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}} op, std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$ constraints) override
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_aeeb376901919d4ffd26cc93bcba3bb93}{unary}} (\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}} op, \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$constraint) override
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ \mbox{\hyperlink{classUniverse_1_1UniverseJavaIntensionConstraintFactory_a6aecac5059faddd545d6204642dca0da}{variable}} (std\+::string id) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1UniverseIntensionConstraintFactory}{Universe\+Intension\+Constraint\+Factory}} makes easier the construction of Java intension constraints from the solver\textquotesingle{}s API, by providing a functional notation similar to that used to define the constraints using XCSP3. 
+
+Definition at line 46 of file Universe\+Java\+Intension\+Constraint\+Factory.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaIntensionConstraintFactory_a3ca65e2039799a9296dce9e3084ca7ec}\label{classUniverse_1_1UniverseJavaIntensionConstraintFactory_a3ca65e2039799a9296dce9e3084ca7ec}} 
+\index{Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}!binary@{binary}}
+\index{binary@{binary}!Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{binary()}{binary()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Universe\+Java\+Intension\+Constraint\+Factory\+::binary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}}}]{op,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{left,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{right }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates a new binary intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & The operator applied by the constraint. \\
+\hline
+{\em left} & The left constraint on which the operator is applied. \\
+\hline
+{\em right} & The right constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_acb172651dc56c3c32cdfd06d9e96bb24}{Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory}}.
+
+
+
+Definition at line 90 of file Universe\+Java\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaIntensionConstraintFactory_afe409f4a93bb7e77443ec3e27e78d38c}\label{classUniverse_1_1UniverseJavaIntensionConstraintFactory_afe409f4a93bb7e77443ec3e27e78d38c}} 
+\index{Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}!constant@{constant}}
+\index{constant@{constant}!Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{constant()}{constant()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Universe\+Java\+Intension\+Constraint\+Factory\+::constant (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Wraps a constant value in its representation as an intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value of the constant.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a50388749409f1ea10db267f354ab0b89}{Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory}}.
+
+
+
+Definition at line 63 of file Universe\+Java\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaIntensionConstraintFactory_ada15bee0e2df40558be7f26d43af7435}\label{classUniverse_1_1UniverseJavaIntensionConstraintFactory_ada15bee0e2df40558be7f26d43af7435}} 
+\index{Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}!constant@{constant}}
+\index{constant@{constant}!Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{constant()}{constant()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Universe\+Java\+Intension\+Constraint\+Factory\+::constant (\begin{DoxyParamCaption}\item[{long}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Wraps a constant value in its representation as an intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The value of the constant.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a0c49cc89e66f4d17131f00beb7cd2730}{Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory}}.
+
+
+
+Definition at line 56 of file Universe\+Java\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaIntensionConstraintFactory_a49ae57f63c089d281be67fd3a8d4446d}\label{classUniverse_1_1UniverseJavaIntensionConstraintFactory_a49ae57f63c089d281be67fd3a8d4446d}} 
+\index{Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}!ite@{ite}}
+\index{ite@{ite}!Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{ite()}{ite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Universe\+Java\+Intension\+Constraint\+Factory\+::ite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{condition,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{if\+True,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{if\+False }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates an intension constraint applying the if-\/then-\/else operator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em condition} & The condition of the constraint. \\
+\hline
+{\em if\+True} & The intension constraint corresponding to the case in which the condition evaluates to true. \\
+\hline
+{\em if\+False} & The intension constraint corresponding to the case in which the condition evaluates to false.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a570f45021700e38b07670f9f18ce26c1}{Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory}}.
+
+
+
+Definition at line 118 of file Universe\+Java\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaIntensionConstraintFactory_aada709ca789a7507480951aab620ae7d}\label{classUniverse_1_1UniverseJavaIntensionConstraintFactory_aada709ca789a7507480951aab620ae7d}} 
+\index{Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}!nary@{nary}}
+\index{nary@{nary}!Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{nary()}{nary()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Universe\+Java\+Intension\+Constraint\+Factory\+::nary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}}}]{op,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$ $>$}]{constraints }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates a new n-\/ary intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & The operator applied by the constraint. \\
+\hline
+{\em constraints} & The constraints on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a69b06db401288081dc5c7cc99732d411}{Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory}}.
+
+
+
+Definition at line 102 of file Universe\+Java\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaIntensionConstraintFactory_aeeb376901919d4ffd26cc93bcba3bb93}\label{classUniverse_1_1UniverseJavaIntensionConstraintFactory_aeeb376901919d4ffd26cc93bcba3bb93}} 
+\index{Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}!unary@{unary}}
+\index{unary@{unary}!Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{unary()}{unary()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Universe\+Java\+Intension\+Constraint\+Factory\+::unary (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}}}]{op,  }\item[{\mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{Universe\+::\+IUniverse\+Intension\+Constraint}} $\ast$}]{constraint }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Creates a new unary intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em op} & The operator applied by the constraint. \\
+\hline
+{\em constraint} & The constraint on which the operator is applied.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a2c0db6bd032d94cf709ae781bffeebba}{Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory}}.
+
+
+
+Definition at line 79 of file Universe\+Java\+Intension\+Constraint\+Factory.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaIntensionConstraintFactory_a6aecac5059faddd545d6204642dca0da}\label{classUniverse_1_1UniverseJavaIntensionConstraintFactory_a6aecac5059faddd545d6204642dca0da}} 
+\index{Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}!variable@{variable}}
+\index{variable@{variable}!Universe::UniverseJavaIntensionConstraintFactory@{Universe::UniverseJavaIntensionConstraintFactory}}
+\doxysubsubsection{\texorpdfstring{variable()}{variable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseIntensionConstraint}{IUniverse\+Intension\+Constraint}} $\ast$ Universe\+Java\+Intension\+Constraint\+Factory\+::variable (\begin{DoxyParamCaption}\item[{std\+::string}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Wraps a variable in its representation as an intension constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The identifier of the variable.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created intension constraint. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1AbstractUniverseIntensionConstraintFactory_a9d37996b8c0499ddb9ce4f4fe6faf5a6}{Universe\+::\+Abstract\+Universe\+Intension\+Constraint\+Factory}}.
+
+
+
+Definition at line 71 of file Universe\+Java\+Intension\+Constraint\+Factory.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{UniverseJavaIntensionConstraintFactory_8hpp}{Universe\+Java\+Intension\+Constraint\+Factory.\+hpp}}\item 
+\mbox{\hyperlink{UniverseJavaIntensionConstraintFactory_8cpp}{Universe\+Java\+Intension\+Constraint\+Factory.\+cpp}}\end{DoxyCompactItemize}

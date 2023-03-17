@@ -1,0 +1,234 @@
+\hypertarget{classUniverse_1_1JavaMapOfString}{}\doxysection{Universe\+::Java\+Map\+Of\+String Class Reference}
+\label{classUniverse_1_1JavaMapOfString}\index{Universe::JavaMapOfString@{Universe::JavaMapOfString}}
+
+
+{\ttfamily \#include $<$Java\+Map\+Of\+String.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename V $>$ }\\std\+::map$<$ std\+::string, V $>$ \mbox{\hyperlink{classUniverse_1_1JavaMapOfString_a443426dc574a2f35a45eb58048c00226}{as\+Map}} (std\+::function$<$ V(easyjni\+::\+Java\+Object)$>$ fct)
+\item 
+void \mbox{\hyperlink{classUniverse_1_1JavaMapOfString_af2de863352c7963b23fad35bf6ecb294}{clear}} ()
+\item 
+easyjni\+::\+Java\+Object \mbox{\hyperlink{classUniverse_1_1JavaMapOfString_ad8022942c9b49d9100e96c9b4ad36e49}{get}} (const std\+::string \&key)
+\item 
+easyjni\+::\+Java\+Object \mbox{\hyperlink{classUniverse_1_1JavaMapOfString_ab0b44d7338d3a4d234e0915d902a3672}{operator$\ast$}} ()
+\item 
+void \mbox{\hyperlink{classUniverse_1_1JavaMapOfString_a8534dfcd5859e00c67e19e1f8289107a}{put}} (const std\+::string \&key, easyjni\+::\+Java\+Object value)
+\item 
+int \mbox{\hyperlink{classUniverse_1_1JavaMapOfString_a6e3c6d28a7f374a0acc2e27132bc384b}{size}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename V $>$ }\\static \mbox{\hyperlink{classUniverse_1_1JavaMapOfString}{Universe\+::\+Java\+Map\+Of\+String}} \mbox{\hyperlink{classUniverse_1_1JavaMapOfString_a30cc2d51ad86bd39e10d4dc8274274cc}{from}} (const std\+::map$<$ std\+::string, V $>$ \&map, std\+::function$<$ easyjni\+::\+Java\+Object(V)$>$ fct)
+\item 
+static \mbox{\hyperlink{classUniverse_1_1JavaMapOfString}{Universe\+::\+Java\+Map\+Of\+String}} \mbox{\hyperlink{classUniverse_1_1JavaMapOfString_aab8655e01b4a360f548730c831d7267c}{new\+Instance}} ()
+\item 
+static \mbox{\hyperlink{classUniverse_1_1JavaMapOfString}{Universe\+::\+Java\+Map\+Of\+String}} \mbox{\hyperlink{classUniverse_1_1JavaMapOfString_aec4d3beb2ce571fb3033a030be70b192}{of}} (easyjni\+::\+Java\+Object j\+Map)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1JavaMapOfString}{Java\+Map\+Of\+String}} class is a wrapper allowing to easily handle Java objects that are instances of Map (and in particular of Hash\+Map), using strings as keys. 
+
+Definition at line 49 of file Java\+Map\+Of\+String.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1JavaMapOfString_a443426dc574a2f35a45eb58048c00226}\label{classUniverse_1_1JavaMapOfString_a443426dc574a2f35a45eb58048c00226}} 
+\index{Universe::JavaMapOfString@{Universe::JavaMapOfString}!asMap@{asMap}}
+\index{asMap@{asMap}!Universe::JavaMapOfString@{Universe::JavaMapOfString}}
+\doxysubsubsection{\texorpdfstring{asMap()}{asMap()}}
+{\footnotesize\ttfamily template$<$typename V $>$ \\
+std\+::map$<$std\+::string, V$>$ Universe\+::\+Java\+Map\+Of\+String\+::as\+Map (\begin{DoxyParamCaption}\item[{std\+::function$<$ V(easyjni\+::\+Java\+Object)$>$}]{fct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gives the representation of this \mbox{\hyperlink{classUniverse_1_1JavaMapOfString}{Java\+Map\+Of\+String}} as a C++ map.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em V} & The type of the values in the output map.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fct} & The function to apply to transform each Java object in this map to an instance of V.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The map representation of this Java object. 
+\end{DoxyReturn}
+
+
+Definition at line 174 of file Java\+Map\+Of\+String.\+hpp.
+
+
+
+References Universe\+::\+Java\+Iterator\+::for\+Iterable(), and Universe\+::\+Java\+Iterator\+::has\+Next().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaMapOfString_af2de863352c7963b23fad35bf6ecb294}\label{classUniverse_1_1JavaMapOfString_af2de863352c7963b23fad35bf6ecb294}} 
+\index{Universe::JavaMapOfString@{Universe::JavaMapOfString}!clear@{clear}}
+\index{clear@{clear}!Universe::JavaMapOfString@{Universe::JavaMapOfString}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Java\+Map\+Of\+String\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes all the elements from this map. 
+
+Definition at line 93 of file Java\+Map\+Of\+String.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1JavaMapOfString_a30cc2d51ad86bd39e10d4dc8274274cc}\label{classUniverse_1_1JavaMapOfString_a30cc2d51ad86bd39e10d4dc8274274cc}} 
+\index{Universe::JavaMapOfString@{Universe::JavaMapOfString}!from@{from}}
+\index{from@{from}!Universe::JavaMapOfString@{Universe::JavaMapOfString}}
+\doxysubsubsection{\texorpdfstring{from()}{from()}}
+{\footnotesize\ttfamily template$<$typename V $>$ \\
+static \mbox{\hyperlink{classUniverse_1_1JavaMapOfString}{Universe\+::\+Java\+Map\+Of\+String}} Universe\+::\+Java\+Map\+Of\+String\+::from (\begin{DoxyParamCaption}\item[{const std\+::map$<$ std\+::string, V $>$ \&}]{map,  }\item[{std\+::function$<$ easyjni\+::\+Java\+Object(V)$>$}]{fct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Creates a new \mbox{\hyperlink{classUniverse_1_1JavaMapOfString}{Java\+Map\+Of\+String}} from a C++ map.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em V} & The type of the values in the map.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em map} & The map to create a Java map from. \\
+\hline
+{\em fct} & The function to apply to transform each value in the map to a Java\+Object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created object. 
+\end{DoxyReturn}
+
+
+Definition at line 118 of file Java\+Map\+Of\+String.\+hpp.
+
+
+
+References new\+Instance(), and put().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaMapOfString_ad8022942c9b49d9100e96c9b4ad36e49}\label{classUniverse_1_1JavaMapOfString_ad8022942c9b49d9100e96c9b4ad36e49}} 
+\index{Universe::JavaMapOfString@{Universe::JavaMapOfString}!get@{get}}
+\index{get@{get}!Universe::JavaMapOfString@{Universe::JavaMapOfString}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily Java\+Object Java\+Map\+Of\+String\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+Gives the value associated with the given key in this map.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key of the value to get.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value associated with the given key. 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file Java\+Map\+Of\+String.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1JavaMapOfString_aab8655e01b4a360f548730c831d7267c}\label{classUniverse_1_1JavaMapOfString_aab8655e01b4a360f548730c831d7267c}} 
+\index{Universe::JavaMapOfString@{Universe::JavaMapOfString}!newInstance@{newInstance}}
+\index{newInstance@{newInstance}!Universe::JavaMapOfString@{Universe::JavaMapOfString}}
+\doxysubsubsection{\texorpdfstring{newInstance()}{newInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1JavaMapOfString}{Java\+Map\+Of\+String}} Java\+Map\+Of\+String\+::new\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a new Java object that is an instance of Hash\+Map.
+
+\begin{DoxyReturn}{Returns}
+The created object. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Java\+Map\+Of\+String.\+cpp.
+
+
+
+Referenced by from().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaMapOfString_aec4d3beb2ce571fb3033a030be70b192}\label{classUniverse_1_1JavaMapOfString_aec4d3beb2ce571fb3033a030be70b192}} 
+\index{Universe::JavaMapOfString@{Universe::JavaMapOfString}!of@{of}}
+\index{of@{of}!Universe::JavaMapOfString@{Universe::JavaMapOfString}}
+\doxysubsubsection{\texorpdfstring{of()}{of()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1JavaMapOfString}{Java\+Map\+Of\+String}} Java\+Map\+Of\+String\+::of (\begin{DoxyParamCaption}\item[{easyjni\+::\+Java\+Object}]{j\+Map }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a new \mbox{\hyperlink{classUniverse_1_1JavaMapOfString}{Java\+Map\+Of\+String}} from an existing Java object that is an instance of Map.
+
+
+\begin{DoxyParams}{Parameters}
+{\em j\+Map} & The existing Java object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The wrapper for the object. 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file Java\+Map\+Of\+String.\+cpp.
+
+
+
+Referenced by Universe\+::\+Universe\+Java\+Solver\+::get\+Variables\+Mapping(), and Universe\+::\+Universe\+Java\+Solver\+::map\+Solution().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaMapOfString_ab0b44d7338d3a4d234e0915d902a3672}\label{classUniverse_1_1JavaMapOfString_ab0b44d7338d3a4d234e0915d902a3672}} 
+\index{Universe::JavaMapOfString@{Universe::JavaMapOfString}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Universe::JavaMapOfString@{Universe::JavaMapOfString}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily Java\+Object Java\+Map\+Of\+String\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gives the Java object that is wrapped in this \mbox{\hyperlink{classUniverse_1_1JavaMapOfString}{Java\+Map\+Of\+String}}.
+
+\begin{DoxyReturn}{Returns}
+The wrapped Java object. 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file Java\+Map\+Of\+String.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1JavaMapOfString_a8534dfcd5859e00c67e19e1f8289107a}\label{classUniverse_1_1JavaMapOfString_a8534dfcd5859e00c67e19e1f8289107a}} 
+\index{Universe::JavaMapOfString@{Universe::JavaMapOfString}!put@{put}}
+\index{put@{put}!Universe::JavaMapOfString@{Universe::JavaMapOfString}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily void Java\+Map\+Of\+String\+::put (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{easyjni\+::\+Java\+Object}]{value }\end{DoxyParamCaption})}
+
+Puts a key-\/value pair in this map.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to put in this map. \\
+\hline
+{\em value} & The value associated with the key. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 79 of file Java\+Map\+Of\+String.\+cpp.
+
+
+
+Referenced by from().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaMapOfString_a6e3c6d28a7f374a0acc2e27132bc384b}\label{classUniverse_1_1JavaMapOfString_a6e3c6d28a7f374a0acc2e27132bc384b}} 
+\index{Universe::JavaMapOfString@{Universe::JavaMapOfString}!size@{size}}
+\index{size@{size}!Universe::JavaMapOfString@{Universe::JavaMapOfString}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Java\+Map\+Of\+String\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gives the size of this map, measured as its number of key-\/value pairs.
+
+\begin{DoxyReturn}{Returns}
+The size of this map. 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file Java\+Map\+Of\+String.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{JavaMapOfString_8hpp}{Java\+Map\+Of\+String.\+hpp}}\item 
+\mbox{\hyperlink{JavaMapOfString_8cpp}{Java\+Map\+Of\+String.\+cpp}}\end{DoxyCompactItemize}

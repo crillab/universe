@@ -1,0 +1,109 @@
+\hypertarget{classUniverse_1_1IUniverseDomain}{}\doxysection{Universe\+::IUniverse\+Domain Class Reference}
+\label{classUniverse_1_1IUniverseDomain}\index{Universe::IUniverseDomain@{Universe::IUniverseDomain}}
+
+
+{\ttfamily \#include $<$IUniverse\+Domain.\+hpp$>$}
+
+Inheritance diagram for Universe\+::IUniverse\+Domain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUniverse_1_1IUniverseDomain}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseDomain_a067f30005a11449df4bb82d4cbee40a4}{$\sim$\+IUniverse\+Domain}} ()=default
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \& \mbox{\hyperlink{classUniverse_1_1IUniverseDomain_a593bc2532cffaa8d1fb12ca66c338c31}{get\+Values}} ()=0
+\item 
+virtual \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \mbox{\hyperlink{classUniverse_1_1IUniverseDomain_ab63d75ca3f820a859cfb8fa1f7ce07e0}{max}} () const =0
+\item 
+virtual \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \mbox{\hyperlink{classUniverse_1_1IUniverseDomain_a68715d4efdab5b3afa72b3f2529f8ba1}{min}} () const =0
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{classUniverse_1_1IUniverseDomain_a40b9efe44cd07e16de00cc51304dbff4}{size}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1IUniverseDomain}{IUniverse\+Domain}} class defines an interface for the domain of the variables in a problem. 
+
+Definition at line 44 of file IUniverse\+Domain.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseDomain_a067f30005a11449df4bb82d4cbee40a4}\label{classUniverse_1_1IUniverseDomain_a067f30005a11449df4bb82d4cbee40a4}} 
+\index{Universe::IUniverseDomain@{Universe::IUniverseDomain}!````~IUniverseDomain@{$\sim$IUniverseDomain}}
+\index{````~IUniverseDomain@{$\sim$IUniverseDomain}!Universe::IUniverseDomain@{Universe::IUniverseDomain}}
+\doxysubsubsection{\texorpdfstring{$\sim$IUniverseDomain()}{~IUniverseDomain()}}
+{\footnotesize\ttfamily virtual Universe\+::\+IUniverse\+Domain\+::$\sim$\+IUniverse\+Domain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destroys this \mbox{\hyperlink{classUniverse_1_1IUniverseDomain}{IUniverse\+Domain}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseDomain_a593bc2532cffaa8d1fb12ca66c338c31}\label{classUniverse_1_1IUniverseDomain_a593bc2532cffaa8d1fb12ca66c338c31}} 
+\index{Universe::IUniverseDomain@{Universe::IUniverseDomain}!getValues@{getValues}}
+\index{getValues@{getValues}!Universe::IUniverseDomain@{Universe::IUniverseDomain}}
+\doxysubsubsection{\texorpdfstring{getValues()}{getValues()}}
+{\footnotesize\ttfamily virtual const std\+::vector$<$\mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}}$>$\& Universe\+::\+IUniverse\+Domain\+::get\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gives the values in this domain.
+
+\begin{DoxyReturn}{Returns}
+The vector of the values in this domain. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain_ac1aa0dd507a1505e0c35c8ce2d2f856f}{Universe\+::\+Universe\+Java\+Domain}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseDomain_ab63d75ca3f820a859cfb8fa1f7ce07e0}\label{classUniverse_1_1IUniverseDomain_ab63d75ca3f820a859cfb8fa1f7ce07e0}} 
+\index{Universe::IUniverseDomain@{Universe::IUniverseDomain}!max@{max}}
+\index{max@{max}!Universe::IUniverseDomain@{Universe::IUniverseDomain}}
+\doxysubsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} Universe\+::\+IUniverse\+Domain\+::max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gives the maximum value in this domain.
+
+\begin{DoxyReturn}{Returns}
+The maximum value in this domain. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain_aa62cbcc16f8d9a952c0c971c6712d6d1}{Universe\+::\+Universe\+Java\+Domain}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseDomain_a68715d4efdab5b3afa72b3f2529f8ba1}\label{classUniverse_1_1IUniverseDomain_a68715d4efdab5b3afa72b3f2529f8ba1}} 
+\index{Universe::IUniverseDomain@{Universe::IUniverseDomain}!min@{min}}
+\index{min@{min}!Universe::IUniverseDomain@{Universe::IUniverseDomain}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} Universe\+::\+IUniverse\+Domain\+::min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gives the minimum value in this domain.
+
+\begin{DoxyReturn}{Returns}
+The minimum value in this domain. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain_a8d8c7de04eea4f31515d93d0d234c353}{Universe\+::\+Universe\+Java\+Domain}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseDomain_a40b9efe44cd07e16de00cc51304dbff4}\label{classUniverse_1_1IUniverseDomain_a40b9efe44cd07e16de00cc51304dbff4}} 
+\index{Universe::IUniverseDomain@{Universe::IUniverseDomain}!size@{size}}
+\index{size@{size}!Universe::IUniverseDomain@{Universe::IUniverseDomain}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily virtual size\+\_\+t Universe\+::\+IUniverse\+Domain\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gives the size of this domain, measured in number of values.
+
+\begin{DoxyReturn}{Returns}
+The size of this domain. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain_adbda50bba147028a5271a2c560ea605f}{Universe\+::\+Universe\+Java\+Domain}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{IUniverseDomain_8hpp}{IUniverse\+Domain.\+hpp}}\end{DoxyCompactItemize}

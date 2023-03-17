@@ -1,0 +1,184 @@
+\hypertarget{classUniverse_1_1UniverseJavaDomain}{}\doxysection{Universe\+::Universe\+Java\+Domain Class Reference}
+\label{classUniverse_1_1UniverseJavaDomain}\index{Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}}
+
+
+{\ttfamily \#include $<$Universe\+Java\+Domain.\+hpp$>$}
+
+Inheritance diagram for Universe\+::Universe\+Java\+Domain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUniverse_1_1UniverseJavaDomain}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain_a8a303ce56f04ec579acc4588d928582e}{$\sim$\+Universe\+Java\+Domain}} () override=default
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \& \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain_ac1aa0dd507a1505e0c35c8ce2d2f856f}{get\+Values}} () override
+\item 
+\mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain_aa62cbcc16f8d9a952c0c971c6712d6d1}{max}} () const override
+\item 
+\mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain_a8d8c7de04eea4f31515d93d0d234c353}{min}} () const override
+\item 
+easyjni\+::\+Java\+Object \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain_a79c9458cbe97afafcd4bbb3c6ab7700e}{operator$\ast$}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain_adbda50bba147028a5271a2c560ea605f}{size}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classUniverse_1_1IUniverseDomain}{Universe\+::\+IUniverse\+Domain}} $\ast$ \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain_a747b1b5931e60d9e72288fc7d8ff5848}{of}} (easyjni\+::\+Java\+Object domain)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain}{Universe\+Java\+Domain}} class defines an adapter for an \mbox{\hyperlink{classUniverse_1_1IUniverseDomain}{IUniverse\+Domain}} written in Java (and implementing the interface provided by JUniverse). 
+
+Definition at line 45 of file Universe\+Java\+Domain.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaDomain_a8a303ce56f04ec579acc4588d928582e}\label{classUniverse_1_1UniverseJavaDomain_a8a303ce56f04ec579acc4588d928582e}} 
+\index{Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}!````~UniverseJavaDomain@{$\sim$UniverseJavaDomain}}
+\index{````~UniverseJavaDomain@{$\sim$UniverseJavaDomain}!Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}}
+\doxysubsubsection{\texorpdfstring{$\sim$UniverseJavaDomain()}{~UniverseJavaDomain()}}
+{\footnotesize\ttfamily Universe\+::\+Universe\+Java\+Domain\+::$\sim$\+Universe\+Java\+Domain (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Destroys this \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain}{Universe\+Java\+Domain}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaDomain_ac1aa0dd507a1505e0c35c8ce2d2f856f}\label{classUniverse_1_1UniverseJavaDomain_ac1aa0dd507a1505e0c35c8ce2d2f856f}} 
+\index{Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}!getValues@{getValues}}
+\index{getValues@{getValues}!Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}}
+\doxysubsubsection{\texorpdfstring{getValues()}{getValues()}}
+{\footnotesize\ttfamily const vector$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \& Universe\+Java\+Domain\+::get\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Gives the values in this domain.
+
+\begin{DoxyReturn}{Returns}
+The vector of the values in this domain. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IUniverseDomain_a593bc2532cffaa8d1fb12ca66c338c31}{Universe\+::\+IUniverse\+Domain}}.
+
+
+
+Definition at line 66 of file Universe\+Java\+Domain.\+cpp.
+
+
+
+References Universe\+::\+Java\+Iterator\+::for\+Iterable(), Universe\+::\+Java\+Iterator\+::has\+Next(), and Universe\+::\+Java\+Big\+Integer\+::of().
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaDomain_aa62cbcc16f8d9a952c0c971c6712d6d1}\label{classUniverse_1_1UniverseJavaDomain_aa62cbcc16f8d9a952c0c971c6712d6d1}} 
+\index{Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}!max@{max}}
+\index{max@{max}!Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}}
+\doxysubsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Big\+Integer}} Universe\+Java\+Domain\+::max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Gives the maximum value in this domain.
+
+\begin{DoxyReturn}{Returns}
+The maximum value in this domain. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IUniverseDomain_ab63d75ca3f820a859cfb8fa1f7ce07e0}{Universe\+::\+IUniverse\+Domain}}.
+
+
+
+Definition at line 89 of file Universe\+Java\+Domain.\+cpp.
+
+
+
+References Universe\+::\+Java\+Big\+Integer\+::as\+Big\+Integer(), and Universe\+::\+Java\+Big\+Integer\+::of().
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaDomain_a8d8c7de04eea4f31515d93d0d234c353}\label{classUniverse_1_1UniverseJavaDomain_a8d8c7de04eea4f31515d93d0d234c353}} 
+\index{Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}!min@{min}}
+\index{min@{min}!Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Big\+Integer}} Universe\+Java\+Domain\+::min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Gives the minimum value in this domain.
+
+\begin{DoxyReturn}{Returns}
+The minimum value in this domain. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IUniverseDomain_a68715d4efdab5b3afa72b3f2529f8ba1}{Universe\+::\+IUniverse\+Domain}}.
+
+
+
+Definition at line 83 of file Universe\+Java\+Domain.\+cpp.
+
+
+
+References Universe\+::\+Java\+Big\+Integer\+::as\+Big\+Integer(), and Universe\+::\+Java\+Big\+Integer\+::of().
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaDomain_a747b1b5931e60d9e72288fc7d8ff5848}\label{classUniverse_1_1UniverseJavaDomain_a747b1b5931e60d9e72288fc7d8ff5848}} 
+\index{Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}!of@{of}}
+\index{of@{of}!Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}}
+\doxysubsubsection{\texorpdfstring{of()}{of()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IUniverseDomain}{IUniverse\+Domain}} $\ast$ Universe\+Java\+Domain\+::of (\begin{DoxyParamCaption}\item[{easyjni\+::\+Java\+Object}]{domain }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a new \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain}{Universe\+Java\+Domain}} from an existing Java object that is an instance of \mbox{\hyperlink{classUniverse_1_1IUniverseDomain}{IUniverse\+Domain}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em variable} & The existing Java object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The wrapper for the object. 
+\end{DoxyReturn}
+
+
+Definition at line 57 of file Universe\+Java\+Domain.\+cpp.
+
+
+
+Referenced by Universe\+::\+Universe\+Java\+Variable\+::get\+Domain().
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaDomain_a79c9458cbe97afafcd4bbb3c6ab7700e}\label{classUniverse_1_1UniverseJavaDomain_a79c9458cbe97afafcd4bbb3c6ab7700e}} 
+\index{Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily Java\+Object Universe\+Java\+Domain\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gives the Java object that is wrapped in this \mbox{\hyperlink{classUniverse_1_1UniverseJavaDomain}{Universe\+Java\+Domain}}.
+
+\begin{DoxyReturn}{Returns}
+The wrapped Java object. 
+\end{DoxyReturn}
+
+
+Definition at line 62 of file Universe\+Java\+Domain.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1UniverseJavaDomain_adbda50bba147028a5271a2c560ea605f}\label{classUniverse_1_1UniverseJavaDomain_adbda50bba147028a5271a2c560ea605f}} 
+\index{Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}!size@{size}}
+\index{size@{size}!Universe::UniverseJavaDomain@{Universe::UniverseJavaDomain}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t Universe\+Java\+Domain\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Gives the size of this domain, measured in number of values.
+
+\begin{DoxyReturn}{Returns}
+The size of this domain. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IUniverseDomain_a40b9efe44cd07e16de00cc51304dbff4}{Universe\+::\+IUniverse\+Domain}}.
+
+
+
+Definition at line 95 of file Universe\+Java\+Domain.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{UniverseJavaDomain_8hpp}{Universe\+Java\+Domain.\+hpp}}\item 
+\mbox{\hyperlink{UniverseJavaDomain_8cpp}{Universe\+Java\+Domain.\+cpp}}\end{DoxyCompactItemize}

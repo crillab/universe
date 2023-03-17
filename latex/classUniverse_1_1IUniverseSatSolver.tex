@@ -1,0 +1,142 @@
+\hypertarget{classUniverse_1_1IUniverseSatSolver}{}\doxysection{Universe\+::IUniverse\+Sat\+Solver Class Reference}
+\label{classUniverse_1_1IUniverseSatSolver}\index{Universe::IUniverseSatSolver@{Universe::IUniverseSatSolver}}
+
+
+{\ttfamily \#include $<$IUniverse\+Sat\+Solver.\+hpp$>$}
+
+Inheritance diagram for Universe\+::IUniverse\+Sat\+Solver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.345281cm]{classUniverse_1_1IUniverseSatSolver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniverseSatSolver_a8dd797309253c2e30dba110afd7dfdc0}{$\sim$\+IUniverse\+Sat\+Solver}} () override=default
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseSatSolver_a81c2808154e5227c4805fe208bc32bce}{add\+All\+Clauses}} (const std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&clauses)
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniverseSatSolver_a753a5f62b0f0bcdebdea27ccaa113d29}{add\+Clause}} (const std\+::vector$<$ int $>$ \&literals)=0
+\item 
+virtual \mbox{\hyperlink{UniverseSolverResult_8hpp_a5c0769554b7e93999912fdfb7b5093c4}{Universe\+::\+Universe\+Solver\+Result}} \mbox{\hyperlink{classUniverse_1_1IUniverseSatSolver_aa42e68b5bec9cebfe2db2bf878584c7f}{solve}} (const std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1UniverseAssumption}{Universe\+::\+Universe\+Assumption}}$<$ bool $>$$>$ \&assumptions)=0
+\item 
+\mbox{\hyperlink{UniverseSolverResult_8hpp_a5c0769554b7e93999912fdfb7b5093c4}{Universe\+::\+Universe\+Solver\+Result}} \mbox{\hyperlink{classUniverse_1_1IUniverseSatSolver_a972c62945b69288a9e2c3e6cf3ab6b58}{solve}} (const std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1UniverseAssumption}{Universe\+::\+Universe\+Assumption}}$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$$>$ \&assumptions) override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1IUniverseSatSolver}{IUniverse\+Sat\+Solver}} interface defines the contract for SAT solvers. 
+
+Definition at line 41 of file IUniverse\+Sat\+Solver.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSatSolver_a8dd797309253c2e30dba110afd7dfdc0}\label{classUniverse_1_1IUniverseSatSolver_a8dd797309253c2e30dba110afd7dfdc0}} 
+\index{Universe::IUniverseSatSolver@{Universe::IUniverseSatSolver}!````~IUniverseSatSolver@{$\sim$IUniverseSatSolver}}
+\index{````~IUniverseSatSolver@{$\sim$IUniverseSatSolver}!Universe::IUniverseSatSolver@{Universe::IUniverseSatSolver}}
+\doxysubsubsection{\texorpdfstring{$\sim$IUniverseSatSolver()}{~IUniverseSatSolver()}}
+{\footnotesize\ttfamily Universe\+::\+IUniverse\+Sat\+Solver\+::$\sim$\+IUniverse\+Sat\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Destroys this \mbox{\hyperlink{classUniverse_1_1IUniverseSatSolver}{IUniverse\+Sat\+Solver}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSatSolver_a81c2808154e5227c4805fe208bc32bce}\label{classUniverse_1_1IUniverseSatSolver_a81c2808154e5227c4805fe208bc32bce}} 
+\index{Universe::IUniverseSatSolver@{Universe::IUniverseSatSolver}!addAllClauses@{addAllClauses}}
+\index{addAllClauses@{addAllClauses}!Universe::IUniverseSatSolver@{Universe::IUniverseSatSolver}}
+\doxysubsubsection{\texorpdfstring{addAllClauses()}{addAllClauses()}}
+{\footnotesize\ttfamily void IUniverse\+Sat\+Solver\+::add\+All\+Clauses (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&}]{clauses }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds to this solver several clauses from a set of sets of literals. This is convenient to create in a single call all the clauses.
+
+
+\begin{DoxyParams}{Parameters}
+{\em clauses} & A vector of sets of literals in the DIMACS format. The vector can be reused since the solver is not supposed to keep a reference to that vector.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classUniverse_1_1UniverseContradictionException}{Universe\+Contradiction\+Exception}}} & If one of the vectors of literals is empty or contains only falsified literals after unit propagation. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 38 of file IUniverse\+Sat\+Solver.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSatSolver_a753a5f62b0f0bcdebdea27ccaa113d29}\label{classUniverse_1_1IUniverseSatSolver_a753a5f62b0f0bcdebdea27ccaa113d29}} 
+\index{Universe::IUniverseSatSolver@{Universe::IUniverseSatSolver}!addClause@{addClause}}
+\index{addClause@{addClause}!Universe::IUniverseSatSolver@{Universe::IUniverseSatSolver}}
+\doxysubsubsection{\texorpdfstring{addClause()}{addClause()}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Sat\+Solver\+::add\+Clause (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{literals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds to this solver a clause from a set of literals. The literals are represented by non-\/zero integers such that opposite literals are represented by opposite values (following the classical DIMACS way of representing literals).
+
+
+\begin{DoxyParams}{Parameters}
+{\em literals} & A set of literals.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classUniverse_1_1UniverseContradictionException}{Universe\+Contradiction\+Exception}}} & If the vector of literals is empty or if it contains only falsified literals after unit propagation. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSatSolver_a41fce385484f7b4cf8f1643b25e2619e}{Universe\+::\+Universe\+Java\+Sat\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSatSolver_aa42e68b5bec9cebfe2db2bf878584c7f}\label{classUniverse_1_1IUniverseSatSolver_aa42e68b5bec9cebfe2db2bf878584c7f}} 
+\index{Universe::IUniverseSatSolver@{Universe::IUniverseSatSolver}!solve@{solve}}
+\index{solve@{solve}!Universe::IUniverseSatSolver@{Universe::IUniverseSatSolver}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{UniverseSolverResult_8hpp_a5c0769554b7e93999912fdfb7b5093c4}{Universe\+::\+Universe\+Solver\+Result}} Universe\+::\+IUniverse\+Sat\+Solver\+::solve (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1UniverseAssumption}{Universe\+::\+Universe\+Assumption}}$<$ bool $>$$>$ \&}]{assumptions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Solves the problem associated to this solver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em assumptions} & The assumptions to consider when solving.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The outcome of the search conducted by the solver. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSatSolver_ae57719fca6c87fa97f4a9142f0e4447a}{Universe\+::\+Universe\+Java\+Sat\+Solver}}, \mbox{\hyperlink{classUniverse_1_1UniverseJavaPseudoBooleanSolver_aa01de39ca9fd6e1315667cf5033c3e48}{Universe\+::\+Universe\+Java\+Pseudo\+Boolean\+Solver}}, and \mbox{\hyperlink{classUniverse_1_1UniverseJavaCspSolver_ab1deab7b17500c9559186fe45bf8273e}{Universe\+::\+Universe\+Java\+Csp\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniverseSatSolver_a972c62945b69288a9e2c3e6cf3ab6b58}\label{classUniverse_1_1IUniverseSatSolver_a972c62945b69288a9e2c3e6cf3ab6b58}} 
+\index{Universe::IUniverseSatSolver@{Universe::IUniverseSatSolver}!solve@{solve}}
+\index{solve@{solve}!Universe::IUniverseSatSolver@{Universe::IUniverseSatSolver}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{UniverseSolverResult_8hpp_a5c0769554b7e93999912fdfb7b5093c4}{Universe\+Solver\+Result}} IUniverse\+Sat\+Solver\+::solve (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1UniverseAssumption}{Universe\+::\+Universe\+Assumption}}$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$$>$ \&}]{assumptions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Solves the problem associated to this solver.
+
+
+\begin{DoxyParams}{Parameters}
+{\em assumptions} & The Boolean assumptions to consider when solving.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The outcome of the search conducted by the solver. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IUniverseSolver_aa305ab4e5d3a2bc07eb5a3dc457ee0aa}{Universe\+::\+IUniverse\+Solver}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaSatSolver_ad3ec031999e3ff2148052cb510f2740a}{Universe\+::\+Universe\+Java\+Sat\+Solver}}.
+
+
+
+Definition at line 44 of file IUniverse\+Sat\+Solver.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{IUniverseSatSolver_8hpp}{IUniverse\+Sat\+Solver.\+hpp}}\item 
+\mbox{\hyperlink{IUniverseSatSolver_8cpp}{IUniverse\+Sat\+Solver.\+cpp}}\end{DoxyCompactItemize}

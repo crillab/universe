@@ -1,0 +1,123 @@
+\hypertarget{UniverseType_8hpp}{}\doxysection{Universe\+Type.\+hpp File Reference}
+\label{UniverseType_8hpp}\index{UniverseType.hpp@{UniverseType.hpp}}
+
+
+Defines various aliases for types used throughout Universe.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef long long \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}}
+\item 
+typedef int \mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \mbox{\hyperlink{UniverseType_8hpp_a10c95e6633582bd541131a45ae25dc82}{Universe\+::big\+Integer\+Value\+Of}} (const std\+::string \&s)
+\item 
+std\+::string \mbox{\hyperlink{UniverseType_8hpp_a0e541cedeffb4ac1d59e34fb3c135bc0}{Universe\+::to\+String}} (const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&i)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines various aliases for types used throughout Universe. 
+
+\begin{DoxyAuthor}{Author}
+Thibault Falque 
+
+Romain Wallon 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+14/09/22 
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2022 -\/ Univ Artois \& CNRS \& Exakis Nelite. 
+\end{DoxyCopyright}
+\begin{DoxyParagraph}{License\+:\textbackslash{}n This project is released under the GNU LGPL3 License.}
+
+\end{DoxyParagraph}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}\label{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}} 
+\index{UniverseType.hpp@{UniverseType.hpp}!BigInteger@{BigInteger}}
+\index{BigInteger@{BigInteger}!UniverseType.hpp@{UniverseType.hpp}}
+\doxysubsubsection{\texorpdfstring{BigInteger}{BigInteger}}
+{\footnotesize\ttfamily typedef long long \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}}}
+
+Big\+Integer is an alias for long long when no big integer implementation is provided. 
+
+Definition at line 51 of file Universe\+Type.\+hpp.
+
+\mbox{\Hypertarget{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}\label{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}} 
+\index{UniverseType.hpp@{UniverseType.hpp}!UniverseOperator@{UniverseOperator}}
+\index{UniverseOperator@{UniverseOperator}!UniverseType.hpp@{UniverseType.hpp}}
+\doxysubsubsection{\texorpdfstring{UniverseOperator}{UniverseOperator}}
+{\footnotesize\ttfamily typedef int \mbox{\hyperlink{UniverseType_8hpp_a04dcb449a8c649c274b1ddcef43772dd}{Universe\+::\+Universe\+Operator}}}
+
+An alias allowing to use any kind of operators in a method. 
+
+Definition at line 75 of file Universe\+Type.\+hpp.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{UniverseType_8hpp_a10c95e6633582bd541131a45ae25dc82}\label{UniverseType_8hpp_a10c95e6633582bd541131a45ae25dc82}} 
+\index{UniverseType.hpp@{UniverseType.hpp}!bigIntegerValueOf@{bigIntegerValueOf}}
+\index{bigIntegerValueOf@{bigIntegerValueOf}!UniverseType.hpp@{UniverseType.hpp}}
+\doxysubsubsection{\texorpdfstring{bigIntegerValueOf()}{bigIntegerValueOf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Big\+Integer}} Universe\+::big\+Integer\+Value\+Of (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{s }\end{DoxyParamCaption})}
+
+Converts a string into a big integer, depending on how Big\+Integers are implemented.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The string to convert into a big integer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Big\+Integer encoded in s. 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file Universe\+Type.\+cpp.
+
+
+
+References Universe\+::big\+Integer\+Value\+Of().
+
+
+
+Referenced by Universe\+::\+Java\+Big\+Integer\+::as\+Big\+Integer(), and Universe\+::big\+Integer\+Value\+Of().
+
+\mbox{\Hypertarget{UniverseType_8hpp_a0e541cedeffb4ac1d59e34fb3c135bc0}\label{UniverseType_8hpp_a0e541cedeffb4ac1d59e34fb3c135bc0}} 
+\index{UniverseType.hpp@{UniverseType.hpp}!toString@{toString}}
+\index{toString@{toString}!UniverseType.hpp@{UniverseType.hpp}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily string Universe\+::to\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&}]{i }\end{DoxyParamCaption})}
+
+Converts a big integer into a string, depending on how Big\+Integers are implemented.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The big integer to convert into a string.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The string representation of i. 
+\end{DoxyReturn}
+
+
+Definition at line 36 of file Universe\+Type.\+cpp.
+
+
+
+References Universe\+::to\+String().
+
+
+
+Referenced by Universe\+::\+Java\+Big\+Integer\+::new\+Instance(), and Universe\+::to\+String().
+

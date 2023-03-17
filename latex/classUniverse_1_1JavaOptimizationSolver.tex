@@ -1,0 +1,272 @@
+\hypertarget{classUniverse_1_1JavaOptimizationSolver}{}\doxysection{Universe\+::Java\+Optimization\+Solver Class Reference}
+\label{classUniverse_1_1JavaOptimizationSolver}\index{Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}}
+
+
+{\ttfamily \#include $<$Java\+Optimization\+Solver.\+hpp$>$}
+
+Inheritance diagram for Universe\+::Java\+Optimization\+Solver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUniverse_1_1JavaOptimizationSolver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver_a9c52d0e07e39fd9016ae1bfea2f5f125}{$\sim$\+Java\+Optimization\+Solver}} () override=default
+\item 
+\mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver_a9ef4e94934235bfa866092a0fcdb9346}{get\+Current\+Bound}} () override
+\item 
+\mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver_a870ee73f800aab65203db9bf68655a72}{get\+Lower\+Bound}} () override
+\item 
+\mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver_a923d2132bf20b0564cae90ec613c01ec}{get\+Upper\+Bound}} () override
+\item 
+bool \mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver_a920eba757095b945fefecb9e50bb24db}{is\+Minimization}} () override
+\item 
+void \mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver_a85f6d297a0e8fd28f9c7eab64d7682ae}{set\+Bounds}} (const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&lb, const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&ub) override
+\item 
+void \mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver_a9c58b9009064db034bcde117e3559cb7}{set\+Lower\+Bound}} (const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&lb) override
+\item 
+void \mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver_a852d306905afdc59b057a0ee143d3dbc}{set\+Upper\+Bound}} (const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&ub) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver}{IOptimization\+Solver}} $\ast$ \mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver_a660781dad7c165e3c1b6578fd97b36f5}{of}} (easyjni\+::\+Java\+Object object)
+\item 
+static \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver}{IOptimization\+Solver}} $\ast$ \mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver_a0285d6a433183616919b7a27801d7604}{of}} (\mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver}{Universe\+::\+Universe\+Java\+Solver}} $\ast$solver)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver}{Java\+Optimization\+Solver}} defines an implementation of an \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver}{IOptimization\+Solver}} in Java (using JNI). 
+
+Definition at line 47 of file Java\+Optimization\+Solver.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1JavaOptimizationSolver_a9c52d0e07e39fd9016ae1bfea2f5f125}\label{classUniverse_1_1JavaOptimizationSolver_a9c52d0e07e39fd9016ae1bfea2f5f125}} 
+\index{Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}!````~JavaOptimizationSolver@{$\sim$JavaOptimizationSolver}}
+\index{````~JavaOptimizationSolver@{$\sim$JavaOptimizationSolver}!Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}}
+\doxysubsubsection{\texorpdfstring{$\sim$JavaOptimizationSolver()}{~JavaOptimizationSolver()}}
+{\footnotesize\ttfamily Universe\+::\+Java\+Optimization\+Solver\+::$\sim$\+Java\+Optimization\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Destroys this \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver}{IOptimization\+Solver}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1JavaOptimizationSolver_a9ef4e94934235bfa866092a0fcdb9346}\label{classUniverse_1_1JavaOptimizationSolver_a9ef4e94934235bfa866092a0fcdb9346}} 
+\index{Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}!getCurrentBound@{getCurrentBound}}
+\index{getCurrentBound@{getCurrentBound}!Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}}
+\doxysubsubsection{\texorpdfstring{getCurrentBound()}{getCurrentBound()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Big\+Integer}} Java\+Optimization\+Solver\+::get\+Current\+Bound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Gives the current (best) bound that have been found by this solver.
+
+\begin{DoxyReturn}{Returns}
+The current bound. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver_a00eae18affa91fc93a773c21b9272afd}{Universe\+::\+IOptimization\+Solver}}.
+
+
+
+Definition at line 57 of file Java\+Optimization\+Solver.\+cpp.
+
+
+
+References Universe\+::\+Java\+Big\+Integer\+::of().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaOptimizationSolver_a870ee73f800aab65203db9bf68655a72}\label{classUniverse_1_1JavaOptimizationSolver_a870ee73f800aab65203db9bf68655a72}} 
+\index{Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}!getLowerBound@{getLowerBound}}
+\index{getLowerBound@{getLowerBound}!Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}}
+\doxysubsubsection{\texorpdfstring{getLowerBound()}{getLowerBound()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Big\+Integer}} Java\+Optimization\+Solver\+::get\+Lower\+Bound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Gives the (best) lower bound that have been found by this solver.
+
+\begin{DoxyReturn}{Returns}
+The lower bound. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver_a954bb37cc33a33cecc8660540b0b961e}{Universe\+::\+IOptimization\+Solver}}.
+
+
+
+Definition at line 64 of file Java\+Optimization\+Solver.\+cpp.
+
+
+
+References Universe\+::\+Java\+Big\+Integer\+::of().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaOptimizationSolver_a923d2132bf20b0564cae90ec613c01ec}\label{classUniverse_1_1JavaOptimizationSolver_a923d2132bf20b0564cae90ec613c01ec}} 
+\index{Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}!getUpperBound@{getUpperBound}}
+\index{getUpperBound@{getUpperBound}!Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}}
+\doxysubsubsection{\texorpdfstring{getUpperBound()}{getUpperBound()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Big\+Integer}} Java\+Optimization\+Solver\+::get\+Upper\+Bound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Gives the (best) upper bound that have been found by this solver.
+
+\begin{DoxyReturn}{Returns}
+The upper bound. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver_a6dd6462b750f5e992db3871445acf072}{Universe\+::\+IOptimization\+Solver}}.
+
+
+
+Definition at line 77 of file Java\+Optimization\+Solver.\+cpp.
+
+
+
+References Universe\+::\+Java\+Big\+Integer\+::of().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaOptimizationSolver_a920eba757095b945fefecb9e50bb24db}\label{classUniverse_1_1JavaOptimizationSolver_a920eba757095b945fefecb9e50bb24db}} 
+\index{Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}!isMinimization@{isMinimization}}
+\index{isMinimization@{isMinimization}!Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}}
+\doxysubsubsection{\texorpdfstring{isMinimization()}{isMinimization()}}
+{\footnotesize\ttfamily bool Java\+Optimization\+Solver\+::is\+Minimization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Checks whether the optimization problem is a minimization problem.
+
+\begin{DoxyReturn}{Returns}
+Whether the problem is a minimization problem. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver_afd9b7c95462dcf6eec7e2dbab2b72fb5}{Universe\+::\+IOptimization\+Solver}}.
+
+
+
+Definition at line 52 of file Java\+Optimization\+Solver.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1JavaOptimizationSolver_a660781dad7c165e3c1b6578fd97b36f5}\label{classUniverse_1_1JavaOptimizationSolver_a660781dad7c165e3c1b6578fd97b36f5}} 
+\index{Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}!of@{of}}
+\index{of@{of}!Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}}
+\doxysubsubsection{\texorpdfstring{of()}{of()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver}{IOptimization\+Solver}}$\ast$ Universe\+::\+Java\+Optimization\+Solver\+::of (\begin{DoxyParamCaption}\item[{easyjni\+::\+Java\+Object}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a \mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver}{Java\+Optimization\+Solver}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & The Java object to adapt.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created solver. 
+\end{DoxyReturn}
+
+
+Referenced by of(), and Universe\+::\+Universe\+Java\+Solver\+::to\+Optimization\+Solver().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaOptimizationSolver_a0285d6a433183616919b7a27801d7604}\label{classUniverse_1_1JavaOptimizationSolver_a0285d6a433183616919b7a27801d7604}} 
+\index{Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}!of@{of}}
+\index{of@{of}!Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}}
+\doxysubsubsection{\texorpdfstring{of()}{of()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver}{IOptimization\+Solver}} $\ast$ Java\+Optimization\+Solver\+::of (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classUniverse_1_1UniverseJavaSolver}{Universe\+::\+Universe\+Java\+Solver}} $\ast$}]{solver }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a \mbox{\hyperlink{classUniverse_1_1JavaOptimizationSolver}{Java\+Optimization\+Solver}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em solver} & The Java solver to adapt.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The created solver. 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file Java\+Optimization\+Solver.\+cpp.
+
+
+
+References Universe\+::\+Universe\+Java\+Solver\+::object, and of().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaOptimizationSolver_a85f6d297a0e8fd28f9c7eab64d7682ae}\label{classUniverse_1_1JavaOptimizationSolver_a85f6d297a0e8fd28f9c7eab64d7682ae}} 
+\index{Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}!setBounds@{setBounds}}
+\index{setBounds@{setBounds}!Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}}
+\doxysubsubsection{\texorpdfstring{setBounds()}{setBounds()}}
+{\footnotesize\ttfamily void Java\+Optimization\+Solver\+::set\+Bounds (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&}]{lb,  }\item[{const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&}]{ub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Sets the bounds to consider when solving the optimization problem.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lb} & The lower bound to set. \\
+\hline
+{\em ub} & The upper bound to set. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver_ad821b02ff24d6c7f7a598055a573e71b}{Universe\+::\+IOptimization\+Solver}}.
+
+
+
+Definition at line 90 of file Java\+Optimization\+Solver.\+cpp.
+
+
+
+References Universe\+::\+Java\+Big\+Integer\+::new\+Instance().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaOptimizationSolver_a9c58b9009064db034bcde117e3559cb7}\label{classUniverse_1_1JavaOptimizationSolver_a9c58b9009064db034bcde117e3559cb7}} 
+\index{Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}!setLowerBound@{setLowerBound}}
+\index{setLowerBound@{setLowerBound}!Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}}
+\doxysubsubsection{\texorpdfstring{setLowerBound()}{setLowerBound()}}
+{\footnotesize\ttfamily void Java\+Optimization\+Solver\+::set\+Lower\+Bound (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&}]{lb }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Sets the lower bound to consider when solving the optimization problem.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lb} & The lower bound to set. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver_a3495e81dc8f7f46d9c7adde8bfec0d50}{Universe\+::\+IOptimization\+Solver}}.
+
+
+
+Definition at line 71 of file Java\+Optimization\+Solver.\+cpp.
+
+
+
+References Universe\+::\+Java\+Big\+Integer\+::new\+Instance().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaOptimizationSolver_a852d306905afdc59b057a0ee143d3dbc}\label{classUniverse_1_1JavaOptimizationSolver_a852d306905afdc59b057a0ee143d3dbc}} 
+\index{Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}!setUpperBound@{setUpperBound}}
+\index{setUpperBound@{setUpperBound}!Universe::JavaOptimizationSolver@{Universe::JavaOptimizationSolver}}
+\doxysubsubsection{\texorpdfstring{setUpperBound()}{setUpperBound()}}
+{\footnotesize\ttfamily void Java\+Optimization\+Solver\+::set\+Upper\+Bound (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&}]{ub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Sets the upper bound to consider when solving the optimization problem.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ub} & The upper bound to set. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classUniverse_1_1IOptimizationSolver_a4ca17a9a24c031cd8e2197f2488eb849}{Universe\+::\+IOptimization\+Solver}}.
+
+
+
+Definition at line 84 of file Java\+Optimization\+Solver.\+cpp.
+
+
+
+References Universe\+::\+Java\+Big\+Integer\+::new\+Instance().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{JavaOptimizationSolver_8hpp}{Java\+Optimization\+Solver.\+hpp}}\item 
+Java\+Optimization\+Solver.\+cpp\end{DoxyCompactItemize}

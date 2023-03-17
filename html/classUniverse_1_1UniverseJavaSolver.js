@@ -1,0 +1,26 @@
+var classUniverse_1_1UniverseJavaSolver =
+[
+    [ "UniverseJavaSolver", "classUniverse_1_1UniverseJavaSolver.html#a5ea32e69e2513664eb18e4950daf76c0", null ],
+    [ "~UniverseJavaSolver", "classUniverse_1_1UniverseJavaSolver.html#acf2467684fcde40534cb8ecede222e4f", null ],
+    [ "getVariablesMapping", "classUniverse_1_1UniverseJavaSolver.html#ab238da06423c8060f7f6293cfb1fb2c0", null ],
+    [ "interrupt", "classUniverse_1_1UniverseJavaSolver.html#a2aee9cc3bde13f1c08b9ca24a3595a37", null ],
+    [ "mapSolution", "classUniverse_1_1UniverseJavaSolver.html#a605b37a8a49fbf7c606608ed0ec18061", null ],
+    [ "nConstraints", "classUniverse_1_1UniverseJavaSolver.html#a1c07b9bd8137140fd57c185fde8f78e6", null ],
+    [ "nVariables", "classUniverse_1_1UniverseJavaSolver.html#af3e35ed5fa762770ebbe7d6eddca3362", null ],
+    [ "reset", "classUniverse_1_1UniverseJavaSolver.html#ae5051d7a6857a1a1a0d27c6b5fe4600b", null ],
+    [ "setLogFile", "classUniverse_1_1UniverseJavaSolver.html#a76e5f579b2b45d19fc261a39dc61c2fc", null ],
+    [ "setTimeout", "classUniverse_1_1UniverseJavaSolver.html#a804012862944e4585df3150fca51e409", null ],
+    [ "setTimeoutMs", "classUniverse_1_1UniverseJavaSolver.html#ac241c3fc8d9fd5be9389307fbd1dc33f", null ],
+    [ "setVerbosity", "classUniverse_1_1UniverseJavaSolver.html#a0dfbe8bdba1eb55ef002d3953d62cd62", null ],
+    [ "solution", "classUniverse_1_1UniverseJavaSolver.html#a15e2990cb5c7fe18dab33fdc3e6d8718", null ],
+    [ "solve", "classUniverse_1_1UniverseJavaSolver.html#a5bc6e10fda7435f4a0f7f36ba7170160", null ],
+    [ "solve", "classUniverse_1_1UniverseJavaSolver.html#a01f127ace8853e771d3fc5c2a67dafd5", null ],
+    [ "solve", "classUniverse_1_1UniverseJavaSolver.html#a52a5acb2942a8c9341392ddaf709c1c9", null ],
+    [ "toJavaAssumptions", "classUniverse_1_1UniverseJavaSolver.html#a6c0390795d300737758763cdcafb6c2f", null ],
+    [ "toOptimizationSolver", "classUniverse_1_1UniverseJavaSolver.html#adbb1ecc296b843a37e97071ffb3830c1", null ],
+    [ "toUniverseSolverResult", "classUniverse_1_1UniverseJavaSolver.html#aad6437f8616331108e57f392001be17e", null ],
+    [ "JavaOptimizationSolver", "classUniverse_1_1UniverseJavaSolver.html#a3f8a5e419ddd9e452098af843098e8de", null ],
+    [ "interface", "classUniverse_1_1UniverseJavaSolver.html#a1bc411feefd7c9d9abd8b62b4178dc4c", null ],
+    [ "mapping", "classUniverse_1_1UniverseJavaSolver.html#a114bd970ca835f03282b7acd667f9fff", null ],
+    [ "object", "classUniverse_1_1UniverseJavaSolver.html#acfe75f78942e49cd0f3024ba5251508d", null ]
+];

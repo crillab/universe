@@ -1,0 +1,48 @@
+\hypertarget{classUniverse_1_1IUniverseConstraint}{}\doxysection{Universe\+::IUniverse\+Constraint Class Reference}
+\label{classUniverse_1_1IUniverseConstraint}\index{Universe::IUniverseConstraint@{Universe::IUniverseConstraint}}
+
+
+{\ttfamily \#include $<$IUniverse\+Constraint.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classUniverse_1_1IUniverseConstraint_add2a5fe765ca32d43d9b56c150c87e9b}{$\sim$\+IUniverse\+Constraint}} ()=default
+\item 
+virtual const std\+::vector$<$ \mbox{\hyperlink{classUniverse_1_1IUniverseVariable}{Universe\+::\+IUniverse\+Variable}} $\ast$ $>$ \& \mbox{\hyperlink{classUniverse_1_1IUniverseConstraint_a7ff836077227f261095ce55fdd60b2c7}{scope}} () const =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1IUniverseConstraint}{IUniverse\+Constraint}} class defines an interface for the constraints in a problem. 
+
+Definition at line 42 of file IUniverse\+Constraint.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseConstraint_add2a5fe765ca32d43d9b56c150c87e9b}\label{classUniverse_1_1IUniverseConstraint_add2a5fe765ca32d43d9b56c150c87e9b}} 
+\index{Universe::IUniverseConstraint@{Universe::IUniverseConstraint}!````~IUniverseConstraint@{$\sim$IUniverseConstraint}}
+\index{````~IUniverseConstraint@{$\sim$IUniverseConstraint}!Universe::IUniverseConstraint@{Universe::IUniverseConstraint}}
+\doxysubsubsection{\texorpdfstring{$\sim$IUniverseConstraint()}{~IUniverseConstraint()}}
+{\footnotesize\ttfamily virtual Universe\+::\+IUniverse\+Constraint\+::$\sim$\+IUniverse\+Constraint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destroys this \mbox{\hyperlink{classUniverse_1_1IUniverseDomain}{IUniverse\+Domain}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniverseConstraint_a7ff836077227f261095ce55fdd60b2c7}\label{classUniverse_1_1IUniverseConstraint_a7ff836077227f261095ce55fdd60b2c7}} 
+\index{Universe::IUniverseConstraint@{Universe::IUniverseConstraint}!scope@{scope}}
+\index{scope@{scope}!Universe::IUniverseConstraint@{Universe::IUniverseConstraint}}
+\doxysubsubsection{\texorpdfstring{scope()}{scope()}}
+{\footnotesize\ttfamily virtual const std\+::vector$<$\mbox{\hyperlink{classUniverse_1_1IUniverseVariable}{Universe\+::\+IUniverse\+Variable}}$\ast$$>$\& Universe\+::\+IUniverse\+Constraint\+::scope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Gives the scope of this constraint, i.\+e., the variables that appear in this constraint.
+
+\begin{DoxyReturn}{Returns}
+The scope of this constraint. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{IUniverseConstraint_8hpp}{IUniverse\+Constraint.\+hpp}}\end{DoxyCompactItemize}

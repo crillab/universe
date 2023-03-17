@@ -1,0 +1,143 @@
+\hypertarget{classUniverse_1_1JavaIterator}{}\doxysection{Universe\+::Java\+Iterator Class Reference}
+\label{classUniverse_1_1JavaIterator}\index{Universe::JavaIterator@{Universe::JavaIterator}}
+
+
+{\ttfamily \#include $<$Java\+Iterator.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classUniverse_1_1JavaIterator_aa4a8e1050486a64571357a5f69e2a207}{has\+Next}} ()
+\item 
+easyjni\+::\+Java\+Object \mbox{\hyperlink{classUniverse_1_1JavaIterator_a751a4de7e6136d07a13e912f2f915b28}{next}} ()
+\item 
+easyjni\+::\+Java\+Object \mbox{\hyperlink{classUniverse_1_1JavaIterator_a6735b1b4ca033d7598f6c290987278de}{operator$\ast$}} ()
+\item 
+void \mbox{\hyperlink{classUniverse_1_1JavaIterator_a36288894d9cb7039fa89c7d38644e024}{remove}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classUniverse_1_1JavaIterator}{Universe\+::\+Java\+Iterator}} \mbox{\hyperlink{classUniverse_1_1JavaIterator_a4c3afb4be62a5dde74740fc09472883b}{for\+Iterable}} (const easyjni\+::\+Java\+Object \&iterable)
+\item 
+static \mbox{\hyperlink{classUniverse_1_1JavaIterator}{Universe\+::\+Java\+Iterator}} \mbox{\hyperlink{classUniverse_1_1JavaIterator_a913161d27a45b6dce6795e3e75d8668f}{of}} (easyjni\+::\+Java\+Object iterator)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1JavaIterator}{Java\+Iterator}} class is a wrapper allowing to easily handle Java objects that are instances of Iterator. 
+
+Definition at line 45 of file Java\+Iterator.\+hpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1JavaIterator_a4c3afb4be62a5dde74740fc09472883b}\label{classUniverse_1_1JavaIterator_a4c3afb4be62a5dde74740fc09472883b}} 
+\index{Universe::JavaIterator@{Universe::JavaIterator}!forIterable@{forIterable}}
+\index{forIterable@{forIterable}!Universe::JavaIterator@{Universe::JavaIterator}}
+\doxysubsubsection{\texorpdfstring{forIterable()}{forIterable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1JavaIterator}{Java\+Iterator}} Java\+Iterator\+::for\+Iterable (\begin{DoxyParamCaption}\item[{const easyjni\+::\+Java\+Object \&}]{iterable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a new \mbox{\hyperlink{classUniverse_1_1JavaIterator}{Java\+Iterator}} from an existing Java object that is an instance of Iterable.
+
+
+\begin{DoxyParams}{Parameters}
+{\em iterable} & The existing Java iterable object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The wrapper for the iterator of the object. 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file Java\+Iterator.\+cpp.
+
+
+
+Referenced by Universe\+::\+Java\+Map\+Of\+String\+::as\+Map(), and Universe\+::\+Universe\+Java\+Domain\+::get\+Values().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaIterator_aa4a8e1050486a64571357a5f69e2a207}\label{classUniverse_1_1JavaIterator_aa4a8e1050486a64571357a5f69e2a207}} 
+\index{Universe::JavaIterator@{Universe::JavaIterator}!hasNext@{hasNext}}
+\index{hasNext@{hasNext}!Universe::JavaIterator@{Universe::JavaIterator}}
+\doxysubsubsection{\texorpdfstring{hasNext()}{hasNext()}}
+{\footnotesize\ttfamily bool Java\+Iterator\+::has\+Next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks whether there is a next element to iterate over.
+
+\begin{DoxyReturn}{Returns}
+If there is a next element. 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file Java\+Iterator.\+cpp.
+
+
+
+Referenced by Universe\+::\+Java\+Map\+Of\+String\+::as\+Map(), and Universe\+::\+Universe\+Java\+Domain\+::get\+Values().
+
+\mbox{\Hypertarget{classUniverse_1_1JavaIterator_a751a4de7e6136d07a13e912f2f915b28}\label{classUniverse_1_1JavaIterator_a751a4de7e6136d07a13e912f2f915b28}} 
+\index{Universe::JavaIterator@{Universe::JavaIterator}!next@{next}}
+\index{next@{next}!Universe::JavaIterator@{Universe::JavaIterator}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily Java\+Object Java\+Iterator\+::next (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gives the next element of the iteration.
+
+\begin{DoxyReturn}{Returns}
+The next element. 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file Java\+Iterator.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1JavaIterator_a913161d27a45b6dce6795e3e75d8668f}\label{classUniverse_1_1JavaIterator_a913161d27a45b6dce6795e3e75d8668f}} 
+\index{Universe::JavaIterator@{Universe::JavaIterator}!of@{of}}
+\index{of@{of}!Universe::JavaIterator@{Universe::JavaIterator}}
+\doxysubsubsection{\texorpdfstring{of()}{of()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classUniverse_1_1JavaIterator}{Java\+Iterator}} Java\+Iterator\+::of (\begin{DoxyParamCaption}\item[{easyjni\+::\+Java\+Object}]{iterator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a new \mbox{\hyperlink{classUniverse_1_1JavaIterator}{Java\+Iterator}} from an existing Java object that is an instance of Iterator.
+
+
+\begin{DoxyParams}{Parameters}
+{\em iterator} & The existing Java object.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The wrapper for the object. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Java\+Iterator.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1JavaIterator_a6735b1b4ca033d7598f6c290987278de}\label{classUniverse_1_1JavaIterator_a6735b1b4ca033d7598f6c290987278de}} 
+\index{Universe::JavaIterator@{Universe::JavaIterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Universe::JavaIterator@{Universe::JavaIterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily Java\+Object Java\+Iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gives the Java object that is wrapped in this \mbox{\hyperlink{classUniverse_1_1JavaIterator}{Java\+Iterator}}.
+
+\begin{DoxyReturn}{Returns}
+The wrapped Java object. 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file Java\+Iterator.\+cpp.
+
+\mbox{\Hypertarget{classUniverse_1_1JavaIterator_a36288894d9cb7039fa89c7d38644e024}\label{classUniverse_1_1JavaIterator_a36288894d9cb7039fa89c7d38644e024}} 
+\index{Universe::JavaIterator@{Universe::JavaIterator}!remove@{remove}}
+\index{remove@{remove}!Universe::JavaIterator@{Universe::JavaIterator}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily void Java\+Iterator\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Removes the current element. 
+
+Definition at line 82 of file Java\+Iterator.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{JavaIterator_8hpp}{Java\+Iterator.\+hpp}}\item 
+\mbox{\hyperlink{JavaIterator_8cpp}{Java\+Iterator.\+cpp}}\end{DoxyCompactItemize}

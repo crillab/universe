@@ -1,0 +1,317 @@
+\hypertarget{classUniverse_1_1IUniversePseudoBooleanSolver}{}\doxysection{Universe\+::IUniverse\+Pseudo\+Boolean\+Solver Class Reference}
+\label{classUniverse_1_1IUniversePseudoBooleanSolver}\index{Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}}
+
+
+{\ttfamily \#include $<$IUniverse\+Pseudo\+Boolean\+Solver.\+hpp$>$}
+
+Inheritance diagram for Universe\+::IUniverse\+Pseudo\+Boolean\+Solver\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=5.000000cm]{classUniverse_1_1IUniversePseudoBooleanSolver}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver_a3fc546f42226b410729d4da848c6ffc0}{$\sim$\+IUniverse\+Pseudo\+Boolean\+Solver}} () override=default
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver_a895f073149ad428ff8ef9f8bf87e2409}{add\+At\+Least}} (const std\+::vector$<$ int $>$ \&literals, const std\+::vector$<$ int $>$ \&coefficients, int degree)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver_add0920d2a5e193d836370dc9899a306f}{add\+At\+Least}} (const std\+::vector$<$ int $>$ \&literals, const std\+::vector$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \&coefficients, const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&degree)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver_a7566acd59b861c36df9d0be564271a2a}{add\+At\+Least}} (const std\+::vector$<$ int $>$ \&literals, int degree)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver_ab7f9a2ca55dfc8bc6d2286094348dcd2}{add\+At\+Most}} (const std\+::vector$<$ int $>$ \&literals, const std\+::vector$<$ int $>$ \&coefficients, int degree)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver_ab0fd9670ac8765b315d5fdc9cdf24ff7}{add\+At\+Most}} (const std\+::vector$<$ int $>$ \&literals, const std\+::vector$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \&coefficients, const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&degree)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver_a74a1c547f667e7d1c5d3adfbac6f731d}{add\+At\+Most}} (const std\+::vector$<$ int $>$ \&literals, int degree)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver_a1bdde7fa5c1aa9b9d11ec2a613f93405}{add\+Exactly}} (const std\+::vector$<$ int $>$ \&literals, const std\+::vector$<$ int $>$ \&coefficients, int degree)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver_a0f5709e3a21b51acbe62b58ebb8561ce}{add\+Exactly}} (const std\+::vector$<$ int $>$ \&literals, const std\+::vector$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \&coefficients, const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&degree)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver_a33bfb8e5e5ebd2778dd83899b36ac7f2}{add\+Exactly}} (const std\+::vector$<$ int $>$ \&literals, int degree)=0
+\item 
+virtual void \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver_ab9e311f5c8d75d630a247973e75e597f}{add\+Pseudo\+Boolean}} (const std\+::vector$<$ int $>$ \&literals, const std\+::vector$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \&coefficients, bool more\+Than, const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Big\+Integer}} \&degree)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver}{IUniverse\+Pseudo\+Boolean\+Solver}} interface defines the contract for pseudo-\/\+Boolean solvers. 
+
+Definition at line 44 of file IUniverse\+Pseudo\+Boolean\+Solver.\+hpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniversePseudoBooleanSolver_a3fc546f42226b410729d4da848c6ffc0}\label{classUniverse_1_1IUniversePseudoBooleanSolver_a3fc546f42226b410729d4da848c6ffc0}} 
+\index{Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}!````~IUniversePseudoBooleanSolver@{$\sim$IUniversePseudoBooleanSolver}}
+\index{````~IUniversePseudoBooleanSolver@{$\sim$IUniversePseudoBooleanSolver}!Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}}
+\doxysubsubsection{\texorpdfstring{$\sim$IUniversePseudoBooleanSolver()}{~IUniversePseudoBooleanSolver()}}
+{\footnotesize\ttfamily Universe\+::\+IUniverse\+Pseudo\+Boolean\+Solver\+::$\sim$\+IUniverse\+Pseudo\+Boolean\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+Destroys this \mbox{\hyperlink{classUniverse_1_1IUniversePseudoBooleanSolver}{IUniverse\+Pseudo\+Boolean\+Solver}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classUniverse_1_1IUniversePseudoBooleanSolver_a895f073149ad428ff8ef9f8bf87e2409}\label{classUniverse_1_1IUniversePseudoBooleanSolver_a895f073149ad428ff8ef9f8bf87e2409}} 
+\index{Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}!addAtLeast@{addAtLeast}}
+\index{addAtLeast@{addAtLeast}!Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}}
+\doxysubsubsection{\texorpdfstring{addAtLeast()}{addAtLeast()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Pseudo\+Boolean\+Solver\+::add\+At\+Least (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{literals,  }\item[{const std\+::vector$<$ int $>$ \&}]{coefficients,  }\item[{int}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds to this solver an at-\/least pseudo-\/\+Boolean constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em literals} & The set of literals appearing in the constraint. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em coefficients} & The coefficients of the literals. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em degree} & The value to which the weighted sum of literals must be at least equal.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classUniverse_1_1UniverseContradictionException}{Universe\+Contradiction\+Exception}}} & If the constraint is trivially unsatisfiable. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaPseudoBooleanSolver_ae827435909dd139c8f639f1591895dfc}{Universe\+::\+Universe\+Java\+Pseudo\+Boolean\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniversePseudoBooleanSolver_add0920d2a5e193d836370dc9899a306f}\label{classUniverse_1_1IUniversePseudoBooleanSolver_add0920d2a5e193d836370dc9899a306f}} 
+\index{Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}!addAtLeast@{addAtLeast}}
+\index{addAtLeast@{addAtLeast}!Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}}
+\doxysubsubsection{\texorpdfstring{addAtLeast()}{addAtLeast()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Pseudo\+Boolean\+Solver\+::add\+At\+Least (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{literals,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \&}]{coefficients,  }\item[{const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds to this solver an at-\/least pseudo-\/\+Boolean constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em literals} & The set of literals appearing in the constraint. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em coefficients} & The coefficients of the literals. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em degree} & The value to which the weighted sum of literals must be at least equal.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classUniverse_1_1UniverseContradictionException}{Universe\+Contradiction\+Exception}}} & If the constraint is trivially unsatisfiable. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaPseudoBooleanSolver_a7a4e934687656d0b2aa1530d305f0f77}{Universe\+::\+Universe\+Java\+Pseudo\+Boolean\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniversePseudoBooleanSolver_a7566acd59b861c36df9d0be564271a2a}\label{classUniverse_1_1IUniversePseudoBooleanSolver_a7566acd59b861c36df9d0be564271a2a}} 
+\index{Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}!addAtLeast@{addAtLeast}}
+\index{addAtLeast@{addAtLeast}!Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}}
+\doxysubsubsection{\texorpdfstring{addAtLeast()}{addAtLeast()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Pseudo\+Boolean\+Solver\+::add\+At\+Least (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{literals,  }\item[{int}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds to this solver an at-\/least cardinality constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em literals} & The set of literals appearing in the constraint. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em degree} & The minimum number of literals to satisfy.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classUniverse_1_1UniverseContradictionException}{Universe\+Contradiction\+Exception}}} & If the constraint is trivially unsatisfiable. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaPseudoBooleanSolver_ac80fd2350b5cc9dd54bce6ef98e6cdc7}{Universe\+::\+Universe\+Java\+Pseudo\+Boolean\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniversePseudoBooleanSolver_ab7f9a2ca55dfc8bc6d2286094348dcd2}\label{classUniverse_1_1IUniversePseudoBooleanSolver_ab7f9a2ca55dfc8bc6d2286094348dcd2}} 
+\index{Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}!addAtMost@{addAtMost}}
+\index{addAtMost@{addAtMost}!Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}}
+\doxysubsubsection{\texorpdfstring{addAtMost()}{addAtMost()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Pseudo\+Boolean\+Solver\+::add\+At\+Most (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{literals,  }\item[{const std\+::vector$<$ int $>$ \&}]{coefficients,  }\item[{int}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds to this solver an at-\/most pseudo-\/\+Boolean constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em literals} & The set of literals appearing in the constraint. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em coefficients} & The coefficients of the literals. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em degree} & The value to which the weighted sum of literals must be at most equal.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classUniverse_1_1UniverseContradictionException}{Universe\+Contradiction\+Exception}}} & If the constraint is trivially unsatisfiable. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaPseudoBooleanSolver_a6d91437b3944e683e15e1c8d8afef68f}{Universe\+::\+Universe\+Java\+Pseudo\+Boolean\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniversePseudoBooleanSolver_ab0fd9670ac8765b315d5fdc9cdf24ff7}\label{classUniverse_1_1IUniversePseudoBooleanSolver_ab0fd9670ac8765b315d5fdc9cdf24ff7}} 
+\index{Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}!addAtMost@{addAtMost}}
+\index{addAtMost@{addAtMost}!Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}}
+\doxysubsubsection{\texorpdfstring{addAtMost()}{addAtMost()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Pseudo\+Boolean\+Solver\+::add\+At\+Most (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{literals,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \&}]{coefficients,  }\item[{const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds to this solver an at-\/most pseudo-\/\+Boolean constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em literals} & The set of literals appearing in the constraint. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em coefficients} & The coefficients of the literals. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em degree} & The value to which the weighted sum of literals must be at most equal.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classUniverse_1_1UniverseContradictionException}{Universe\+Contradiction\+Exception}}} & If the constraint is trivially unsatisfiable. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaPseudoBooleanSolver_a49d856b8d2bff90d9d5b7d7750cf8cda}{Universe\+::\+Universe\+Java\+Pseudo\+Boolean\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniversePseudoBooleanSolver_a74a1c547f667e7d1c5d3adfbac6f731d}\label{classUniverse_1_1IUniversePseudoBooleanSolver_a74a1c547f667e7d1c5d3adfbac6f731d}} 
+\index{Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}!addAtMost@{addAtMost}}
+\index{addAtMost@{addAtMost}!Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}}
+\doxysubsubsection{\texorpdfstring{addAtMost()}{addAtMost()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Pseudo\+Boolean\+Solver\+::add\+At\+Most (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{literals,  }\item[{int}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds to this solver an at-\/most cardinality constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em literals} & The set of literals appearing in the constraint. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em degree} & The maximum number of literals to satisfy.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classUniverse_1_1UniverseContradictionException}{Universe\+Contradiction\+Exception}}} & If the constraint is trivially unsatisfiable. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaPseudoBooleanSolver_a838362195ba936e80c3041c7deb20fa0}{Universe\+::\+Universe\+Java\+Pseudo\+Boolean\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniversePseudoBooleanSolver_a1bdde7fa5c1aa9b9d11ec2a613f93405}\label{classUniverse_1_1IUniversePseudoBooleanSolver_a1bdde7fa5c1aa9b9d11ec2a613f93405}} 
+\index{Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}!addExactly@{addExactly}}
+\index{addExactly@{addExactly}!Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}}
+\doxysubsubsection{\texorpdfstring{addExactly()}{addExactly()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Pseudo\+Boolean\+Solver\+::add\+Exactly (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{literals,  }\item[{const std\+::vector$<$ int $>$ \&}]{coefficients,  }\item[{int}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds to this solver a pseudo-\/\+Boolean constraint defining an equality.
+
+
+\begin{DoxyParams}{Parameters}
+{\em literals} & The set of literals appearing in the constraint. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em coefficients} & The coefficients of the literals. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em degree} & The value to which the weighted sum of literals must be equal.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classUniverse_1_1UniverseContradictionException}{Universe\+Contradiction\+Exception}}} & If the constraint is trivially unsatisfiable. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaPseudoBooleanSolver_af479634ccda4744b508ae8653cb742f1}{Universe\+::\+Universe\+Java\+Pseudo\+Boolean\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniversePseudoBooleanSolver_a0f5709e3a21b51acbe62b58ebb8561ce}\label{classUniverse_1_1IUniversePseudoBooleanSolver_a0f5709e3a21b51acbe62b58ebb8561ce}} 
+\index{Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}!addExactly@{addExactly}}
+\index{addExactly@{addExactly}!Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}}
+\doxysubsubsection{\texorpdfstring{addExactly()}{addExactly()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Pseudo\+Boolean\+Solver\+::add\+Exactly (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{literals,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \&}]{coefficients,  }\item[{const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} \&}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds to this solver a pseudo-\/\+Boolean constraint defining an equality.
+
+
+\begin{DoxyParams}{Parameters}
+{\em literals} & The set of literals appearing in the constraint. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em coefficients} & The coefficients of the literals. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em degree} & The value to which the weighted sum of literals must be equal.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classUniverse_1_1UniverseContradictionException}{Universe\+Contradiction\+Exception}}} & If the constraint is trivially unsatisfiable. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaPseudoBooleanSolver_a2cdd493188a4f54305a16406b5352786}{Universe\+::\+Universe\+Java\+Pseudo\+Boolean\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniversePseudoBooleanSolver_a33bfb8e5e5ebd2778dd83899b36ac7f2}\label{classUniverse_1_1IUniversePseudoBooleanSolver_a33bfb8e5e5ebd2778dd83899b36ac7f2}} 
+\index{Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}!addExactly@{addExactly}}
+\index{addExactly@{addExactly}!Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}}
+\doxysubsubsection{\texorpdfstring{addExactly()}{addExactly()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Pseudo\+Boolean\+Solver\+::add\+Exactly (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{literals,  }\item[{int}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds to this solver a cardinality constraint defining an equality.
+
+
+\begin{DoxyParams}{Parameters}
+{\em literals} & The set of literals appearing in the constraint. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em degree} & The number of literals to satisfy.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classUniverse_1_1UniverseContradictionException}{Universe\+Contradiction\+Exception}}} & If the constraint is trivially unsatisfiable. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaPseudoBooleanSolver_a6bec1c4e85ef26f31d71daaa80f7e460}{Universe\+::\+Universe\+Java\+Pseudo\+Boolean\+Solver}}.
+
+\mbox{\Hypertarget{classUniverse_1_1IUniversePseudoBooleanSolver_ab9e311f5c8d75d630a247973e75e597f}\label{classUniverse_1_1IUniversePseudoBooleanSolver_ab9e311f5c8d75d630a247973e75e597f}} 
+\index{Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}!addPseudoBoolean@{addPseudoBoolean}}
+\index{addPseudoBoolean@{addPseudoBoolean}!Universe::IUniversePseudoBooleanSolver@{Universe::IUniversePseudoBooleanSolver}}
+\doxysubsubsection{\texorpdfstring{addPseudoBoolean()}{addPseudoBoolean()}}
+{\footnotesize\ttfamily virtual void Universe\+::\+IUniverse\+Pseudo\+Boolean\+Solver\+::add\+Pseudo\+Boolean (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{literals,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Universe\+::\+Big\+Integer}} $>$ \&}]{coefficients,  }\item[{bool}]{more\+Than,  }\item[{const \mbox{\hyperlink{UniverseType_8hpp_ae7505d353aae3b8b471df4cbb66ed82a}{Big\+Integer}} \&}]{degree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Adds to this solver a pseudo-\/\+Boolean constraint.
+
+
+\begin{DoxyParams}{Parameters}
+{\em literals} & The set of literals appearing in the constraint. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em coefficients} & The coefficients of the literals. The vector can be reused since the solver is not supposed to keep a reference to that vector. \\
+\hline
+{\em more\+Than} & The value true if the constraint is a constraint $>$= degree, and the value false if it is a constraint $<$= degree \\
+\hline
+{\em degree} & The degree of the pseudo-\/\+Boolean constraint.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em \mbox{\hyperlink{classUniverse_1_1UniverseContradictionException}{Universe\+Contradiction\+Exception}}} & If the constraint is trivially unsatisfiable. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classUniverse_1_1UniverseJavaPseudoBooleanSolver_adee7d056ce01c543bf42cd177c543596}{Universe\+::\+Universe\+Java\+Pseudo\+Boolean\+Solver}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{IUniversePseudoBooleanSolver_8hpp}{IUniverse\+Pseudo\+Boolean\+Solver.\+hpp}}\end{DoxyCompactItemize}

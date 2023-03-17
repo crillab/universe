@@ -1,4 +1,4 @@
-name: CMake Windows
+name: C++ Windows
 on:
   push:
     branches: [ 'disabled']

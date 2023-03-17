@@ -1,4 +1,4 @@
-name: CMake Unix System
+name: C++ Unix
 on:
   push:
     branches: [ 'main', 'releases/**','test-github' ]

@@ -1,9 +1,9 @@
 name: CMake Windows
 on:
   push:
-    branches: [ 'main', 'releases/**','test-github' ]
+    branches: [ 'disabled']
   pull_request:
-    branches: [ 'main','test-github' ]
+    branches: [ 'disabled' ]
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)

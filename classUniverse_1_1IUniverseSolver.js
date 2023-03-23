@@ -3,6 +3,8 @@ var classUniverse_1_1IUniverseSolver =
     [ "~IUniverseSolver", "classUniverse_1_1IUniverseSolver.html#a7f47ace46bb113eabe4b9ecae5598c03", null ],
     [ "getVariablesMapping", "classUniverse_1_1IUniverseSolver.html#ae083822fe0cc090e6f4dc5adf4fb59cc", null ],
     [ "interrupt", "classUniverse_1_1IUniverseSolver.html#ac0dc1989f6cb78a4310b7553c87fc5c2", null ],
+    [ "isOptimization", "classUniverse_1_1IUniverseSolver.html#a517c70387547f9bc0363a6afdf382ff0", null ],
+    [ "loadInstance", "classUniverse_1_1IUniverseSolver.html#a7966c1dde6de26a852df04a988f991f1", null ],
     [ "mapSolution", "classUniverse_1_1IUniverseSolver.html#a87a9a73eb177019fa6af6184fe328c19", null ],
     [ "nConstraints", "classUniverse_1_1IUniverseSolver.html#a9656d32867b57556d3cf4837dce42d86", null ],
     [ "nVariables", "classUniverse_1_1IUniverseSolver.html#a3825d87ddbdfb229a286d144c57b475d", null ],

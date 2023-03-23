@@ -154,10 +154,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acac588285395010aaa1e7ab043337d23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a881b1c4e5e67dc99276d9821311bb573"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#a881b1c4e5e67dc99276d9821311bb573">addClause</a> (const std::vector&lt; std::string &gt; &amp;positive, const std::vector&lt; std::string &gt; &amp;negative)=0</td></tr>
 <tr class="separator:a881b1c4e5e67dc99276d9821311bb573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac44fe3e65eae6e419c4c22339d4965a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#ac44fe3e65eae6e419c4c22339d4965a3">addConflicts</a> (const std::string &amp;variable, const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">BigInteger</a> &gt; &amp;forbiddenValues)=0</td></tr>
-<tr class="separator:ac44fe3e65eae6e419c4c22339d4965a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5bf78fc280ea32e30edd2a16254b2407"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#a5bf78fc280ea32e30edd2a16254b2407">addConflicts</a> (const std::vector&lt; std::string &gt; &amp;variableTuple, const std::vector&lt; std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt;&gt; &amp;forbiddenValues)=0</td></tr>
-<tr class="separator:a5bf78fc280ea32e30edd2a16254b2407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20b2958c93958b1f4d9a15bb8d03c19"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#ad20b2958c93958b1f4d9a15bb8d03c19">addConflicts</a> (const std::string &amp;variable, const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">BigInteger</a> &gt; &amp;forbiddenValues, bool hasStar)=0</td></tr>
+<tr class="separator:ad20b2958c93958b1f4d9a15bb8d03c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab25d68836d1adeec60b9632f9aeca991"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#ab25d68836d1adeec60b9632f9aeca991">addConflicts</a> (const std::vector&lt; std::string &gt; &amp;variableTuple, const std::vector&lt; std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt;&gt; &amp;forbiddenValues, bool hasStar)=0</td></tr>
+<tr class="separator:ab25d68836d1adeec60b9632f9aeca991"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac362f68842ff4ce227ed0e676c780ce9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#ac362f68842ff4ce227ed0e676c780ce9">addCountIntensionWithConstantValues</a> (const std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseIntensionConstraint.html">Universe::IUniverseIntensionConstraint</a> * &gt; &amp;expressions, const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;values, <a class="el" href="UniverseRelationalOperator_8hpp.html#a0045c691d4f4d9af7285d7a37ae48cf6">Universe::UniverseRelationalOperator</a> op, const std::string &amp;count)=0</td></tr>
 <tr class="separator:ac362f68842ff4ce227ed0e676c780ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba6f2c9d5005fd66b8f72e4967933d70"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#aba6f2c9d5005fd66b8f72e4967933d70">addCountIntensionWithConstantValues</a> (const std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseIntensionConstraint.html">Universe::IUniverseIntensionConstraint</a> * &gt; &amp;expressions, const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;values, <a class="el" href="UniverseRelationalOperator_8hpp.html#a0045c691d4f4d9af7285d7a37ae48cf6">Universe::UniverseRelationalOperator</a> op, const <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &amp;count)=0</td></tr>
@@ -340,10 +340,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a731b222427a9fbc472c56e8b0bed3caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0281d843212140650841a5aa4b64e5b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#a0281d843212140650841a5aa4b64e5b3">addSumWithVariableCoefficients</a> (const std::vector&lt; std::string &gt; &amp;variables, const std::vector&lt; std::string &gt; &amp;coefficients, <a class="el" href="UniverseRelationalOperator_8hpp.html#a0045c691d4f4d9af7285d7a37ae48cf6">Universe::UniverseRelationalOperator</a> op, const <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &amp;value)=0</td></tr>
 <tr class="separator:a0281d843212140650841a5aa4b64e5b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a940ff1b8078075b374957c2e3d118023"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#a940ff1b8078075b374957c2e3d118023">addSupport</a> (const std::string &amp;variable, const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;allowedValues)=0</td></tr>
-<tr class="separator:a940ff1b8078075b374957c2e3d118023"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc8cb75ef9a5fd2a9cb3a680595995cc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#adc8cb75ef9a5fd2a9cb3a680595995cc">addSupport</a> (const std::vector&lt; std::string &gt; &amp;variableTuple, const std::vector&lt; std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt;&gt; &amp;allowedValues)=0</td></tr>
-<tr class="separator:adc8cb75ef9a5fd2a9cb3a680595995cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03bc2ef84a37054332c7d2dbb07597c6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#a03bc2ef84a37054332c7d2dbb07597c6">addSupport</a> (const std::string &amp;variable, const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;allowedValues, bool hasStar)=0</td></tr>
+<tr class="separator:a03bc2ef84a37054332c7d2dbb07597c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5e9914f18fc884bfe319b4f96a8cc2b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#aa5e9914f18fc884bfe319b4f96a8cc2b">addSupport</a> (const std::vector&lt; std::string &gt; &amp;variableTuple, const std::vector&lt; std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt;&gt; &amp;allowedValues, bool hasStar)=0</td></tr>
+<tr class="separator:aa5e9914f18fc884bfe319b4f96a8cc2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38c1aca9f928212309c593e2937a2b8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#a38c1aca9f928212309c593e2937a2b8b">maximizeExpression</a> (<a class="el" href="classUniverse_1_1IUniverseIntensionConstraint.html">Universe::IUniverseIntensionConstraint</a> *expression)=0</td></tr>
 <tr class="separator:a38c1aca9f928212309c593e2937a2b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adff6bb24a791d850f344730ba45bb9f6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseCspSolver.html#adff6bb24a791d850f344730ba45bb9f6">maximizeExpressionMaximum</a> (const std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseIntensionConstraint.html">Universe::IUniverseIntensionConstraint</a> * &gt; &amp;expressions)=0</td></tr>
@@ -481,6 +481,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae083822fe0cc090e6f4dc5adf4fb59cc inherit pub_methods_classUniverse_1_1IUniverseSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0dc1989f6cb78a4310b7553c87fc5c2 inherit pub_methods_classUniverse_1_1IUniverseSolver"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#ac0dc1989f6cb78a4310b7553c87fc5c2">interrupt</a> ()=0</td></tr>
 <tr class="separator:ac0dc1989f6cb78a4310b7553c87fc5c2 inherit pub_methods_classUniverse_1_1IUniverseSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a517c70387547f9bc0363a6afdf382ff0 inherit pub_methods_classUniverse_1_1IUniverseSolver"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a517c70387547f9bc0363a6afdf382ff0">isOptimization</a> ()=0</td></tr>
+<tr class="separator:a517c70387547f9bc0363a6afdf382ff0 inherit pub_methods_classUniverse_1_1IUniverseSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7966c1dde6de26a852df04a988f991f1 inherit pub_methods_classUniverse_1_1IUniverseSolver"><td class="memItemLeft" align="right" valign="top"><a id="a7966c1dde6de26a852df04a988f991f1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loadInstance</b> (const std::string &amp;filename)=0</td></tr>
+<tr class="separator:a7966c1dde6de26a852df04a988f991f1 inherit pub_methods_classUniverse_1_1IUniverseSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87a9a73eb177019fa6af6184fe328c19 inherit pub_methods_classUniverse_1_1IUniverseSolver"><td class="memItemLeft" align="right" valign="top">virtual std::map&lt; std::string, <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a87a9a73eb177019fa6af6184fe328c19">mapSolution</a> ()=0</td></tr>
 <tr class="separator:a87a9a73eb177019fa6af6184fe328c19 inherit pub_methods_classUniverse_1_1IUniverseSolver"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9656d32867b57556d3cf4837dce42d86 inherit pub_methods_classUniverse_1_1IUniverseSolver"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a9656d32867b57556d3cf4837dce42d86">nConstraints</a> ()=0</td></tr>
@@ -1736,8 +1741,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac44fe3e65eae6e419c4c22339d4965a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac44fe3e65eae6e419c4c22339d4965a3">&#9670;&nbsp;</a></span>addConflicts() <span class="overload">[1/2]</span></h2>
+<a id="ad20b2958c93958b1f4d9a15bb8d03c19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20b2958c93958b1f4d9a15bb8d03c19">&#9670;&nbsp;</a></span>addConflicts() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1755,7 +1760,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">BigInteger</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>forbiddenValues</em>&#160;</td>
+          <td class="paramname"><em>forbiddenValues</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hasStar</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1784,12 +1795,12 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaCspSolver.html#a5b16633e9d0f100b76978f5ff29180a5">Universe::UniverseJavaCspSolver</a>.</p>
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaCspSolver.html#acd8efdcc70ce241a08451bb7129dfc59">Universe::UniverseJavaCspSolver</a>.</p>
 
 </div>
 </div>
-<a id="a5bf78fc280ea32e30edd2a16254b2407"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5bf78fc280ea32e30edd2a16254b2407">&#9670;&nbsp;</a></span>addConflicts() <span class="overload">[2/2]</span></h2>
+<a id="ab25d68836d1adeec60b9632f9aeca991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab25d68836d1adeec60b9632f9aeca991">&#9670;&nbsp;</a></span>addConflicts() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1807,7 +1818,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>forbiddenValues</em>&#160;</td>
+          <td class="paramname"><em>forbiddenValues</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hasStar</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1836,7 +1853,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaCspSolver.html#ab6ed3f820ad39f6642920c5f5651cd21">Universe::UniverseJavaCspSolver</a>.</p>
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaCspSolver.html#ab733ca6da6081f277e6bf256f5390e8c">Universe::UniverseJavaCspSolver</a>.</p>
 
 </div>
 </div>
@@ -7663,8 +7680,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a940ff1b8078075b374957c2e3d118023"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a940ff1b8078075b374957c2e3d118023">&#9670;&nbsp;</a></span>addSupport() <span class="overload">[1/2]</span></h2>
+<a id="a03bc2ef84a37054332c7d2dbb07597c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03bc2ef84a37054332c7d2dbb07597c6">&#9670;&nbsp;</a></span>addSupport() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7682,7 +7699,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>allowedValues</em>&#160;</td>
+          <td class="paramname"><em>allowedValues</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hasStar</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7711,12 +7734,12 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaCspSolver.html#ad60fde5b786b6c17ec410742c35e51a0">Universe::UniverseJavaCspSolver</a>.</p>
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaCspSolver.html#a1c7bed284f1b2bec5f273c679aa828dc">Universe::UniverseJavaCspSolver</a>.</p>
 
 </div>
 </div>
-<a id="adc8cb75ef9a5fd2a9cb3a680595995cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc8cb75ef9a5fd2a9cb3a680595995cc">&#9670;&nbsp;</a></span>addSupport() <span class="overload">[2/2]</span></h2>
+<a id="aa5e9914f18fc884bfe319b4f96a8cc2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5e9914f18fc884bfe319b4f96a8cc2b">&#9670;&nbsp;</a></span>addSupport() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7734,7 +7757,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::vector&lt; std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt;&gt; &amp;&#160;</td>
-          <td class="paramname"><em>allowedValues</em>&#160;</td>
+          <td class="paramname"><em>allowedValues</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>hasStar</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7763,7 +7792,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaCspSolver.html#a54b5eedff98079e7af4e80ce1c3c47be">Universe::UniverseJavaCspSolver</a>.</p>
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaCspSolver.html#a5cc9c1bcbf215ee7b97e9b3a04af361d">Universe::UniverseJavaCspSolver</a>.</p>
 
 </div>
 </div>

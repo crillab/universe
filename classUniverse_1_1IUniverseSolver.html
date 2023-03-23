@@ -125,6 +125,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae083822fe0cc090e6f4dc5adf4fb59cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0dc1989f6cb78a4310b7553c87fc5c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#ac0dc1989f6cb78a4310b7553c87fc5c2">interrupt</a> ()=0</td></tr>
 <tr class="separator:ac0dc1989f6cb78a4310b7553c87fc5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a517c70387547f9bc0363a6afdf382ff0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a517c70387547f9bc0363a6afdf382ff0">isOptimization</a> ()=0</td></tr>
+<tr class="separator:a517c70387547f9bc0363a6afdf382ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7966c1dde6de26a852df04a988f991f1"><td class="memItemLeft" align="right" valign="top"><a id="a7966c1dde6de26a852df04a988f991f1"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loadInstance</b> (const std::string &amp;filename)=0</td></tr>
+<tr class="separator:a7966c1dde6de26a852df04a988f991f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87a9a73eb177019fa6af6184fe328c19"><td class="memItemLeft" align="right" valign="top">virtual std::map&lt; std::string, <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a87a9a73eb177019fa6af6184fe328c19">mapSolution</a> ()=0</td></tr>
 <tr class="separator:a87a9a73eb177019fa6af6184fe328c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9656d32867b57556d3cf4837dce42d86"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a9656d32867b57556d3cf4837dce42d86">nConstraints</a> ()=0</td></tr>
@@ -238,6 +243,35 @@ Public Member Functions</h2></td></tr>
 <p>Interrupts (asynchronously) the search currently performed by this solver. </p>
 
 <p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#a2aee9cc3bde13f1c08b9ca24a3595a37">Universe::UniverseJavaSolver</a>.</p>
+
+</div>
+</div>
+<a id="a517c70387547f9bc0363a6afdf382ff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a517c70387547f9bc0363a6afdf382ff0">&#9670;&nbsp;</a></span>isOptimization()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Universe::IUniverseSolver::isOptimization </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks whether the problem to be solved by this solver is an optimization problem.</p>
+<dl class="section return"><dt>Returns</dt><dd>Whether the problem to be solved by this solver is an optimization problem. </dd></dl>
+
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#a0fa943fef0268ebc8f350b076a072013">Universe::UniverseJavaSolver</a>.</p>
 
 </div>
 </div>

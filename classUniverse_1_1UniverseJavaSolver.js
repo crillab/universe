@@ -4,6 +4,8 @@ var classUniverse_1_1UniverseJavaSolver =
     [ "~UniverseJavaSolver", "classUniverse_1_1UniverseJavaSolver.html#acf2467684fcde40534cb8ecede222e4f", null ],
     [ "getVariablesMapping", "classUniverse_1_1UniverseJavaSolver.html#ab238da06423c8060f7f6293cfb1fb2c0", null ],
     [ "interrupt", "classUniverse_1_1UniverseJavaSolver.html#a2aee9cc3bde13f1c08b9ca24a3595a37", null ],
+    [ "isOptimization", "classUniverse_1_1UniverseJavaSolver.html#a0fa943fef0268ebc8f350b076a072013", null ],
+    [ "loadInstance", "classUniverse_1_1UniverseJavaSolver.html#a9e25dac27b40cefc4d3abdf4956aeca6", null ],
     [ "mapSolution", "classUniverse_1_1UniverseJavaSolver.html#a605b37a8a49fbf7c606608ed0ec18061", null ],
     [ "nConstraints", "classUniverse_1_1UniverseJavaSolver.html#a1c07b9bd8137140fd57c185fde8f78e6", null ],
     [ "nVariables", "classUniverse_1_1UniverseJavaSolver.html#af3e35ed5fa762770ebbe7d6eddca3362", null ],

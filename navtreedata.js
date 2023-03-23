@@ -50,9 +50,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "AbstractUniverseIntensionConstraintFactory_8cpp.html",
-"classUniverse_1_1IUniverseCspSolver.html#a222b16bbf897e7c2b43262d7be1cd9a9",
-"classUniverse_1_1JavaOptimizationSolver.html#a852d306905afdc59b057a0ee143d3dbc",
-"classUniverse_1_1UniverseJavaPseudoBooleanSolver.html#af479634ccda4744b508ae8653cb742f1"
+"classUniverse_1_1IUniverseCspSolver.html#a21f0d3c308cdd2a63033c5681657e027",
+"classUniverse_1_1JavaOptimizationSolver.html#a0285d6a433183616919b7a27801d7604",
+"classUniverse_1_1UniverseJavaPseudoBooleanSolver.html#adee7d056ce01c543bf42cd177c543596"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -12,7 +12,7 @@ var classUniverse_1_1UniverseJavaPseudoBooleanSolver =
     [ "addExactly", "classUniverse_1_1UniverseJavaPseudoBooleanSolver.html#a2cdd493188a4f54305a16406b5352786", null ],
     [ "addExactly", "classUniverse_1_1UniverseJavaPseudoBooleanSolver.html#a6bec1c4e85ef26f31d71daaa80f7e460", null ],
     [ "addPseudoBoolean", "classUniverse_1_1UniverseJavaPseudoBooleanSolver.html#adee7d056ce01c543bf42cd177c543596", null ],
-    [ "asList", "classUniverse_1_1UniverseJavaPseudoBooleanSolver.html#a7b4b17c4f81e375b32c58b3b9c7df155", null ],
+    [ "asList", "classUniverse_1_1UniverseJavaPseudoBooleanSolver.html#aa5ef2c1842e401fac72b3601cfc4d727", null ],
     [ "solve", "classUniverse_1_1UniverseJavaPseudoBooleanSolver.html#ac51c26c1c0799e25deb9af5da4b39bf6", null ],
     [ "solve", "classUniverse_1_1UniverseJavaPseudoBooleanSolver.html#aa01de39ca9fd6e1315667cf5033c3e48", null ]
 ];

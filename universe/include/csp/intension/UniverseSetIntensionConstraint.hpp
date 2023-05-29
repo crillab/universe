@@ -31,6 +31,8 @@
 #ifndef UNIVERSE_UNIVERSESETINTENSIONCONSTRAINT_HPP
 #define UNIVERSE_UNIVERSESETINTENSIONCONSTRAINT_HPP
 
+#include <vector>
+
 #include "../../core/UniverseType.hpp"
 
 #include "IUniverseIntensionConstraint.hpp"

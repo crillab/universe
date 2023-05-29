@@ -111,35 +111,37 @@ $(document).ready(function(){initNavTree('UniverseSetIntensionConstraint_8hpp_so
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef UNIVERSE_UNIVERSESETINTENSIONCONSTRAINT_HPP</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define UNIVERSE_UNIVERSESETINTENSIONCONSTRAINT_HPP</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;../../core/UniverseType.hpp&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IUniverseIntensionConstraint_8hpp.html">IUniverseIntensionConstraint.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;../../core/UniverseType.hpp&quot;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span>Universe {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IUniverseIntensionConstraint_8hpp.html">IUniverseIntensionConstraint.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseSetIntensionConstraint.html">   44</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUniverse_1_1UniverseSetIntensionConstraint.html">UniverseSetIntensionConstraint</a> : <span class="keyword">public</span> <a class="code" href="classUniverse_1_1IUniverseIntensionConstraint.html">Universe::IUniverseIntensionConstraint</a> {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">namespace </span>Universe {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseSetIntensionConstraint.html">   46</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUniverse_1_1UniverseSetIntensionConstraint.html">UniverseSetIntensionConstraint</a> : <span class="keyword">public</span> <a class="code" href="classUniverse_1_1IUniverseIntensionConstraint.html">Universe::IUniverseIntensionConstraint</a> {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        std::vector&lt;Universe::IUniverseIntensionConstraint *&gt; constraints;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        std::vector&lt;Universe::IUniverseIntensionConstraint *&gt; constraints;</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classUniverse_1_1UniverseSetIntensionConstraint.html#a803c97d889a9e60058c81664179f6a4a">UniverseSetIntensionConstraint</a>(std::vector&lt;Universe::IUniverseIntensionConstraint *&gt; set);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        [[nodiscard]] <span class="keywordtype">int</span> <a class="code" href="classUniverse_1_1UniverseSetIntensionConstraint.html#a686159bd6ccdcd8e94aeedddabaecedb">size</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUniverse_1_1UniverseSetIntensionConstraint.html#af4df0d8fabcb2003ed1ef9be815d32f2">accept</a>(<a class="code" href="classUniverse_1_1IUniverseIntensionConstraintVisitor.html">Universe::IUniverseIntensionConstraintVisitor</a> *visitor) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classUniverse_1_1UniverseSetIntensionConstraint.html#a803c97d889a9e60058c81664179f6a4a">UniverseSetIntensionConstraint</a>(std::vector&lt;Universe::IUniverseIntensionConstraint *&gt; set);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        [[nodiscard]] <span class="keywordtype">int</span> <a class="code" href="classUniverse_1_1UniverseSetIntensionConstraint.html#a686159bd6ccdcd8e94aeedddabaecedb">size</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUniverse_1_1UniverseSetIntensionConstraint.html#af4df0d8fabcb2003ed1ef9be815d32f2">accept</a>(<a class="code" href="classUniverse_1_1IUniverseIntensionConstraintVisitor.html">Universe::IUniverseIntensionConstraintVisitor</a> *visitor) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    };</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aIUniverseIntensionConstraint_8hpp_html"><div class="ttname"><a href="IUniverseIntensionConstraint_8hpp.html">IUniverseIntensionConstraint.hpp</a></div><div class="ttdoc">Defines an interface for representing intension constraints.</div></div>
 <div class="ttc" id="aclassUniverse_1_1IUniverseIntensionConstraintVisitor_html"><div class="ttname"><a href="classUniverse_1_1IUniverseIntensionConstraintVisitor.html">Universe::IUniverseIntensionConstraintVisitor</a></div><div class="ttdef"><b>Definition:</b> <a href="IUniverseIntensionConstraintVisitor_8hpp_source.html#l00088">IUniverseIntensionConstraintVisitor.hpp:88</a></div></div>
 <div class="ttc" id="aclassUniverse_1_1IUniverseIntensionConstraint_html"><div class="ttname"><a href="classUniverse_1_1IUniverseIntensionConstraint.html">Universe::IUniverseIntensionConstraint</a></div><div class="ttdef"><b>Definition:</b> <a href="IUniverseIntensionConstraint_8hpp_source.html#l00042">IUniverseIntensionConstraint.hpp:42</a></div></div>
-<div class="ttc" id="aclassUniverse_1_1UniverseSetIntensionConstraint_html"><div class="ttname"><a href="classUniverse_1_1UniverseSetIntensionConstraint.html">Universe::UniverseSetIntensionConstraint</a></div><div class="ttdef"><b>Definition:</b> <a href="UniverseSetIntensionConstraint_8hpp_source.html#l00044">UniverseSetIntensionConstraint.hpp:44</a></div></div>
+<div class="ttc" id="aclassUniverse_1_1UniverseSetIntensionConstraint_html"><div class="ttname"><a href="classUniverse_1_1UniverseSetIntensionConstraint.html">Universe::UniverseSetIntensionConstraint</a></div><div class="ttdef"><b>Definition:</b> <a href="UniverseSetIntensionConstraint_8hpp_source.html#l00046">UniverseSetIntensionConstraint.hpp:46</a></div></div>
 <div class="ttc" id="aclassUniverse_1_1UniverseSetIntensionConstraint_html_a686159bd6ccdcd8e94aeedddabaecedb"><div class="ttname"><a href="classUniverse_1_1UniverseSetIntensionConstraint.html#a686159bd6ccdcd8e94aeedddabaecedb">Universe::UniverseSetIntensionConstraint::size</a></div><div class="ttdeci">int size() const</div><div class="ttdef"><b>Definition:</b> <a href="UniverseSetIntensionConstraint_8cpp_source.html#l00041">UniverseSetIntensionConstraint.cpp:41</a></div></div>
 <div class="ttc" id="aclassUniverse_1_1UniverseSetIntensionConstraint_html_a803c97d889a9e60058c81664179f6a4a"><div class="ttname"><a href="classUniverse_1_1UniverseSetIntensionConstraint.html#a803c97d889a9e60058c81664179f6a4a">Universe::UniverseSetIntensionConstraint::UniverseSetIntensionConstraint</a></div><div class="ttdeci">UniverseSetIntensionConstraint(std::vector&lt; Universe::IUniverseIntensionConstraint * &gt; set)</div><div class="ttdef"><b>Definition:</b> <a href="UniverseSetIntensionConstraint_8cpp_source.html#l00036">UniverseSetIntensionConstraint.cpp:36</a></div></div>
 <div class="ttc" id="aclassUniverse_1_1UniverseSetIntensionConstraint_html_af4df0d8fabcb2003ed1ef9be815d32f2"><div class="ttname"><a href="classUniverse_1_1UniverseSetIntensionConstraint.html#af4df0d8fabcb2003ed1ef9be815d32f2">Universe::UniverseSetIntensionConstraint::accept</a></div><div class="ttdeci">void accept(Universe::IUniverseIntensionConstraintVisitor *visitor) override</div><div class="ttdef"><b>Definition:</b> <a href="UniverseSetIntensionConstraint_8cpp_source.html#l00045">UniverseSetIntensionConstraint.cpp:45</a></div></div>

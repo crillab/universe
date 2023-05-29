@@ -36,7 +36,7 @@
 namespace Universe {
 
     /**
-     * The IUniverseSolver provides an interface for optimization solvers.
+     * The IUniverseSolver defines the contract for optimization solvers.
      */
     class IOptimizationSolver {
 
@@ -50,52 +50,54 @@ namespace Universe {
         /**
          * Checks whether the optimization problem is a minimization problem.
          *
-         * @return Whether the problem is a minimization problem.
+         * @return Whether the underlying problem is a minimization problem.
          */
         virtual bool isMinimization() = 0;
 
         /**
-         * Gives the current (best) bound that have been found by this solver.
+         * Sets the bounds for the optimization problem to solve.
          *
-         * @return The current bound.
+         * @param lb The lower bound to set.
+         * @param ub The upper bound to set.
          */
-        virtual Universe::BigInteger getCurrentBound() = 0;
+        virtual void setBounds(const Universe::BigInteger &lb, const Universe::BigInteger &ub) = 0;
 
         /**
-         * Gives the (best) lower bound that have been found by this solver.
-         *
-         * @return The lower bound.
-         */
-        virtual Universe::BigInteger getLowerBound() = 0;
-
-        /**
-         * Sets the lower bound to consider when solving the optimization problem.
+         * Sets the lower bound for the optimization problem to solve.
          *
          * @param lb The lower bound to set.
          */
         virtual void setLowerBound(const Universe::BigInteger &lb) = 0;
 
         /**
-         * Gives the (best) upper bound that have been found by this solver.
+         * Gives the current (best) lower bound of the underlying optimization problem.
          *
-         * @return The upper bound.
+         * @return The current lower bound.
          */
-        virtual Universe::BigInteger getUpperBound() = 0;
+        virtual Universe::BigInteger getLowerBound() = 0;
 
         /**
-         * Sets the upper bound to consider when solving the optimization problem.
+         * Sets the upper bound for the optimization problem to solve.
          *
          * @param ub The upper bound to set.
          */
         virtual void setUpperBound(const Universe::BigInteger &ub) = 0;
 
         /**
-         * Sets the bounds to consider when solving the optimization problem.
+         * Gives the current (best) upper bound of the underlying optimization problem.
          *
-         * @param lb The lower bound to set.
-         * @param ub The upper bound to set.
+         * @return The current upper bound.
          */
-        virtual void setBounds(const Universe::BigInteger &lb, const Universe::BigInteger &ub) = 0;
+        virtual Universe::BigInteger getUpperBound() = 0;
+
+        /**
+         * Gives the current (best) bound that have been found by this solver.
+         * It is the current lower or upper bound, depending on whether the problem is a
+         * minimization or maximization problem.
+         *
+         * @return The current bound.
+         */
+        virtual Universe::BigInteger getCurrentBound() = 0;
 
     };
 

@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 10/10/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -38,8 +38,8 @@
 namespace Universe {
 
     /**
-     * The IUniverseDomain class defines an interface for the domain of the
-     * variables in a problem.
+     * The IUniverseDomain class represents the domain of a IUniverseVariable in
+     * a constraint problem.
      */
     class IUniverseDomain {
 
@@ -51,32 +51,32 @@ namespace Universe {
         virtual ~IUniverseDomain() = default;
 
         /**
-         * Gives the values in this domain.
-         *
-         * @return The vector of the values in this domain.
-         */
-        [[nodiscard]] virtual const std::vector<Universe::BigInteger> &getValues() = 0;
-
-        /**
-         * Gives the minimum value in this domain.
-         *
-         * @return The minimum value in this domain.
-         */
-        [[nodiscard]] virtual Universe::BigInteger min() const = 0;
-
-        /**
-         * Gives the maximum value in this domain.
-         *
-         * @return The maximum value in this domain.
-         */
-        [[nodiscard]] virtual Universe::BigInteger max() const = 0;
-
-        /**
          * Gives the size of this domain, measured in number of values.
          *
          * @return The size of this domain.
          */
         [[nodiscard]] virtual size_t size() const = 0;
+
+        /**
+         * Gives the minimum value of this domain.
+         *
+         * @return The minimum value.
+         */
+        [[nodiscard]] virtual Universe::BigInteger min() const = 0;
+
+        /**
+         * Gives the maximum value of this domain.
+         *
+         * @return The maximum value.
+         */
+        [[nodiscard]] virtual Universe::BigInteger max() const = 0;
+
+        /**
+         * Gives the list of values of this domain.
+         *
+         * @return The list of values.
+         */
+        [[nodiscard]] virtual const std::vector<Universe::BigInteger> &getValues() = 0;
 
     };
 

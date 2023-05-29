@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 19/10/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -91,6 +91,10 @@ void UniverseJavaCspSolver::newVariable(const string &id, const vector<BigIntege
     mtd.invoke(object, *jString, **list);
 }
 
+void UniverseJavaCspSolver::newVariableSymbolic(const string &id, const vector<string> &values) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addInstantiation(const string &variable, int value) {
     auto mtd = interface->getMethod("addInstantiation",
             METHOD(VOID, CLASS(java/lang/String) INTEGER));
@@ -104,6 +108,10 @@ void UniverseJavaCspSolver::addInstantiation(const string &variable, const BigIn
     auto jString = JavaVirtualMachineRegistry::get()->toJavaString(variable);
     auto jValue = JavaBigInteger::newInstance(value);
     mtd.invoke(object, *jString, **jValue);
+}
+
+void UniverseJavaCspSolver::addInstantiation(const string &variable, const string &value) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addInstantiation(const vector<string> &variables, const vector<int> &values) {
@@ -120,6 +128,11 @@ void UniverseJavaCspSolver::addInstantiation(const vector<string> &variables, co
     auto jVariables = UniverseJavaCspSolver::asList(variables);
     auto jValues = UniverseJavaPseudoBooleanSolver::asList(values);
     mtd.invoke(object, **jVariables, **jValues);
+}
+
+void UniverseJavaCspSolver::addInstantiationSymbolic(
+        const vector<string> &variables, const vector<string> &values) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addClause(const vector<string> &positive, const vector<string> &negative) {
@@ -203,11 +216,38 @@ void UniverseJavaCspSolver::addAllDifferentList(const vector<vector<string>> &va
     mtd.invoke(object, **jVariableLists);
 }
 
+void UniverseJavaCspSolver::addAllDifferentList(
+        const vector<vector<string>> &variableLists, const vector<vector<BigInteger>> &except) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addAllDifferentIntension(
         const vector<IUniverseIntensionConstraint *> &intensionConstraints) {
     auto mtd = interface->getMethod("addAllDifferentIntension", METHOD(VOID, CLASS(java/util/List)));
     auto jIntensionConstraints = UniverseJavaCspSolver::asList(intensionConstraints);
     mtd.invoke(object, **jIntensionConstraints);
+}
+
+void UniverseJavaCspSolver::addChannel(const vector<string> &variables, int startIndex) {
+    auto mtd = interface->getMethod("addChannel", METHOD(VOID, CLASS(java/util/List) INTEGER));
+    auto jVariables = UniverseJavaCspSolver::asList(variables);
+    mtd.invoke(object, **jVariables, (jint) startIndex);
+}
+
+void UniverseJavaCspSolver::addChannel(const vector<string> &variables, int startIndex, const string &value) {
+    auto mtd = interface->getMethod("addChannel", METHOD(VOID, CLASS(java/util/List) INTEGER CLASS(java/lang/String)));
+    auto jVariables = UniverseJavaCspSolver::asList(variables);
+    auto jValue = JavaVirtualMachineRegistry::get()->toJavaString(value);
+    mtd.invoke(object, **jVariables, (jint) startIndex, *jValue);
+}
+
+void UniverseJavaCspSolver::addChannel(
+        const vector<string> &variables, int startIndex, const vector<string> &otherVariables, int otherStartIndex) {
+    auto mtd = interface->getMethod("addChannel",
+                                    METHOD(VOID, CLASS(java/util/List) INTEGER CLASS(java/util/List) INTEGER));
+    auto jVariables = UniverseJavaCspSolver::asList(variables);
+    auto jOtherVariables = UniverseJavaCspSolver::asList(otherVariables);
+    mtd.invoke(object, **jVariables, (jint) startIndex, *jOtherVariables, (jint) otherStartIndex);
 }
 
 void UniverseJavaCspSolver::addCardinalityWithConstantValuesAndConstantCounts(
@@ -273,28 +313,6 @@ void UniverseJavaCspSolver::addCardinalityWithVariableValuesAndVariableCounts(
     auto jValues = UniverseJavaCspSolver::asList(values);
     auto jOccurs = UniverseJavaCspSolver::asList(occurs);
     mtd.invoke(object, **jVariables, **jValues, **jOccurs, (jboolean) closed);
-}
-
-void UniverseJavaCspSolver::addChannel(const vector<string> &variables, int startIndex) {
-    auto mtd = interface->getMethod("addChannel", METHOD(VOID, CLASS(java/util/List) INTEGER));
-    auto jVariables = UniverseJavaCspSolver::asList(variables);
-    mtd.invoke(object, **jVariables, (jint) startIndex);
-}
-
-void UniverseJavaCspSolver::addChannel(const vector<string> &variables, int startIndex, const string &value) {
-    auto mtd = interface->getMethod("addChannel", METHOD(VOID, CLASS(java/util/List) INTEGER CLASS(java/lang/String)));
-    auto jVariables = UniverseJavaCspSolver::asList(variables);
-    auto jValue = JavaVirtualMachineRegistry::get()->toJavaString(value);
-    mtd.invoke(object, **jVariables, (jint) startIndex, *jValue);
-}
-
-void UniverseJavaCspSolver::addChannel(
-        const vector<string> &variables, int startIndex, const vector<string> &otherVariables, int otherStartIndex) {
-    auto mtd = interface->getMethod("addChannel",
-            METHOD(VOID, CLASS(java/util/List) INTEGER CLASS(java/util/List) INTEGER));
-    auto jVariables = UniverseJavaCspSolver::asList(variables);
-    auto jOtherVariables = UniverseJavaCspSolver::asList(otherVariables);
-    mtd.invoke(object, **jVariables, (jint) startIndex, *jOtherVariables, (jint) otherStartIndex);
 }
 
 void UniverseJavaCspSolver::addAtLeast(
@@ -378,6 +396,18 @@ void UniverseJavaCspSolver::addCountWithConstantValues(const vector<string> &var
     mtd.invoke(object, **jVariables, **jValues, *jOp, *jCount);
 }
 
+void UniverseJavaCspSolver::addCountWithConstantValues(
+        const vector<string> &variables, const vector<BigInteger> &values, UniverseSetBelongingOperator op,
+        const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCountWithConstantValues(
+        const vector<string> &variables, const vector<BigInteger> &values, UniverseSetBelongingOperator op,
+        const vector<BigInteger> &set) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addCountWithVariableValues(const vector<string> &variables,
         const vector<string> &values, UniverseRelationalOperator op, const BigInteger &count) {
     auto mtd = interface->getMethod("addCountWithVariableValues",
@@ -398,6 +428,18 @@ void UniverseJavaCspSolver::addCountWithVariableValues(const vector<string> &var
     auto jOp = UniverseJavaCspSolver::toJavaRelationalOperator(op);
     auto jCount = JavaVirtualMachineRegistry::get()->toJavaString(count);
     mtd.invoke(object, **jVariables, **jValues, *jOp, *jCount);
+}
+
+void UniverseJavaCspSolver::addCountWithVariableValues(
+        const vector<string> &variables, const vector<string> &values, UniverseSetBelongingOperator op,
+        const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+                                                       
+void UniverseJavaCspSolver::addCountWithVariableValues(
+        const vector<string> &variables, const vector<string> &values, UniverseSetBelongingOperator op,
+        const vector<BigInteger> &set) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addCountIntensionWithConstantValues(
@@ -422,6 +464,159 @@ void UniverseJavaCspSolver::addCountIntensionWithConstantValues(
     auto jOp = UniverseJavaCspSolver::toJavaRelationalOperator(op);
     auto jCount = JavaVirtualMachineRegistry::get()->toJavaString(count);
     mtd.invoke(object, **jExpressions, **jValues, *jOp, *jCount);
+}
+
+void UniverseJavaCspSolver::addCountIntensionWithConstantValues(
+        const vector<IUniverseIntensionConstraint *> &expressions,
+        const vector<BigInteger> &values, UniverseSetBelongingOperator op,
+        const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCountIntensionWithConstantValues(
+        const vector<IUniverseIntensionConstraint *> &expressions,
+        const vector<BigInteger> &values, UniverseSetBelongingOperator op,
+        const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addNValues(
+        const vector<string> &variables, UniverseRelationalOperator op, const BigInteger &nb) {
+    auto mtd = interface->getMethod("addNValues",
+                                    METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG CLASS(java/math/BigInteger)));
+    auto jVariables = UniverseJavaCspSolver::asList(variables);
+    auto jOp = toJavaRelationalOperator(op);
+    auto jNb = JavaBigInteger::newInstance(nb);
+    mtd.invoke(object, **jVariables, *jOp, **jNb);
+}
+
+void UniverseJavaCspSolver::addNValuesExcept(const vector<string> &variables, UniverseRelationalOperator op,
+                                             const BigInteger &nb, const vector<BigInteger> &except) {
+    auto mtd = interface->getMethod("addNValuesExcept",
+                                    METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG CLASS(java/math/BigInteger) CLASS(java/util/List)));
+    auto jVariables = UniverseJavaCspSolver::asList(variables);
+    auto jOp = toJavaRelationalOperator(op);
+    auto jNb = JavaBigInteger::newInstance(nb);
+    auto jExcept = UniverseJavaPseudoBooleanSolver::asList(except);
+    mtd.invoke(object, **jVariables, *jOp, **jNb, **jExcept);
+}
+
+void UniverseJavaCspSolver::addNValues(
+        const vector<string> &variables, UniverseRelationalOperator op, const string &nb) {
+    auto mtd = interface->getMethod("addNValues",
+                                    METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG CLASS(java/lang/String)));
+    auto jVariables = UniverseJavaCspSolver::asList(variables);
+    auto jOp = toJavaRelationalOperator(op);
+    auto jNb = JavaVirtualMachineRegistry::get()->toJavaString(nb);
+    mtd.invoke(object, **jVariables, *jOp, *jNb);
+}
+
+void UniverseJavaCspSolver::addNValuesExcept(const vector<string> &variables, UniverseRelationalOperator op,
+                                             const string &nb, const vector<BigInteger> &except) {
+    auto mtd = interface->getMethod("addNValuesExcept",
+                                    METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG CLASS(java/lang/String) CLASS(java/util/List)));
+    auto jVariables = UniverseJavaCspSolver::asList(variables);
+    auto jOp = toJavaRelationalOperator(op);
+    auto jNb = JavaVirtualMachineRegistry::get()->toJavaString(nb);
+    auto jExcept = UniverseJavaPseudoBooleanSolver::asList(except);
+    mtd.invoke(object, **jVariables, *jOp, *jNb, **jExcept);
+}
+
+void UniverseJavaCspSolver::addNValues(const vector<string> &variables,
+                                       UniverseSetBelongingOperator op, const BigInteger &min,
+                                       const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addNValuesExcept(const vector<string> &variables,
+                                             UniverseSetBelongingOperator op, const BigInteger &min,
+                                             const BigInteger &max,
+                                             const vector<BigInteger> &except) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addNValues(const vector<string> &variables,
+                                       UniverseSetBelongingOperator op,
+                                       const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addNValuesExcept(const vector<string> &variables,
+                                             UniverseSetBelongingOperator op,
+                                             const vector<BigInteger> &set,
+                                             const vector<BigInteger> &except) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addNValuesIntension(const vector<IUniverseIntensionConstraint *> &expressions,
+                                                UniverseRelationalOperator op, const BigInteger &nb) {
+    auto mtd = interface->getMethod("addNValuesIntension",
+                                    METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG CLASS(java/math/BigInteger)));
+    auto jExpressions = UniverseJavaCspSolver::asList(expressions);
+    auto jOp = toJavaRelationalOperator(op);
+    auto jNb = JavaBigInteger::newInstance(nb);
+    mtd.invoke(object, **jExpressions, *jOp, **jNb);
+}
+
+void UniverseJavaCspSolver::addNValuesIntension(const vector<IUniverseIntensionConstraint *> &expressions,
+                                                UniverseRelationalOperator op, const string &nb) {
+    auto mtd = interface->getMethod("addNValuesIntension",
+                                    METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG CLASS(java/lang/String)));
+    auto jExpressions = UniverseJavaCspSolver::asList(expressions);
+    auto jOp = toJavaRelationalOperator(op);
+    auto jNb = JavaVirtualMachineRegistry::get()->toJavaString(nb);
+    mtd.invoke(object, **jExpressions, *jOp, *jNb);
+}
+
+void UniverseJavaCspSolver::addNValuesIntension(const vector<IUniverseIntensionConstraint *> &expressions,
+                                                UniverseSetBelongingOperator op, const BigInteger &min,
+                                                const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addNValuesIntension(const vector<IUniverseIntensionConstraint *> &expressions,
+                                                UniverseSetBelongingOperator op,
+                                                const vector<BigInteger> &set) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addBinPacking(const vector<string> &variables, const vector<BigInteger> &sizes,
+                                     UniverseRelationalOperator op, const BigInteger &value) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addBinPacking(const vector<string> &variables, const vector<BigInteger> &sizes,
+                                     UniverseRelationalOperator op, const string &variable) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addBinPacking(const vector<string> &variables, const vector<BigInteger> &sizes,
+                                     UniverseSetBelongingOperator op, const BigInteger &min,
+                                     const BigInteger &max) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addBinPacking(const vector<string> &variables, const vector<BigInteger> &sizes,
+                                     UniverseSetBelongingOperator op,
+                                     const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addBinPackingWithConstantCapacities(const vector<string> &variables,
+                                                                const vector<BigInteger> &sizes,
+                                                                const vector<BigInteger> &capacities,
+                                                                bool loads) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addBinPackingWithVariableCapacities(const vector<string> &variables,
+                                                                const vector<BigInteger> &sizes,
+                                                                const vector<string> &capacities, bool loads) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(
@@ -478,6 +673,40 @@ void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(
     mtd.invoke(object, **jOrigins, **jLengths, **jEnds, **jHeights, *jOp, *jValue);
 }
 
+void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(const vector<string> &origins,
+                                                                        const vector<BigInteger> &lengths,
+                                                                        const vector<BigInteger> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(const vector<string> &origins,
+                                                                        const vector<BigInteger> &lengths,
+                                                                        const vector<string> &ends,
+                                                                        const vector<BigInteger> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(const vector<string> &origins,
+                                                                        const vector<BigInteger> &lengths,
+                                                                        const vector<BigInteger> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(const vector<string> &origins,
+                                                                        const vector<BigInteger> &lengths,
+                                                                        const vector<string> &ends,
+                                                                        const vector<BigInteger> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const vector<BigInteger> &set) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(
         const vector<string> &origins, const vector<BigInteger> &lengths, const vector<string> &heights,
         UniverseRelationalOperator op, const BigInteger &value) {
@@ -530,6 +759,40 @@ void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(
     auto jOp = UniverseJavaCspSolver::toJavaRelationalOperator(op);
     auto jValue = JavaVirtualMachineRegistry::get()->toJavaString(value);
     mtd.invoke(object, **jOrigins, **jLengths, **jEnds, **jHeights, *jOp, *jValue);
+}
+
+void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(const vector<string> &origins,
+                                                                        const vector<BigInteger> &lengths,
+                                                                        const vector<string> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(const vector<string> &origins,
+                                                                        const vector<BigInteger> &lengths,
+                                                                        const vector<string> &ends,
+                                                                        const vector<string> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(const vector<string> &origins,
+                                                                        const vector<BigInteger> &lengths,
+                                                                        const vector<string> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(const vector<string> &origins,
+                                                                        const vector<BigInteger> &lengths,
+                                                                        const vector<string> &ends,
+                                                                        const vector<string> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const vector<BigInteger> &set) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(
@@ -572,6 +835,40 @@ void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(
     mtd.invoke(object, **jOrigins, **jLengths, **jHeights, *jOp, *jValue);
 }
 
+void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(const vector<string> &origins,
+                                                                        const vector<string> &lengths,
+                                                                        const vector<BigInteger> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(const vector<string> &origins,
+                                                                        const vector<string> &lengths,
+                                                                        const vector<string> &ends,
+                                                                        const vector<BigInteger> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(const vector<string> &origins,
+                                                                        const vector<string> &lengths,
+                                                                        const vector<BigInteger> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(const vector<string> &origins,
+                                                                        const vector<string> &lengths,
+                                                                        const vector<string> &ends,
+                                                                        const vector<BigInteger> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const vector<BigInteger> &set) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(
         const vector<string> &origins, const vector<string> &lengths, const vector<string> &heights,
         UniverseRelationalOperator op, const BigInteger &value) {
@@ -640,104 +937,322 @@ void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(
     mtd.invoke(object, **jOrigins, **jLengths, **jEnds, **jHeights, *jOp, *jValue);
 }
 
-void UniverseJavaCspSolver::addElement(const vector<string> &variables, const BigInteger &value) {
-    auto mtd = interface->getMethod("addElement", METHOD(VOID, CLASS(java/util/List) CLASS(java/math/BigInteger)));
-    auto jVariables = UniverseJavaCspSolver::asList(variables);
-    auto jValue = JavaBigInteger::newInstance(value);
-    mtd.invoke(object, **jVariables, **jValue);
+void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(const vector<string> &origins,
+                                                                        const vector<string> &lengths,
+                                                                        const vector<string> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const BigInteger &min, const BigInteger &max) {
+    // TODO
 }
 
-void UniverseJavaCspSolver::addElement(const vector<string> &variables, const string &value) {
-    auto mtd = interface->getMethod("addElement", METHOD(VOID, CLASS(java/util/List) CLASS(java/lang/String)));
-    auto jVariables = UniverseJavaCspSolver::asList(variables);
-    auto jValue = JavaVirtualMachineRegistry::get()->toJavaString(value);
-    mtd.invoke(object, **jVariables, *jValue);
+void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(const vector<string> &origins,
+                                                                        const vector<string> &lengths,
+                                                                        const vector<string> &ends,
+                                                                        const vector<string> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const BigInteger &min, const BigInteger &max) {
+    // TODO
 }
 
-void UniverseJavaCspSolver::addElement(
-        const vector<string> &variables, int startIndex, const string &index, const BigInteger &value) {
-    auto mtd = interface->getMethod("addElement",
-            METHOD(VOID, CLASS(java/util/List) INTEGER CLASS(java/lang/String) CLASS(java/math/BigInteger)));
-    auto jVariables = UniverseJavaCspSolver::asList(variables);
-    auto jIndex = JavaVirtualMachineRegistry::get()->toJavaString(index);
-    auto jValue = JavaBigInteger::newInstance(value);
-    mtd.invoke(object, **jVariables, (jint) startIndex, *jIndex, **jValue);
+void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(const vector<string> &origins,
+                                                                        const vector<string> &lengths,
+                                                                        const vector<string> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const vector<BigInteger> &set) {
+    // TODO
 }
 
-void UniverseJavaCspSolver::addElement(
-        const vector<string> &values, int startIndex, const string &index, const string &variable) {
-    auto mtd = interface->getMethod("addElement",
-            METHOD(VOID, CLASS(java/util/List) INTEGER CLASS(java/lang/String) CLASS(java/lang/String)));
-    auto jValues = UniverseJavaCspSolver::asList(values);
-    auto jIndex = JavaVirtualMachineRegistry::get()->toJavaString(index);
-    auto jVariable = JavaVirtualMachineRegistry::get()->toJavaString(variable);
-    mtd.invoke(object, **jValues, (jint) startIndex, *jIndex, **jVariable);
+void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(const vector<string> &origins,
+                                                                        const vector<string> &lengths,
+                                                                        const vector<string> &ends,
+                                                                        const vector<string> &heights,
+                                                                        UniverseSetBelongingOperator op,
+                                                                        const vector<BigInteger> &set) {
+    // TODO
 }
 
-void UniverseJavaCspSolver::addElementConstantValues(
-        const vector<BigInteger> &values, int startIndex, const string &index, const BigInteger &value) {
-    auto mtd = interface->getMethod("addElementConstantValues",
-            METHOD(VOID, CLASS(java/util/List) INTEGER CLASS(java/lang/String) CLASS(java/math/BigInteger)));
-    auto jValues = UniverseJavaPseudoBooleanSolver::asList(values);
-    auto jIndex = JavaVirtualMachineRegistry::get()->toJavaString(index);
-    auto jValue = JavaBigInteger::newInstance(value);
-    mtd.invoke(object, **jValues, (jint) startIndex, *jIndex, **jValue);
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseRelationalOperator wOperator, const BigInteger &wValue,
+                                   const vector<BigInteger> &profits,
+                                   UniverseRelationalOperator pOperator, const BigInteger &pValue) {
+    // TODO
 }
 
-void UniverseJavaCspSolver::addElementConstantValues(
-        const vector<BigInteger> &values, int startIndex, const string &index, const string &variable) {
-    auto mtd = interface->getMethod("addElementConstantValues",
-            METHOD(VOID, CLASS(java/util/List) INTEGER CLASS(java/lang/String) CLASS(java/lang/String)));
-    auto jValues = UniverseJavaPseudoBooleanSolver::asList(values);
-    auto jIndex = JavaVirtualMachineRegistry::get()->toJavaString(index);
-    auto jVariable = JavaVirtualMachineRegistry::get()->toJavaString(variable);
-    mtd.invoke(object, **jValues, (jint) startIndex, *jIndex, *jVariable);
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseRelationalOperator wOperator, const BigInteger &wValue,
+                                   const vector<BigInteger> &profits,
+                                   UniverseRelationalOperator pOperator, const string &pVariable) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseRelationalOperator wOperator, const BigInteger &wValue,
+                                   const vector<BigInteger> &profits,
+                                   UniverseSetBelongingOperator pOperator, const BigInteger &pMin,
+                                   const BigInteger &pMax) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseRelationalOperator wOperator, const BigInteger &wValue,
+                                   const vector<BigInteger> &profits,
+                                   UniverseSetBelongingOperator pOperator,
+                                   const vector<BigInteger> &pSet) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseRelationalOperator wOperator, const string &wVariable,
+                                   const vector<BigInteger> &profits,
+                                   UniverseRelationalOperator pOperator, const BigInteger &pValue) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseRelationalOperator wOperator, const string &wVariable,
+                                   const vector<BigInteger> &profits,
+                                   UniverseRelationalOperator pOperator, const string &pVariable) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseRelationalOperator wOperator, const string &wVariable,
+                                   const vector<BigInteger> &profits,
+                                   UniverseSetBelongingOperator pOperator, const BigInteger &pMin,
+                                   const BigInteger &pMax) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseRelationalOperator wOperator, const string &wVariable,
+                                   const vector<BigInteger> &profits,
+                                   UniverseSetBelongingOperator pOperator,
+                                   const vector<BigInteger> &pSet) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseSetBelongingOperator wOperator, const BigInteger &wMin,
+                                   const BigInteger &wMax, const vector<BigInteger> &profits,
+                                   UniverseRelationalOperator pOperator, const BigInteger &pValue) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseSetBelongingOperator wOperator, const BigInteger &wMin,
+                                   const BigInteger &wMax, const vector<BigInteger> &profits,
+                                   UniverseRelationalOperator pOperator, const string &pVariable) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseSetBelongingOperator wOperator, const BigInteger &wMin,
+                                   const BigInteger &wMax, const vector<BigInteger> &profits,
+                                   UniverseSetBelongingOperator pOperator, const BigInteger &pMin,
+                                   const BigInteger &pMax) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseSetBelongingOperator wOperator, const BigInteger &wMin,
+                                   const BigInteger &wMax, const vector<BigInteger> &profits,
+                                   UniverseSetBelongingOperator pOperator,
+                                   const vector<BigInteger> &pSet) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseSetBelongingOperator wOperator,
+                                   const vector<BigInteger> &wSet,
+                                   const vector<BigInteger> &profits,
+                                   UniverseRelationalOperator pOperator, const BigInteger &pValue) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseSetBelongingOperator wOperator,
+                                   const vector<BigInteger> &wSet,
+                                   const vector<BigInteger> &profits,
+                                   UniverseRelationalOperator pOperator, const string &pVariable) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseSetBelongingOperator wOperator,
+                                   const vector<BigInteger> &wSet,
+                                   const vector<BigInteger> &profits,
+                                   UniverseSetBelongingOperator pOperator, const BigInteger &pMin,
+                                   const BigInteger &pMax) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector<BigInteger> &weights,
+                                   UniverseSetBelongingOperator wOperator,
+                                   const vector<BigInteger> &wSet,
+                                   const vector<BigInteger> &profits,
+                                   UniverseSetBelongingOperator pOperator,
+                                   const vector<BigInteger> &pSet) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addStretch(const vector<string> &variables, const vector<BigInteger> &values,
+                                       const vector<BigInteger> &widthsMin,
+                                       const vector<BigInteger> &widthsMax) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addStretch(const vector<string> &variables, const vector<BigInteger> &values,
+                                       const vector<BigInteger> &widthsMin,
+                                       const vector<BigInteger> &widthsMax,
+                                       const vector<vector<BigInteger>> &patterns) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElement(const vector<string> &variables, UniverseRelationalOperator op,
+                                       const BigInteger &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElement(const vector<string> &variables, UniverseRelationalOperator op,
+                                       const string &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElement(const vector<string> &variables, UniverseSetBelongingOperator op,
+                                       const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElement(const vector<string> &variables, UniverseSetBelongingOperator op,
+                                       const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElementConstantValues(const vector<BigInteger> &values, int startIndex,
+                                                     const string &index, UniverseRelationalOperator op,
+                                                     const BigInteger &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElementConstantValues(const vector<BigInteger> &values, int startIndex,
+                                                     const string &index, UniverseRelationalOperator op,
+                                                     const string &variable) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElementConstantValues(const vector<BigInteger> &values, int startIndex,
+                                                     const string &index, UniverseSetBelongingOperator op,
+                                                     const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElementConstantValues(const vector<BigInteger> &values, int startIndex,
+                                                     const string &index, UniverseSetBelongingOperator op,
+                                                     const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElement(const vector<string> &variables, int startIndex, const string &index,
+                                       UniverseRelationalOperator op, const BigInteger &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElement(const vector<string> &variables, int startIndex, const string &index,
+                                       UniverseRelationalOperator op, const string &variable) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElement(const vector<string> &variables, int startIndex, const string &index,
+                                       UniverseSetBelongingOperator op, const BigInteger &min,
+                                       const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElement(const vector<string> &variables, int startIndex, const string &index,
+                                       UniverseSetBelongingOperator op,
+                                       const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElementConstantMatrix(const vector<vector<BigInteger>> &matrix,
+                                                     int startRowIndex, const string &rowIndex, int startColIndex,
+                                                     const string &colIndex, UniverseRelationalOperator op,
+                                                     const BigInteger &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElementConstantMatrix(const vector<vector<BigInteger>> &matrix,
+                                                     int startRowIndex, const string &rowIndex, int startColIndex,
+                                                     const string &colIndex, UniverseRelationalOperator op,
+                                                     const string &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElementConstantMatrix(const vector<vector<BigInteger>> &matrix,
+                                                     int startRowIndex, const string &rowIndex, int startColIndex,
+                                                     const string &colIndex, UniverseSetBelongingOperator op,
+                                                     const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addElementConstantMatrix(const vector<vector<BigInteger>> &matrix,
+                                                     int startRowIndex, const string &rowIndex, int startColIndex,
+                                                     const string &colIndex, UniverseSetBelongingOperator op,
+                                                     const vector<BigInteger> &set) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addElementMatrix(const vector<vector<string>> &matrix, int startRowIndex,
-        const string &rowIndex, int startColIndex, const string &colIndex, const BigInteger &value) {
-    auto mtd = interface->getMethod("addElementMatrix",
-            METHOD(VOID, CLASS(java/util/List) INTEGER CLASS(java/lang/String) INTEGER CLASS(java/lang/String) CLASS(java/math/BigInteger)));
-    auto jMatrix = UniverseJavaCspSolver::asList(matrix);
-    auto jRowIndex = JavaVirtualMachineRegistry::get()->toJavaString(rowIndex);
-    auto jColIndex = JavaVirtualMachineRegistry::get()->toJavaString(colIndex);
-    auto jValue = JavaBigInteger::newInstance(value);
-    mtd.invoke(object, **jMatrix, (jint) startRowIndex, *jRowIndex, (jint) startColIndex, *jColIndex, **jValue);
+                                             const string &rowIndex, int startColIndex, const string &colIndex,
+                                             UniverseRelationalOperator op, const BigInteger &value) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addElementMatrix(const vector<vector<string>> &matrix, int startRowIndex,
-        const string &rowIndex, int startColIndex, const string &colIndex, const string &value) {
-    auto mtd = interface->getMethod("addElementMatrix",
-            METHOD(VOID, CLASS(java/util/List) INTEGER CLASS(java/lang/String) INTEGER CLASS(java/lang/String) CLASS(java/lang/String)));
-    auto jMatrix = UniverseJavaCspSolver::asList(matrix);
-    auto jRowIndex = JavaVirtualMachineRegistry::get()->toJavaString(rowIndex);
-    auto jColIndex = JavaVirtualMachineRegistry::get()->toJavaString(colIndex);
-    auto jValue = JavaVirtualMachineRegistry::get()->toJavaString(value);
-    mtd.invoke(object, **jMatrix, (jint) startRowIndex, *jRowIndex, (jint) startColIndex, *jColIndex, *jValue);
+                                             const string &rowIndex, int startColIndex, const string &colIndex,
+                                             UniverseRelationalOperator op, const string &value) {
+    // TODO
 }
 
-void UniverseJavaCspSolver::addElementConstantMatrix(
-        const vector<vector<BigInteger>> &matrix, int startRowIndex, const string &rowIndex, int startColIndex,
-        const string &colIndex, const BigInteger &value) {
-    auto mtd = interface->getMethod("addElementConstantMatrix",
-            METHOD(VOID, CLASS(java/util/List) INTEGER CLASS(java/lang/String) INTEGER CLASS(java/lang/String) CLASS(java/math/BigInteger)));
-    auto jMatrix = UniverseJavaCspSolver::asList(matrix);
-    auto jRowIndex = JavaVirtualMachineRegistry::get()->toJavaString(rowIndex);
-    auto jColIndex = JavaVirtualMachineRegistry::get()->toJavaString(colIndex);
-    auto jValue = JavaBigInteger::newInstance(value);
-    mtd.invoke(object, **jMatrix, (jint) startRowIndex, *jRowIndex, (jint) startColIndex, *jColIndex, **jValue);
+void UniverseJavaCspSolver::addElementMatrix(const vector<vector<string>> &matrix, int startRowIndex,
+                                             const string &rowIndex, int startColIndex, const string &colIndex,
+                                             UniverseSetBelongingOperator op, const BigInteger &min,
+                                             const BigInteger &max) {
+    // TODO
 }
 
-void UniverseJavaCspSolver::addElementConstantMatrix(
-        const vector<vector<BigInteger>> &matrix, int startRowIndex, const string &rowIndex, int startColIndex,
-        const string &colIndex, const string &value) {
-    auto mtd = interface->getMethod("addElementConstantMatrix",
-            METHOD(VOID, CLASS(java/util/List) INTEGER CLASS(java/lang/String) INTEGER CLASS(java/lang/String) CLASS(java/lang/String)));
-    auto jMatrix = UniverseJavaCspSolver::asList(matrix);
-    auto jRowIndex = JavaVirtualMachineRegistry::get()->toJavaString(rowIndex);
-    auto jColIndex = JavaVirtualMachineRegistry::get()->toJavaString(colIndex);
-    auto jValue = JavaVirtualMachineRegistry::get()->toJavaString(value);
-    mtd.invoke(object, **jMatrix, (jint) startRowIndex, *jRowIndex, (jint) startColIndex, *jColIndex, *jValue);
+void UniverseJavaCspSolver::addElementMatrix(const vector<vector<string>> &matrix, int startRowIndex,
+                                             const string &rowIndex, int startColIndex, const string &colIndex,
+                                             UniverseSetBelongingOperator op,
+                                             const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addPrecedence(const vector<string> &variables) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addPrecedence(const vector<string> &variables, const vector<BigInteger> &values,
+                                     bool covered) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addSupport(const string &variable, const vector<BigInteger> &allowedValues) {
@@ -746,6 +1261,10 @@ void UniverseJavaCspSolver::addSupport(const string &variable, const vector<BigI
     auto jVariable = JavaVirtualMachineRegistry::get()->toJavaString(variable);
     auto jAllowedValues = UniverseJavaPseudoBooleanSolver::asList(allowedValues);
     mtd.invoke(object, *jVariable, **jAllowedValues);
+}
+
+void UniverseJavaCspSolver::addSupportSymbolic(const string &variable, const vector<string> &allowedValues) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addSupport(
@@ -757,12 +1276,21 @@ void UniverseJavaCspSolver::addSupport(
     mtd.invoke(object, **jVariableTuple, **jAllowedValues);
 }
 
+void UniverseJavaCspSolver::addSupportSymbolic(const vector<string> &variableTuple,
+                                               const vector<vector<string>> &allowedValues) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addConflicts(const string &variable, const vector<BigInteger> &forbiddenValues) {
     auto mtd = interface->getMethod("addConflicts",
             METHOD(VOID, CLASS(java/lang/String) CLASS(java/util/List)));
     auto jVariable = JavaVirtualMachineRegistry::get()->toJavaString(variable);
     auto jForbiddenValues = UniverseJavaPseudoBooleanSolver::asList(forbiddenValues);
     mtd.invoke(object, *jVariable, **jForbiddenValues);
+}
+
+void UniverseJavaCspSolver::addConflictsSymbolic(const string &variable, const vector<string> &forbiddenValues) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addConflicts(
@@ -772,6 +1300,11 @@ void UniverseJavaCspSolver::addConflicts(
     auto jVariableTuple = UniverseJavaCspSolver::asList(variableTuple);
     auto jForbiddenValues = UniverseJavaCspSolver::asList(forbiddenValues);
     mtd.invoke(object, **jVariableTuple, **jForbiddenValues);
+}
+
+void UniverseJavaCspSolver::addConflictsSymbolic(const vector<string> &variableTuple,
+                                                 const vector<vector<string>> &forbiddenValues) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addIntension(IUniverseIntensionConstraint *constr) {
@@ -890,6 +1423,38 @@ void UniverseJavaCspSolver::addMinimum(
     mtd.invoke(object, **jVariables, *jOp, *jValue);
 }
 
+void UniverseJavaCspSolver::addMinimum(const vector<string> &variables, UniverseSetBelongingOperator op,
+                                       const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMinimum(const vector<string> &variables, UniverseSetBelongingOperator op,
+                                       const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMinimumIndex(const vector<string> &variables, int startIndex, const string &index,
+                                            UniverseRelationalOperator op, const BigInteger &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMinimumIndex(const vector<string> &variables, int startIndex, const string &index,
+                                            UniverseRelationalOperator op, const string &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMinimumIndex(const vector<string> &variables, int startIndex, const string &index,
+                                            UniverseSetBelongingOperator op, const BigInteger &min,
+                                            const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMinimumIndex(const vector<string> &variables, int startIndex, const string &index,
+                                            UniverseSetBelongingOperator op,
+                                            const vector<BigInteger> &set) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addMinimumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
         UniverseRelationalOperator op, const BigInteger &value) {
     auto mtd = interface->getMethod("addMinimumIntension",
@@ -908,6 +1473,66 @@ void UniverseJavaCspSolver::addMinimumIntension(const vector<IUniverseIntensionC
     auto jOp = toJavaRelationalOperator(op);
     auto jValue = JavaVirtualMachineRegistry::get()->toJavaString(value);
     mtd.invoke(object, **jIntensionConstraints, *jOp, **jValue);
+}
+
+void
+UniverseJavaCspSolver::addMinimumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
+                                           UniverseSetBelongingOperator op, const BigInteger &min,
+                                           const BigInteger &max) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addMinimumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
+                                           UniverseSetBelongingOperator op,
+                                           const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMinimumArg(const vector<string> &variables, UniverseRelationalOperator op,
+                                          const BigInteger &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMinimumArg(const vector<string> &variables, UniverseRelationalOperator op,
+                                          const string &value) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addMinimumArg(const vector<string> &variables, UniverseSetBelongingOperator op,
+                                     const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addMinimumArg(const vector<string> &variables, UniverseSetBelongingOperator op,
+                                     const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMinimumArgIntension(
+        const vector<IUniverseIntensionConstraint *> &intensionConstraints,
+        UniverseRelationalOperator op, const BigInteger &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMinimumArgIntension(
+        const vector<IUniverseIntensionConstraint *> &intensionConstraints,
+        UniverseRelationalOperator op, const string &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMinimumArgIntension(
+        const vector<IUniverseIntensionConstraint *> &intensionConstraints,
+        UniverseSetBelongingOperator op, const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMinimumArgIntension(
+        const vector<IUniverseIntensionConstraint *> &intensionConstraints,
+        UniverseSetBelongingOperator op, const vector<BigInteger> &set) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addMaximum(
@@ -930,6 +1555,38 @@ void UniverseJavaCspSolver::addMaximum(
     mtd.invoke(object, **jVariables, *jOp, *jValue);
 }
 
+void UniverseJavaCspSolver::addMaximum(const vector<string> &variables, UniverseSetBelongingOperator op,
+                                       const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMaximum(const vector<string> &variables, UniverseSetBelongingOperator op,
+                                       const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMaximumIndex(const vector<string> &variables, int startIndex, const string &index,
+                                            UniverseRelationalOperator op, const BigInteger &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMaximumIndex(const vector<string> &variables, int startIndex, const string &index,
+                                            UniverseRelationalOperator op, const string &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMaximumIndex(const vector<string> &variables, int startIndex, const string &index,
+                                            UniverseSetBelongingOperator op, const BigInteger &min,
+                                            const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMaximumIndex(const vector<string> &variables, int startIndex, const string &index,
+                                            UniverseSetBelongingOperator op,
+                                            const vector<BigInteger> &set) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addMaximumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
         UniverseRelationalOperator op, const BigInteger &value) {
     auto mtd = interface->getMethod("addMaximumIntension",
@@ -948,6 +1605,66 @@ void UniverseJavaCspSolver::addMaximumIntension(const vector<IUniverseIntensionC
     auto jOp = toJavaRelationalOperator(op);
     auto jValue = JavaVirtualMachineRegistry::get()->toJavaString(value);
     mtd.invoke(object, **jIntensionConstraints, *jOp, **jValue);
+}
+
+void
+UniverseJavaCspSolver::addMaximumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
+                                           UniverseSetBelongingOperator op, const BigInteger &min,
+                                           const BigInteger &max) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addMaximumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
+                                           UniverseSetBelongingOperator op,
+                                           const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMaximumArg(const vector<string> &variables, UniverseRelationalOperator op,
+                                          const BigInteger &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMaximumArg(const vector<string> &variables, UniverseRelationalOperator op,
+                                          const string &value) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addMaximumArg(const vector<string> &variables, UniverseSetBelongingOperator op,
+                                     const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addMaximumArg(const vector<string> &variables, UniverseSetBelongingOperator op,
+                                     const vector<BigInteger> &set) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMaximumArgIntension(
+        const vector<IUniverseIntensionConstraint *> &intensionConstraints,
+        UniverseRelationalOperator op, const BigInteger &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMaximumArgIntension(
+        const vector<IUniverseIntensionConstraint *> &intensionConstraints,
+        UniverseRelationalOperator op, const string &value) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMaximumArgIntension(
+        const vector<IUniverseIntensionConstraint *> &intensionConstraints,
+        UniverseSetBelongingOperator op, const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addMaximumArgIntension(
+        const vector<IUniverseIntensionConstraint *> &intensionConstraints,
+        UniverseSetBelongingOperator op, const vector<BigInteger> &set) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addNoOverlap(const vector<string> &variables, const vector<BigInteger> &length) {
@@ -985,6 +1702,20 @@ void UniverseJavaCspSolver::addNoOverlapVariableLength(
     mtd.invoke(object, **jVariables, **jLength, (jboolean) zeroIgnored);
 }
 
+void UniverseJavaCspSolver::addBiDimensionalNoOverlap(const vector<string> &xVariables,
+                                                      const vector<string> &yVariables,
+                                                      const vector<string> &xLength,
+                                                      const vector<BigInteger> &yLength) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addBiDimensionalNoOverlap(const vector<string> &xVariables,
+                                                      const vector<string> &yVariables,
+                                                      const vector<string> &xLength,
+                                                      const vector<BigInteger> &yLength, bool zeroIgnored) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addMultiDimensionalNoOverlap(
         const vector<vector<string>> &variables, const vector<vector<BigInteger>> &length) {
     auto mtd = interface->getMethod("addMultiDimensionalNoOverlap",
@@ -1019,68 +1750,6 @@ void UniverseJavaCspSolver::addMultiDimensionalNoOverlapVariableLength(
     auto jVariables = UniverseJavaCspSolver::asList(variables);
     auto jLength = UniverseJavaCspSolver::asList(length);
     mtd.invoke(object, **jVariables, **jLength, (jboolean) zeroIgnored);
-}
-
-void UniverseJavaCspSolver::addNValues(
-        const vector<string> &variables, UniverseRelationalOperator op, const BigInteger &nb) {
-    auto mtd = interface->getMethod("addNValues",
-            METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG CLASS(java/math/BigInteger)));
-    auto jVariables = UniverseJavaCspSolver::asList(variables);
-    auto jOp = toJavaRelationalOperator(op);
-    auto jNb = JavaBigInteger::newInstance(nb);
-    mtd.invoke(object, **jVariables, *jOp, **jNb);
-}
-
-void UniverseJavaCspSolver::addNValuesExcept(const vector<string> &variables, UniverseRelationalOperator op,
-        const BigInteger &nb, const vector<BigInteger> &except) {
-    auto mtd = interface->getMethod("addNValuesExcept",
-            METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG CLASS(java/math/BigInteger) CLASS(java/util/List)));
-    auto jVariables = UniverseJavaCspSolver::asList(variables);
-    auto jOp = toJavaRelationalOperator(op);
-    auto jNb = JavaBigInteger::newInstance(nb);
-    auto jExcept = UniverseJavaPseudoBooleanSolver::asList(except);
-    mtd.invoke(object, **jVariables, *jOp, **jNb, **jExcept);
-}
-
-void UniverseJavaCspSolver::addNValues(
-        const vector<string> &variables, UniverseRelationalOperator op, const string &nb) {
-    auto mtd = interface->getMethod("addNValues",
-            METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG CLASS(java/lang/String)));
-    auto jVariables = UniverseJavaCspSolver::asList(variables);
-    auto jOp = toJavaRelationalOperator(op);
-    auto jNb = JavaVirtualMachineRegistry::get()->toJavaString(nb);
-    mtd.invoke(object, **jVariables, *jOp, *jNb);
-}
-
-void UniverseJavaCspSolver::addNValuesExcept(const vector<string> &variables, UniverseRelationalOperator op,
-        const string &nb, const vector<BigInteger> &except) {
-    auto mtd = interface->getMethod("addNValuesExcept",
-            METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG CLASS(java/lang/String) CLASS(java/util/List)));
-    auto jVariables = UniverseJavaCspSolver::asList(variables);
-    auto jOp = toJavaRelationalOperator(op);
-    auto jNb = JavaVirtualMachineRegistry::get()->toJavaString(nb);
-    auto jExcept = UniverseJavaPseudoBooleanSolver::asList(except);
-    mtd.invoke(object, **jVariables, *jOp, *jNb, **jExcept);
-}
-
-void UniverseJavaCspSolver::addNValuesIntension(const vector<IUniverseIntensionConstraint *> &expressions,
-        UniverseRelationalOperator op, const BigInteger &nb) {
-    auto mtd = interface->getMethod("addNValuesIntension",
-            METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG CLASS(java/math/BigInteger)));
-    auto jExpressions = UniverseJavaCspSolver::asList(expressions);
-    auto jOp = toJavaRelationalOperator(op);
-    auto jNb = JavaBigInteger::newInstance(nb);
-    mtd.invoke(object, **jExpressions, *jOp, **jNb);
-}
-
-void UniverseJavaCspSolver::addNValuesIntension(const vector<IUniverseIntensionConstraint *> &expressions,
-        UniverseRelationalOperator op, const string &nb) {
-    auto mtd = interface->getMethod("addNValuesIntension",
-            METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG CLASS(java/lang/String)));
-    auto jExpressions = UniverseJavaCspSolver::asList(expressions);
-    auto jOp = toJavaRelationalOperator(op);
-    auto jNb = JavaVirtualMachineRegistry::get()->toJavaString(nb);
-    mtd.invoke(object, **jExpressions, *jOp, *jNb);
 }
 
 void UniverseJavaCspSolver::addOrdered(const vector<string> &variables, UniverseRelationalOperator op) {
@@ -1137,6 +1806,12 @@ void UniverseJavaCspSolver::addLex(const vector<vector<string>> &tuples, Univers
     mtd.invoke(object, **jTuples, *jOp);
 }
 
+void UniverseJavaCspSolver::addLex(const vector<vector<string>> &variables,
+                                   const vector<vector<BigInteger>> &limit,
+                                   UniverseRelationalOperator op) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addLexMatrix(const vector<vector<string>> &matrix, UniverseRelationalOperator op) {
     auto mtd = interface->getMethod("addLexMatrix",
             METHOD(VOID, CLASS(java/util/List) J_RELATIONAL_OPERATOR_SIG));
@@ -1166,6 +1841,16 @@ void UniverseJavaCspSolver::addSum(const vector<string> &variables, const vector
     mtd.invoke(object, **jVariables, **jCoefficients, *jOp, **jValue);
 }
 
+void UniverseJavaCspSolver::addSum(const vector<string> &variables, UniverseSetBelongingOperator op,
+                                   const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addSum(const vector<string> &variables, UniverseSetBelongingOperator op,
+                                   const vector<BigInteger> &values) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addSum(
         const vector<string> &variables, UniverseRelationalOperator op, const string &rightVariable) {
     auto mtd = interface->getMethod("addSum",
@@ -1185,6 +1870,18 @@ void UniverseJavaCspSolver::addSum(const vector<string> &variables, const vector
     auto jOp = toJavaRelationalOperator(op);
     auto jRightVariable = JavaVirtualMachineRegistry::get()->toJavaString(rightVariable);
     mtd.invoke(object, **jVariables, **jCoefficients, *jOp, **jRightVariable);
+}
+
+void
+UniverseJavaCspSolver::addSum(const vector<string> &variables, const vector<BigInteger> &coefficients,
+                              UniverseSetBelongingOperator op, const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addSum(const vector<string> &variables, const vector<BigInteger> &coefficients,
+                              UniverseSetBelongingOperator op, const vector<BigInteger> &values) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
@@ -1208,6 +1905,18 @@ void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConst
     mtd.invoke(object, **jIntensionConstraints, **jCoefficients, *jOp, **jValue);
 }
 
+void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConstraint *> &expressions,
+                                            UniverseSetBelongingOperator op, const BigInteger &min,
+                                            const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConstraint *> &expressions,
+                                            UniverseSetBelongingOperator op,
+                                            const vector<BigInteger> &values) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
         UniverseRelationalOperator op, const string &rightVariable) {
     auto mtd = interface->getMethod("addSumIntension",
@@ -1227,6 +1936,20 @@ void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConst
     auto jOp = toJavaRelationalOperator(op);
     auto jRightVariable = JavaVirtualMachineRegistry::get()->toJavaString(rightVariable);
     mtd.invoke(object, **jIntensionConstraints, **jCoefficients, *jOp, **jRightVariable);
+}
+
+void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConstraint *> &expressions,
+                                            const vector<BigInteger> &coefficients,
+                                            UniverseSetBelongingOperator op, const BigInteger &min,
+                                            const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConstraint *> &expressions,
+                                            const vector<BigInteger> &coefficients,
+                                            UniverseSetBelongingOperator op,
+                                            const vector<BigInteger> &values) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addSumWithVariableCoefficients(const vector<string> &variables,
@@ -1251,6 +1974,20 @@ void UniverseJavaCspSolver::addSumWithVariableCoefficients(const vector<string> 
     mtd.invoke(object, **jVariables, **jCoefficients, *jOp, **jRightVariable);
 }
 
+void UniverseJavaCspSolver::addSumWithVariableCoefficients(const vector<string> &variables,
+                                                           const vector<string> &coefficients,
+                                                           UniverseSetBelongingOperator op,
+                                                           const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addSumWithVariableCoefficients(const vector<string> &variables,
+                                                           const vector<string> &coefficients,
+                                                           UniverseSetBelongingOperator op,
+                                                           const vector<BigInteger> &values) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addSumIntensionWithVariableCoefficients(
         const vector<IUniverseIntensionConstraint *> &intensionConstraints,
         const vector<string> &coefficients, UniverseRelationalOperator op, const BigInteger &value) {
@@ -1273,6 +2010,76 @@ void UniverseJavaCspSolver::addSumIntensionWithVariableCoefficients(
     auto jOp = toJavaRelationalOperator(op);
     auto jRightVariable = JavaVirtualMachineRegistry::get()->toJavaString(rightVariable);
     mtd.invoke(object, **jIntensionConstraints, **jCoefficients, *jOp, **jRightVariable);
+}
+
+void UniverseJavaCspSolver::addSumIntensionWithVariableCoefficients(
+        const vector<IUniverseIntensionConstraint *> &expressions, const vector<string> &coefficients,
+        UniverseSetBelongingOperator op, const BigInteger &min, const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addSumIntensionWithVariableCoefficients(
+        const vector<IUniverseIntensionConstraint *> &expressions, const vector<string> &coefficients,
+        UniverseSetBelongingOperator op, const vector<BigInteger> &values) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCircuit(const vector<string> &variables, int startIndex) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCircuit(const vector<string> &variables, int startIndex, const BigInteger &size) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addCircuit(const vector<string> &variables, int startIndex, const string &size) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addMDD(const vector<string> &variables, const vector<UniverseTransition> &transitions) {
+    // TODO
+}
+
+void
+UniverseJavaCspSolver::addRegular(const vector<string> &variables, const vector<UniverseTransition> &transitions,
+                                  const string &startState, const vector<string> &finalStates) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addFlow(const vector<string> &variables, const vector<BigInteger> &balance,
+                                    const vector<vector<BigInteger>> &edges) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addFlow(const vector<string> &variables, const vector<BigInteger> &balance,
+                                    const vector<vector<BigInteger>> &edges,
+                                    const vector<BigInteger> &weights,
+                                    UniverseRelationalOperator op, const BigInteger &totalCost) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addFlow(const vector<string> &variables, const vector<BigInteger> &balance,
+                                    const vector<vector<BigInteger>> &edges,
+                                    const vector<BigInteger> &weights,
+                                    UniverseRelationalOperator op, const string &totalCost) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addFlow(const vector<string> &variables, const vector<BigInteger> &balance,
+                                    const vector<vector<BigInteger>> &edges,
+                                    const vector<BigInteger> &weights,
+                                    UniverseSetBelongingOperator op, const BigInteger &min,
+                                    const BigInteger &max) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addFlow(const vector<string> &variables, const vector<BigInteger> &balance,
+                                    const vector<vector<BigInteger>> &edges,
+                                    const vector<BigInteger> &weights,
+                                    UniverseSetBelongingOperator op,
+                                    const vector<BigInteger> &set) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::minimizeVariable(const string &variable) {
@@ -1569,8 +2376,12 @@ void UniverseJavaCspSolver::maximizeExpressionNValues(
     mtd.invoke(object, **jExpressions, **jCoefficients);
 }
 
-UniverseSolverResult UniverseJavaCspSolver::solve(const vector<UniverseAssumption<bool>> &assumptions) {
-    return UniverseJavaPseudoBooleanSolver::solve(assumptions);
+UniverseSolverResult UniverseJavaCspSolver::solveDimacs(const vector<int> &assumptions) {
+    return UniverseJavaPseudoBooleanSolver::solveDimacs(assumptions);
+}
+
+UniverseSolverResult UniverseJavaCspSolver::solveBoolean(const vector<UniverseAssumption<bool>> &assumptions) {
+    return UniverseJavaPseudoBooleanSolver::solveBoolean(assumptions);
 }
 
 UniverseSolverResult UniverseJavaCspSolver::solve(const vector<UniverseAssumption<BigInteger>> &assumptions) {

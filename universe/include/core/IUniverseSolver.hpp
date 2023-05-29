@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,17 +24,19 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 13/09/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
 #ifndef UNIVERSE_IUNIVERSESOLVER_HPP
 #define UNIVERSE_IUNIVERSESOLVER_HPP
 
+#include <iostream>
 #include <map>
 #include <string>
 #include <vector>
 
+#include "../listener/IUniverseSearchListener.hpp"
 #include "../optim/IOptimizationSolver.hpp"
 #include "problem/IUniverseVariable.hpp"
 #include "UniverseAssumption.hpp"
@@ -75,11 +77,25 @@ namespace Universe {
         [[nodiscard]] virtual const std::map<std::string, Universe::IUniverseVariable *> &getVariablesMapping() = 0;
 
         /**
+         * Advises this solver to focus on some variables to make decisions.
+         *
+         * @param variables The variables on which to make decisions.
+         */
+        virtual void decisionVariables(const std::vector<std::string> &variables) = 0;
+
+        /**
          * Gives the number of constraints defined in this solver.
          *
          * @return The number of constraints.
          */
         virtual int nConstraints() = 0;
+
+        /**
+         * Checks whether the associated problem is an optimization problem.
+         *
+         * @return Whether the problem is an optimization problem.
+         */
+        virtual bool isOptimization() = 0;
 
         /**
          * Sets the time limit before interrupting the search.
@@ -105,11 +121,34 @@ namespace Universe {
         virtual void setVerbosity(int level) = 0;
 
         /**
+         * Adds a listener to this solver, which listens to the events occurring in
+         * the solver during the search.
+         *
+         * @param listener The listener to add.
+         */
+        virtual void addSearchListener(Universe::IUniverseSearchListener *listener);
+
+        /**
          * Sets the log file to be used by the solver.
          *
          * @param filename The name of the log file.
          */
         virtual void setLogFile(const std::string &filename) = 0;
+
+        /**
+         * Sets the output stream to be used by the solver for logging.
+         *
+         * @param stream The logging output stream.
+         */
+        virtual void setLogStream(std::ostream &stream) = 0;
+
+        /**
+         * Loads a problem stored in the given file.
+         * The solver is expected to parse the problem itself.
+         *
+         * @param filename The name of the file containing the problem to solve.
+         */
+        virtual void loadInstance(const std::string &filename) = 0;
 
         /**
          * Solves the problem associated to this solver.
@@ -151,12 +190,22 @@ namespace Universe {
         virtual std::vector<Universe::BigInteger> solution() = 0;
 
         /**
-         * Gives the mapping between the name of a variable and the assignment found for this
-         * variable by this solver (if any).
+         * Gives the mapping between the names of the variables and the assignment found
+         * by this solver (if any).
          *
          * @return The solution found by this solver.
          */
         virtual std::map<std::string, Universe::BigInteger> mapSolution() = 0;
+
+        /**
+         * Gives the mapping between the names of the variables and the assignment found
+         * by this solver (if any).
+         *
+         * @param excludeAux Whether auxiliary variables should be excluded from the solution.
+         *
+         * @return The solution found by this solver.
+         */
+        virtual std::map<std::string, Universe::BigInteger> mapSolution(bool excludeAux) = 0;
 
         /**
          * Casts this solver into an IOptimizationSolver.

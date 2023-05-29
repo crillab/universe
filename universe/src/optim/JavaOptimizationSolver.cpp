@@ -19,7 +19,7 @@
  ******************************************************************************/
 
 /**
- * @file JavaOptimizationSolver.hpp
+ * @file JavaOptimizationSolver.cpp
  * @brief Defines an implementation of an IOptimizationSolver in Java (using JNI).
  * @author Thibault Falque
  * @author Romain Wallon
@@ -54,18 +54,11 @@ bool JavaOptimizationSolver::isMinimization() {
     return mtd.invoke(object);
 }
 
-BigInteger JavaOptimizationSolver::getCurrentBound() {
-    auto mtd = interface->getObjectMethod("getCurrentBound", METHOD(CLASS(java/math/BigInteger)));
-    auto obj = mtd.invoke(object);
-    auto bigInteger = JavaBigInteger::of(obj);
-    return bigInteger.asBigInteger();
-}
-
-BigInteger JavaOptimizationSolver::getLowerBound() {
-    auto mtd = interface->getObjectMethod("getLowerBound", METHOD(CLASS(java/math/BigInteger)));
-    auto obj = mtd.invoke(object);
-    auto bigInteger = JavaBigInteger::of(obj);
-    return bigInteger.asBigInteger();
+void JavaOptimizationSolver::setBounds(const BigInteger &lb, const BigInteger &ub) {
+    auto mtd = interface->getMethod("setBounds", METHOD(VOID, CLASS(java/math/BigInteger) CLASS(java/math/BigInteger)));
+    auto lower = JavaBigInteger::newInstance(lb);
+    auto upper = JavaBigInteger::newInstance(ub);
+    mtd.invoke(object, **lower, **upper);
 }
 
 void JavaOptimizationSolver::setLowerBound(const BigInteger &lb) {
@@ -74,8 +67,8 @@ void JavaOptimizationSolver::setLowerBound(const BigInteger &lb) {
     mtd.invoke(object, **bound);
 }
 
-BigInteger JavaOptimizationSolver::getUpperBound() {
-    auto mtd = interface->getObjectMethod("getUpperBound", METHOD(CLASS(java/math/BigInteger)));
+BigInteger JavaOptimizationSolver::getLowerBound() {
+    auto mtd = interface->getObjectMethod("getLowerBound", METHOD(CLASS(java/math/BigInteger)));
     auto obj = mtd.invoke(object);
     auto bigInteger = JavaBigInteger::of(obj);
     return bigInteger.asBigInteger();
@@ -87,11 +80,18 @@ void JavaOptimizationSolver::setUpperBound(const BigInteger &ub) {
     mtd.invoke(object, **bound);
 }
 
-void JavaOptimizationSolver::setBounds(const BigInteger &lb, const BigInteger &ub) {
-    auto mtd = interface->getMethod("setBounds", METHOD(VOID, CLASS(java/math/BigInteger) CLASS(java/math/BigInteger)));
-    auto lower = JavaBigInteger::newInstance(lb);
-    auto upper = JavaBigInteger::newInstance(ub);
-    mtd.invoke(object, **lower, **upper);
+BigInteger JavaOptimizationSolver::getUpperBound() {
+    auto mtd = interface->getObjectMethod("getUpperBound", METHOD(CLASS(java/math/BigInteger)));
+    auto obj = mtd.invoke(object);
+    auto bigInteger = JavaBigInteger::of(obj);
+    return bigInteger.asBigInteger();
+}
+
+BigInteger JavaOptimizationSolver::getCurrentBound() {
+    auto mtd = interface->getObjectMethod("getCurrentBound", METHOD(CLASS(java/math/BigInteger)));
+    auto obj = mtd.invoke(object);
+    auto bigInteger = JavaBigInteger::of(obj);
+    return bigInteger.asBigInteger();
 }
 
 void JavaOptimizationSolver::loadInterface() {

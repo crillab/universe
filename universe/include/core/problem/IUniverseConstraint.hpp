@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 10/10/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -36,15 +36,14 @@
 namespace Universe {
 
     /**
-     * The IUniverseConstraint class defines an interface for the constraints
-     * in a problem.
+     * The IUniverseConstraint class represents a constraint in constraint problem.
      */
     class IUniverseConstraint {
 
     public:
 
         /**
-         * Destroys this IUniverseDomain.
+         * Destroys this IUniverseConstraint.
          */
         virtual ~IUniverseConstraint() = default;
 
@@ -52,9 +51,9 @@ namespace Universe {
          * Gives the scope of this constraint, i.e., the variables that appear in
          * this constraint.
          *
-         * @return The scope of this constraint.
+         * @return The variables involved in this constraint.
          */
-        [[nodiscard]] virtual const std::vector<Universe::IUniverseVariable*> &scope() const = 0;
+        [[nodiscard]] virtual const std::vector<Universe::IUniverseVariable *> &scope() const = 0;
 
     };
 

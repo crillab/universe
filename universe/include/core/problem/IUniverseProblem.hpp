@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 10/10/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -39,7 +39,7 @@
 namespace Universe {
 
     /**
-     * The IUniverseProblem class defines an interface for the problems to solve.
+     * The IUniverseProblem class represents a constraint problem to solve.
      */
     class IUniverseProblem {
 
@@ -62,7 +62,7 @@ namespace Universe {
          *
          * @return The variables in this problem.
          */
-        [[nodiscard]] virtual const std::vector<Universe::IUniverseVariable> &getVariables() const = 0;
+        [[nodiscard]] virtual const std::vector<Universe::IUniverseVariable *> &getVariables() const = 0;
 
         /**
          * Adds a constraint to this problem.
@@ -76,7 +76,7 @@ namespace Universe {
          *
          * @return The constraints in this problem.
          */
-        [[nodiscard]] virtual const std::vector<Universe::IUniverseConstraint> &getConstraints() const = 0;
+        [[nodiscard]] virtual const std::vector<Universe::IUniverseConstraint *> &getConstraints() const = 0;
 
     };
 

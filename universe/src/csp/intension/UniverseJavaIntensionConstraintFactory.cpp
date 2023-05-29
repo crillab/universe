@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -20,11 +20,11 @@
 
 /**
  * @file UniverseJavaIntensionConstraintFactory.cpp
- * @brief Defines a utility class for instantiating Java intension constraints.
+ * @brief Defines a factory class for instantiating Java intension constraints.
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 19/10/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -34,14 +34,12 @@
 
 #include "../../../include/csp/intension/UniverseJavaIntensionConstraint.hpp"
 #include "../../../include/csp/intension/UniverseJavaIntensionConstraintFactory.hpp"
-#include "../../../include/csp/operator/UniverseArithmeticOperator.hpp"
-#include "../../../include/csp/operator/UniverseBooleanOperator.hpp"
-#include "../../../include/csp/operator/UniverseRelationalOperator.hpp"
-#include "../../../include/csp/operator/UniverseSetBelongingOperator.hpp"
+
 #include "../../../include/java/JavaBigInteger.hpp"
 #include "../../../include/java/JavaList.hpp"
 
 #define INTENSION_CONSTR CLASS(fr/univartois/cril/juniverse/csp/intension/IIntensionConstraint)
+#define UNIVERSE_OPERATOR CLASS(fr/univartois/cril/juniverse/csp/operator/UniverseOperator)
 
 using namespace easyjni;
 using namespace std;
@@ -76,11 +74,75 @@ IUniverseIntensionConstraint *UniverseJavaIntensionConstraintFactory::variable(s
     return UniverseJavaIntensionConstraint::newInstance(obj);
 }
 
+IUniverseIntensionConstraint *UniverseJavaIntensionConstraintFactory::in(
+        IUniverseIntensionConstraint *constraint, const BigInteger &min, const BigInteger &max) {
+    loadClasses();
+    auto mtd = jClass->getStaticObjectMethod("in",
+            METHOD(INTENSION_CONSTR, INTENSION_CONSTR CLASS(java/math/BigInteger) CLASS(java/math/BigInteger)));
+    auto jConstr = (UniverseJavaIntensionConstraint *) constraint;
+    auto jMin = JavaBigInteger::newInstance(min);
+    auto jMax = JavaBigInteger::newInstance(max);
+    auto obj = mtd.invokeStatic(*jClass, ***jConstr, **jMin, **jMax);
+    return UniverseJavaIntensionConstraint::newInstance(obj);
+}
+
+IUniverseIntensionConstraint *UniverseJavaIntensionConstraintFactory::in(
+        IUniverseIntensionConstraint *constraint, vector<IUniverseIntensionConstraint *> set) {
+    loadClasses();
+    auto mtd = jClass->getStaticObjectMethod("in",
+            METHOD(INTENSION_CONSTR, INTENSION_CONSTR CLASS(java/util/List)));
+    function<JavaObject(IUniverseIntensionConstraint *)> f = [] (auto *c) {
+        return **((UniverseJavaIntensionConstraint *) c);
+    };
+    auto jConstr = (UniverseJavaIntensionConstraint *) constraint;
+    auto list = JavaList::from(set, f);
+    auto obj = mtd.invokeStatic(*jClass, ***jConstr, **list);
+    return UniverseJavaIntensionConstraint::newInstance(obj);
+}
+
+IUniverseIntensionConstraint *UniverseJavaIntensionConstraintFactory::notIn(
+        IUniverseIntensionConstraint *constraint, const BigInteger &min, const BigInteger &max) {
+    loadClasses();
+    auto mtd = jClass->getStaticObjectMethod("notIn",
+            METHOD(INTENSION_CONSTR, INTENSION_CONSTR CLASS(java/math/BigInteger) CLASS(java/math/BigInteger)));
+    auto jConstr = (UniverseJavaIntensionConstraint *) constraint;
+    auto jMin = JavaBigInteger::newInstance(min);
+    auto jMax = JavaBigInteger::newInstance(max);
+    auto obj = mtd.invokeStatic(*jClass, ***jConstr, **jMin, **jMax);
+    return UniverseJavaIntensionConstraint::newInstance(obj);
+}
+
+IUniverseIntensionConstraint *UniverseJavaIntensionConstraintFactory::notIn(
+        IUniverseIntensionConstraint *constraint, vector<IUniverseIntensionConstraint *> set) {
+    loadClasses();
+    auto mtd = jClass->getStaticObjectMethod("notIn",
+             METHOD(INTENSION_CONSTR, INTENSION_CONSTR CLASS(java/util/List)));
+    function<JavaObject(IUniverseIntensionConstraint *)> f = [] (auto *c) {
+        return **((UniverseJavaIntensionConstraint *) c);
+    };
+    auto jConstr = (UniverseJavaIntensionConstraint *) constraint;
+    auto list = JavaList::from(set, f);
+    auto obj = mtd.invokeStatic(*jClass, ***jConstr, **list);
+    return UniverseJavaIntensionConstraint::newInstance(obj);
+}
+
+IUniverseIntensionConstraint *UniverseJavaIntensionConstraintFactory::ite(IUniverseIntensionConstraint *condition,
+        IUniverseIntensionConstraint *ifTrue, IUniverseIntensionConstraint *ifFalse) {
+    loadClasses();
+    auto mtd = jClass->getStaticObjectMethod("ite",
+            METHOD(INTENSION_CONSTR, INTENSION_CONSTR INTENSION_CONSTR INTENSION_CONSTR));
+    auto jCondition = (UniverseJavaIntensionConstraint *) condition;
+    auto jIfTrue = (UniverseJavaIntensionConstraint *) ifTrue;
+    auto jIfFalse = (UniverseJavaIntensionConstraint *) ifFalse;
+    auto obj = mtd.invokeStatic(*jClass, ***jCondition, ***jIfTrue, ***jIfFalse);
+    return UniverseJavaIntensionConstraint::newInstance(obj);
+}
+
 IUniverseIntensionConstraint *UniverseJavaIntensionConstraintFactory::unary(
         UniverseOperator op, IUniverseIntensionConstraint *constraint) {
     loadClasses();
     auto mtd = jClass->getStaticObjectMethod("unary",
-            METHOD(INTENSION_CONSTR, CLASS(fr/univartois/cril/juniverse/csp/operator/UniverseOperator) INTENSION_CONSTR));
+             METHOD(INTENSION_CONSTR, UNIVERSE_OPERATOR INTENSION_CONSTR));
     auto jOp = getOperator(op);
     auto jConstraint = (UniverseJavaIntensionConstraint *) constraint;
     auto obj = mtd.invokeStatic(*jClass, *jOp, ***jConstraint);
@@ -91,7 +153,7 @@ IUniverseIntensionConstraint *UniverseJavaIntensionConstraintFactory::binary(
         UniverseOperator op, IUniverseIntensionConstraint *left, IUniverseIntensionConstraint *right) {
     loadClasses();
     auto mtd = jClass->getStaticObjectMethod("binary",
-            METHOD(INTENSION_CONSTR, CLASS(fr/univartois/cril/juniverse/csp/operator/UniverseOperator) INTENSION_CONSTR INTENSION_CONSTR));
+             METHOD(INTENSION_CONSTR, UNIVERSE_OPERATOR INTENSION_CONSTR INTENSION_CONSTR));
     auto jOp = getOperator(op);
     auto jLeft = (UniverseJavaIntensionConstraint *) left;
     auto jRight = (UniverseJavaIntensionConstraint *) right;
@@ -99,38 +161,24 @@ IUniverseIntensionConstraint *UniverseJavaIntensionConstraintFactory::binary(
     return UniverseJavaIntensionConstraint::newInstance(obj);
 }
 
-IUniverseIntensionConstraint * UniverseJavaIntensionConstraintFactory::nary(
+IUniverseIntensionConstraint *UniverseJavaIntensionConstraintFactory::nary(
         UniverseOperator op, vector<IUniverseIntensionConstraint *> constraints) {
     loadClasses();
     auto mtd = jClass->getStaticObjectMethod("nary",
-            METHOD(INTENSION_CONSTR, CLASS(fr/univartois/cril/juniverse/csp/operator/UniverseOperator) CLASS(java/util/List)));
-
+             METHOD(INTENSION_CONSTR, UNIVERSE_OPERATOR CLASS(java/util/List)));
     function<JavaObject(IUniverseIntensionConstraint *)> f = [] (auto *c) {
         return **((UniverseJavaIntensionConstraint *) c);
     };
     auto jOp = getOperator(op);
     auto list = JavaList::from(constraints, f);
-
     auto obj = mtd.invokeStatic(*jClass, *jOp, **list);
-    return UniverseJavaIntensionConstraint::newInstance(obj);
-}
-
-IUniverseIntensionConstraint *UniverseJavaIntensionConstraintFactory::ite(IUniverseIntensionConstraint *condition,
-        IUniverseIntensionConstraint *ifTrue, IUniverseIntensionConstraint *ifFalse) {
-    loadClasses();
-    auto mtd = jClass->getStaticObjectMethod("ite",
-            METHOD(INTENSION_CONSTR, CLASS(INTENSION_CONSTR INTENSION_CONSTR INTENSION_CONSTR)));
-    auto jCondition = (UniverseJavaIntensionConstraint *) condition;
-    auto jIfTrue = (UniverseJavaIntensionConstraint *) ifTrue;
-    auto jIfFalse = (UniverseJavaIntensionConstraint *) ifFalse;
-    auto obj = mtd.invokeStatic(*jClass, ***jCondition, ***jIfTrue, ***jIfFalse);
     return UniverseJavaIntensionConstraint::newInstance(obj);
 }
 
 void UniverseJavaIntensionConstraintFactory::loadClasses() {
     if (jClass == nullptr) {
         jClass = new JavaClass(JavaVirtualMachineRegistry::get()->loadClass(
-                "fr/univartois/cril/juniverse/csp/intension/AbstractUniverseIntensionConstraintFactory"));
+                "fr/univartois/cril/juniverse/csp/intension/UniverseIntensionConstraintFactory"));
         jArithmetic = new JavaClass(JavaVirtualMachineRegistry::get()->loadClass(
                 "fr/univartois/cril/juniverse/csp/operator/UniverseArithmeticOperator"));
         jBoolean = new JavaClass(JavaVirtualMachineRegistry::get()->loadClass(

@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 21/10/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -119,11 +119,9 @@ namespace Universe {
         static Universe::JavaList from(const std::vector<T> &vector, std::function<easyjni::JavaObject(T)> fct) {
             int nbElems = vector.size();
             Universe::JavaList list(newInstance(nbElems));
-
             for (int i = 0; i < nbElems; i++) {
                 list.add(fct(vector[i]));
             }
-
             return list;
         }
 
@@ -176,11 +174,9 @@ namespace Universe {
         std::vector<T> asVector(std::function<T(easyjni::JavaObject)> fct) {
             int nbElems = size();
             std::vector<T> v(nbElems);
-
             for (int i = 0; i < nbElems; i++) {
                 v.push_back(fct(get(i)));
             }
-
             return v;
         }
 

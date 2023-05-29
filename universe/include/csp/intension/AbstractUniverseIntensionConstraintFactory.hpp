@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -20,11 +20,11 @@
 
 /**
  * @file AbstractUniverseIntensionConstraintFactory.hpp
- * @brief Defines an abstract class for instantiating Java intension constraints.
+ * @brief Defines an abstract class for instantiating intension constraints.
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 15/09/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -39,6 +39,7 @@
 #include "../operator/UniverseArithmeticOperator.hpp"
 #include "../operator/UniverseBooleanOperator.hpp"
 #include "../operator/UniverseRelationalOperator.hpp"
+#include "../operator/UniverseSetBelongingOperator.hpp"
 
 #include "IUniverseIntensionConstraint.hpp"
 #include "UniverseConstantIntensionConstraint.hpp"
@@ -47,16 +48,17 @@
 #include "UniverseBinaryIntensionConstraint.hpp"
 #include "UniverseIfThenElseIntensionConstraint.hpp"
 #include "UniverseNaryIntensionConstraint.hpp"
+#include "UniverseRangeIntensionConstraint.hpp"
+#include "UniverseSetIntensionConstraint.hpp"
 
 namespace Universe {
 
     /**
-     * The AbstractUniverseIntensionConstraintFactory makes easier the construction of intension
-     * constraints from the solver's API, by providing a functional notation similar to that
-     * used to define the constraints using XCSP3.
+     * The UniverseIntensionConstraintFactory makes easier the construction of intension
+     * constraints from the solver's API, by providing a functional notation.
      */
     class AbstractUniverseIntensionConstraintFactory {
-        
+
     public:
 
         /**
@@ -85,40 +87,6 @@ namespace Universe {
          * @return The created intension constraint.
          */
         virtual Universe::IUniverseIntensionConstraint *variable(std::string id) = 0;
-
-        /**
-         * Creates a new unary intension constraint.
-         *
-         * @param op The operator applied by the constraint.
-         * @param constraint The constraint on which the operator is applied.
-         *
-         * @return The created intension constraint.
-         */
-        virtual IUniverseIntensionConstraint *unary(
-                Universe::UniverseOperator op, Universe::IUniverseIntensionConstraint *constraint) = 0;
-
-        /**
-         * Creates a new binary intension constraint.
-         *
-         * @param op The operator applied by the constraint.
-         * @param left The left constraint on which the operator is applied.
-         * @param right The right constraint on which the operator is applied.
-         *
-         * @return The created intension constraint.
-         */
-        virtual Universe::IUniverseIntensionConstraint *binary(Universe::UniverseOperator op,
-                Universe::IUniverseIntensionConstraint *left, Universe::IUniverseIntensionConstraint *right) = 0;
-
-        /**
-         * Creates a new n-ary intension constraint.
-         *
-         * @param op The operator applied by the constraint.
-         * @param constraints The constraints on which the operator is applied.
-         *
-         * @return The created intension constraint.
-         */
-        virtual Universe::IUniverseIntensionConstraint *nary(Universe::UniverseOperator op,
-                std::vector<Universe::IUniverseIntensionConstraint *> constraints) = 0;
         
         /**
          * Creates an intension constraint applying the opposite operator.
@@ -156,7 +124,7 @@ namespace Universe {
          *
          * @return The created intension constraint.
          */
-        Universe::IUniverseIntensionConstraint* sub(
+        Universe::IUniverseIntensionConstraint *sub(
                 Universe::IUniverseIntensionConstraint *left, Universe::IUniverseIntensionConstraint *right);
 
         /**
@@ -203,7 +171,7 @@ namespace Universe {
         /**
          * Creates an intension constraint applying the power operator.
          *
-         * @param constraint The left constraint on which the operator is applied.
+         * @param constraint The constraint on which the operator is applied.
          * @param exponent The exponent in the power operation
          *
          * @return The created intension constraint.
@@ -368,6 +336,52 @@ namespace Universe {
                 Universe::IUniverseIntensionConstraint *left, Universe::IUniverseIntensionConstraint *right);
 
         /**
+         * Creates an intension constraint applying the in operator w.r.t. a range of values.
+         *
+         * @param constraint The constraint that should be in the range.
+         * @param min The minimum value in the range.
+         * @param max The maximum value in the range.
+         *
+         * @return The created intension constraint.
+         */
+        virtual Universe::IUniverseIntensionConstraint *in(Universe::IUniverseIntensionConstraint *constraint,
+                const Universe::BigInteger &min, const Universe::BigInteger &max) = 0;
+
+        /**
+         * Creates an intension constraint applying the in operator w.r.t. a set of values.
+         *
+         * @param constraint The constraint that should be in the set.
+         * @param set The constraints in the set.
+         *
+         * @return The created intension constraint.
+         */
+        virtual Universe::IUniverseIntensionConstraint *in(Universe::IUniverseIntensionConstraint *constraint,
+                std::vector<Universe::IUniverseIntensionConstraint *> set) = 0;
+
+        /**
+         * Creates an intension constraint applying the not-in operator w.r.t. a range of values.
+         *
+         * @param constraint The constraint that should not be in the range.
+         * @param min The minimum value in the range.
+         * @param max The maximum value in the range.
+         *
+         * @return The created intension constraint.
+         */
+        virtual Universe::IUniverseIntensionConstraint *notIn(Universe::IUniverseIntensionConstraint *constraint,
+                const Universe::BigInteger &min, const Universe::BigInteger &max) = 0;
+
+        /**
+         * Creates an intension constraint applying the not-in operator w.r.t. a set of values.
+         *
+         * @param constraint The constraint that should not be in the set.
+         * @param set The constraints in the set.
+         *
+         * @return The created intension constraint.
+         */
+        virtual Universe::IUniverseIntensionConstraint *notIn(Universe::IUniverseIntensionConstraint *constraint,
+                std::vector<Universe::IUniverseIntensionConstraint *> set) = 0;
+
+        /**
          * Creates an intension constraint applying the if-then-else operator.
          *
          * @param condition The condition of the constraint.
@@ -380,6 +394,40 @@ namespace Universe {
          */
         virtual Universe::IUniverseIntensionConstraint *ite(Universe::IUniverseIntensionConstraint *condition,
                 Universe::IUniverseIntensionConstraint *ifTrue, Universe::IUniverseIntensionConstraint *ifFalse) = 0;
+
+        /**
+         * Creates a new unary intension constraint.
+         *
+         * @param op The operator applied by the constraint.
+         * @param constraint The constraint on which the operator is applied.
+         *
+         * @return The created intension constraint.
+         */
+        virtual Universe::IUniverseIntensionConstraint *unary(
+                Universe::UniverseOperator op, Universe::IUniverseIntensionConstraint *constraint) = 0;
+
+        /**
+         * Creates a new binary intension constraint.
+         *
+         * @param op The operator applied by the constraint.
+         * @param left The left constraint on which the operator is applied.
+         * @param right The right constraint on which the operator is applied.
+         *
+         * @return The created intension constraint.
+         */
+        virtual Universe::IUniverseIntensionConstraint *binary(Universe::UniverseOperator op,
+                Universe::IUniverseIntensionConstraint *left, Universe::IUniverseIntensionConstraint *right) = 0;
+
+        /**
+         * Creates a new n-ary intension constraint.
+         *
+         * @param op The operator applied by the constraint.
+         * @param constraints The constraints on which the operator is applied.
+         *
+         * @return The created intension constraint.
+         */
+        virtual Universe::IUniverseIntensionConstraint *nary(Universe::UniverseOperator op,
+                std::vector<Universe::IUniverseIntensionConstraint *> constraints) = 0;
 
     };
 

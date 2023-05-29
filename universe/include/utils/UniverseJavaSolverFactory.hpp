@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.                   *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 19/10/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -139,17 +139,17 @@ namespace Universe {
         void loadClasses();
 
         /**
-         * Loads the Java interface for Universe's SAT solvers.
+         * Loads the Java interface for Universe SAT solvers.
          */
         static void loadSatInterface();
 
         /**
-         * Loads the Java interface for Universe's pseudo-Boolean solvers.
+         * Loads the Java interface for Universe pseudo-Boolean solvers.
          */
         static void loadPbInterface();
 
         /**
-         * Loads the Java interface for Universe's CSP solvers.
+         * Loads the Java interface for Universe CSP solvers.
          */
         static void loadCspInterface();
 

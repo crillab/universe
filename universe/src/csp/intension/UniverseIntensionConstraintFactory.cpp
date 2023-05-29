@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -19,12 +19,12 @@
  ******************************************************************************/
 
 /**
- * @file AbstractUniverseIntensionConstraintFactory.cpp
- * @brief Defines a utility class for instantiating Java intension constraints.
+ * @file UniverseIntensionConstraintFactory.cpp
+ * @brief Defines a factory class for instantiating native intension constraints.
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 15/09/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -45,6 +45,31 @@ IUniverseIntensionConstraint *UniverseIntensionConstraintFactory::variable(strin
     return new UniverseVariableIntensionConstraint(std::move(id));
 }
 
+IUniverseIntensionConstraint *UniverseIntensionConstraintFactory::in(
+        IUniverseIntensionConstraint *constraint, const BigInteger &min, const BigInteger &max) {
+    return binary(UniverseSetBelongingOperator::IN, constraint, new UniverseRangeIntensionConstraint(min, max));
+}
+
+IUniverseIntensionConstraint *UniverseIntensionConstraintFactory::in(
+        IUniverseIntensionConstraint *constraint, vector<IUniverseIntensionConstraint *> set) {
+    return binary(UniverseSetBelongingOperator::IN, constraint, new UniverseSetIntensionConstraint(set));
+}
+
+IUniverseIntensionConstraint *UniverseIntensionConstraintFactory::notIn(
+        IUniverseIntensionConstraint *constraint, const BigInteger &min, const BigInteger &max) {
+    return binary(UniverseSetBelongingOperator::NOT_IN, constraint, new UniverseRangeIntensionConstraint(min, max));
+}
+
+IUniverseIntensionConstraint *UniverseIntensionConstraintFactory::notIn(
+        IUniverseIntensionConstraint *constraint, vector<IUniverseIntensionConstraint *> set) {
+    return binary(UniverseSetBelongingOperator::NOT_IN, constraint, new UniverseSetIntensionConstraint(set));
+}
+
+IUniverseIntensionConstraint *UniverseIntensionConstraintFactory::ite(IUniverseIntensionConstraint *condition,
+         IUniverseIntensionConstraint *ifTrue, IUniverseIntensionConstraint *ifFalse) {
+    return new UniverseIfThenElseIntensionConstraint(condition, ifTrue, ifFalse);
+}
+
 IUniverseIntensionConstraint *UniverseIntensionConstraintFactory::unary(
         UniverseOperator op, IUniverseIntensionConstraint *constraint) {
     return new UniverseUnaryIntensionConstraint(op, constraint);
@@ -58,9 +83,4 @@ IUniverseIntensionConstraint *UniverseIntensionConstraintFactory::binary(Univers
 IUniverseIntensionConstraint *UniverseIntensionConstraintFactory::nary(
         UniverseOperator op, vector<IUniverseIntensionConstraint *> constraints) {
     return new UniverseNaryIntensionConstraint(op, std::move(constraints));
-}
-
-IUniverseIntensionConstraint *UniverseIntensionConstraintFactory::ite(IUniverseIntensionConstraint *condition,
-        IUniverseIntensionConstraint *ifTrue, IUniverseIntensionConstraint *ifFalse) {
-    return new UniverseIfThenElseIntensionConstraint(condition, ifTrue, ifFalse);
 }

@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,12 +24,14 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 14/09/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
 #ifndef UNIVERSE_UNIVERSEASSUMPTION_HPP
 #define UNIVERSE_UNIVERSEASSUMPTION_HPP
+
+#include <string>
 
 #include "UniverseType.hpp"
 
@@ -47,9 +49,9 @@ namespace Universe {
     private:
 
         /**
-         * The identifier of the assumed variable.
+         * The name of the variable involved in this assumption.
          */
-        const int variableId;
+        const std::string variableId;
 
         /**
          * Whether the assumption represents an equality.
@@ -66,23 +68,23 @@ namespace Universe {
         /**
          * Creates a new UniverseAssumption.
          *
-         * @param variableId The identifier of the assumed variable.
+         * @param variableId The name of the variable involved in the assumption.
          * @param equal Whether the assumption represents an equality.
          * @param value The assumed value.
          */
-        UniverseAssumption(int variableId, bool equal, T value) :
-                variableId(variableId),
+        UniverseAssumption(std::string variableId, bool equal, T value) :
+                variableId(std::move(variableId)),
                 equal(equal),
                 value(value) {
             // Nothing to do: everything is already initialized.
         }
 
         /**
-         * Gives the identifier of the assumed variable.
+         * Gives the name of the variable involved in this assumption.
          *
-         * @return The identifier of the assumed variable.
+         * @return The name of the variable involved in this assumption.
          */
-        [[nodiscard]] inline int getVariableId() const {
+        [[nodiscard]] inline const std::string &getVariableId() const {
             return variableId;
         }
 

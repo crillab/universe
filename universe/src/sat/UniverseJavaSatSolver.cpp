@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 19/10/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -49,7 +49,15 @@ void UniverseJavaSatSolver::addClause(const vector<int> &literals) {
     mtd.invoke(object, **list);
 }
 
-UniverseSolverResult UniverseJavaSatSolver::solve(const vector<UniverseAssumption<bool>> &assumptions) {
+UniverseSolverResult UniverseJavaSatSolver::solveDimacs(const vector<int> &assumptions) {
+    JavaList list = asList(assumptions);
+    auto mtd = interface->getObjectMethod("solveDimacs",
+        METHOD(CLASS(fr/univartois/cril/juniverse/core/UniverseSolverResult), CLASS(java/util/List)));
+    auto result = mtd.invoke(object, **list);
+    return toUniverseSolverResult(result);
+}
+
+UniverseSolverResult UniverseJavaSatSolver::solveBoolean(const vector<UniverseAssumption<bool>> &assumptions) {
     // Converting the assumptions into Java assumptions.
     function<JavaObject(bool)> toBoolean = [] (bool b) {
         return JavaVirtualMachineRegistry::get()->wrap((jboolean) b);

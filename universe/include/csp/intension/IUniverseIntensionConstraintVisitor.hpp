@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 15/09/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -70,8 +70,20 @@ namespace Universe {
     class UniverseIfThenElseIntensionConstraint;
 
     /**
-     * The IUniverseIntensionConstraintVisitor defines an interface for
-     * visiting intension constraints.
+     * The UniverseSetIntensionConstraint is an intension constraint that
+     * represents a set of intension constraints.
+     */
+    class UniverseSetIntensionConstraint;
+
+    /**
+     * The UniverseRangeIntensionConstraint is an intension constraint that
+     * represents a range of values.
+     */
+    class UniverseRangeIntensionConstraint;
+
+    /**
+     * The IUniverseIntensionConstraintVisitor allows visiting intension
+     * constraints to discover its semantics.
      */
     class IUniverseIntensionConstraintVisitor {
 
@@ -111,6 +123,13 @@ namespace Universe {
         virtual void visit(Universe::UniverseBinaryIntensionConstraint *constraint) = 0;
 
         /**
+         * Visits an n-ary constraint that appears in an intension constraint.
+         *
+         * @param constraint The constraint to visit.
+         */
+        virtual void visit(Universe::UniverseNaryIntensionConstraint *constraint) = 0;
+
+        /**
          * Visits an if-then-else constraint that appears in an intension constraint.
          *
          * @param ifThenElse The constraint to visit.
@@ -118,11 +137,18 @@ namespace Universe {
         virtual void visit(Universe::UniverseIfThenElseIntensionConstraint *ifThenElse) = 0;
 
         /**
-         * Visits an n-ary constraint that appears in an intension constraint.
+         * Visits a set that appears in an intension constraint.
          *
-         * @param constraint The constraint to visit.
+         * @param set The set to visit.
          */
-        virtual void visit(Universe::UniverseNaryIntensionConstraint *constraint) = 0;
+        virtual void visit(Universe::UniverseSetIntensionConstraint *set) = 0;
+
+        /**
+         * Visits a range that appears in an intension constraint.
+         *
+         * @param range The range to visit.
+         */
+        virtual void visit(Universe::UniverseRangeIntensionConstraint *range) = 0;
 
     };
 

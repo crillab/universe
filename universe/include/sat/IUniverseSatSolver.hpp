@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 13/09/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -53,10 +53,9 @@ namespace Universe {
          * are represented by opposite values (following the classical DIMACS way of
          * representing literals).
          *
-         * @param literals A set of literals.
+         * @param literals The literals of the clause to add.
          *
-         * @throws UniverseContradictionException If the vector of literals is empty
-         *         or if it contains only falsified literals after unit propagation.
+         * @throws UniverseContradictionException If the clause to add is inconsistent.
          */
         virtual void addClause(const std::vector<int> &literals) = 0;
 
@@ -65,23 +64,19 @@ namespace Universe {
          * This is convenient to create in a single call all the clauses.
          *
          * @param clauses A vector of sets of literals in the DIMACS format.
-         *        The vector can be reused since the solver is not supposed to keep
-         *        a reference to that vector.
          *
-         * @throws UniverseContradictionException If one of the vectors of literals is
-         *         empty or contains only falsified literals after unit propagation.
+         * @throws UniverseContradictionException If one of the clauses to add is inconsistent.
          */
         virtual void addAllClauses(const std::vector<std::vector<int>> &clauses);
 
         /**
          * Solves the problem associated to this solver.
          *
-         * @param assumptions The Boolean assumptions to consider when solving.
+         * @param assumptions The assumptions to consider when solving (as a set of literals).
          *
          * @return The outcome of the search conducted by the solver.
          */
-        Universe::UniverseSolverResult solve(
-                const std::vector<Universe::UniverseAssumption<Universe::BigInteger>> &assumptions) override;
+        virtual UniverseSolverResult solveDimacs(const std::vector<int> &assumptions);
 
         /**
          * Solves the problem associated to this solver.
@@ -90,8 +85,8 @@ namespace Universe {
          *
          * @return The outcome of the search conducted by the solver.
          */
-        virtual Universe::UniverseSolverResult solve(
-                const std::vector<Universe::UniverseAssumption<bool>> &assumptions) = 0;
+        virtual Universe::UniverseSolverResult solveBoolean(
+                const std::vector<Universe::UniverseAssumption<bool>> &assumptions);
 
     };
 

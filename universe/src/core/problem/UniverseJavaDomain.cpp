@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 12/12/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -63,6 +63,23 @@ JavaObject UniverseJavaDomain::operator*() {
     return rawDomain;
 }
 
+size_t UniverseJavaDomain::size() const {
+    auto mtd = domainInterface->getLongMethod("size");
+    return mtd.invoke(rawDomain);
+}
+
+BigInteger UniverseJavaDomain::min() const {
+    auto mtd = domainInterface->getObjectMethod("min", METHOD(CLASS(java/math/BigInteger)));
+    auto minValue = mtd.invoke(rawDomain);
+    return JavaBigInteger::of(minValue).asBigInteger();
+}
+
+BigInteger UniverseJavaDomain::max() const {
+    auto mtd = domainInterface->getObjectMethod("max", METHOD(CLASS(java/math/BigInteger)));
+    auto maxValue = mtd.invoke(rawDomain);
+    return JavaBigInteger::of(maxValue).asBigInteger();
+}
+
 const vector<Universe::BigInteger> &UniverseJavaDomain::getValues() {
     if (values.empty()) {
         // Getting the values from the Java domain.
@@ -78,21 +95,4 @@ const vector<Universe::BigInteger> &UniverseJavaDomain::getValues() {
     }
 
     return values;
-}
-
-BigInteger UniverseJavaDomain::min() const {
-    auto mtd = domainInterface->getObjectMethod("min", METHOD(CLASS(java/math/BigInteger)));
-    auto minValue = mtd.invoke(rawDomain);
-    return JavaBigInteger::of(minValue).asBigInteger();
-}
-
-BigInteger UniverseJavaDomain::max() const {
-    auto mtd = domainInterface->getObjectMethod("max", METHOD(CLASS(java/math/BigInteger)));
-    auto maxValue = mtd.invoke(rawDomain);
-    return JavaBigInteger::of(maxValue).asBigInteger();
-}
-
-size_t UniverseJavaDomain::size() const {
-    auto mtd = domainInterface->getLongMethod("size");
-    return mtd.invoke(rawDomain);
 }

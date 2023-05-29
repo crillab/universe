@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 14/09/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -38,8 +38,8 @@
 namespace Universe {
 
     /**
-     * The UniverseOperatorIntensionConstraint is the parent class of intension
-     * constraints applying operators.
+     * The UniverseOperatorIntensionConstraint is the parent class of all the implementations
+     * of intension constraints that apply an operator on some other intension constraint(s).
      */
     class UniverseOperatorIntensionConstraint : public Universe::IUniverseIntensionConstraint {
 
@@ -69,7 +69,7 @@ namespace Universe {
          *
          * @return The operator applied by this constraint.
          */
-        Universe::UniverseOperator getOperator();
+        [[nodiscard]] Universe::UniverseOperator getOperator() const;
 
     };
 

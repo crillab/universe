@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('IUniverseSatSolver_8cpp_source.html','
 <div class="contents">
 <a href="IUniverseSatSolver_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/******************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (c) 2022 - Univ Artois &amp; CNRS &amp; Exakis Nelite.                   *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (c) 2022-2023 - Univ Artois &amp; CNRS &amp; Exakis Nelite.              *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * All rights reserved.                                                       *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *                                                                            *</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * This library is free software; you can redistribute it and/or modify it    *</span></div>
@@ -109,38 +109,45 @@ $(document).ready(function(){initNavTree('IUniverseSatSolver_8cpp_source.html','
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;../../include/sat/IUniverseSatSolver.hpp&quot;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">using namespace </span>Universe;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classUniverse_1_1IUniverseSatSolver.html#a81c2808154e5227c4805fe208bc32bce">   38</a></span>&#160;<span class="keywordtype">void</span> IUniverseSatSolver::addAllClauses(<span class="keyword">const</span> vector&lt;vector&lt;int&gt;&gt; &amp;clauses) {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;clause: clauses) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        addClause(clause);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classUniverse_1_1IUniverseSatSolver.html#a972c62945b69288a9e2c3e6cf3ab6b58">   44</a></span>&#160;<a class="code" href="UniverseSolverResult_8hpp.html#a5c0769554b7e93999912fdfb7b5093c4">UniverseSolverResult</a> IUniverseSatSolver::solve(<span class="keyword">const</span> vector&lt;<a class="code" href="classUniverse_1_1UniverseAssumption.html">UniverseAssumption&lt;BigInteger&gt;</a>&gt; &amp;assumptions) {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    vector&lt;UniverseAssumption&lt;bool&gt;&gt; boolAssumptions;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;assumption: assumptions) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">int</span> identifier = assumption.getVariableId();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">bool</span> equal = assumption.isEqual();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">BigInteger</a> value = assumption.getValue();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;../../include/sat/IUniverseSatSolver.hpp&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">using namespace </span>Universe;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classUniverse_1_1IUniverseSatSolver.html#a81c2808154e5227c4805fe208bc32bce">   39</a></span>&#160;<span class="keywordtype">void</span> IUniverseSatSolver::addAllClauses(<span class="keyword">const</span> vector&lt;vector&lt;int&gt;&gt; &amp;clauses) {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;clause: clauses) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        addClause(clause);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classUniverse_1_1IUniverseSatSolver.html#a75fffd8b9d57853f514b4098ddcdfe86">   45</a></span>&#160;<a class="code" href="UniverseSolverResult_8hpp.html#a5c0769554b7e93999912fdfb7b5093c4">UniverseSolverResult</a> IUniverseSatSolver::solveDimacs(<span class="keyword">const</span> std::vector&lt;int&gt; &amp;assumptions) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    vector&lt;UniverseAssumption&lt;BigInteger&gt;&gt; bigAssumptions;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> assumption : assumptions) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">if</span> (assumption &lt; 0) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            bigAssumptions.emplace_back(to_string(-assumption), <span class="keyword">true</span>, 0);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">if</span> ((value != 0) &amp;&amp; (value != 1)) {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">throw</span> invalid_argument(<span class="stringliteral">&quot;Assumption must be boolean&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            bigAssumptions.emplace_back(to_string(assumption), <span class="keyword">true</span>, 1);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        boolAssumptions.emplace_back(identifier, equal, (value == 1));</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">return</span> solve(boolAssumptions);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span> solve(bigAssumptions);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classUniverse_1_1IUniverseSatSolver.html#a4dc80cd6321e57deddf02cc6706752e6">   60</a></span>&#160;<a class="code" href="UniverseSolverResult_8hpp.html#a5c0769554b7e93999912fdfb7b5093c4">UniverseSolverResult</a> IUniverseSatSolver::solveBoolean(<span class="keyword">const</span> vector&lt;<a class="code" href="classUniverse_1_1UniverseAssumption.html">UniverseAssumption&lt;bool&gt;</a>&gt; &amp;assumptions) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    vector&lt;UniverseAssumption&lt;BigInteger&gt;&gt; bigAssumptions;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> &amp;assumption : assumptions) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        bigAssumptions.emplace_back(assumption.getVariableId(), assumption.isEqual(), (assumption.getValue() ? 1 : 0));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordflow">return</span> solve(bigAssumptions);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
 <div class="ttc" id="aUniverseSolverResult_8hpp_html_a5c0769554b7e93999912fdfb7b5093c4"><div class="ttname"><a href="UniverseSolverResult_8hpp.html#a5c0769554b7e93999912fdfb7b5093c4">Universe::UniverseSolverResult</a></div><div class="ttdeci">UniverseSolverResult</div><div class="ttdef"><b>Definition:</b> <a href="UniverseSolverResult_8hpp_source.html#l00040">UniverseSolverResult.hpp:40</a></div></div>
-<div class="ttc" id="aUniverseType_8hpp_html_ae7505d353aae3b8b471df4cbb66ed82a"><div class="ttname"><a href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a></div><div class="ttdeci">long long BigInteger</div><div class="ttdef"><b>Definition:</b> <a href="UniverseType_8hpp_source.html#l00051">UniverseType.hpp:51</a></div></div>
-<div class="ttc" id="aclassUniverse_1_1UniverseAssumption_html"><div class="ttname"><a href="classUniverse_1_1UniverseAssumption.html">Universe::UniverseAssumption</a></div><div class="ttdef"><b>Definition:</b> <a href="UniverseAssumption_8hpp_source.html#l00045">UniverseAssumption.hpp:45</a></div></div>
+<div class="ttc" id="aclassUniverse_1_1UniverseAssumption_html"><div class="ttname"><a href="classUniverse_1_1UniverseAssumption.html">Universe::UniverseAssumption</a></div><div class="ttdef"><b>Definition:</b> <a href="UniverseAssumption_8hpp_source.html#l00047">UniverseAssumption.hpp:47</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

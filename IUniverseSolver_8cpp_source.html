@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('IUniverseSolver_8cpp_source.html','');
 <div class="contents">
 <a href="IUniverseSolver_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/******************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (c) 2022 - Univ Artois &amp; CNRS &amp; Exakis Nelite.                   *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (c) 2022-2023 - Univ Artois &amp; CNRS &amp; Exakis Nelite.              *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * All rights reserved.                                                       *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *                                                                            *</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * This library is free software; you can redistribute it and/or modify it    *</span></div>
@@ -108,15 +108,22 @@ $(document).ready(function(){initNavTree('IUniverseSolver_8cpp_source.html','');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * If not, see http://www.gnu.org/licenses.                                   *</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> ******************************************************************************/</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;../../include/core/IUniverseSolver.hpp&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">using namespace </span>Universe;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;../../include/core/IUniverseSolver.hpp&quot;</span></div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classUniverse_1_1IUniverseSolver.html#a20fbb6964d1d6b5035e5849036dd776e">   35</a></span>&#160;<a class="code" href="classUniverse_1_1IOptimizationSolver.html">IOptimizationSolver</a> *<a class="code" href="classUniverse_1_1IUniverseSolver.html#a20fbb6964d1d6b5035e5849036dd776e">IUniverseSolver::toOptimizationSolver</a>() {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classUniverse_1_1IOptimizationSolver.html">IOptimizationSolver</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">using namespace </span>Universe;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classUniverse_1_1IUniverseSolver.html#a567425ff2b031b70fb813ce910318c8b">   38</a></span>&#160;<span class="keywordtype">void</span> IUniverseSolver::addSearchListener(<a class="code" href="classUniverse_1_1IUniverseSearchListener.html">IUniverseSearchListener</a> *listener) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">throw</span> runtime_error(<span class="stringliteral">&quot;search listeners are not supported for this solver&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classUniverse_1_1IUniverseSolver.html#a20fbb6964d1d6b5035e5849036dd776e">   42</a></span>&#160;<a class="code" href="classUniverse_1_1IOptimizationSolver.html">IOptimizationSolver</a> *IUniverseSolver::toOptimizationSolver() {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classUniverse_1_1IOptimizationSolver.html">IOptimizationSolver</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
 <div class="ttc" id="aclassUniverse_1_1IOptimizationSolver_html"><div class="ttname"><a href="classUniverse_1_1IOptimizationSolver.html">Universe::IOptimizationSolver</a></div><div class="ttdef"><b>Definition:</b> <a href="IOptimizationSolver_8hpp_source.html#l00041">IOptimizationSolver.hpp:41</a></div></div>
-<div class="ttc" id="aclassUniverse_1_1IUniverseSolver_html_a20fbb6964d1d6b5035e5849036dd776e"><div class="ttname"><a href="classUniverse_1_1IUniverseSolver.html#a20fbb6964d1d6b5035e5849036dd776e">Universe::IUniverseSolver::toOptimizationSolver</a></div><div class="ttdeci">virtual Universe::IOptimizationSolver * toOptimizationSolver()</div><div class="ttdef"><b>Definition:</b> <a href="IUniverseSolver_8cpp_source.html#l00035">IUniverseSolver.cpp:35</a></div></div>
+<div class="ttc" id="aclassUniverse_1_1IUniverseSearchListener_html"><div class="ttname"><a href="classUniverse_1_1IUniverseSearchListener.html">Universe::IUniverseSearchListener</a></div><div class="ttdef"><b>Definition:</b> <a href="IUniverseSearchListener_8hpp_source.html#l00047">IUniverseSearchListener.hpp:47</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

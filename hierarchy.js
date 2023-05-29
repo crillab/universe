@@ -10,6 +10,7 @@ var hierarchy =
     [ "Universe::IOptimizationSolver", "classUniverse_1_1IOptimizationSolver.html", [
       [ "Universe::JavaOptimizationSolver", "classUniverse_1_1JavaOptimizationSolver.html", null ]
     ] ],
+    [ "Universe::IUniverseConfigurableSolver", "classUniverse_1_1IUniverseConfigurableSolver.html", null ],
     [ "Universe::IUniverseConstraint", "classUniverse_1_1IUniverseConstraint.html", null ],
     [ "Universe::IUniverseDomain", "classUniverse_1_1IUniverseDomain.html", [
       [ "Universe::UniverseJavaDomain", "classUniverse_1_1UniverseJavaDomain.html", null ]
@@ -23,10 +24,13 @@ var hierarchy =
         [ "Universe::UniverseNaryIntensionConstraint", "classUniverse_1_1UniverseNaryIntensionConstraint.html", null ],
         [ "Universe::UniverseUnaryIntensionConstraint", "classUniverse_1_1UniverseUnaryIntensionConstraint.html", null ]
       ] ],
+      [ "Universe::UniverseRangeIntensionConstraint", "classUniverse_1_1UniverseRangeIntensionConstraint.html", null ],
+      [ "Universe::UniverseSetIntensionConstraint", "classUniverse_1_1UniverseSetIntensionConstraint.html", null ],
       [ "Universe::UniverseVariableIntensionConstraint", "classUniverse_1_1UniverseVariableIntensionConstraint.html", null ]
     ] ],
     [ "Universe::IUniverseIntensionConstraintVisitor", "classUniverse_1_1IUniverseIntensionConstraintVisitor.html", null ],
     [ "Universe::IUniverseProblem", "classUniverse_1_1IUniverseProblem.html", null ],
+    [ "Universe::IUniverseSearchListener", "classUniverse_1_1IUniverseSearchListener.html", null ],
     [ "Universe::IUniverseSolver", "classUniverse_1_1IUniverseSolver.html", [
       [ "Universe::IUniverseSatSolver", "classUniverse_1_1IUniverseSatSolver.html", [
         [ "Universe::IUniversePseudoBooleanSolver", "classUniverse_1_1IUniversePseudoBooleanSolver.html", [
@@ -55,5 +59,7 @@ var hierarchy =
     [ "Universe::JavaIterator", "classUniverse_1_1JavaIterator.html", null ],
     [ "Universe::JavaList", "classUniverse_1_1JavaList.html", null ],
     [ "Universe::JavaMapOfString", "classUniverse_1_1JavaMapOfString.html", null ],
-    [ "Universe::UniverseAssumption< T >", "classUniverse_1_1UniverseAssumption.html", null ]
+    [ "Universe::UniverseAssumption< T >", "classUniverse_1_1UniverseAssumption.html", null ],
+    [ "Universe::UniverseConfiguration", "classUniverse_1_1UniverseConfiguration.html", null ],
+    [ "Universe::UniverseTransition", "classUniverse_1_1UniverseTransition.html", null ]
 ];

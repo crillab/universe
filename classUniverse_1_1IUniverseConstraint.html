@@ -98,13 +98,13 @@ $(document).ready(function(){initNavTree('classUniverse_1_1IUniverseConstraint.h
 Public Member Functions</h2></td></tr>
 <tr class="memitem:add2a5fe765ca32d43d9b56c150c87e9b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseConstraint.html#add2a5fe765ca32d43d9b56c150c87e9b">~IUniverseConstraint</a> ()=default</td></tr>
 <tr class="separator:add2a5fe765ca32d43d9b56c150c87e9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ff836077227f261095ce55fdd60b2c7"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseVariable.html">Universe::IUniverseVariable</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseConstraint.html#a7ff836077227f261095ce55fdd60b2c7">scope</a> () const =0</td></tr>
-<tr class="separator:a7ff836077227f261095ce55fdd60b2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d8fc2b26a94516bd5a32a72bb9c783d"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseVariable.html">Universe::IUniverseVariable</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseConstraint.html#a2d8fc2b26a94516bd5a32a72bb9c783d">scope</a> () const =0</td></tr>
+<tr class="separator:a2d8fc2b26a94516bd5a32a72bb9c783d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="classUniverse_1_1IUniverseConstraint.html">IUniverseConstraint</a> class defines an interface for the constraints in a problem. </p>
+<div class="textblock"><p>The <a class="el" href="classUniverse_1_1IUniverseConstraint.html">IUniverseConstraint</a> class represents a constraint in constraint problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="IUniverseConstraint_8hpp_source.html#l00042">42</a> of file <a class="el" href="IUniverseConstraint_8hpp_source.html">IUniverseConstraint.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="IUniverseConstraint_8hpp_source.html#l00041">41</a> of file <a class="el" href="IUniverseConstraint_8hpp_source.html">IUniverseConstraint.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="add2a5fe765ca32d43d9b56c150c87e9b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add2a5fe765ca32d43d9b56c150c87e9b">&#9670;&nbsp;</a></span>~IUniverseConstraint()</h2>
@@ -128,13 +128,13 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Destroys this <a class="el" href="classUniverse_1_1IUniverseDomain.html">IUniverseDomain</a>. </p>
+<p>Destroys this <a class="el" href="classUniverse_1_1IUniverseConstraint.html">IUniverseConstraint</a>. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7ff836077227f261095ce55fdd60b2c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7ff836077227f261095ce55fdd60b2c7">&#9670;&nbsp;</a></span>scope()</h2>
+<a id="a2d8fc2b26a94516bd5a32a72bb9c783d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d8fc2b26a94516bd5a32a72bb9c783d">&#9670;&nbsp;</a></span>scope()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -143,7 +143,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const std::vector&lt;<a class="el" href="classUniverse_1_1IUniverseVariable.html">Universe::IUniverseVariable</a>*&gt;&amp; Universe::IUniverseConstraint::scope </td>
+          <td class="memname">virtual const std::vector&lt;<a class="el" href="classUniverse_1_1IUniverseVariable.html">Universe::IUniverseVariable</a> *&gt;&amp; Universe::IUniverseConstraint::scope </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -156,7 +156,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Gives the scope of this constraint, i.e., the variables that appear in this constraint.</p>
-<dl class="section return"><dt>Returns</dt><dd>The scope of this constraint. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The variables involved in this constraint. </dd></dl>
 
 </div>
 </div>

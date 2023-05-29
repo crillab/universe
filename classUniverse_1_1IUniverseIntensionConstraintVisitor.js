@@ -5,6 +5,8 @@ var classUniverse_1_1IUniverseIntensionConstraintVisitor =
     [ "visit", "classUniverse_1_1IUniverseIntensionConstraintVisitor.html#a08ec8db11c60cf25ca0832678de1bcf6", null ],
     [ "visit", "classUniverse_1_1IUniverseIntensionConstraintVisitor.html#a958ac7250ec474f2ec5511ddf4eabf5b", null ],
     [ "visit", "classUniverse_1_1IUniverseIntensionConstraintVisitor.html#a324e4164ceda0e1a1b3a25071ac081a4", null ],
+    [ "visit", "classUniverse_1_1IUniverseIntensionConstraintVisitor.html#a016964f6de5cc3218f0bd497f27e3366", null ],
+    [ "visit", "classUniverse_1_1IUniverseIntensionConstraintVisitor.html#a3ecfd850424b7a2dc1b33e037da43fac", null ],
     [ "visit", "classUniverse_1_1IUniverseIntensionConstraintVisitor.html#a9ae629f4d9f6e1c0d6711a4f964165e8", null ],
     [ "visit", "classUniverse_1_1IUniverseIntensionConstraintVisitor.html#a2ab24aca1de2c365e194325a0e6d4b98", null ]
 ];

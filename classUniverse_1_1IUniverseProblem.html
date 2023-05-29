@@ -102,13 +102,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a89e2c6c1108f76eb605cae507c2d3c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac3c6aadfb99d74304dc6150fb2826a15"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseProblem.html#ac3c6aadfb99d74304dc6150fb2826a15">addVariable</a> (<a class="el" href="classUniverse_1_1IUniverseVariable.html">IUniverseVariable</a> *variable)=0</td></tr>
 <tr class="separator:ac3c6aadfb99d74304dc6150fb2826a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a856c60852e93acab42b42641da463b59"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseProblem.html#a856c60852e93acab42b42641da463b59">getConstraints</a> () const =0</td></tr>
-<tr class="separator:a856c60852e93acab42b42641da463b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86cfea4f4c814c321bad14f69e81d332"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseVariable.html">Universe::IUniverseVariable</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseProblem.html#a86cfea4f4c814c321bad14f69e81d332">getVariables</a> () const =0</td></tr>
-<tr class="separator:a86cfea4f4c814c321bad14f69e81d332"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fb2568fb85dbfe285bee86e61ec0e64"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseProblem.html#a2fb2568fb85dbfe285bee86e61ec0e64">getConstraints</a> () const =0</td></tr>
+<tr class="separator:a2fb2568fb85dbfe285bee86e61ec0e64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a275f2f225b6253bd6dd66ac813164b69"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseVariable.html">Universe::IUniverseVariable</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseProblem.html#a275f2f225b6253bd6dd66ac813164b69">getVariables</a> () const =0</td></tr>
+<tr class="separator:a275f2f225b6253bd6dd66ac813164b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="classUniverse_1_1IUniverseProblem.html">IUniverseProblem</a> class defines an interface for the problems to solve. </p>
+<div class="textblock"><p>The <a class="el" href="classUniverse_1_1IUniverseProblem.html">IUniverseProblem</a> class represents a constraint problem to solve. </p>
 
 <p class="definition">Definition at line <a class="el" href="IUniverseProblem_8hpp_source.html#l00044">44</a> of file <a class="el" href="IUniverseProblem_8hpp_source.html">IUniverseProblem.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -205,8 +205,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a856c60852e93acab42b42641da463b59"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a856c60852e93acab42b42641da463b59">&#9670;&nbsp;</a></span>getConstraints()</h2>
+<a id="a2fb2568fb85dbfe285bee86e61ec0e64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fb2568fb85dbfe285bee86e61ec0e64">&#9670;&nbsp;</a></span>getConstraints()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,7 +215,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const std::vector&lt;<a class="el" href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a>&gt;&amp; Universe::IUniverseProblem::getConstraints </td>
+          <td class="memname">virtual const std::vector&lt;<a class="el" href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a> *&gt;&amp; Universe::IUniverseProblem::getConstraints </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -232,8 +232,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a86cfea4f4c814c321bad14f69e81d332"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a86cfea4f4c814c321bad14f69e81d332">&#9670;&nbsp;</a></span>getVariables()</h2>
+<a id="a275f2f225b6253bd6dd66ac813164b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a275f2f225b6253bd6dd66ac813164b69">&#9670;&nbsp;</a></span>getVariables()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -242,7 +242,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual const std::vector&lt;<a class="el" href="classUniverse_1_1IUniverseVariable.html">Universe::IUniverseVariable</a>&gt;&amp; Universe::IUniverseProblem::getVariables </td>
+          <td class="memname">virtual const std::vector&lt;<a class="el" href="classUniverse_1_1IUniverseVariable.html">Universe::IUniverseVariable</a> *&gt;&amp; Universe::IUniverseProblem::getVariables </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>

@@ -7,6 +7,9 @@ var files_dup =
     [ "IOptimizationSolver.hpp", "IOptimizationSolver_8hpp.html", [
       [ "IOptimizationSolver", "classUniverse_1_1IOptimizationSolver.html", "classUniverse_1_1IOptimizationSolver" ]
     ] ],
+    [ "IUniverseConfigurableSolver.hpp", "IUniverseConfigurableSolver_8hpp.html", [
+      [ "IUniverseConfigurableSolver", "classUniverse_1_1IUniverseConfigurableSolver.html", "classUniverse_1_1IUniverseConfigurableSolver" ]
+    ] ],
     [ "IUniverseConstraint.hpp", "IUniverseConstraint_8hpp.html", [
       [ "IUniverseConstraint", "classUniverse_1_1IUniverseConstraint.html", "classUniverse_1_1IUniverseConstraint" ]
     ] ],
@@ -31,6 +34,10 @@ var files_dup =
     [ "IUniverseSatSolver.cpp", "IUniverseSatSolver_8cpp.html", null ],
     [ "IUniverseSatSolver.hpp", "IUniverseSatSolver_8hpp.html", [
       [ "IUniverseSatSolver", "classUniverse_1_1IUniverseSatSolver.html", "classUniverse_1_1IUniverseSatSolver" ]
+    ] ],
+    [ "IUniverseSearchListener.cpp", "IUniverseSearchListener_8cpp.html", null ],
+    [ "IUniverseSearchListener.hpp", "IUniverseSearchListener_8hpp.html", [
+      [ "IUniverseSearchListener", "classUniverse_1_1IUniverseSearchListener.html", "classUniverse_1_1IUniverseSearchListener" ]
     ] ],
     [ "IUniverseSolver.cpp", "IUniverseSolver_8cpp.html", null ],
     [ "IUniverseSolver.hpp", "IUniverseSolver_8hpp.html", [
@@ -58,7 +65,7 @@ var files_dup =
     [ "JavaMapOfString.hpp", "JavaMapOfString_8hpp.html", [
       [ "JavaMapOfString", "classUniverse_1_1JavaMapOfString.html", "classUniverse_1_1JavaMapOfString" ]
     ] ],
-    [ "JavaOptimizationSolver.cpp", "JavaOptimizationSolver_8cpp_source.html", null ],
+    [ "JavaOptimizationSolver.cpp", "JavaOptimizationSolver_8cpp.html", null ],
     [ "JavaOptimizationSolver.hpp", "JavaOptimizationSolver_8hpp.html", [
       [ "JavaOptimizationSolver", "classUniverse_1_1JavaOptimizationSolver.html", "classUniverse_1_1JavaOptimizationSolver" ]
     ] ],
@@ -71,8 +78,14 @@ var files_dup =
       [ "UniverseBinaryIntensionConstraint", "classUniverse_1_1UniverseBinaryIntensionConstraint.html", "classUniverse_1_1UniverseBinaryIntensionConstraint" ]
     ] ],
     [ "UniverseBooleanOperator.hpp", "UniverseBooleanOperator_8hpp.html", "UniverseBooleanOperator_8hpp" ],
-    [ "UniverseConstantIntensionConstraint.cpp", "UniverseConstantIntensionConstraint_8cpp_source.html", null ],
-    [ "UniverseConstantIntensionConstraint.hpp", "UniverseConstantIntensionConstraint_8hpp_source.html", null ],
+    [ "UniverseConfiguration.cpp", "UniverseConfiguration_8cpp.html", null ],
+    [ "UniverseConfiguration.hpp", "UniverseConfiguration_8hpp.html", [
+      [ "UniverseConfiguration", "classUniverse_1_1UniverseConfiguration.html", "classUniverse_1_1UniverseConfiguration" ]
+    ] ],
+    [ "UniverseConstantIntensionConstraint.cpp", "UniverseConstantIntensionConstraint_8cpp.html", null ],
+    [ "UniverseConstantIntensionConstraint.hpp", "UniverseConstantIntensionConstraint_8hpp.html", [
+      [ "UniverseConstantIntensionConstraint", "classUniverse_1_1UniverseConstantIntensionConstraint.html", "classUniverse_1_1UniverseConstantIntensionConstraint" ]
+    ] ],
     [ "UniverseContradictionException.cpp", "UniverseContradictionException_8cpp.html", null ],
     [ "UniverseContradictionException.hpp", "UniverseContradictionException_8hpp.html", [
       [ "UniverseContradictionException", "classUniverse_1_1UniverseContradictionException.html", "classUniverse_1_1UniverseContradictionException" ]
@@ -81,7 +94,7 @@ var files_dup =
     [ "UniverseIfThenElseIntensionConstraint.hpp", "UniverseIfThenElseIntensionConstraint_8hpp.html", [
       [ "UniverseIfThenElseIntensionConstraint", "classUniverse_1_1UniverseIfThenElseIntensionConstraint.html", "classUniverse_1_1UniverseIfThenElseIntensionConstraint" ]
     ] ],
-    [ "UniverseIntensionConstraintFactory.cpp", "UniverseIntensionConstraintFactory_8cpp_source.html", null ],
+    [ "UniverseIntensionConstraintFactory.cpp", "UniverseIntensionConstraintFactory_8cpp.html", null ],
     [ "UniverseIntensionConstraintFactory.hpp", "UniverseIntensionConstraintFactory_8hpp.html", [
       [ "UniverseIntensionConstraintFactory", "classUniverse_1_1UniverseIntensionConstraintFactory.html", "classUniverse_1_1UniverseIntensionConstraintFactory" ]
     ] ],
@@ -127,16 +140,28 @@ var files_dup =
     [ "UniverseOperatorIntensionConstraint.hpp", "UniverseOperatorIntensionConstraint_8hpp.html", [
       [ "UniverseOperatorIntensionConstraint", "classUniverse_1_1UniverseOperatorIntensionConstraint.html", "classUniverse_1_1UniverseOperatorIntensionConstraint" ]
     ] ],
+    [ "UniverseRangeIntensionConstraint.cpp", "UniverseRangeIntensionConstraint_8cpp.html", null ],
+    [ "UniverseRangeIntensionConstraint.hpp", "UniverseRangeIntensionConstraint_8hpp.html", [
+      [ "UniverseRangeIntensionConstraint", "classUniverse_1_1UniverseRangeIntensionConstraint.html", "classUniverse_1_1UniverseRangeIntensionConstraint" ]
+    ] ],
     [ "UniverseRelationalOperator.hpp", "UniverseRelationalOperator_8hpp.html", "UniverseRelationalOperator_8hpp" ],
     [ "UniverseSetBelongingOperator.hpp", "UniverseSetBelongingOperator_8hpp.html", "UniverseSetBelongingOperator_8hpp" ],
+    [ "UniverseSetIntensionConstraint.cpp", "UniverseSetIntensionConstraint_8cpp.html", null ],
+    [ "UniverseSetIntensionConstraint.hpp", "UniverseSetIntensionConstraint_8hpp.html", [
+      [ "UniverseSetIntensionConstraint", "classUniverse_1_1UniverseSetIntensionConstraint.html", "classUniverse_1_1UniverseSetIntensionConstraint" ]
+    ] ],
     [ "UniverseSolverResult.hpp", "UniverseSolverResult_8hpp.html", "UniverseSolverResult_8hpp" ],
-    [ "UniverseType.cpp", "UniverseType_8cpp_source.html", null ],
+    [ "UniverseTransition.cpp", "UniverseTransition_8cpp.html", null ],
+    [ "UniverseTransition.hpp", "UniverseTransition_8hpp.html", [
+      [ "UniverseTransition", "classUniverse_1_1UniverseTransition.html", "classUniverse_1_1UniverseTransition" ]
+    ] ],
+    [ "UniverseType.cpp", "UniverseType_8cpp.html", null ],
     [ "UniverseType.hpp", "UniverseType_8hpp.html", "UniverseType_8hpp" ],
     [ "UniverseUnaryIntensionConstraint.cpp", "UniverseUnaryIntensionConstraint_8cpp.html", null ],
     [ "UniverseUnaryIntensionConstraint.hpp", "UniverseUnaryIntensionConstraint_8hpp.html", [
       [ "UniverseUnaryIntensionConstraint", "classUniverse_1_1UniverseUnaryIntensionConstraint.html", "classUniverse_1_1UniverseUnaryIntensionConstraint" ]
     ] ],
-    [ "UniverseVariableIntensionConstraint.cpp", "UniverseVariableIntensionConstraint_8cpp_source.html", null ],
+    [ "UniverseVariableIntensionConstraint.cpp", "UniverseVariableIntensionConstraint_8cpp.html", null ],
     [ "UniverseVariableIntensionConstraint.hpp", "UniverseVariableIntensionConstraint_8hpp.html", [
       [ "UniverseVariableIntensionConstraint", "classUniverse_1_1UniverseVariableIntensionConstraint.html", "classUniverse_1_1UniverseVariableIntensionConstraint" ]
     ] ]

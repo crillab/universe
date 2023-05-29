@@ -138,7 +138,7 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classUniverse_1_1JavaOptimizationSolver.html">JavaOptimizationSolver</a> defines an implementation of an <a class="el" href="classUniverse_1_1IOptimizationSolver.html">IOptimizationSolver</a> in Java (using JNI). </p>
 
-<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8hpp_source.html#l00047">47</a> of file <a class="el" href="JavaOptimizationSolver_8hpp_source.html">JavaOptimizationSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8hpp_source.html#l00046">46</a> of file <a class="el" href="JavaOptimizationSolver_8hpp_source.html">JavaOptimizationSolver.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9c52d0e07e39fd9016ae1bfea2f5f125"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c52d0e07e39fd9016ae1bfea2f5f125">&#9670;&nbsp;</a></span>~JavaOptimizationSolver()</h2>
@@ -189,12 +189,12 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gives the current (best) bound that have been found by this solver.</p>
+<p>Gives the current (best) bound that have been found by this solver. It is the current lower or upper bound, depending on whether the problem is a minimization or maximization problem.</p>
 <dl class="section return"><dt>Returns</dt><dd>The current bound. </dd></dl>
 
 <p>Implements <a class="el" href="classUniverse_1_1IOptimizationSolver.html#a00eae18affa91fc93a773c21b9272afd">Universe::IOptimizationSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00057">57</a> of file <a class="el" href="JavaOptimizationSolver_8cpp_source.html">JavaOptimizationSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00090">90</a> of file <a class="el" href="JavaOptimizationSolver_8cpp_source.html">JavaOptimizationSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaBigInteger_8cpp_source.html#l00067">Universe::JavaBigInteger::of()</a>.</p>
 
@@ -222,12 +222,12 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gives the (best) lower bound that have been found by this solver.</p>
-<dl class="section return"><dt>Returns</dt><dd>The lower bound. </dd></dl>
+<p>Gives the current (best) lower bound of the underlying optimization problem.</p>
+<dl class="section return"><dt>Returns</dt><dd>The current lower bound. </dd></dl>
 
 <p>Implements <a class="el" href="classUniverse_1_1IOptimizationSolver.html#a954bb37cc33a33cecc8660540b0b961e">Universe::IOptimizationSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00064">64</a> of file <a class="el" href="JavaOptimizationSolver_8cpp_source.html">JavaOptimizationSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00070">70</a> of file <a class="el" href="JavaOptimizationSolver_8cpp_source.html">JavaOptimizationSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaBigInteger_8cpp_source.html#l00067">Universe::JavaBigInteger::of()</a>.</p>
 
@@ -255,12 +255,12 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gives the (best) upper bound that have been found by this solver.</p>
-<dl class="section return"><dt>Returns</dt><dd>The upper bound. </dd></dl>
+<p>Gives the current (best) upper bound of the underlying optimization problem.</p>
+<dl class="section return"><dt>Returns</dt><dd>The current upper bound. </dd></dl>
 
 <p>Implements <a class="el" href="classUniverse_1_1IOptimizationSolver.html#a6dd6462b750f5e992db3871445acf072">Universe::IOptimizationSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00077">77</a> of file <a class="el" href="JavaOptimizationSolver_8cpp_source.html">JavaOptimizationSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00083">83</a> of file <a class="el" href="JavaOptimizationSolver_8cpp_source.html">JavaOptimizationSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaBigInteger_8cpp_source.html#l00067">Universe::JavaBigInteger::of()</a>.</p>
 
@@ -289,7 +289,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Checks whether the optimization problem is a minimization problem.</p>
-<dl class="section return"><dt>Returns</dt><dd>Whether the problem is a minimization problem. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether the underlying problem is a minimization problem. </dd></dl>
 
 <p>Implements <a class="el" href="classUniverse_1_1IOptimizationSolver.html#afd9b7c95462dcf6eec7e2dbab2b72fb5">Universe::IOptimizationSolver</a>.</p>
 
@@ -329,7 +329,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The created solver. </dd></dl>
 
-<p class="reference">Referenced by <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00048">of()</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00177">Universe::UniverseJavaSolver::toOptimizationSolver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00048">of()</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00189">Universe::UniverseJavaSolver::toOptimizationSolver()</a>.</p>
 
 </div>
 </div>
@@ -404,7 +404,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the bounds to consider when solving the optimization problem.</p>
+<p>Sets the bounds for the optimization problem to solve.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lb</td><td>The lower bound to set. </td></tr>
@@ -415,7 +415,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IOptimizationSolver.html#ad821b02ff24d6c7f7a598055a573e71b">Universe::IOptimizationSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00090">90</a> of file <a class="el" href="JavaOptimizationSolver_8cpp_source.html">JavaOptimizationSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00057">57</a> of file <a class="el" href="JavaOptimizationSolver_8cpp_source.html">JavaOptimizationSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaBigInteger_8cpp_source.html#l00053">Universe::JavaBigInteger::newInstance()</a>.</p>
 
@@ -444,7 +444,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the lower bound to consider when solving the optimization problem.</p>
+<p>Sets the lower bound for the optimization problem to solve.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lb</td><td>The lower bound to set. </td></tr>
@@ -454,7 +454,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IOptimizationSolver.html#a3495e81dc8f7f46d9c7adde8bfec0d50">Universe::IOptimizationSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00071">71</a> of file <a class="el" href="JavaOptimizationSolver_8cpp_source.html">JavaOptimizationSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00064">64</a> of file <a class="el" href="JavaOptimizationSolver_8cpp_source.html">JavaOptimizationSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaBigInteger_8cpp_source.html#l00053">Universe::JavaBigInteger::newInstance()</a>.</p>
 
@@ -483,7 +483,7 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the upper bound to consider when solving the optimization problem.</p>
+<p>Sets the upper bound for the optimization problem to solve.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ub</td><td>The upper bound to set. </td></tr>
@@ -493,7 +493,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IOptimizationSolver.html#a4ca17a9a24c031cd8e2197f2488eb849">Universe::IOptimizationSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00084">84</a> of file <a class="el" href="JavaOptimizationSolver_8cpp_source.html">JavaOptimizationSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="JavaOptimizationSolver_8cpp_source.html#l00077">77</a> of file <a class="el" href="JavaOptimizationSolver_8cpp_source.html">JavaOptimizationSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaBigInteger_8cpp_source.html#l00053">Universe::JavaBigInteger::newInstance()</a>.</p>
 

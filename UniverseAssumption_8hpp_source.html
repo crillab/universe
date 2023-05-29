@@ -90,7 +90,7 @@ $(document).ready(function(){initNavTree('UniverseAssumption_8hpp_source.html','
 <div class="contents">
 <a href="UniverseAssumption_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/******************************************************************************</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (c) 2022 - Univ Artois &amp; CNRS &amp; Exakis Nelite.                   *</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Copyright (c) 2022-2023 - Univ Artois &amp; CNRS &amp; Exakis Nelite.              *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * All rights reserved.                                                       *</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *                                                                            *</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> * This library is free software; you can redistribute it and/or modify it    *</span></div>
@@ -111,53 +111,55 @@ $(document).ready(function(){initNavTree('UniverseAssumption_8hpp_source.html','
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifndef UNIVERSE_UNIVERSEASSUMPTION_HPP</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define UNIVERSE_UNIVERSEASSUMPTION_HPP</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="UniverseType_8hpp.html">UniverseType.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">namespace </span>Universe {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="UniverseType_8hpp.html">UniverseType.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseAssumption.html">   45</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUniverse_1_1UniverseAssumption.html">UniverseAssumption</a> {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span>Universe {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseAssumption.html">   47</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUniverse_1_1UniverseAssumption.html">UniverseAssumption</a> {</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> variableId;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> equal;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keyword">const</span> T value;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">const</span> std::string variableId;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> equal;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">const</span> T value;</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseAssumption.html#a8d7fe7b81fb02544f709b0be105b8ba6">   73</a></span>&#160;        <a class="code" href="classUniverse_1_1UniverseAssumption.html#a8d7fe7b81fb02544f709b0be105b8ba6">UniverseAssumption</a>(<span class="keywordtype">int</span> variableId, <span class="keywordtype">bool</span> equal, T value) :</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                variableId(variableId),</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                equal(equal),</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                value(value) {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="comment">// Nothing to do: everything is already initialized.</span></div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseAssumption.html#a9f61c089681bf0c268f808e8d801da56">   85</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">int</span> <a class="code" href="classUniverse_1_1UniverseAssumption.html#a9f61c089681bf0c268f808e8d801da56">getVariableId</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">return</span> variableId;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseAssumption.html#a309d3ae202e5eac944017190fdfb6dfa">   94</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classUniverse_1_1UniverseAssumption.html#a309d3ae202e5eac944017190fdfb6dfa">isEqual</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">return</span> equal;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseAssumption.html#af6514691bb184cd17d898b9a92ffee94">  103</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> T <a class="code" href="classUniverse_1_1UniverseAssumption.html#af6514691bb184cd17d898b9a92ffee94">getValue</a>()<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">return</span> value;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    };</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseAssumption.html#a9dc624d19fa382df5133e6ffa3c7f6cd">   75</a></span>&#160;        <a class="code" href="classUniverse_1_1UniverseAssumption.html#a9dc624d19fa382df5133e6ffa3c7f6cd">UniverseAssumption</a>(std::string variableId, <span class="keywordtype">bool</span> equal, T value) :</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                variableId(std::move(variableId)),</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                equal(equal),</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                value(value) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="comment">// Nothing to do: everything is already initialized.</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseAssumption.html#a970637b622d779b87f0f922d1bee4cdc">   87</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> <span class="keyword">const</span> std::string &amp;<a class="code" href="classUniverse_1_1UniverseAssumption.html#a970637b622d779b87f0f922d1bee4cdc">getVariableId</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordflow">return</span> variableId;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseAssumption.html#a309d3ae202e5eac944017190fdfb6dfa">   96</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="classUniverse_1_1UniverseAssumption.html#a309d3ae202e5eac944017190fdfb6dfa">isEqual</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">return</span> equal;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseAssumption.html#af6514691bb184cd17d898b9a92ffee94">  105</a></span>&#160;        [[nodiscard]] <span class="keyword">inline</span> T <a class="code" href="classUniverse_1_1UniverseAssumption.html#af6514691bb184cd17d898b9a92ffee94">getValue</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="keywordflow">return</span> value;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    };</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aUniverseType_8hpp_html"><div class="ttname"><a href="UniverseType_8hpp.html">UniverseType.hpp</a></div><div class="ttdoc">Defines various aliases for types used throughout Universe.</div></div>
-<div class="ttc" id="aclassUniverse_1_1UniverseAssumption_html"><div class="ttname"><a href="classUniverse_1_1UniverseAssumption.html">Universe::UniverseAssumption</a></div><div class="ttdef"><b>Definition:</b> <a href="UniverseAssumption_8hpp_source.html#l00045">UniverseAssumption.hpp:45</a></div></div>
-<div class="ttc" id="aclassUniverse_1_1UniverseAssumption_html_a309d3ae202e5eac944017190fdfb6dfa"><div class="ttname"><a href="classUniverse_1_1UniverseAssumption.html#a309d3ae202e5eac944017190fdfb6dfa">Universe::UniverseAssumption::isEqual</a></div><div class="ttdeci">bool isEqual() const</div><div class="ttdef"><b>Definition:</b> <a href="UniverseAssumption_8hpp_source.html#l00094">UniverseAssumption.hpp:94</a></div></div>
-<div class="ttc" id="aclassUniverse_1_1UniverseAssumption_html_a8d7fe7b81fb02544f709b0be105b8ba6"><div class="ttname"><a href="classUniverse_1_1UniverseAssumption.html#a8d7fe7b81fb02544f709b0be105b8ba6">Universe::UniverseAssumption::UniverseAssumption</a></div><div class="ttdeci">UniverseAssumption(int variableId, bool equal, T value)</div><div class="ttdef"><b>Definition:</b> <a href="UniverseAssumption_8hpp_source.html#l00073">UniverseAssumption.hpp:73</a></div></div>
-<div class="ttc" id="aclassUniverse_1_1UniverseAssumption_html_a9f61c089681bf0c268f808e8d801da56"><div class="ttname"><a href="classUniverse_1_1UniverseAssumption.html#a9f61c089681bf0c268f808e8d801da56">Universe::UniverseAssumption::getVariableId</a></div><div class="ttdeci">int getVariableId() const</div><div class="ttdef"><b>Definition:</b> <a href="UniverseAssumption_8hpp_source.html#l00085">UniverseAssumption.hpp:85</a></div></div>
-<div class="ttc" id="aclassUniverse_1_1UniverseAssumption_html_af6514691bb184cd17d898b9a92ffee94"><div class="ttname"><a href="classUniverse_1_1UniverseAssumption.html#af6514691bb184cd17d898b9a92ffee94">Universe::UniverseAssumption::getValue</a></div><div class="ttdeci">T getValue() const</div><div class="ttdef"><b>Definition:</b> <a href="UniverseAssumption_8hpp_source.html#l00103">UniverseAssumption.hpp:103</a></div></div>
+<div class="ttc" id="aclassUniverse_1_1UniverseAssumption_html"><div class="ttname"><a href="classUniverse_1_1UniverseAssumption.html">Universe::UniverseAssumption</a></div><div class="ttdef"><b>Definition:</b> <a href="UniverseAssumption_8hpp_source.html#l00047">UniverseAssumption.hpp:47</a></div></div>
+<div class="ttc" id="aclassUniverse_1_1UniverseAssumption_html_a309d3ae202e5eac944017190fdfb6dfa"><div class="ttname"><a href="classUniverse_1_1UniverseAssumption.html#a309d3ae202e5eac944017190fdfb6dfa">Universe::UniverseAssumption::isEqual</a></div><div class="ttdeci">bool isEqual() const</div><div class="ttdef"><b>Definition:</b> <a href="UniverseAssumption_8hpp_source.html#l00096">UniverseAssumption.hpp:96</a></div></div>
+<div class="ttc" id="aclassUniverse_1_1UniverseAssumption_html_a970637b622d779b87f0f922d1bee4cdc"><div class="ttname"><a href="classUniverse_1_1UniverseAssumption.html#a970637b622d779b87f0f922d1bee4cdc">Universe::UniverseAssumption::getVariableId</a></div><div class="ttdeci">const std::string &amp; getVariableId() const</div><div class="ttdef"><b>Definition:</b> <a href="UniverseAssumption_8hpp_source.html#l00087">UniverseAssumption.hpp:87</a></div></div>
+<div class="ttc" id="aclassUniverse_1_1UniverseAssumption_html_a9dc624d19fa382df5133e6ffa3c7f6cd"><div class="ttname"><a href="classUniverse_1_1UniverseAssumption.html#a9dc624d19fa382df5133e6ffa3c7f6cd">Universe::UniverseAssumption::UniverseAssumption</a></div><div class="ttdeci">UniverseAssumption(std::string variableId, bool equal, T value)</div><div class="ttdef"><b>Definition:</b> <a href="UniverseAssumption_8hpp_source.html#l00075">UniverseAssumption.hpp:75</a></div></div>
+<div class="ttc" id="aclassUniverse_1_1UniverseAssumption_html_af6514691bb184cd17d898b9a92ffee94"><div class="ttname"><a href="classUniverse_1_1UniverseAssumption.html#af6514691bb184cd17d898b9a92ffee94">Universe::UniverseAssumption::getValue</a></div><div class="ttdeci">T getValue() const</div><div class="ttdef"><b>Definition:</b> <a href="UniverseAssumption_8hpp_source.html#l00105">UniverseAssumption.hpp:105</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -106,15 +106,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a958ac7250ec474f2ec5511ddf4eabf5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a324e4164ceda0e1a1b3a25071ac081a4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseIntensionConstraintVisitor.html#a324e4164ceda0e1a1b3a25071ac081a4">visit</a> (<a class="el" href="classUniverse_1_1UniverseNaryIntensionConstraint.html">Universe::UniverseNaryIntensionConstraint</a> *constraint)=0</td></tr>
 <tr class="separator:a324e4164ceda0e1a1b3a25071ac081a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a016964f6de5cc3218f0bd497f27e3366"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseIntensionConstraintVisitor.html#a016964f6de5cc3218f0bd497f27e3366">visit</a> (<a class="el" href="classUniverse_1_1UniverseRangeIntensionConstraint.html">Universe::UniverseRangeIntensionConstraint</a> *range)=0</td></tr>
+<tr class="separator:a016964f6de5cc3218f0bd497f27e3366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ecfd850424b7a2dc1b33e037da43fac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseIntensionConstraintVisitor.html#a3ecfd850424b7a2dc1b33e037da43fac">visit</a> (<a class="el" href="classUniverse_1_1UniverseSetIntensionConstraint.html">Universe::UniverseSetIntensionConstraint</a> *set)=0</td></tr>
+<tr class="separator:a3ecfd850424b7a2dc1b33e037da43fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ae629f4d9f6e1c0d6711a4f964165e8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseIntensionConstraintVisitor.html#a9ae629f4d9f6e1c0d6711a4f964165e8">visit</a> (<a class="el" href="classUniverse_1_1UniverseUnaryIntensionConstraint.html">Universe::UniverseUnaryIntensionConstraint</a> *constraint)=0</td></tr>
 <tr class="separator:a9ae629f4d9f6e1c0d6711a4f964165e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ab24aca1de2c365e194325a0e6d4b98"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseIntensionConstraintVisitor.html#a2ab24aca1de2c365e194325a0e6d4b98">visit</a> (<a class="el" href="classUniverse_1_1UniverseVariableIntensionConstraint.html">Universe::UniverseVariableIntensionConstraint</a> *variable)=0</td></tr>
 <tr class="separator:a2ab24aca1de2c365e194325a0e6d4b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="classUniverse_1_1IUniverseIntensionConstraintVisitor.html">IUniverseIntensionConstraintVisitor</a> defines an interface for visiting intension constraints. </p>
+<div class="textblock"><p>The <a class="el" href="classUniverse_1_1IUniverseIntensionConstraintVisitor.html">IUniverseIntensionConstraintVisitor</a> allows visiting intension constraints to discover its semantics. </p>
 
-<p class="definition">Definition at line <a class="el" href="IUniverseIntensionConstraintVisitor_8hpp_source.html#l00076">76</a> of file <a class="el" href="IUniverseIntensionConstraintVisitor_8hpp_source.html">IUniverseIntensionConstraintVisitor.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="IUniverseIntensionConstraintVisitor_8hpp_source.html#l00088">88</a> of file <a class="el" href="IUniverseIntensionConstraintVisitor_8hpp_source.html">IUniverseIntensionConstraintVisitor.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2dab22d0831df8baa235f4c8a13a6544"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2dab22d0831df8baa235f4c8a13a6544">&#9670;&nbsp;</a></span>~IUniverseIntensionConstraintVisitor()</h2>
@@ -144,7 +148,7 @@ Public Member Functions</h2></td></tr>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a69e5c30757e17dce6deb9b311eb71505"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a69e5c30757e17dce6deb9b311eb71505">&#9670;&nbsp;</a></span>visit() <span class="overload">[1/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a69e5c30757e17dce6deb9b311eb71505">&#9670;&nbsp;</a></span>visit() <span class="overload">[1/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -177,7 +181,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a08ec8db11c60cf25ca0832678de1bcf6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08ec8db11c60cf25ca0832678de1bcf6">&#9670;&nbsp;</a></span>visit() <span class="overload">[2/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a08ec8db11c60cf25ca0832678de1bcf6">&#9670;&nbsp;</a></span>visit() <span class="overload">[2/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,12 +211,12 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="reference">Referenced by <a class="el" href="UniverseBinaryIntensionConstraint_8cpp_source.html#l00043">Universe::UniverseBinaryIntensionConstraint::accept()</a>, <a class="el" href="UniverseConstantIntensionConstraint_8cpp_source.html#l00045">Universe::UniverseConstantIntensionConstraint::accept()</a>, <a class="el" href="UniverseIfThenElseIntensionConstraint_8cpp_source.html#l00043">Universe::UniverseIfThenElseIntensionConstraint::accept()</a>, <a class="el" href="UniverseNaryIntensionConstraint_8cpp_source.html#l00047">Universe::UniverseNaryIntensionConstraint::accept()</a>, <a class="el" href="UniverseUnaryIntensionConstraint_8cpp_source.html#l00042">Universe::UniverseUnaryIntensionConstraint::accept()</a>, and <a class="el" href="UniverseVariableIntensionConstraint_8cpp_source.html#l00045">Universe::UniverseVariableIntensionConstraint::accept()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UniverseBinaryIntensionConstraint_8cpp_source.html#l00043">Universe::UniverseBinaryIntensionConstraint::accept()</a>, <a class="el" href="UniverseConstantIntensionConstraint_8cpp_source.html#l00045">Universe::UniverseConstantIntensionConstraint::accept()</a>, <a class="el" href="UniverseIfThenElseIntensionConstraint_8cpp_source.html#l00043">Universe::UniverseIfThenElseIntensionConstraint::accept()</a>, <a class="el" href="UniverseNaryIntensionConstraint_8cpp_source.html#l00047">Universe::UniverseNaryIntensionConstraint::accept()</a>, <a class="el" href="UniverseRangeIntensionConstraint_8cpp_source.html#l00050">Universe::UniverseRangeIntensionConstraint::accept()</a>, <a class="el" href="UniverseSetIntensionConstraint_8cpp_source.html#l00045">Universe::UniverseSetIntensionConstraint::accept()</a>, <a class="el" href="UniverseUnaryIntensionConstraint_8cpp_source.html#l00042">Universe::UniverseUnaryIntensionConstraint::accept()</a>, and <a class="el" href="UniverseVariableIntensionConstraint_8cpp_source.html#l00045">Universe::UniverseVariableIntensionConstraint::accept()</a>.</p>
 
 </div>
 </div>
 <a id="a958ac7250ec474f2ec5511ddf4eabf5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a958ac7250ec474f2ec5511ddf4eabf5b">&#9670;&nbsp;</a></span>visit() <span class="overload">[3/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a958ac7250ec474f2ec5511ddf4eabf5b">&#9670;&nbsp;</a></span>visit() <span class="overload">[3/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -245,7 +249,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a324e4164ceda0e1a1b3a25071ac081a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a324e4164ceda0e1a1b3a25071ac081a4">&#9670;&nbsp;</a></span>visit() <span class="overload">[4/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a324e4164ceda0e1a1b3a25071ac081a4">&#9670;&nbsp;</a></span>visit() <span class="overload">[4/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,8 +281,74 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a016964f6de5cc3218f0bd497f27e3366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a016964f6de5cc3218f0bd497f27e3366">&#9670;&nbsp;</a></span>visit() <span class="overload">[5/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Universe::IUniverseIntensionConstraintVisitor::visit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classUniverse_1_1UniverseRangeIntensionConstraint.html">Universe::UniverseRangeIntensionConstraint</a> *&#160;</td>
+          <td class="paramname"><em>range</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Visits a range that appears in an intension constraint.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">range</td><td>The range to visit. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3ecfd850424b7a2dc1b33e037da43fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ecfd850424b7a2dc1b33e037da43fac">&#9670;&nbsp;</a></span>visit() <span class="overload">[6/8]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Universe::IUniverseIntensionConstraintVisitor::visit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classUniverse_1_1UniverseSetIntensionConstraint.html">Universe::UniverseSetIntensionConstraint</a> *&#160;</td>
+          <td class="paramname"><em>set</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Visits a set that appears in an intension constraint.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">set</td><td>The set to visit. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9ae629f4d9f6e1c0d6711a4f964165e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ae629f4d9f6e1c0d6711a4f964165e8">&#9670;&nbsp;</a></span>visit() <span class="overload">[5/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ae629f4d9f6e1c0d6711a4f964165e8">&#9670;&nbsp;</a></span>visit() <span class="overload">[7/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -311,7 +381,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <a id="a2ab24aca1de2c365e194325a0e6d4b98"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ab24aca1de2c365e194325a0e6d4b98">&#9670;&nbsp;</a></span>visit() <span class="overload">[6/6]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ab24aca1de2c365e194325a0e6d4b98">&#9670;&nbsp;</a></span>visit() <span class="overload">[8/8]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

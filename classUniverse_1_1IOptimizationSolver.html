@@ -125,7 +125,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4ca17a9a24c031cd8e2197f2488eb849"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="classUniverse_1_1IUniverseSolver.html">IUniverseSolver</a> provides an interface for optimization solvers. </p>
+<div class="textblock"><p>The <a class="el" href="classUniverse_1_1IUniverseSolver.html">IUniverseSolver</a> defines the contract for optimization solvers. </p>
 
 <p class="definition">Definition at line <a class="el" href="IOptimizationSolver_8hpp_source.html#l00041">41</a> of file <a class="el" href="IOptimizationSolver_8hpp_source.html">IOptimizationSolver.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -178,7 +178,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gives the current (best) bound that have been found by this solver.</p>
+<p>Gives the current (best) bound that have been found by this solver. It is the current lower or upper bound, depending on whether the problem is a minimization or maximization problem.</p>
 <dl class="section return"><dt>Returns</dt><dd>The current bound. </dd></dl>
 
 <p>Implemented in <a class="el" href="classUniverse_1_1JavaOptimizationSolver.html#a9ef4e94934235bfa866092a0fcdb9346">Universe::JavaOptimizationSolver</a>.</p>
@@ -207,8 +207,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gives the (best) lower bound that have been found by this solver.</p>
-<dl class="section return"><dt>Returns</dt><dd>The lower bound. </dd></dl>
+<p>Gives the current (best) lower bound of the underlying optimization problem.</p>
+<dl class="section return"><dt>Returns</dt><dd>The current lower bound. </dd></dl>
 
 <p>Implemented in <a class="el" href="classUniverse_1_1JavaOptimizationSolver.html#a870ee73f800aab65203db9bf68655a72">Universe::JavaOptimizationSolver</a>.</p>
 
@@ -236,8 +236,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gives the (best) upper bound that have been found by this solver.</p>
-<dl class="section return"><dt>Returns</dt><dd>The upper bound. </dd></dl>
+<p>Gives the current (best) upper bound of the underlying optimization problem.</p>
+<dl class="section return"><dt>Returns</dt><dd>The current upper bound. </dd></dl>
 
 <p>Implemented in <a class="el" href="classUniverse_1_1JavaOptimizationSolver.html#a923d2132bf20b0564cae90ec613c01ec">Universe::JavaOptimizationSolver</a>.</p>
 
@@ -266,7 +266,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Checks whether the optimization problem is a minimization problem.</p>
-<dl class="section return"><dt>Returns</dt><dd>Whether the problem is a minimization problem. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether the underlying problem is a minimization problem. </dd></dl>
 
 <p>Implemented in <a class="el" href="classUniverse_1_1JavaOptimizationSolver.html#a920eba757095b945fefecb9e50bb24db">Universe::JavaOptimizationSolver</a>.</p>
 
@@ -305,7 +305,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the bounds to consider when solving the optimization problem.</p>
+<p>Sets the bounds for the optimization problem to solve.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lb</td><td>The lower bound to set. </td></tr>
@@ -341,7 +341,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the lower bound to consider when solving the optimization problem.</p>
+<p>Sets the lower bound for the optimization problem to solve.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lb</td><td>The lower bound to set. </td></tr>
@@ -376,7 +376,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the upper bound to consider when solving the optimization problem.</p>
+<p>Sets the upper bound for the optimization problem to solve.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ub</td><td>The upper bound to set. </td></tr>

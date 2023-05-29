@@ -3,6 +3,7 @@ var annotated_dup =
     [ "Universe", null, [
       [ "AbstractUniverseIntensionConstraintFactory", "classUniverse_1_1AbstractUniverseIntensionConstraintFactory.html", "classUniverse_1_1AbstractUniverseIntensionConstraintFactory" ],
       [ "IOptimizationSolver", "classUniverse_1_1IOptimizationSolver.html", "classUniverse_1_1IOptimizationSolver" ],
+      [ "IUniverseConfigurableSolver", "classUniverse_1_1IUniverseConfigurableSolver.html", "classUniverse_1_1IUniverseConfigurableSolver" ],
       [ "IUniverseConstraint", "classUniverse_1_1IUniverseConstraint.html", "classUniverse_1_1IUniverseConstraint" ],
       [ "IUniverseCspSolver", "classUniverse_1_1IUniverseCspSolver.html", "classUniverse_1_1IUniverseCspSolver" ],
       [ "IUniverseDomain", "classUniverse_1_1IUniverseDomain.html", "classUniverse_1_1IUniverseDomain" ],
@@ -11,6 +12,7 @@ var annotated_dup =
       [ "IUniverseProblem", "classUniverse_1_1IUniverseProblem.html", "classUniverse_1_1IUniverseProblem" ],
       [ "IUniversePseudoBooleanSolver", "classUniverse_1_1IUniversePseudoBooleanSolver.html", "classUniverse_1_1IUniversePseudoBooleanSolver" ],
       [ "IUniverseSatSolver", "classUniverse_1_1IUniverseSatSolver.html", "classUniverse_1_1IUniverseSatSolver" ],
+      [ "IUniverseSearchListener", "classUniverse_1_1IUniverseSearchListener.html", "classUniverse_1_1IUniverseSearchListener" ],
       [ "IUniverseSolver", "classUniverse_1_1IUniverseSolver.html", "classUniverse_1_1IUniverseSolver" ],
       [ "IUniverseSolverFactory", "classUniverse_1_1IUniverseSolverFactory.html", "classUniverse_1_1IUniverseSolverFactory" ],
       [ "IUniverseVariable", "classUniverse_1_1IUniverseVariable.html", "classUniverse_1_1IUniverseVariable" ],
@@ -21,6 +23,7 @@ var annotated_dup =
       [ "JavaOptimizationSolver", "classUniverse_1_1JavaOptimizationSolver.html", "classUniverse_1_1JavaOptimizationSolver" ],
       [ "UniverseAssumption", "classUniverse_1_1UniverseAssumption.html", "classUniverse_1_1UniverseAssumption" ],
       [ "UniverseBinaryIntensionConstraint", "classUniverse_1_1UniverseBinaryIntensionConstraint.html", "classUniverse_1_1UniverseBinaryIntensionConstraint" ],
+      [ "UniverseConfiguration", "classUniverse_1_1UniverseConfiguration.html", "classUniverse_1_1UniverseConfiguration" ],
       [ "UniverseConstantIntensionConstraint", "classUniverse_1_1UniverseConstantIntensionConstraint.html", "classUniverse_1_1UniverseConstantIntensionConstraint" ],
       [ "UniverseContradictionException", "classUniverse_1_1UniverseContradictionException.html", "classUniverse_1_1UniverseContradictionException" ],
       [ "UniverseIfThenElseIntensionConstraint", "classUniverse_1_1UniverseIfThenElseIntensionConstraint.html", "classUniverse_1_1UniverseIfThenElseIntensionConstraint" ],
@@ -36,6 +39,9 @@ var annotated_dup =
       [ "UniverseJavaVariable", "classUniverse_1_1UniverseJavaVariable.html", "classUniverse_1_1UniverseJavaVariable" ],
       [ "UniverseNaryIntensionConstraint", "classUniverse_1_1UniverseNaryIntensionConstraint.html", "classUniverse_1_1UniverseNaryIntensionConstraint" ],
       [ "UniverseOperatorIntensionConstraint", "classUniverse_1_1UniverseOperatorIntensionConstraint.html", "classUniverse_1_1UniverseOperatorIntensionConstraint" ],
+      [ "UniverseRangeIntensionConstraint", "classUniverse_1_1UniverseRangeIntensionConstraint.html", "classUniverse_1_1UniverseRangeIntensionConstraint" ],
+      [ "UniverseSetIntensionConstraint", "classUniverse_1_1UniverseSetIntensionConstraint.html", "classUniverse_1_1UniverseSetIntensionConstraint" ],
+      [ "UniverseTransition", "classUniverse_1_1UniverseTransition.html", "classUniverse_1_1UniverseTransition" ],
       [ "UniverseUnaryIntensionConstraint", "classUniverse_1_1UniverseUnaryIntensionConstraint.html", "classUniverse_1_1UniverseUnaryIntensionConstraint" ],
       [ "UniverseVariableIntensionConstraint", "classUniverse_1_1UniverseVariableIntensionConstraint.html", "classUniverse_1_1UniverseVariableIntensionConstraint" ]
     ] ]

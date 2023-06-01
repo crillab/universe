@@ -944,7 +944,18 @@ namespace Universe {
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
         virtual void addSupport(
-                const std::string &variable, const std::vector<Universe::BigInteger> &allowedValues) = 0;
+                const std::string &variable, const std::vector<Universe::BigInteger> &allowedValues, bool hasStar) = 0;
+
+        /**
+         * Adds to this solver an extension constraint describing the support of a variable.
+         *
+         * @param variable The variable for which the support is given.
+         * @param allowedValues The values allowed for the variable.
+         *
+         * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
+         */
+        virtual void addSupportSymbolic(
+                const std::string &variable, const std::vector<std::string> &allowedValues, bool hasStar) = 0;
 
         /**
          * Adds to this solver an extension constraint describing the support of a tuple of variables.
@@ -956,17 +967,43 @@ namespace Universe {
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
         virtual void addSupport(const std::vector<std::string> &variableTuple,
+
                 const std::vector<std::vector<Universe::BigInteger>> &allowedValues,bool hasStar) = 0;
 
         /**
-         * Adds to this solver an extension constraint describing the conflicts of a tuple of variables.
+         * Adds to this solver an extension constraint describing the support of a tuple of variables.
+         *
+         * @param variableTuple The tuple of variables for which the support is given.
+         * @param allowedValues The values allowed for the tuple variables.
+         *
+         * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
+         */
+        virtual void addSupportSymbolic(const std::vector<std::string> &variableTuple,
+                const std::vector<std::vector<std::string>> &allowedValues, bool hasStar) = 0;
+
+        /**
+         * Adds to this solver an extension constraint describing the conflicts of a variable.
          *
          * @param variable The variable for which the conflicts are given.
          * @param forbiddenValues The values forbidden for the variable.
          *
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
-        virtual void addConflicts(const std::string &variable, const std::vector<BigInteger> &forbiddenValues) = 0;
+
+        virtual void addConflicts(
+                const std::string &variable, const std::vector<Universe::BigInteger> &forbiddenValues, bool hasStar) = 0;
+
+        /**
+         * Adds to this solver an extension constraint describing the conflicts of a variable.
+         *
+         * @param variable The variable for which the conflicts are given.
+         * @param forbiddenValues The values forbidden for the variable.
+         *
+         * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
+         */
+        virtual void addConflictsSymbolic(
+                const std::string &variable, const std::vector<std::string> &forbiddenValues, bool hasStar) = 0;
+
 
         /**
          * Adds to this solver an extension constraint describing the conflicts of a tuple of variables.
@@ -977,8 +1014,20 @@ namespace Universe {
          *
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
-        virtual void addConflicts(const std::vector<std::string> &variableTuple,
-                const std::vector<std::vector<Universe::BigInteger>> &forbiddenValues,bool hasStar) = 0;
+        virtual void addConflicts(const std::vector<std::string> &variableTuple,const std::vector<std::vector<Universe::BigInteger>> &forbiddenValues,bool hasStar) = 0;
+
+
+        /**
+         * Adds to this solver an extension constraint describing the conflicts of a tuple of variables.
+         *
+         * @param variableTuple The tuple of variables for which the conflicts are given.
+         * @param forbiddenValues The values forbidden for the tuple variables.
+         *
+         * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
+         */
+        virtual void addConflictsSymbolic(const std::vector<std::string> &variableTuple,
+                const std::vector<std::vector<std::string>> &forbiddenValues, bool hasStar) = 0;
+
 
         /**
          * Adds to this solver an intension constraint.

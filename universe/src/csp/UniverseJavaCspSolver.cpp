@@ -740,7 +740,7 @@ void UniverseJavaCspSolver::addElementConstantMatrix(
     mtd.invoke(object, **jMatrix, (jint) startRowIndex, *jRowIndex, (jint) startColIndex, *jColIndex, *jValue);
 }
 
-void UniverseJavaCspSolver::addSupport(const string &variable, const vector<BigInteger> &allowedValues) {
+void UniverseJavaCspSolver::addSupport(const string &variable, const vector<BigInteger> &allowedValues, bool hasStar) {
     auto mtd = interface->getMethod("addSupport",
             METHOD(VOID, CLASS(java/lang/String) CLASS(java/util/List)));
     auto jVariable = JavaVirtualMachineRegistry::get()->toJavaString(variable);
@@ -748,8 +748,14 @@ void UniverseJavaCspSolver::addSupport(const string &variable, const vector<BigI
     mtd.invoke(object, *jVariable, **jAllowedValues);
 }
 
+
+void UniverseJavaCspSolver::addSupportSymbolic(const string &variable, const vector<string> &allowedValues, bool hasStar) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addSupport(
-        const vector<string> &variableTuple, const vector<vector<BigInteger>> &allowedValues,bool hasStar) {
+        const vector<string> &variableTuple, const vector<vector<BigInteger>> &allowedValues, bool hasStar) {
+
     auto mtd = interface->getMethod("addSupport",
             METHOD(VOID, CLASS(java/util/List) CLASS(java/util/List)));
     auto jVariableTuple = UniverseJavaCspSolver::asList(variableTuple);
@@ -757,7 +763,14 @@ void UniverseJavaCspSolver::addSupport(
     mtd.invoke(object, **jVariableTuple, **jAllowedValues);
 }
 
-void UniverseJavaCspSolver::addConflicts(const string &variable, const vector<BigInteger> &forbiddenValues) {
+
+void UniverseJavaCspSolver::addSupportSymbolic(const vector<string> &variableTuple,
+                                               const vector<vector<string>> &allowedValues, bool hasStar) {
+    // TODO
+}
+
+void UniverseJavaCspSolver::addConflicts(const string &variable, const vector<BigInteger> &forbiddenValues, bool hasStar) {
+
     auto mtd = interface->getMethod("addConflicts",
             METHOD(VOID, CLASS(java/lang/String) CLASS(java/util/List)));
     auto jVariable = JavaVirtualMachineRegistry::get()->toJavaString(variable);
@@ -765,13 +778,23 @@ void UniverseJavaCspSolver::addConflicts(const string &variable, const vector<Bi
     mtd.invoke(object, *jVariable, **jForbiddenValues);
 }
 
+
+void UniverseJavaCspSolver::addConflictsSymbolic(const string &variable, const vector<string> &forbiddenValues, bool hasStar) {
+    // TODO
+}
+
 void UniverseJavaCspSolver::addConflicts(
-        const vector<string> &variableTuple, const vector<vector<BigInteger>> &forbiddenValues,bool hasStar) {
+        const vector<string> &variableTuple, const vector<vector<BigInteger>> &forbiddenValues, bool hasStar) {
     auto mtd = interface->getMethod("addConflicts",
             METHOD(VOID, CLASS(java/util/List) CLASS(java/util/List)));
     auto jVariableTuple = UniverseJavaCspSolver::asList(variableTuple);
     auto jForbiddenValues = UniverseJavaCspSolver::asList(forbiddenValues,hasStar);
     mtd.invoke(object, **jVariableTuple, **jForbiddenValues);
+}
+
+void UniverseJavaCspSolver::addConflictsSymbolic(const vector<string> &variableTuple,
+                                                 const vector<vector<string>> &forbiddenValues, bool hasStar) {
+    // TODO
 }
 
 void UniverseJavaCspSolver::addIntension(IUniverseIntensionConstraint *constr) {

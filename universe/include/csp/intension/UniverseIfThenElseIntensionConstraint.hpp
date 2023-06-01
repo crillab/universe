@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 14/09/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -37,8 +37,8 @@
 namespace Universe {
 
     /**
-     * The UniverseIfThenElseIntensionConstraint is an intension constraint
-     * representing an if-then-else (ternary) constraint.
+     * The UniverseIfThenElseIntensionConstraint is an intension constraint that
+     * represents an if-then-else (ternary) constraint.
      */
     class UniverseIfThenElseIntensionConstraint : public Universe::IUniverseIntensionConstraint {
 
@@ -50,13 +50,13 @@ namespace Universe {
         IUniverseIntensionConstraint *condition;
 
         /**
-         * The intension constraint corresponding to the case in which condition
+         * The intension constraint corresponding to the case in which the condition
          * evaluates to true.
          */
         IUniverseIntensionConstraint *ifTrue;
 
         /**
-         * The intension constraint corresponding to the case in which condition
+         * The intension constraint corresponding to the case in which the condition
          * evaluates to false.
          */
         IUniverseIntensionConstraint *ifFalse;
@@ -73,7 +73,7 @@ namespace Universe {
          *        condition evaluates to false.
          */
         explicit UniverseIfThenElseIntensionConstraint(Universe::IUniverseIntensionConstraint *condition,
-                                                       Universe::IUniverseIntensionConstraint *ifTrue, Universe::IUniverseIntensionConstraint *ifFalse);
+                Universe::IUniverseIntensionConstraint *ifTrue, Universe::IUniverseIntensionConstraint *ifFalse);
 
         /**
          * Accepts an IUniverseIntensionConstraintVisitor.

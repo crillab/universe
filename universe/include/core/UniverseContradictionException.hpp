@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 14/09/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -38,7 +38,7 @@ namespace Universe {
 
     /**
      * The UniverseContradictionException is an exception that is thrown when
-     * a trivial inconsistency is encountered.
+     * a trivial inconsistency is detected by the solver.
      */
     class UniverseContradictionException : public std::exception {
 

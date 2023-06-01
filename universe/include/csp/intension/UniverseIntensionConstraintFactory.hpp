@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -20,11 +20,11 @@
 
 /**
  * @file UniverseIntensionConstraintFactory.hpp
- * @brief Defines a utility class for instantiating native intension constraints.
+ * @brief Defines a factory class for instantiating native intension constraints.
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 15/09/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -36,9 +36,8 @@
 namespace Universe {
 
     /**
-     * The UniverseIntensionConstraintFactory makes easier the construction of native intension
-     * constraints from the solver's API, by providing a functional notation similar to that
-     * used to define the constraints using XCSP3.
+     * The UniverseIntensionConstraintFactory makes easier the construction of native
+     * intension constraints from the solver's API, by providing a functional notation.
      */
     class UniverseIntensionConstraintFactory : public Universe::AbstractUniverseIntensionConstraintFactory {
 
@@ -70,6 +69,66 @@ namespace Universe {
          * @return The created intension constraint.
          */
         Universe::IUniverseIntensionConstraint *variable(std::string id) override;
+
+        /**
+         * Creates an intension constraint applying the in operator w.r.t. a range of values.
+         *
+         * @param constraint The constraint that should be in the range.
+         * @param min The minimum value in the range.
+         * @param max The maximum value in the range.
+         *
+         * @return The created intension constraint.
+         */
+        Universe::IUniverseIntensionConstraint *in(Universe::IUniverseIntensionConstraint *constraint,
+                const Universe::BigInteger &min, const Universe::BigInteger &max) override;
+
+        /**
+         * Creates an intension constraint applying the in operator w.r.t. a set of values.
+         *
+         * @param constraint The constraint that should be in the set.
+         * @param set The constraints in the set.
+         *
+         * @return The created intension constraint.
+         */
+        Universe::IUniverseIntensionConstraint *in(Universe::IUniverseIntensionConstraint *constraint,
+                std::vector<Universe::IUniverseIntensionConstraint *> set) override;
+
+        /**
+         * Creates an intension constraint applying the not-in operator w.r.t. a range of values.
+         *
+         * @param constraint The constraint that should not be in the range.
+         * @param min The minimum value in the range.
+         * @param max The maximum value in the range.
+         *
+         * @return The created intension constraint.
+         */
+        Universe::IUniverseIntensionConstraint *notIn(Universe::IUniverseIntensionConstraint *constraint,
+                const Universe::BigInteger &min, const Universe::BigInteger &max) override;
+
+        /**
+         * Creates an intension constraint applying the not-in operator w.r.t. a set of values.
+         *
+         * @param constraint The constraint that should not be in the set.
+         * @param set The constraints in the set.
+         *
+         * @return The created intension constraint.
+         */
+        Universe::IUniverseIntensionConstraint *notIn(Universe::IUniverseIntensionConstraint *constraint,
+                std::vector<Universe::IUniverseIntensionConstraint *> set) override;
+
+        /**
+         * Creates an intension constraint applying the if-then-else operator.
+         *
+         * @param condition The condition of the constraint.
+         * @param ifTrue The intension constraint corresponding to the case in which the
+         *        condition evaluates to true.
+         * @param ifFalse The intension constraint corresponding to the case in which the
+         *        condition evaluates to false.
+         *
+         * @return The created intension constraint.
+         */
+        Universe::IUniverseIntensionConstraint *ite(Universe::IUniverseIntensionConstraint *condition,
+                Universe::IUniverseIntensionConstraint *ifTrue, Universe::IUniverseIntensionConstraint *ifFalse) override;
 
         /**
          * Creates a new unary intension constraint.
@@ -104,20 +163,6 @@ namespace Universe {
          */
         Universe::IUniverseIntensionConstraint *nary(Universe::UniverseOperator op,
                 std::vector<Universe::IUniverseIntensionConstraint *> constraints) override;
-
-        /**
-         * Creates an intension constraint applying the if-then-else operator.
-         *
-         * @param condition The condition of the constraint.
-         * @param ifTrue The intension constraint corresponding to the case in which the
-         *        condition evaluates to true.
-         * @param ifFalse The intension constraint corresponding to the case in which the
-         *        condition evaluates to false.
-         *
-         * @return The created intension constraint.
-         */
-        Universe::IUniverseIntensionConstraint *ite(Universe::IUniverseIntensionConstraint *condition,
-                Universe::IUniverseIntensionConstraint *ifTrue, Universe::IUniverseIntensionConstraint *ifFalse) override;
 
     };
 

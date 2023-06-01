@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,11 +24,12 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 13/09/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
 #include <stdexcept>
+#include <string>
 
 #include "../../include/sat/IUniverseSatSolver.hpp"
 
@@ -41,20 +42,27 @@ void IUniverseSatSolver::addAllClauses(const vector<vector<int>> &clauses) {
     }
 }
 
-UniverseSolverResult IUniverseSatSolver::solve(const vector<UniverseAssumption<BigInteger>> &assumptions) {
-    vector<UniverseAssumption<bool>> boolAssumptions;
+UniverseSolverResult IUniverseSatSolver::solveDimacs(const std::vector<int> &assumptions) {
+    vector<UniverseAssumption<BigInteger>> bigAssumptions;
 
-    for (auto &assumption: assumptions) {
-        int identifier = assumption.getVariableId();
-        bool equal = assumption.isEqual();
-        BigInteger value = assumption.getValue();
+    for (int assumption : assumptions) {
+        if (assumption < 0) {
+            bigAssumptions.emplace_back(to_string(-assumption), true, 0);
 
-        if ((value != 0) && (value != 1)) {
-            throw invalid_argument("Assumption must be boolean");
+        } else {
+            bigAssumptions.emplace_back(to_string(assumption), true, 1);
         }
-
-        boolAssumptions.emplace_back(identifier, equal, (value == 1));
     }
 
-    return solve(boolAssumptions);
+    return solve(bigAssumptions);
+}
+
+UniverseSolverResult IUniverseSatSolver::solveBoolean(const vector<UniverseAssumption<bool>> &assumptions) {
+    vector<UniverseAssumption<BigInteger>> bigAssumptions;
+
+    for (auto &assumption : assumptions) {
+        bigAssumptions.emplace_back(assumption.getVariableId(), assumption.isEqual(), (assumption.getValue() ? 1 : 0));
+    }
+
+    return solve(bigAssumptions);
 }

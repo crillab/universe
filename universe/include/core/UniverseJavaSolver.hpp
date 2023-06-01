@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 19/10/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -110,11 +110,25 @@ namespace Universe {
         [[nodiscard]] const std::map<std::string, Universe::IUniverseVariable *> &getVariablesMapping() override;
 
         /**
+         * Advises this solver to focus on some variables to make decisions.
+         *
+         * @param variables The variables on which to make decisions.
+         */
+        void decisionVariables(const std::vector<std::string> &variables) override;
+
+        /**
          * Gives the number of constraints defined in this solver.
          *
          * @return The number of constraints.
          */
         int nConstraints() override;
+
+        /**
+         * Checks whether the associated problem is an optimization problem.
+         *
+         * @return Whether the problem is an optimization problem.
+         */
+        bool isOptimization() override;
 
         /**
          * Sets the time limit before interrupting the search.
@@ -138,6 +152,14 @@ namespace Universe {
         void setVerbosity(int level) override;
 
         /**
+         * Adds a listener to this solver, which listens to the events occurring in
+         * the solver during the search.
+         *
+         * @param listener The listener to add.
+         */
+        void addSearchListener(Universe::IUniverseSearchListener *listener) override;
+
+        /**
          * Sets the log file to be used by the solver.
          *
          * @param filename The name of the log file.
@@ -145,9 +167,21 @@ namespace Universe {
         void setLogFile(const std::string &filename) override;
 
 
-        void loadInstance(const std::string &filename) override;
 
-        bool isOptimization() override;
+        /**
+         * Sets the output stream to be used by the solver for logging.
+         *
+         * @param stream The logging output stream.
+         */
+        void setLogStream(std::ostream &stream) override;
+
+        /**
+         * Loads a problem stored in the given file.
+         * The solver is expected to parse the problem itself.
+         *
+         * @param filename The name of the file containing the problem to solve.
+         */
+        void loadInstance(const std::string &filename) override;
 
         /**
          * Solves the problem associated to this solver.
@@ -173,7 +207,8 @@ namespace Universe {
          *
          * @return The outcome of the search conducted by the solver.
          */
-        UniverseSolverResult solve(const std::vector<UniverseAssumption<Universe::BigInteger>> &assumptions) override;
+        UniverseSolverResult solve(
+                const std::vector<UniverseAssumption<Universe::BigInteger>> &assumptions) override;
 
         /**
          * Interrupts (asynchronously) the search currently performed by this solver.
@@ -185,15 +220,25 @@ namespace Universe {
          *
          * @return The solution found by this solver.
          */
-        std::vector<BigInteger> solution() override;
+        std::vector<Universe::BigInteger> solution() override;
 
         /**
-         * Gives the mapping between the name of a variable and the assignment found for this
-         * variable by this solver (if any).
+         * Gives the mapping between the names of the variables and the assignment found
+         * by this solver (if any).
          *
          * @return The solution found by this solver.
          */
         std::map<std::string, Universe::BigInteger> mapSolution() override;
+
+        /**
+         * Gives the mapping between the names of the variables and the assignment found
+         * by this solver (if any).
+         *
+         * @param excludeAux Whether auxiliary variables should be excluded from the solution.
+         *
+         * @return The solution found by this solver.
+         */
+        std::map<std::string, Universe::BigInteger> mapSolution(bool excludeAux) override;
 
         /**
          * Casts this solver into an IOptimizationSolver.
@@ -220,13 +265,14 @@ namespace Universe {
             auto cls = easyjni::JavaVirtualMachineRegistry::get()->loadClass(
                     "fr/univartois/cril/juniverse/core/UniverseAssumption");
             auto constructor = cls.getConstructor(
-                    CONSTRUCTOR(INTEGER BOOLEAN CLASS(java/lang/Object)));
+                    CONSTRUCTOR(CLASS(java/lang/String) BOOLEAN CLASS(java/lang/Object)));
 
             std::function<easyjni::JavaObject(Universe::UniverseAssumption<T>)> fct = [&] (auto assumption) {
-                auto id = (jint) assumption.getVariableId();
+                auto id = assumption.getVariableId();
+                auto name = easyjni::JavaVirtualMachineRegistry::get()->toJavaString(id);
                 auto equal = (jboolean) assumption.isEqual();
                 auto obj = toJavaObject(assumption.getValue());
-                return constructor.invokeStatic(cls, id, equal, *obj);
+                return constructor.invokeStatic(cls, *name, equal, *obj);
             };
 
             return JavaList::from(assumptions, fct);
@@ -243,7 +289,7 @@ namespace Universe {
 
         /**
          * The JavaOptimizationSolver is a friend class, which allows to "cast" a UniverseJavaSolver
-         * into a IOptimizationSolver.
+         * into an IOptimizationSolver.
          */
         friend class JavaOptimizationSolver;
 

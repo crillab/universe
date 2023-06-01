@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.               *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 19/10/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 #include <bits/stdc++.h>
@@ -43,28 +43,38 @@ UniverseJavaPseudoBooleanSolver::UniverseJavaPseudoBooleanSolver(JavaClass *inte
     // Nothing to do: everything is already initialized.
 }
 
-void UniverseJavaPseudoBooleanSolver::addExactly(const vector<int> &literals, int degree) {
+void UniverseJavaPseudoBooleanSolver::addPseudoBoolean(
+        const vector<int> &literals, const vector<BigInteger> &coefficients, bool moreThan, const BigInteger &degree) {
     auto literalList = UniverseJavaSatSolver::asList(literals);
-    auto mtd = interface->getMethod("addExactly",
+    auto coefficientList = UniverseJavaPseudoBooleanSolver::asList(coefficients);
+    auto javaDegree = JavaBigInteger::newInstance(degree);
+    auto mtd = interface->getMethod("addPseudoBoolean",
+            METHOD(VOID, CLASS(java/util/List) CLASS(java/util/List) BOOLEAN CLASS(java/math/BigInteger)));
+    mtd.invoke(object, **literalList, **coefficientList, (jboolean) moreThan, **javaDegree);
+}
+
+void UniverseJavaPseudoBooleanSolver::addAtMost(const vector<int> &literals, int degree) {
+    auto literalList = UniverseJavaSatSolver::asList(literals);
+    auto mtd = interface->getMethod("addAtMost",
             METHOD(VOID, CLASS(java/util/List) INTEGER));
     mtd.invoke(object, **literalList, (jint) degree);
 }
 
-void UniverseJavaPseudoBooleanSolver::addExactly(
+void UniverseJavaPseudoBooleanSolver::addAtMost(
         const vector<int> &literals, const vector<int> &coefficients, int degree) {
     auto literalList = UniverseJavaSatSolver::asList(literals);
     auto coefficientList = UniverseJavaSatSolver::asList(coefficients);
-    auto mtd = interface->getMethod("addExactly",
+    auto mtd = interface->getMethod("addAtMost",
             METHOD(VOID, CLASS(java/util/List) CLASS(java/util/List) INTEGER));
     mtd.invoke(object, **literalList, **coefficientList, (jint) degree);
 }
 
-void UniverseJavaPseudoBooleanSolver::addExactly(
+void UniverseJavaPseudoBooleanSolver::addAtMost(
         const vector<int> &literals, const vector<BigInteger> &coefficients, const BigInteger &degree) {
     auto literalList = UniverseJavaSatSolver::asList(literals);
     auto coefficientList = UniverseJavaPseudoBooleanSolver::asList(coefficients);
     auto javaDegree = JavaBigInteger::newInstance(degree);
-    auto mtd = interface->getMethod("addExactly",
+    auto mtd = interface->getMethod("addAtMost",
             METHOD(VOID, CLASS(java/util/List) CLASS(java/util/List) CLASS(java/math/BigInteger)));
     mtd.invoke(object, **literalList, **coefficientList, **javaDegree);
 }
@@ -95,45 +105,39 @@ void UniverseJavaPseudoBooleanSolver::addAtLeast(
     mtd.invoke(object, **literalList, **coefficientList, **javaDegree);
 }
 
-void UniverseJavaPseudoBooleanSolver::addAtMost(const vector<int> &literals, int degree) {
+void UniverseJavaPseudoBooleanSolver::addExactly(const vector<int> &literals, int degree) {
     auto literalList = UniverseJavaSatSolver::asList(literals);
-    auto mtd = interface->getMethod("addAtMost",
+    auto mtd = interface->getMethod("addExactly",
             METHOD(VOID, CLASS(java/util/List) INTEGER));
     mtd.invoke(object, **literalList, (jint) degree);
 }
 
-void UniverseJavaPseudoBooleanSolver::addAtMost(
+void UniverseJavaPseudoBooleanSolver::addExactly(
         const vector<int> &literals, const vector<int> &coefficients, int degree) {
     auto literalList = UniverseJavaSatSolver::asList(literals);
     auto coefficientList = UniverseJavaSatSolver::asList(coefficients);
-    auto mtd = interface->getMethod("addAtMost",
+    auto mtd = interface->getMethod("addExactly",
             METHOD(VOID, CLASS(java/util/List) CLASS(java/util/List) INTEGER));
     mtd.invoke(object, **literalList, **coefficientList, (jint) degree);
 }
 
-void UniverseJavaPseudoBooleanSolver::addAtMost(
+void UniverseJavaPseudoBooleanSolver::addExactly(
         const vector<int> &literals, const vector<BigInteger> &coefficients, const BigInteger &degree) {
     auto literalList = UniverseJavaSatSolver::asList(literals);
     auto coefficientList = UniverseJavaPseudoBooleanSolver::asList(coefficients);
     auto javaDegree = JavaBigInteger::newInstance(degree);
-    auto mtd = interface->getMethod("addAtMost",
+    auto mtd = interface->getMethod("addExactly",
             METHOD(VOID, CLASS(java/util/List) CLASS(java/util/List) CLASS(java/math/BigInteger)));
     mtd.invoke(object, **literalList, **coefficientList, **javaDegree);
 }
 
-void UniverseJavaPseudoBooleanSolver::addPseudoBoolean(
-        const vector<int> &literals, const vector<BigInteger> &coefficients, bool moreThan, const BigInteger &degree) {
-    auto literalList = UniverseJavaSatSolver::asList(literals);
-    auto coefficientList = UniverseJavaPseudoBooleanSolver::asList(coefficients);
-    auto javaDegree = JavaBigInteger::newInstance(degree);
-    auto mtd = interface->getMethod("addPseudoBoolean",
-            METHOD(VOID, CLASS(java/util/List) CLASS(java/util/List) BOOLEAN CLASS(java/math/BigInteger)));
-    mtd.invoke(object, **literalList, **coefficientList, (jboolean) moreThan, **javaDegree);
+UniverseSolverResult UniverseJavaPseudoBooleanSolver::solveDimacs(const vector<int> &assumptions) {
+    return UniverseJavaSatSolver::solveDimacs(assumptions);
 }
 
-UniverseSolverResult UniverseJavaPseudoBooleanSolver::solve(
+UniverseSolverResult UniverseJavaPseudoBooleanSolver::solveBoolean(
         const vector<UniverseAssumption<bool>> &assumptions) {
-    return UniverseJavaSatSolver::solve(assumptions);
+    return UniverseJavaSatSolver::solveBoolean(assumptions);
 }
 
 UniverseSolverResult UniverseJavaPseudoBooleanSolver::solve(
@@ -151,4 +155,3 @@ JavaList UniverseJavaPseudoBooleanSolver::asList(const vector<BigInteger> &integ
     };
     return JavaList::from(integers, fct);
 }
-

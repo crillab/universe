@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -19,12 +19,12 @@
  ******************************************************************************/
 
 /**
- * @file UniverseBinaryIntensionConstraint.hpp
+ * @file UniverseConstantIntensionConstraint.hpp
  * @brief An intension constraint representing a constant value.
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 14/09/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -38,8 +38,8 @@
 namespace Universe {
 
     /**
-     * The UniverseConstantIntensionConstraint is an intension constraint
-     * representing a constant value.
+     * The UniverseConstantIntensionConstraint is an intension constraint that
+     * represents a constant value.
      */
     class UniverseConstantIntensionConstraint : public Universe::IUniverseIntensionConstraint {
 

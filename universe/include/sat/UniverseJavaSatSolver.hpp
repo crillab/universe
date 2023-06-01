@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 19/10/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -66,21 +66,29 @@ namespace Universe {
          * are represented by opposite values (following the classical DIMACS way of
          * representing literals).
          *
-         * @param literals A set of literals.
+         * @param literals The literals of the clause to add.
          *
-         * @throws UniverseContradictionException If the vector of literals is empty
-         *         or if it contains only falsified literals after unit propagation.
+         * @throws UniverseContradictionException If the clause to add is inconsistent.
          */
         void addClause(const std::vector<int> &literals) override;
 
         /**
          * Solves the problem associated to this solver.
          *
-         * @param assumptions The Boolean assumptions to consider when solving.
+         * @param assumptions The assumptions to consider when solving (as a set of literals).
          *
          * @return The outcome of the search conducted by the solver.
          */
-        Universe::UniverseSolverResult solve(const std::vector<UniverseAssumption<bool>> &assumptions) override;
+        UniverseSolverResult solveDimacs(const std::vector<int> &assumptions) override;
+
+        /**
+         * Solves the problem associated to this solver.
+         *
+         * @param assumptions The assumptions to consider when solving.
+         *
+         * @return The outcome of the search conducted by the solver.
+         */
+        Universe::UniverseSolverResult solveBoolean(const std::vector<UniverseAssumption<bool>> &assumptions) override;
 
         /**
          * Solves the problem associated to this solver.

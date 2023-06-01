@@ -1,37 +1,37 @@
 @startuml
 interface       IUniverseSolver
 IUniverseSolver : solve()
-IUniverseSolver :  UniverseSolverResult solve(std::string filename)
-IUniverseSolver :  UniverseSolverResult solve(std::vector<UniverseAssumption<BigInteger>> assumptions)
+IUniverseSolver :  UniverseSolverResult solve(String filename)
+IUniverseSolver :  UniverseSolverResult solve(List<UniverseAssumption<BigInteger>> assumptions)
 IUniverseSolver :  void interrupt()
 IUniverseSolver :  void setVerbosity(int level)
 IUniverseSolver :  void setTimeout(long seconds)
 IUniverseSolver :  void setTimeoutMs(long mseconds)
 IUniverseSolver :  void reset()
-IUniverseSolver :  std::vector<BigInteger> solution()
+IUniverseSolver :  List<BigInteger> solution()
 IUniverseSolver :  int nVariables()
 IUniverseSolver :  int nConstraints()
-IUniverseSolver :  void setLogFile(const std::string& filename)
+IUniverseSolver :  void setLogFile(String filename)
 
 interface IUniverseSatSolver
-IUniverseSatSolver : void addAllClauses(const std::vector<std::vector<int>>& clauses)
-IUniverseSatSolver : void addClause(const std::vector<int>& literals)
+IUniverseSatSolver : void addAllClauses(List<List<int>> clauses)
+IUniverseSatSolver : void addClause(List<int> literals)
 
 interface IUniversePseudoBooleanSolver
-IUniversePseudoBooleanSolver : void addPseudoBoolean(std::vector<int> lits, std::vector<BigInteger> coeffs,bool moreThan, BigInteger d)
-IUniversePseudoBooleanSolver : void addAtMost(std::vector<int> literals, std::vector<int> coeffs, int degree)
-IUniversePseudoBooleanSolver : void addAtMost(std::vector<int> literals, std::vector<BigInteger> coeffs, BigInteger degree)
-IUniversePseudoBooleanSolver : void addAtLeast(std::vector<int> literals, std::vector<int> coeffs, int degree)
-IUniversePseudoBooleanSolver : void addAtLeast(std::vector<int> literals, std::vector<BigInteger> coeffs,BigInteger degree)
-IUniversePseudoBooleanSolver : void addExactly(std::vector<int> literals, std::vector<int> coeffs, int weight)
-IUniversePseudoBooleanSolver : void addExactly(std::vector<int> literals, std::vector<BigInteger> coeffs, BigInteger weight)
+IUniversePseudoBooleanSolver : void addPseudoBoolean(List<int> lits, List<BigInteger> coeffs,bool moreThan, BigInteger d)
+IUniversePseudoBooleanSolver : void addAtMost(List<int> literals, List<int> coeffs, int degree)
+IUniversePseudoBooleanSolver : void addAtMost(List<int> literals, List<BigInteger> coeffs, BigInteger degree)
+IUniversePseudoBooleanSolver : void addAtLeast(List<int> literals, List<int> coeffs, int degree)
+IUniversePseudoBooleanSolver : void addAtLeast(List<int> literals, List<BigInteger> coeffs,BigInteger degree)
+IUniversePseudoBooleanSolver : void addExactly(List<int> literals, List<int> coeffs, int weight)
+IUniversePseudoBooleanSolver : void addExactly(List<int> literals, List<BigInteger> coeffs, BigInteger weight)
 
 
 interface IUniverseCspSolver
-IUniverseCspSolver :  void newVariable(std::string id, int min, int max)
-IUniverseCspSolver : void newVariable(std::string id, BigInteger min, BigInteger max)
-IUniverseCspSolver : void newVariable(std::string id, std::vector<int> values)
-IUniverseCspSolver :  void newVariable(std::string id, std::vector<BigInteger> values)
+IUniverseCspSolver :  void newVariable(String id, int min, int max)
+IUniverseCspSolver : void newVariable(String id, BigInteger min, BigInteger max)
+IUniverseCspSolver : void newVariable(String id, List<int> values)
+IUniverseCspSolver :  void newVariable(String id, List<BigInteger> values)
 IUniverseCspSolver : void add*()
 
 

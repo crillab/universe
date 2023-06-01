@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,7 +24,7 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 12/12/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
@@ -100,32 +100,32 @@ namespace Universe {
         easyjni::JavaObject operator*();
 
         /**
-         * Gives the values in this domain.
-         *
-         * @return The vector of the values in this domain.
-         */
-        [[nodiscard]] const std::vector<Universe::BigInteger> &getValues() override;
-
-        /**
-         * Gives the minimum value in this domain.
-         *
-         * @return The minimum value in this domain.
-         */
-        [[nodiscard]] Universe::BigInteger min() const override;
-
-        /**
-         * Gives the maximum value in this domain.
-         *
-         * @return The maximum value in this domain.
-         */
-        [[nodiscard]] Universe::BigInteger max() const override;
-
-        /**
          * Gives the size of this domain, measured in number of values.
          *
          * @return The size of this domain.
          */
         [[nodiscard]] size_t size() const override;
+
+        /**
+         * Gives the minimum value of this domain.
+         *
+         * @return The minimum value.
+         */
+        [[nodiscard]] Universe::BigInteger min() const override;
+
+        /**
+         * Gives the maximum value of this domain.
+         *
+         * @return The maximum value.
+         */
+        [[nodiscard]] Universe::BigInteger max() const override;
+
+        /**
+         * Gives the list of values of this domain.
+         *
+         * @return The list of values.
+         */
+        [[nodiscard]] const std::vector<Universe::BigInteger> &getValues() override;
 
     };
 

@@ -1,6 +1,6 @@
 /******************************************************************************
  * UNIvERSE - mUlti laNguage unIfied intErface foR conStraint solvErs.        *
- * Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.                   *
+ * Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.              *
  * All rights reserved.                                                       *
  *                                                                            *
  * This library is free software; you can redistribute it and/or modify it    *
@@ -24,18 +24,14 @@
  * @author Thibault Falque
  * @author Romain Wallon
  * @date 19/10/22
- * @copyright Copyright (c) 2022 - Univ Artois & CNRS & Exakis Nelite.
+ * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
-#include <stdexcept>
-#include <iostream>
 #include "../../../libs/easy-jni/easyjni/JavaMethod.h"
 #include "../../../libs/easy-jni/easyjni/JavaVirtualMachineRegistry.h"
 
 #include "../../include/core/UniverseJavaSolver.hpp"
-#include "../../include/java/JavaBigInteger.hpp"
-#include "../../include/java/JavaList.hpp"
 #include "../../include/java/JavaMapOfString.hpp"
 #include "../../include/core/problem/UniverseJavaVariable.hpp"
 #include "../../include/optim/JavaOptimizationSolver.hpp"
@@ -77,10 +73,15 @@ const map<string, IUniverseVariable *> &UniverseJavaSolver::getVariablesMapping(
     return mapping;
 }
 
+void UniverseJavaSolver::decisionVariables(const vector<std::string> &variables) {
+    // TODO
+}
+
 int UniverseJavaSolver::nConstraints() {
     auto mtd = interface->getIntMethod("nConstraints");
     return mtd.invoke(object);
 }
+
 
 void UniverseJavaSolver::setTimeout(long seconds) {
     auto mtd = interface->getMethod("setTimeout", METHOD(VOID, LONG));
@@ -95,6 +96,11 @@ void UniverseJavaSolver::setTimeoutMs(long mseconds) {
 void UniverseJavaSolver::setVerbosity(int level) {
     auto mtd = interface->getMethod("setVerbosity", METHOD(VOID, INTEGER));
     mtd.invoke(object, level);
+}
+
+void UniverseJavaSolver::addSearchListener(Universe::IUniverseSearchListener *listener) {
+    // TODO
+    IUniverseSolver::addSearchListener(listener);
 }
 
 void UniverseJavaSolver::setLogFile(const string &filename) {
@@ -113,6 +119,11 @@ bool UniverseJavaSolver::isOptimization() {
     auto mtd = interface->getBooleanMethod("isOptimization");
     return mtd.invoke(object);
 }
+void UniverseJavaSolver::setLogStream(ostream &stream) {
+    // TODO
+}
+
+
 
 UniverseSolverResult UniverseJavaSolver::solve() {
     auto mtd = interface->getObjectMethod("solve",
@@ -172,6 +183,11 @@ map<string, BigInteger> UniverseJavaSolver::mapSolution() {
         return JavaBigInteger::of(o).asBigInteger();
     };
     return jMap.asMap(toBigInteger);
+}
+
+std::map<std::string, Universe::BigInteger> UniverseJavaSolver::mapSolution(bool excludeAux) {
+    // TODO
+    return std::map<std::string, Universe::BigInteger>();
 }
 
 IOptimizationSolver * UniverseJavaSolver::toOptimizationSolver() {

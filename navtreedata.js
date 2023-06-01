@@ -51,9 +51,9 @@ var NAVTREEINDEX =
 [
 "AbstractUniverseIntensionConstraintFactory_8cpp.html",
 "classUniverse_1_1IOptimizationSolver.html",
-"classUniverse_1_1IUniverseCspSolver.html#aba78e4961eb2b7f248699400e42958db",
+"classUniverse_1_1IUniverseCspSolver.html#ab9758e7523015e9d73f1ea13881be684",
 "classUniverse_1_1UniverseIntensionConstraintFactory.html#acc6a2ae1f1b4e8c8b68167a21d4038a1",
-"classUniverse_1_1UniverseJavaCspSolver.html#ad108574f3b78ef3ad3298ed1977ccca6"
+"classUniverse_1_1UniverseJavaCspSolver.html#acfcc6f86af86bb1feac6cf01bc727729"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

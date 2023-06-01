@@ -53,7 +53,7 @@ namespace Universe {
          *
          * @return The variables involved in this constraint.
          */
-        [[nodiscard]] virtual const std::vector<Universe::IUniverseVariable *> &scope() const = 0;
+        [[nodiscard]] virtual const std::vector<Universe::IUniverseVariable *> &scope() = 0;
 
     };
 

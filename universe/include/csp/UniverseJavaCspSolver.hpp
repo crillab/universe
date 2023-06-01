@@ -2222,88 +2222,96 @@ namespace Universe {
          *
          * @param variable The variable for which the support is given.
          * @param allowedValues The values allowed for the variable.
+         * @param hasStar Whether the allowed values contain stars (to mark that any value is allowed).
          *
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
-        void addSupport(
-                const std::string &variable, const std::vector<Universe::BigInteger> &allowedValues,bool hasStar) override;
+        void addSupport(const std::string &variable,
+                        const std::vector<Universe::BigInteger> &allowedValues, bool hasStar) override;
 
         /**
          * Adds to this solver an extension constraint describing the support of a variable.
          *
          * @param variable The variable for which the support is given.
          * @param allowedValues The values allowed for the variable.
+         * @param hasStar Whether the allowed values contain stars (to mark that any value is allowed).
          *
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
-        void addSupportSymbolic(
-                const std::string &variable, const std::vector<std::string> &allowedValues,bool hasStar) override;
+        void addSupportSymbolic(const std::string &variable,
+                                const std::vector<std::string> &allowedValues, bool hasStar) override;
 
         /**
          * Adds to this solver an extension constraint describing the support of a tuple of variables.
          *
          * @param variableTuple The tuple of variables for which the support is given.
          * @param allowedValues The values allowed for the tuple variables.
+         * @param hasStar Whether the allowed values contain stars (to mark that any value is allowed).
          *
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
         void addSupport(const std::vector<std::string> &variableTuple,
-                        const std::vector<std::vector<Universe::BigInteger>> &allowedValues,bool hasStar) override;
+                        const std::vector<std::vector<Universe::BigInteger>> &allowedValues, bool hasStar) override;
 
         /**
          * Adds to this solver an extension constraint describing the support of a tuple of variables.
          *
          * @param variableTuple The tuple of variables for which the support is given.
          * @param allowedValues The values allowed for the tuple variables.
+         * @param hasStar Whether the allowed values contain stars (to mark that any value is allowed).
          *
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
         void addSupportSymbolic(const std::vector<std::string> &variableTuple,
-                                const std::vector<std::vector<std::string>> &allowedValues,bool hasStar) override;
+                                const std::vector<std::vector<std::string>> &allowedValues, bool hasStar) override;
 
         /**
          * Adds to this solver an extension constraint describing the conflicts of a variable.
          *
          * @param variable The variable for which the conflicts are given.
          * @param forbiddenValues The values forbidden for the variable.
+         * @param hasStar Whether the forbidden values contain stars (to mark that any value is forbidden).
          *
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
-        void addConflicts(
-                const std::string &variable, const std::vector<Universe::BigInteger> &forbiddenValues,bool hasStar) override;
+        void addConflicts(const std::string &variable,
+                          const std::vector<Universe::BigInteger> &forbiddenValues, bool hasStar) override;
 
         /**
          * Adds to this solver an extension constraint describing the conflicts of a variable.
          *
          * @param variable The variable for which the conflicts are given.
          * @param forbiddenValues The values forbidden for the variable.
+         * @param hasStar Whether the forbidden values contain stars (to mark that any value is forbidden).
          *
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
         void addConflictsSymbolic(
-                const std::string &variable, const std::vector<std::string> &forbiddenValues,bool hasStar) override;
+                const std::string &variable, const std::vector<std::string> &forbiddenValues, bool hasStar) override;
 
         /**
          * Adds to this solver an extension constraint describing the conflicts of a tuple of variables.
          *
          * @param variableTuple The tuple of variables for which the conflicts are given.
          * @param forbiddenValues The values forbidden for the tuple variables.
+         * @param hasStar Whether the forbidden values contain stars (to mark that any value is forbidden).
          *
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
         void addConflicts(const std::vector<std::string> &variableTuple,
-                          const std::vector<std::vector<Universe::BigInteger>> &forbiddenValues,bool hasStar) override;
+                          const std::vector<std::vector<Universe::BigInteger>> &forbiddenValues, bool hasStar) override;
 
         /**
          * Adds to this solver an extension constraint describing the conflicts of a tuple of variables.
          *
          * @param variableTuple The tuple of variables for which the conflicts are given.
          * @param forbiddenValues The values forbidden for the tuple variables.
+         * @param hasStar Whether the forbidden values contain stars (to mark that any value is forbidden).
          *
          * @throws UniverseContradictionException If adding the constraint results in a trivial inconsistency.
          */
         void addConflictsSymbolic(const std::vector<std::string> &variableTuple,
-                                  const std::vector<std::vector<std::string>> &forbiddenValues,bool hasStar) override;
+                                  const std::vector<std::vector<std::string>> &forbiddenValues, bool hasStar) override;
 
         /**
          * Adds to this solver an intension constraint.

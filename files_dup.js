@@ -98,6 +98,10 @@ var files_dup =
     [ "UniverseIntensionConstraintFactory.hpp", "UniverseIntensionConstraintFactory_8hpp.html", [
       [ "UniverseIntensionConstraintFactory", "classUniverse_1_1UniverseIntensionConstraintFactory.html", "classUniverse_1_1UniverseIntensionConstraintFactory" ]
     ] ],
+    [ "UniverseJavaConstraint.cpp", "UniverseJavaConstraint_8cpp.html", null ],
+    [ "UniverseJavaConstraint.hpp", "UniverseJavaConstraint_8hpp.html", [
+      [ "UniverseJavaConstraint", "classUniverse_1_1UniverseJavaConstraint.html", "classUniverse_1_1UniverseJavaConstraint" ]
+    ] ],
     [ "UniverseJavaCspSolver.cpp", "UniverseJavaCspSolver_8cpp.html", "UniverseJavaCspSolver_8cpp" ],
     [ "UniverseJavaCspSolver.hpp", "UniverseJavaCspSolver_8hpp.html", [
       [ "UniverseJavaCspSolver", "classUniverse_1_1UniverseJavaCspSolver.html", "classUniverse_1_1UniverseJavaCspSolver" ]
@@ -113,6 +117,10 @@ var files_dup =
     [ "UniverseJavaIntensionConstraintFactory.cpp", "UniverseJavaIntensionConstraintFactory_8cpp.html", "UniverseJavaIntensionConstraintFactory_8cpp" ],
     [ "UniverseJavaIntensionConstraintFactory.hpp", "UniverseJavaIntensionConstraintFactory_8hpp.html", [
       [ "UniverseJavaIntensionConstraintFactory", "classUniverse_1_1UniverseJavaIntensionConstraintFactory.html", "classUniverse_1_1UniverseJavaIntensionConstraintFactory" ]
+    ] ],
+    [ "UniverseJavaProblem.cpp", "UniverseJavaProblem_8cpp.html", null ],
+    [ "UniverseJavaProblem.hpp", "UniverseJavaProblem_8hpp.html", [
+      [ "UniverseJavaProblem", "classUniverse_1_1UniverseJavaProblem.html", "classUniverse_1_1UniverseJavaProblem" ]
     ] ],
     [ "UniverseJavaPseudoBooleanSolver.cpp", "UniverseJavaPseudoBooleanSolver_8cpp.html", null ],
     [ "UniverseJavaPseudoBooleanSolver.hpp", "UniverseJavaPseudoBooleanSolver_8hpp.html", [

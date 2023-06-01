@@ -11,7 +11,9 @@ var hierarchy =
       [ "Universe::JavaOptimizationSolver", "classUniverse_1_1JavaOptimizationSolver.html", null ]
     ] ],
     [ "Universe::IUniverseConfigurableSolver", "classUniverse_1_1IUniverseConfigurableSolver.html", null ],
-    [ "Universe::IUniverseConstraint", "classUniverse_1_1IUniverseConstraint.html", null ],
+    [ "Universe::IUniverseConstraint", "classUniverse_1_1IUniverseConstraint.html", [
+      [ "Universe::UniverseJavaConstraint", "classUniverse_1_1UniverseJavaConstraint.html", null ]
+    ] ],
     [ "Universe::IUniverseDomain", "classUniverse_1_1IUniverseDomain.html", [
       [ "Universe::UniverseJavaDomain", "classUniverse_1_1UniverseJavaDomain.html", null ]
     ] ],
@@ -29,7 +31,9 @@ var hierarchy =
       [ "Universe::UniverseVariableIntensionConstraint", "classUniverse_1_1UniverseVariableIntensionConstraint.html", null ]
     ] ],
     [ "Universe::IUniverseIntensionConstraintVisitor", "classUniverse_1_1IUniverseIntensionConstraintVisitor.html", null ],
-    [ "Universe::IUniverseProblem", "classUniverse_1_1IUniverseProblem.html", null ],
+    [ "Universe::IUniverseProblem", "classUniverse_1_1IUniverseProblem.html", [
+      [ "Universe::UniverseJavaProblem", "classUniverse_1_1UniverseJavaProblem.html", null ]
+    ] ],
     [ "Universe::IUniverseSearchListener", "classUniverse_1_1IUniverseSearchListener.html", null ],
     [ "Universe::IUniverseSolver", "classUniverse_1_1IUniverseSolver.html", [
       [ "Universe::IUniverseSatSolver", "classUniverse_1_1IUniverseSatSolver.html", [

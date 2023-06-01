@@ -1,7 +1,7 @@
 var searchData=
 [
   ['satisfiable_291',['SATISFIABLE',['../UniverseSolverResult_8hpp.html#a5c0769554b7e93999912fdfb7b5093c4a82d139e61c34638d11f9d9f5dc250dfb',1,'Universe']]],
-  ['scope_292',['scope',['../classUniverse_1_1IUniverseConstraint.html#a2d8fc2b26a94516bd5a32a72bb9c783d',1,'Universe::IUniverseConstraint']]],
+  ['scope_292',['scope',['../classUniverse_1_1UniverseJavaConstraint.html#abe33db2fce69825f624aa8bc8d0143e1',1,'Universe::UniverseJavaConstraint::scope()'],['../classUniverse_1_1IUniverseConstraint.html#a52dd6b004ecf4c9928882c69e1539d54',1,'Universe::IUniverseConstraint::scope()']]],
   ['setbounds_293',['setBounds',['../classUniverse_1_1IOptimizationSolver.html#ad821b02ff24d6c7f7a598055a573e71b',1,'Universe::IOptimizationSolver::setBounds()'],['../classUniverse_1_1JavaOptimizationSolver.html#a85f6d297a0e8fd28f9c7eab64d7682ae',1,'Universe::JavaOptimizationSolver::setBounds()']]],
   ['setlearntconstraintdeletionstrategy_294',['setLearntConstraintDeletionStrategy',['../classUniverse_1_1IUniverseConfigurableSolver.html#a354056184bcc0562d9a05e01a00c2196',1,'Universe::IUniverseConfigurableSolver']]],
   ['setlogfile_295',['setLogFile',['../classUniverse_1_1IUniverseSolver.html#ad459819c09ee1dcc1e6081361767d24d',1,'Universe::IUniverseSolver::setLogFile()'],['../classUniverse_1_1UniverseJavaSolver.html#a76e5f579b2b45d19fc261a39dc61c2fc',1,'Universe::UniverseJavaSolver::setLogFile()']]],
@@ -9,7 +9,7 @@ var searchData=
   ['setlowerbound_297',['setLowerBound',['../classUniverse_1_1IOptimizationSolver.html#a3495e81dc8f7f46d9c7adde8bfec0d50',1,'Universe::IOptimizationSolver::setLowerBound()'],['../classUniverse_1_1JavaOptimizationSolver.html#a9c58b9009064db034bcde117e3559cb7',1,'Universe::JavaOptimizationSolver::setLowerBound()']]],
   ['setrestartpolicy_298',['setRestartPolicy',['../classUniverse_1_1IUniverseConfigurableSolver.html#a89e6740dd90c37022570a7c1ecfdf2ae',1,'Universe::IUniverseConfigurableSolver']]],
   ['setsolverconfiguration_299',['setSolverConfiguration',['../classUniverse_1_1IUniverseConfigurableSolver.html#ada4319e1878570d230a86586e47e5e97',1,'Universe::IUniverseConfigurableSolver']]],
-  ['settimeout_300',['setTimeout',['../classUniverse_1_1IUniverseSolver.html#aab2de52dde22f996bfb19b57bb93e071',1,'Universe::IUniverseSolver::setTimeout()'],['../classUniverse_1_1UniverseJavaSolver.html#a804012862944e4585df3150fca51e409',1,'Universe::UniverseJavaSolver::setTimeout()']]],
+  ['settimeout_300',['setTimeout',['../classUniverse_1_1UniverseJavaSolver.html#a804012862944e4585df3150fca51e409',1,'Universe::UniverseJavaSolver::setTimeout()'],['../classUniverse_1_1IUniverseSolver.html#aab2de52dde22f996bfb19b57bb93e071',1,'Universe::IUniverseSolver::setTimeout(long seconds)=0']]],
   ['settimeoutms_301',['setTimeoutMs',['../classUniverse_1_1IUniverseSolver.html#acb699799ca0af24d9cb5f565b2b86989',1,'Universe::IUniverseSolver::setTimeoutMs()'],['../classUniverse_1_1UniverseJavaSolver.html#ac241c3fc8d9fd5be9389307fbd1dc33f',1,'Universe::UniverseJavaSolver::setTimeoutMs()']]],
   ['setupperbound_302',['setUpperBound',['../classUniverse_1_1IOptimizationSolver.html#a4ca17a9a24c031cd8e2197f2488eb849',1,'Universe::IOptimizationSolver::setUpperBound()'],['../classUniverse_1_1JavaOptimizationSolver.html#a852d306905afdc59b057a0ee143d3dbc',1,'Universe::JavaOptimizationSolver::setUpperBound()']]],
   ['setvalueselectionheuristic_303',['setValueSelectionHeuristic',['../classUniverse_1_1IUniverseConfigurableSolver.html#ad8758472a0acb0ea78fcc6aa25b0af32',1,'Universe::IUniverseConfigurableSolver']]],

@@ -39,6 +39,10 @@ void IUniverseSolver::addSearchListener(IUniverseSearchListener *listener) {
     throw runtime_error("search listeners are not supported for this solver");
 }
 
+void IUniverseSolver::removeSearchListener(IUniverseSearchListener *listener) {
+    throw runtime_error("search listeners are not supported for this solver");
+}
+
 IOptimizationSolver *IUniverseSolver::toOptimizationSolver() {
     return dynamic_cast<IOptimizationSolver*>(this);
 }

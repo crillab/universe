@@ -79,3 +79,8 @@ const vector<IUniverseVariable *> &UniverseJavaConstraint::scope() {
 
     return variables;
 }
+
+const double UniverseJavaConstraint::getScore() const {
+    auto mtd = constraintInterface->getDoubleMethod("getScore");
+    return mtd.invoke(rawConstraint);
+}

@@ -4109,6 +4109,15 @@ namespace Universe {
          *
          * @return The JavaObject representing the operator.
          */
+        static easyjni::JavaObject toJavaTransition(const Universe::UniverseTransition &transition);
+
+        /**
+         * Gives the Java object representing a Boolean operator.
+         *
+         * @param op The Boolean operator to get the Java representation of.
+         *
+         * @return The JavaObject representing the operator.
+         */
         static easyjni::JavaObject toJavaBooleanOperator(Universe::UniverseBooleanOperator op);
 
         /**

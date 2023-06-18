@@ -55,6 +55,13 @@ namespace Universe {
          */
         [[nodiscard]] virtual const std::vector<Universe::IUniverseVariable *> &scope() = 0;
 
+        /**
+         * Gives the score of this constraint, as computed by the solver.
+         *
+         * @return The score of the constraint.
+         */
+        [[nodiscard]] virtual const double getScore() const = 0;
+
     };
 
 }

@@ -106,6 +106,13 @@ namespace Universe {
          */
         const std::vector<Universe::IUniverseVariable *> &scope() override;
 
+        /**
+         * Gives the score of this constraint, as computed by the solver.
+         *
+         * @return The score of the constraint.
+         */
+        const double getScore() const override;
+
     };
 
 }

@@ -39,6 +39,7 @@
 #include "../../include/java/JavaBigInteger.hpp"
 #include "../../include/java/JavaList.hpp"
 
+#define J_UNIVERSE_TRANSITION       "fr/univartois/cril/juniverse/csp/UniverseTransition"
 #define J_BOOLEAN_OPERATOR          "fr/univartois/cril/juniverse/csp/operator/UniverseBooleanOperator"
 #define J_BOOLEAN_OPERATOR_SIG      "L" J_BOOLEAN_OPERATOR ";"
 #define J_ARITHMETIC_OPERATOR       "fr/univartois/cril/juniverse/csp/operator/UniverseArithmeticOperator"
@@ -111,7 +112,11 @@ void UniverseJavaCspSolver::addInstantiation(const string &variable, const BigIn
 }
 
 void UniverseJavaCspSolver::addInstantiation(const string &variable, const string &value) {
-    // TODO
+    auto mtd = interface->getMethod("addInstantiation",
+                                    METHOD(VOID, CLASS(java/lang/String) CLASS(java/lang/String)));
+    auto jString = JavaVirtualMachineRegistry::get()->toJavaString(variable);
+    auto jValue = JavaVirtualMachineRegistry::get()->toJavaString(value);
+    mtd.invoke(object, *jString, **jValue);
 }
 
 void UniverseJavaCspSolver::addInstantiation(const vector<string> &variables, const vector<int> &values) {
@@ -2386,6 +2391,20 @@ UniverseSolverResult UniverseJavaCspSolver::solveBoolean(const vector<UniverseAs
 
 UniverseSolverResult UniverseJavaCspSolver::solve(const vector<UniverseAssumption<BigInteger>> &assumptions) {
     return UniverseJavaPseudoBooleanSolver::solve(assumptions);
+}
+
+JavaObject UniverseJavaCspSolver::toJavaTransition(const UniverseTransition &transition) {
+    // Loading useful data from the Java class (only once).
+    static auto cls = JavaVirtualMachineRegistry::get()->loadClass(J_UNIVERSE_TRANSITION);
+    static auto constructor = cls.getConstructor(CONSTRUCTOR(CLASS(java/lang/String) INTEGER CLASS(java/lang/String)));
+
+    // Converting the content of the transition to Java types.
+    auto start = JavaVirtualMachineRegistry::get()->toJavaString(transition.getStart());
+    auto value = (jint) transition.getValue();
+    auto end = JavaVirtualMachineRegistry::get()->toJavaString(transition.getEnd());
+
+    // Creating the UniverseTransition Java object.
+    return constructor.invokeStatic(cls, *start, value, *end);
 }
 
 JavaObject UniverseJavaCspSolver::toJavaBooleanOperator(UniverseBooleanOperator op) {

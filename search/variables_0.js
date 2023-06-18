@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interface_865',['interface',['../classUniverse_1_1UniverseJavaSolver.html#a1bc411feefd7c9d9abd8b62b4178dc4c',1,'Universe::UniverseJavaSolver']]]
+  ['auxiliaryvariables_886',['auxiliaryVariables',['../classUniverse_1_1UniverseJavaSolver.html#abd063c84099ed4619f42e31eabc60c25',1,'Universe::UniverseJavaSolver']]]
 ];

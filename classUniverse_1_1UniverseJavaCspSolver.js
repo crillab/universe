@@ -306,5 +306,6 @@ var classUniverse_1_1UniverseJavaCspSolver =
     [ "toJavaArithmeticOperator", "classUniverse_1_1UniverseJavaCspSolver.html#a8419c3f7c7c52206c3e916b0b2a0fba6", null ],
     [ "toJavaBooleanOperator", "classUniverse_1_1UniverseJavaCspSolver.html#a99ee8b10c4991890d744cb06ce470a29", null ],
     [ "toJavaRelationalOperator", "classUniverse_1_1UniverseJavaCspSolver.html#aa032f9bae165a61a6702647af945895a", null ],
-    [ "toJavaSetBelongingOperator", "classUniverse_1_1UniverseJavaCspSolver.html#a3426775e8360cf8d4cfb0a0586a11608", null ]
+    [ "toJavaSetBelongingOperator", "classUniverse_1_1UniverseJavaCspSolver.html#a3426775e8360cf8d4cfb0a0586a11608", null ],
+    [ "toJavaTransition", "classUniverse_1_1UniverseJavaCspSolver.html#a8bc3fc4dc5e1cdb88d53304dfc889c13", null ]
 ];

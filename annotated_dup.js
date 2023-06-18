@@ -36,6 +36,7 @@ var annotated_dup =
       [ "UniverseJavaProblem", "classUniverse_1_1UniverseJavaProblem.html", "classUniverse_1_1UniverseJavaProblem" ],
       [ "UniverseJavaPseudoBooleanSolver", "classUniverse_1_1UniverseJavaPseudoBooleanSolver.html", "classUniverse_1_1UniverseJavaPseudoBooleanSolver" ],
       [ "UniverseJavaSatSolver", "classUniverse_1_1UniverseJavaSatSolver.html", "classUniverse_1_1UniverseJavaSatSolver" ],
+      [ "UniverseJavaSearchListener", "classUniverse_1_1UniverseJavaSearchListener.html", "classUniverse_1_1UniverseJavaSearchListener" ],
       [ "UniverseJavaSolver", "classUniverse_1_1UniverseJavaSolver.html", "classUniverse_1_1UniverseJavaSolver" ],
       [ "UniverseJavaSolverFactory", "classUniverse_1_1UniverseJavaSolverFactory.html", "classUniverse_1_1UniverseJavaSolverFactory" ],
       [ "UniverseJavaVariable", "classUniverse_1_1UniverseJavaVariable.html", "classUniverse_1_1UniverseJavaVariable" ],

@@ -7,5 +7,6 @@ var UniverseJavaCspSolver_8cpp =
     [ "J_RELATIONAL_OPERATOR", "UniverseJavaCspSolver_8cpp.html#abebbaf4bb3e8f025cc124770f6d79b66", null ],
     [ "J_RELATIONAL_OPERATOR_SIG", "UniverseJavaCspSolver_8cpp.html#a02cff7e4afa4aaddb8d4a490f418c576", null ],
     [ "J_SET_OPERATOR", "UniverseJavaCspSolver_8cpp.html#a07aa33c75b019a59c11a1744d62912c6", null ],
-    [ "J_SET_OPERATOR_SIG", "UniverseJavaCspSolver_8cpp.html#acf55b5f81e430519c23712744f893853", null ]
+    [ "J_SET_OPERATOR_SIG", "UniverseJavaCspSolver_8cpp.html#acf55b5f81e430519c23712744f893853", null ],
+    [ "J_UNIVERSE_TRANSITION", "UniverseJavaCspSolver_8cpp.html#afc44e49f6f2de62f98e05fa3cd167e05", null ]
 ];

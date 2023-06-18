@@ -34,7 +34,9 @@ var hierarchy =
     [ "Universe::IUniverseProblem", "classUniverse_1_1IUniverseProblem.html", [
       [ "Universe::UniverseJavaProblem", "classUniverse_1_1UniverseJavaProblem.html", null ]
     ] ],
-    [ "Universe::IUniverseSearchListener", "classUniverse_1_1IUniverseSearchListener.html", null ],
+    [ "Universe::IUniverseSearchListener", "classUniverse_1_1IUniverseSearchListener.html", [
+      [ "Universe::UniverseJavaSearchListener", "classUniverse_1_1UniverseJavaSearchListener.html", null ]
+    ] ],
     [ "Universe::IUniverseSolver", "classUniverse_1_1IUniverseSolver.html", [
       [ "Universe::IUniverseSatSolver", "classUniverse_1_1IUniverseSatSolver.html", [
         [ "Universe::IUniversePseudoBooleanSolver", "classUniverse_1_1IUniversePseudoBooleanSolver.html", [

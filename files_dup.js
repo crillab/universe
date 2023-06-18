@@ -130,6 +130,10 @@ var files_dup =
     [ "UniverseJavaSatSolver.hpp", "UniverseJavaSatSolver_8hpp.html", [
       [ "UniverseJavaSatSolver", "classUniverse_1_1UniverseJavaSatSolver.html", "classUniverse_1_1UniverseJavaSatSolver" ]
     ] ],
+    [ "UniverseJavaSearchListener.cpp", "UniverseJavaSearchListener_8cpp.html", null ],
+    [ "UniverseJavaSearchListener.hpp", "UniverseJavaSearchListener_8hpp.html", [
+      [ "UniverseJavaSearchListener", "classUniverse_1_1UniverseJavaSearchListener.html", "classUniverse_1_1UniverseJavaSearchListener" ]
+    ] ],
     [ "UniverseJavaSolver.cpp", "UniverseJavaSolver_8cpp.html", null ],
     [ "UniverseJavaSolver.hpp", "UniverseJavaSolver_8hpp.html", [
       [ "UniverseJavaSolver", "classUniverse_1_1UniverseJavaSolver.html", "classUniverse_1_1UniverseJavaSolver" ]

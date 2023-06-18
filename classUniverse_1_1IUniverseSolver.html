@@ -123,8 +123,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7f47ace46bb113eabe4b9ecae5598c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a567425ff2b031b70fb813ce910318c8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a567425ff2b031b70fb813ce910318c8b">addSearchListener</a> (<a class="el" href="classUniverse_1_1IUniverseSearchListener.html">Universe::IUniverseSearchListener</a> *listener)</td></tr>
 <tr class="separator:a567425ff2b031b70fb813ce910318c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac89f8ed2659c8789c7bacaed87fd5f1c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#ac89f8ed2659c8789c7bacaed87fd5f1c">checkSolution</a> () const =0</td></tr>
+<tr class="separator:ac89f8ed2659c8789c7bacaed87fd5f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85220a95b208e497e201f7aed1c4c1b1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a85220a95b208e497e201f7aed1c4c1b1">checkSolution</a> (const std::map&lt; std::string, <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;assignment) const =0</td></tr>
+<tr class="separator:a85220a95b208e497e201f7aed1c4c1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2df7f50a3fb685fda9a19fd466bebc3c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a2df7f50a3fb685fda9a19fd466bebc3c">decisionVariables</a> (const std::vector&lt; std::string &gt; &amp;variables)=0</td></tr>
 <tr class="separator:a2df7f50a3fb685fda9a19fd466bebc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a331d7b66278d5180f2b909fa7375cbab"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a331d7b66278d5180f2b909fa7375cbab">getAuxiliaryVariables</a> ()=0</td></tr>
+<tr class="separator:a331d7b66278d5180f2b909fa7375cbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae083822fe0cc090e6f4dc5adf4fb59cc"><td class="memItemLeft" align="right" valign="top">virtual const std::map&lt; std::string, <a class="el" href="classUniverse_1_1IUniverseVariable.html">Universe::IUniverseVariable</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#ae083822fe0cc090e6f4dc5adf4fb59cc">getVariablesMapping</a> ()=0</td></tr>
 <tr class="separator:ae083822fe0cc090e6f4dc5adf4fb59cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0dc1989f6cb78a4310b7553c87fc5c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#ac0dc1989f6cb78a4310b7553c87fc5c2">interrupt</a> ()=0</td></tr>
@@ -141,6 +147,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9656d32867b57556d3cf4837dce42d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3825d87ddbdfb229a286d144c57b475d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a3825d87ddbdfb229a286d144c57b475d">nVariables</a> ()=0</td></tr>
 <tr class="separator:a3825d87ddbdfb229a286d144c57b475d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e988fc7fe99270fbf5ce2943b57fbd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a70e988fc7fe99270fbf5ce2943b57fbd">removeSearchListener</a> (<a class="el" href="classUniverse_1_1IUniverseSearchListener.html">Universe::IUniverseSearchListener</a> *listener)</td></tr>
+<tr class="separator:a70e988fc7fe99270fbf5ce2943b57fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc17bd143d5a44ed9be59f5f6c54d4e8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#adc17bd143d5a44ed9be59f5f6c54d4e8">reset</a> ()=0</td></tr>
 <tr class="separator:adc17bd143d5a44ed9be59f5f6c54d4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad459819c09ee1dcc1e6081361767d24d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#ad459819c09ee1dcc1e6081361767d24d">setLogFile</a> (const std::string &amp;filename)=0</td></tr>
@@ -163,6 +171,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa305ab4e5d3a2bc07eb5a3dc457ee0aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20fbb6964d1d6b5035e5849036dd776e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classUniverse_1_1IOptimizationSolver.html">Universe::IOptimizationSolver</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a20fbb6964d1d6b5035e5849036dd776e">toOptimizationSolver</a> ()</td></tr>
 <tr class="separator:a20fbb6964d1d6b5035e5849036dd776e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4828ae45a36ca7f5e37fc96cfe514c36"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a4828ae45a36ca7f5e37fc96cfe514c36">valueHeuristicStatic</a> (const std::vector&lt; std::string &gt; &amp;variables, const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;orderedValues)=0</td></tr>
+<tr class="separator:a4828ae45a36ca7f5e37fc96cfe514c36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classUniverse_1_1IUniverseSolver.html">IUniverseSolver</a> interface is the root interface defining the base contract for all solvers. </p>
@@ -231,7 +241,70 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="IUniverseSolver_8cpp_source.html#l00038">38</a> of file <a class="el" href="IUniverseSolver_8cpp_source.html">IUniverseSolver.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00101">Universe::UniverseJavaSolver::addSearchListener()</a>.</p>
+</div>
+</div>
+<a id="ac89f8ed2659c8789c7bacaed87fd5f1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac89f8ed2659c8789c7bacaed87fd5f1c">&#9670;&nbsp;</a></span>checkSolution() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Universe::IUniverseSolver::checkSolution </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks the last solution that has been computed by the solver. Said differently, this method ensures that the last solution satisfies all the constraints of the problem solved by the solver.</p>
+<dl class="section return"><dt>Returns</dt><dd>Whether the last solution is correct. </dd></dl>
+
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ada4b2d74e04e496df5685e29a8fef07d">Universe::UniverseJavaSolver</a>.</p>
+
+</div>
+</div>
+<a id="a85220a95b208e497e201f7aed1c4c1b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85220a95b208e497e201f7aed1c4c1b1">&#9670;&nbsp;</a></span>checkSolution() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Universe::IUniverseSolver::checkSolution </td>
+          <td>(</td>
+          <td class="paramtype">const std::map&lt; std::string, <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>assignment</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks whether the given assignment is a solution of the problem. Said differently, this method ensures that the given assignment satisfies all the constraints of the problem solved by the solver.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">assignment</td><td>The assignment to check as a solution.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether the given assignment is a solution of the problem. </dd></dl>
+
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ad2ce349eb2eb7b07fab4c387e831c389">Universe::UniverseJavaSolver</a>.</p>
 
 </div>
 </div>
@@ -267,6 +340,35 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#a908a7645a8a5fda09ee1746d22bebbfd">Universe::UniverseJavaSolver</a>.</p>
+
+</div>
+</div>
+<a id="a331d7b66278d5180f2b909fa7375cbab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a331d7b66278d5180f2b909fa7375cbab">&#9670;&nbsp;</a></span>getAuxiliaryVariables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::vector&lt;std::string&gt;&amp; Universe::IUniverseSolver::getAuxiliaryVariables </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives the vector of the auxiliary variables used by the solver. These variables are those that the solver defines to help it represent the problem (for instance, to reify constraints).</p>
+<dl class="section return"><dt>Returns</dt><dd>The list of the auxiliary variables, given by their name. </dd></dl>
+
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ae1ec4dbc2fc10172db90949dfa810b00">Universe::UniverseJavaSolver</a>.</p>
 
 </div>
 </div>
@@ -511,6 +613,43 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The number of variables. </dd></dl>
 
 <p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#af3e35ed5fa762770ebbe7d6eddca3362">Universe::UniverseJavaSolver</a>.</p>
+
+</div>
+</div>
+<a id="a70e988fc7fe99270fbf5ce2943b57fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70e988fc7fe99270fbf5ce2943b57fbd">&#9670;&nbsp;</a></span>removeSearchListener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IUniverseSolver::removeSearchListener </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classUniverse_1_1IUniverseSearchListener.html">Universe::IUniverseSearchListener</a> *&#160;</td>
+          <td class="paramname"><em>listener</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Removes a listener from this solver, so that the listener does not listen to the events occurring in the solver during the search anymore.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">listener</td><td>The listener to remove. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ae38d46fb7e679fcef41fb320abea41e4">Universe::UniverseJavaSolver</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="IUniverseSolver_8cpp_source.html#l00042">42</a> of file <a class="el" href="IUniverseSolver_8cpp_source.html">IUniverseSolver.cpp</a>.</p>
 
 </div>
 </div>
@@ -874,7 +1013,53 @@ Public Member Functions</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#adbb1ecc296b843a37e97071ffb3830c1">Universe::UniverseJavaSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="IUniverseSolver_8cpp_source.html#l00042">42</a> of file <a class="el" href="IUniverseSolver_8cpp_source.html">IUniverseSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="IUniverseSolver_8cpp_source.html#l00046">46</a> of file <a class="el" href="IUniverseSolver_8cpp_source.html">IUniverseSolver.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4828ae45a36ca7f5e37fc96cfe514c36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4828ae45a36ca7f5e37fc96cfe514c36">&#9670;&nbsp;</a></span>valueHeuristicStatic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Universe::IUniverseSolver::valueHeuristicStatic </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>variables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>orderedValues</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Forces a static order on the values to try for some variables.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">variables</td><td>The variables for which a static order is set. </td></tr>
+    <tr><td class="paramname">orderedValues</td><td>The values to try for the specified variables, in the desired order. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ad21606dbb9f371e17d5fd23416b52729">Universe::UniverseJavaSolver</a>.</p>
 
 </div>
 </div>

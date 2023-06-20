@@ -186,8 +186,33 @@ map<string, BigInteger> UniverseJavaSolver::mapSolution() {
 }
 
 std::map<std::string, Universe::BigInteger> UniverseJavaSolver::mapSolution(bool excludeAux) {
-    // TODO
-    return std::map<std::string, Universe::BigInteger>();
+    // Retrieving the Java solution map.
+    auto mtd = interface->getObjectMethod("mapSolution", METHOD(CLASS(java/util/Map), BOOLEAN));
+    auto obj = mtd.invoke(object);
+    auto jMap = JavaMapOfString::of(obj);
+
+    // Converting the Java map to a C++ map.
+    function<BigInteger(JavaObject)> toBigInteger = [] (JavaObject o) {
+        return JavaBigInteger::of(o).asBigInteger();
+    };
+    return jMap.asMap(toBigInteger);
+}
+
+bool UniverseJavaSolver::checkSolution() {
+    auto mtd = interface->getBooleanMethod("checkSolution");
+    return mtd.invoke(object);
+}
+
+bool UniverseJavaSolver::checkSolution(const map<string, BigInteger> &assignment) {
+    // Converting the C++ map into a Java map.
+    function<JavaObject(BigInteger)> fct = [] (BigInteger b) {
+        return *JavaBigInteger::newInstance(b);
+    };
+    auto jMap = JavaMapOfString::from(assignment, fct);
+
+    // Invoking the appropriate Java method.
+    auto mtd = interface->getBooleanMethod("checkSolution", METHOD(BOOLEAN, CLASS(java/util/Map)));
+    return mtd.invoke(object, **jMap);
 }
 
 IOptimizationSolver * UniverseJavaSolver::toOptimizationSolver() {

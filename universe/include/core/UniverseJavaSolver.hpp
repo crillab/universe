@@ -241,6 +241,26 @@ namespace Universe {
         std::map<std::string, Universe::BigInteger> mapSolution(bool excludeAux) override;
 
         /**
+         * Checks the last solution that has been computed by the solver.
+         * Said differently, this method ensures that the last solution satisfies all the
+         * constraints of the problem solved by the solver.
+         *
+         * @return Whether the last solution is correct.
+         */
+        bool checkSolution() override;
+
+        /**
+         * Checks whether the given assignment is a solution of the problem.
+         * Said differently, this method ensures that the given assignment satisfies all the
+         * constraints of the problem solved by the solver.
+         *
+         * @param assignment The assignment to check as a solution.
+         *
+         * @return Whether the given assignment is a solution of the problem.
+         */
+        bool checkSolution(const std::map<std::string, Universe::BigInteger> &assignment) override;
+
+        /**
          * Casts this solver into an IOptimizationSolver.
          *
          * @return The casted optimization solver.

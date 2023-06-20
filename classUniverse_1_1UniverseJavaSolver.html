@@ -118,10 +118,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acf2467684fcde40534cb8ecede222e4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5005c776a421f9be72745f705fbcc66"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#aa5005c776a421f9be72745f705fbcc66">addSearchListener</a> (<a class="el" href="classUniverse_1_1IUniverseSearchListener.html">Universe::IUniverseSearchListener</a> *listener) override</td></tr>
 <tr class="separator:aa5005c776a421f9be72745f705fbcc66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada4b2d74e04e496df5685e29a8fef07d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ada4b2d74e04e496df5685e29a8fef07d">checkSolution</a> () const override</td></tr>
-<tr class="separator:ada4b2d74e04e496df5685e29a8fef07d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2ce349eb2eb7b07fab4c387e831c389"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ad2ce349eb2eb7b07fab4c387e831c389">checkSolution</a> (const std::map&lt; std::string, <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;assignment) const override</td></tr>
-<tr class="separator:ad2ce349eb2eb7b07fab4c387e831c389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afce5740909e52cee298be81158353947"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#afce5740909e52cee298be81158353947">checkSolution</a> () override</td></tr>
+<tr class="separator:afce5740909e52cee298be81158353947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaec2d28d5de9e0dc99970877e34b9dde"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#aaec2d28d5de9e0dc99970877e34b9dde">checkSolution</a> (const std::map&lt; std::string, <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;assignment) override</td></tr>
+<tr class="separator:aaec2d28d5de9e0dc99970877e34b9dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a908a7645a8a5fda09ee1746d22bebbfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#a908a7645a8a5fda09ee1746d22bebbfd">decisionVariables</a> (const std::vector&lt; std::string &gt; &amp;variables) override</td></tr>
 <tr class="separator:a908a7645a8a5fda09ee1746d22bebbfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1ec4dbc2fc10172db90949dfa810b00"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ae1ec4dbc2fc10172db90949dfa810b00">getAuxiliaryVariables</a> () override</td></tr>
@@ -308,8 +308,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ada4b2d74e04e496df5685e29a8fef07d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada4b2d74e04e496df5685e29a8fef07d">&#9670;&nbsp;</a></span>checkSolution() <span class="overload">[1/2]</span></h2>
+<a id="afce5740909e52cee298be81158353947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afce5740909e52cee298be81158353947">&#9670;&nbsp;</a></span>checkSolution() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -321,7 +321,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname">bool UniverseJavaSolver::checkSolution </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -333,7 +333,7 @@ Protected Attributes</h2></td></tr>
 <p>Checks the last solution that has been computed by the solver. Said differently, this method ensures that the last solution satisfies all the constraints of the problem solved by the solver.</p>
 <dl class="section return"><dt>Returns</dt><dd>Whether the last solution is correct. </dd></dl>
 
-<p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#ac89f8ed2659c8789c7bacaed87fd5f1c">Universe::IUniverseSolver</a>.</p>
+<p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a91ba2a683f6334d5cd9e29f2a471ac82">Universe::IUniverseSolver</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00265">265</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
@@ -341,8 +341,8 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad2ce349eb2eb7b07fab4c387e831c389"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2ce349eb2eb7b07fab4c387e831c389">&#9670;&nbsp;</a></span>checkSolution() <span class="overload">[2/2]</span></h2>
+<a id="aaec2d28d5de9e0dc99970877e34b9dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaec2d28d5de9e0dc99970877e34b9dde">&#9670;&nbsp;</a></span>checkSolution() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -355,7 +355,7 @@ Protected Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const std::map&lt; std::string, <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>assignment</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -373,7 +373,7 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether the given assignment is a solution of the problem. </dd></dl>
 
-<p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a85220a95b208e497e201f7aed1c4c1b1">Universe::IUniverseSolver</a>.</p>
+<p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a0f5ece35aa374324673ca8307289d7e2">Universe::IUniverseSolver</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00270">270</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
@@ -1139,7 +1139,7 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00206">206</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, <a class="el" href="JavaBigInteger_8cpp_source.html#l00053">Universe::JavaBigInteger::newInstance()</a>, <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00313">toJavaAssumptions()</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00286">toUniverseSolverResult()</a>.</p>
+<p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, <a class="el" href="JavaBigInteger_8cpp_source.html#l00053">Universe::JavaBigInteger::newInstance()</a>, <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00314">toJavaAssumptions()</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00286">toUniverseSolverResult()</a>.</p>
 
 </div>
 </div>
@@ -1194,7 +1194,7 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classUniverse_1_1JavaList.html">JavaList</a> representing the assumptions. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00313">313</a> of file <a class="el" href="UniverseJavaSolver_8hpp_source.html">UniverseJavaSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00314">314</a> of file <a class="el" href="UniverseJavaSolver_8hpp_source.html">UniverseJavaSolver.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaList_8hpp_source.html#l00119">Universe::JavaList::from()</a>.</p>
 

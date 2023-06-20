@@ -123,10 +123,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7f47ace46bb113eabe4b9ecae5598c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a567425ff2b031b70fb813ce910318c8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a567425ff2b031b70fb813ce910318c8b">addSearchListener</a> (<a class="el" href="classUniverse_1_1IUniverseSearchListener.html">Universe::IUniverseSearchListener</a> *listener)</td></tr>
 <tr class="separator:a567425ff2b031b70fb813ce910318c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac89f8ed2659c8789c7bacaed87fd5f1c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#ac89f8ed2659c8789c7bacaed87fd5f1c">checkSolution</a> () const =0</td></tr>
-<tr class="separator:ac89f8ed2659c8789c7bacaed87fd5f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85220a95b208e497e201f7aed1c4c1b1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a85220a95b208e497e201f7aed1c4c1b1">checkSolution</a> (const std::map&lt; std::string, <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;assignment) const =0</td></tr>
-<tr class="separator:a85220a95b208e497e201f7aed1c4c1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91ba2a683f6334d5cd9e29f2a471ac82"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a91ba2a683f6334d5cd9e29f2a471ac82">checkSolution</a> ()=0</td></tr>
+<tr class="separator:a91ba2a683f6334d5cd9e29f2a471ac82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f5ece35aa374324673ca8307289d7e2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a0f5ece35aa374324673ca8307289d7e2">checkSolution</a> (const std::map&lt; std::string, <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;assignment)=0</td></tr>
+<tr class="separator:a0f5ece35aa374324673ca8307289d7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2df7f50a3fb685fda9a19fd466bebc3c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a2df7f50a3fb685fda9a19fd466bebc3c">decisionVariables</a> (const std::vector&lt; std::string &gt; &amp;variables)=0</td></tr>
 <tr class="separator:a2df7f50a3fb685fda9a19fd466bebc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a331d7b66278d5180f2b909fa7375cbab"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a331d7b66278d5180f2b909fa7375cbab">getAuxiliaryVariables</a> ()=0</td></tr>
@@ -243,8 +243,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac89f8ed2659c8789c7bacaed87fd5f1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac89f8ed2659c8789c7bacaed87fd5f1c">&#9670;&nbsp;</a></span>checkSolution() <span class="overload">[1/2]</span></h2>
+<a id="a91ba2a683f6334d5cd9e29f2a471ac82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91ba2a683f6334d5cd9e29f2a471ac82">&#9670;&nbsp;</a></span>checkSolution() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,7 +256,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual bool Universe::IUniverseSolver::checkSolution </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -268,12 +268,12 @@ Public Member Functions</h2></td></tr>
 <p>Checks the last solution that has been computed by the solver. Said differently, this method ensures that the last solution satisfies all the constraints of the problem solved by the solver.</p>
 <dl class="section return"><dt>Returns</dt><dd>Whether the last solution is correct. </dd></dl>
 
-<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ada4b2d74e04e496df5685e29a8fef07d">Universe::UniverseJavaSolver</a>.</p>
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#afce5740909e52cee298be81158353947">Universe::UniverseJavaSolver</a>.</p>
 
 </div>
 </div>
-<a id="a85220a95b208e497e201f7aed1c4c1b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a85220a95b208e497e201f7aed1c4c1b1">&#9670;&nbsp;</a></span>checkSolution() <span class="overload">[2/2]</span></h2>
+<a id="a0f5ece35aa374324673ca8307289d7e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f5ece35aa374324673ca8307289d7e2">&#9670;&nbsp;</a></span>checkSolution() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -286,7 +286,7 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const std::map&lt; std::string, <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>assignment</em></td><td>)</td>
-          <td> const</td>
+          <td></td>
         </tr>
       </table>
   </td>
@@ -304,7 +304,7 @@ Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Whether the given assignment is a solution of the problem. </dd></dl>
 
-<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ad2ce349eb2eb7b07fab4c387e831c389">Universe::UniverseJavaSolver</a>.</p>
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#aaec2d28d5de9e0dc99970877e34b9dde">Universe::UniverseJavaSolver</a>.</p>
 
 </div>
 </div>

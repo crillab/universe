@@ -2,8 +2,8 @@ var classUniverse_1_1IUniverseSolver =
 [
     [ "~IUniverseSolver", "classUniverse_1_1IUniverseSolver.html#a7f47ace46bb113eabe4b9ecae5598c03", null ],
     [ "addSearchListener", "classUniverse_1_1IUniverseSolver.html#a567425ff2b031b70fb813ce910318c8b", null ],
-    [ "checkSolution", "classUniverse_1_1IUniverseSolver.html#ac89f8ed2659c8789c7bacaed87fd5f1c", null ],
-    [ "checkSolution", "classUniverse_1_1IUniverseSolver.html#a85220a95b208e497e201f7aed1c4c1b1", null ],
+    [ "checkSolution", "classUniverse_1_1IUniverseSolver.html#a91ba2a683f6334d5cd9e29f2a471ac82", null ],
+    [ "checkSolution", "classUniverse_1_1IUniverseSolver.html#a0f5ece35aa374324673ca8307289d7e2", null ],
     [ "decisionVariables", "classUniverse_1_1IUniverseSolver.html#a2df7f50a3fb685fda9a19fd466bebc3c", null ],
     [ "getAuxiliaryVariables", "classUniverse_1_1IUniverseSolver.html#a331d7b66278d5180f2b909fa7375cbab", null ],
     [ "getVariablesMapping", "classUniverse_1_1IUniverseSolver.html#ae083822fe0cc090e6f4dc5adf4fb59cc", null ],

@@ -53,7 +53,14 @@ namespace Universe {
          *
          * @return The variables involved in this constraint.
          */
-        [[nodiscard]] virtual const std::vector<Universe::IUniverseVariable *> &scope() const = 0;
+        [[nodiscard]] virtual const std::vector<Universe::IUniverseVariable *> &scope() = 0;
+
+        /**
+         * Gives the score of this constraint, as computed by the solver.
+         *
+         * @return The score of the constraint.
+         */
+        [[nodiscard]] virtual const double getScore() const = 0;
 
     };
 

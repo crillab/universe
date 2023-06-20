@@ -19,113 +19,117 @@
  ******************************************************************************/
 
 /**
- * @file UniverseJavaDomain.hpp
- * @brief Defines an implementation of an IUniverseDomain in Java (using JNI).
+ * @file UniverseJavaProblem.hpp
+ * @brief Defines an implementation of an IUniverseProblem in Java (using JNI).
  * @author Thibault Falque
  * @author Romain Wallon
- * @date 12/12/22
+ * @date 01/06/23
  * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
-#ifndef UNIVERSE_UNIVERSEJAVADOMAIN_HPP
-#define UNIVERSE_UNIVERSEJAVADOMAIN_HPP
+#ifndef UNIVERSE_UNIVERSEJAVAPROBLEM_HPP
+#define UNIVERSE_UNIVERSEJAVAPROBLEM_HPP
 
 #include "../../../../libs/easy-jni/easyjni/JavaClass.h"
 
-#include "../../core/UniverseType.hpp"
-#include "IUniverseDomain.hpp"
+#include "IUniverseProblem.hpp"
 
 namespace Universe {
 
     /**
-     * The UniverseJavaDomain class defines an adapter for an IUniverseDomain
+     * The UniverseJavaProblem class defines an adapter for an IUniverseProblem
      * written in Java (and implementing the interface provided by JUniverse).
      */
-    class UniverseJavaDomain : public Universe::IUniverseDomain {
+    class UniverseJavaProblem : public Universe::IUniverseProblem {
 
     private:
 
         /**
-         * The reference to the IUniverseDomain Java interface.
+         * The reference to the IUniverseProblem Java interface.
          */
-        static easyjni::JavaClass *domainInterface;
+        static easyjni::JavaClass *problemInterface;
 
         /**
-         * The Java object that is an instance of IUniverseDomain.
+         * The Java object that is an instance of IUniverseProblem.
          */
-        easyjni::JavaObject rawDomain;
+        easyjni::JavaObject rawProblem;
 
         /**
-         * The values in this domain.
+         * The variables in this problem.
          */
-        std::vector<Universe::BigInteger> values;
+        std::vector<Universe::IUniverseVariable *> variables;
+
+        /**
+         * The constraints in this problem.
+         */
+        std::vector<Universe::IUniverseConstraint *> constraints;
 
     private:
 
         /**
-         * Creates a new UniverseJavaDomain.
+         * Creates a new UniverseJavaProblem.
          *
-         * @param domain The Java object that is an instance of IUniverseDomain.
+         * @param problem The Java object that is an instance of IUniverseProblem.
          */
-        explicit UniverseJavaDomain(easyjni::JavaObject domain);
+        explicit UniverseJavaProblem(easyjni::JavaObject problem);
 
         /**
-         * Loads the reference to the IUniverseDomain Java interface.
+         * Loads the reference to the IUniverseProblem Java interface.
          */
         static void loadClass();
 
     public:
 
         /**
-         * Creates a new UniverseJavaDomain from an existing Java object that is an
-         * instance of IUniverseDomain.
+         * Creates a new UniverseJavaProblem from an existing Java object that is an
+         * instance of IUniverseProblem.
          *
-         * @param domain The existing Java object.
+         * @param problem The existing Java object.
          *
          * @return The wrapper for the object.
          */
-        static Universe::IUniverseDomain *of(easyjni::JavaObject domain);
+        static Universe::IUniverseProblem *of(easyjni::JavaObject problem);
 
         /**
-         * Destroys this UniverseJavaDomain.
+         * Destroys this UniverseJavaProblem.
          */
-        ~UniverseJavaDomain() override = default;
+        ~UniverseJavaProblem() override = default;
 
         /**
-         * Gives the Java object that is wrapped in this UniverseJavaDomain.
+         * Gives the Java object that is wrapped in this UniverseJavaProblem.
          *
          * @return The wrapped Java object.
          */
         easyjni::JavaObject operator*();
 
         /**
-         * Gives the size of this domain, measured in number of values.
+         * Adds a variable to this problem.
          *
-         * @return The size of this domain.
+         * @param variable The variable to add.
          */
-        [[nodiscard]] size_t size() const override;
+        void addVariable(Universe::IUniverseVariable *variable) override;
 
         /**
-         * Gives the minimum value of this domain.
+         * Gives the variables in this problem.
          *
-         * @return The minimum value.
+         * @return The variables in this problem.
          */
-        [[nodiscard]] Universe::BigInteger min() const override;
+        const std::vector<Universe::IUniverseVariable *> &getVariables() override;
 
         /**
-         * Gives the maximum value of this domain.
+         * Adds a constraint to this problem.
          *
-         * @return The maximum value.
+         * @param constraint The constraint to add.
          */
-        [[nodiscard]] Universe::BigInteger max() const override;
+        void addConstraint(Universe::IUniverseConstraint *constraint) override;
 
         /**
-         * Gives the list of values of this domain.
+         * Gives the constraints in this problem.
          *
-         * @return The list of values.
+         * @return The constraints in this problem.
          */
-        [[nodiscard]] const std::vector<Universe::BigInteger> &getValues() override;
+        const std::vector<Universe::IUniverseConstraint *> &getConstraints() override;
 
     };
 

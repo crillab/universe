@@ -77,11 +77,30 @@ namespace Universe {
         [[nodiscard]] virtual const std::map<std::string, Universe::IUniverseVariable *> &getVariablesMapping() = 0;
 
         /**
+         * Gives the vector of the auxiliary variables used by the solver.
+         * These variables are those that the solver defines to help it represent the
+         * problem (for instance, to reify constraints).
+         *
+         * @return The list of the auxiliary variables, given by their name.
+         */
+        [[nodiscard]] virtual const std::vector<std::string> &getAuxiliaryVariables() = 0;
+
+        /**
          * Advises this solver to focus on some variables to make decisions.
          *
          * @param variables The variables on which to make decisions.
          */
         virtual void decisionVariables(const std::vector<std::string> &variables) = 0;
+
+        /**
+         * Forces a static order on the values to try for some variables.
+         *
+         * @param variables The variables for which a static order is set.
+         * @param orderedValues The values to try for the specified variables, in the desired
+         *        order.
+         */
+        virtual void valueHeuristicStatic(
+                const std::vector<std::string> &variables, const std::vector<Universe::BigInteger> &orderedValues) = 0;
 
         /**
          * Gives the number of constraints defined in this solver.
@@ -129,14 +148,19 @@ namespace Universe {
         virtual void addSearchListener(Universe::IUniverseSearchListener *listener);
 
         /**
+         * Removes a listener from this solver, so that the listener does not listen to
+         * the events occurring in the solver during the search anymore.
+         *
+         * @param listener The listener to remove.
+         */
+        virtual void removeSearchListener(Universe::IUniverseSearchListener *listener);
+
+        /**
          * Sets the log file to be used by the solver.
          *
          * @param filename The name of the log file.
          */
         virtual void setLogFile(const std::string &filename) = 0;
-
-
-
 
         /**
          * Sets the output stream to be used by the solver for logging.
@@ -219,6 +243,7 @@ namespace Universe {
          */
         [[nodiscard]] virtual bool checkSolution() = 0;
 
+
         /**
          * Checks whether the given assignment is a solution of the problem.
          * Said differently, this method ensures that the given assignment satisfies all the
@@ -228,8 +253,7 @@ namespace Universe {
          *
          * @return Whether the given assignment is a solution of the problem.
          */
-        [[nodiscard]] virtual bool checkSolution(
-                const std::map<std::string, Universe::BigInteger> &assignment) = 0;
+        [[nodiscard]] virtual bool checkSolution(const std::map<std::string, Universe::BigInteger> &assignment) = 0;
 
         /**
          * Casts this solver into an IOptimizationSolver.

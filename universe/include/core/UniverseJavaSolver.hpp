@@ -75,6 +75,11 @@ namespace Universe {
          */
         std::map<std::string, Universe::IUniverseVariable *> mapping;
 
+        /**
+         * The name of the auxiliary variables used by the solver.
+         */
+        std::vector<std::string> auxiliaryVariables;
+
     public:
 
         /**
@@ -110,11 +115,30 @@ namespace Universe {
         [[nodiscard]] const std::map<std::string, Universe::IUniverseVariable *> &getVariablesMapping() override;
 
         /**
+         * Gives the vector of the auxiliary variables used by the solver.
+         * These variables are those that the solver defines to help it represent the
+         * problem (for instance, to reify constraints).
+         *
+         * @return The list of the auxiliary variables, given by their name.
+         */
+        const std::vector<std::string> &getAuxiliaryVariables() override;
+
+        /**
          * Advises this solver to focus on some variables to make decisions.
          *
          * @param variables The variables on which to make decisions.
          */
         void decisionVariables(const std::vector<std::string> &variables) override;
+
+        /**
+         * Forces a static order on the values to try for some variables.
+         *
+         * @param variables The variables for which a static order is set.
+         * @param orderedValues The values to try for the specified variables, in the desired
+         *        order.
+         */
+        void valueHeuristicStatic(const std::vector<std::string> &variables,
+                                  const std::vector<Universe::BigInteger> &orderedValues) override;
 
         /**
          * Gives the number of constraints defined in this solver.
@@ -160,13 +184,19 @@ namespace Universe {
         void addSearchListener(Universe::IUniverseSearchListener *listener) override;
 
         /**
+         * Removes a listener from this solver, so that the listener does not listen to
+         * the events occurring in the solver during the search anymore.
+         *
+         * @param listener The listener to remove.
+         */
+        void removeSearchListener(Universe::IUniverseSearchListener *listener) override;
+
+        /**
          * Sets the log file to be used by the solver.
          *
          * @param filename The name of the log file.
          */
         void setLogFile(const std::string &filename) override;
-
-
 
         /**
          * Sets the output stream to be used by the solver for logging.
@@ -248,6 +278,7 @@ namespace Universe {
          * @return Whether the last solution is correct.
          */
         bool checkSolution() override;
+
 
         /**
          * Checks whether the given assignment is a solution of the problem.

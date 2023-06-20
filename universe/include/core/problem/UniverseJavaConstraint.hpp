@@ -19,113 +19,99 @@
  ******************************************************************************/
 
 /**
- * @file UniverseJavaDomain.hpp
- * @brief Defines an implementation of an IUniverseDomain in Java (using JNI).
+ * @file UniverseJavaConstraint.hpp
+ * @brief Defines an implementation of an IUniverseConstraint in Java (using JNI).
  * @author Thibault Falque
  * @author Romain Wallon
- * @date 12/12/22
+ * @date 01/06/23
  * @copyright Copyright (c) 2022-2023 - Univ Artois & CNRS & Exakis Nelite.
  * @license This project is released under the GNU LGPL3 License.
  */
 
-#ifndef UNIVERSE_UNIVERSEJAVADOMAIN_HPP
-#define UNIVERSE_UNIVERSEJAVADOMAIN_HPP
+#ifndef UNIVERSE_UNIVERSEJAVACONSTRAINT_HPP
+#define UNIVERSE_UNIVERSEJAVACONSTRAINT_HPP
 
 #include "../../../../libs/easy-jni/easyjni/JavaClass.h"
 
-#include "../../core/UniverseType.hpp"
-#include "IUniverseDomain.hpp"
+#include "IUniverseConstraint.hpp"
 
 namespace Universe {
 
     /**
-     * The UniverseJavaDomain class defines an adapter for an IUniverseDomain
+     * The UniverseJavaConstraint class defines an adapter for an IUniverseConstraint
      * written in Java (and implementing the interface provided by JUniverse).
      */
-    class UniverseJavaDomain : public Universe::IUniverseDomain {
+    class UniverseJavaConstraint : public Universe::IUniverseConstraint {
 
     private:
 
         /**
-         * The reference to the IUniverseDomain Java interface.
+         * The reference to the IUniverseConstraint Java interface.
          */
-        static easyjni::JavaClass *domainInterface;
+        static easyjni::JavaClass *constraintInterface;
 
         /**
-         * The Java object that is an instance of IUniverseDomain.
+         * The Java object that is an instance of IUniverseConstraint.
          */
-        easyjni::JavaObject rawDomain;
+        easyjni::JavaObject rawConstraint;
 
         /**
-         * The values in this domain.
+         * The variables in this constraint.
          */
-        std::vector<Universe::BigInteger> values;
+        std::vector<Universe::IUniverseVariable *> variables;
 
     private:
 
         /**
-         * Creates a new UniverseJavaDomain.
+         * Creates a new UniverseJavaConstraint.
          *
-         * @param domain The Java object that is an instance of IUniverseDomain.
+         * @param constraint The Java object that is an instance of IUniverseConstraint.
          */
-        explicit UniverseJavaDomain(easyjni::JavaObject domain);
+        explicit UniverseJavaConstraint(easyjni::JavaObject constraint);
 
         /**
-         * Loads the reference to the IUniverseDomain Java interface.
+         * Loads the reference to the IUniverseConstraint Java interface.
          */
         static void loadClass();
 
     public:
 
         /**
-         * Creates a new UniverseJavaDomain from an existing Java object that is an
-         * instance of IUniverseDomain.
+         * Creates a new UniverseJavaConstraint from an existing Java object that is an
+         * instance of IUniverseConstraint.
          *
-         * @param domain The existing Java object.
+         * @param constraint The existing Java object.
          *
          * @return The wrapper for the object.
          */
-        static Universe::IUniverseDomain *of(easyjni::JavaObject domain);
+        static Universe::IUniverseConstraint *of(easyjni::JavaObject constraint);
 
         /**
-         * Destroys this UniverseJavaDomain.
+         * Destroys this UniverseJavaConstraint.
          */
-        ~UniverseJavaDomain() override = default;
+        ~UniverseJavaConstraint() override = default;
 
         /**
-         * Gives the Java object that is wrapped in this UniverseJavaDomain.
+         * Gives the Java object that is wrapped in this UniverseJavaConstraint.
          *
          * @return The wrapped Java object.
          */
         easyjni::JavaObject operator*();
 
         /**
-         * Gives the size of this domain, measured in number of values.
+         * Gives the scope of this constraint, i.e., the variables that appear in
+         * this constraint.
          *
-         * @return The size of this domain.
+         * @return The variables involved in this constraint.
          */
-        [[nodiscard]] size_t size() const override;
+        const std::vector<Universe::IUniverseVariable *> &scope() override;
 
         /**
-         * Gives the minimum value of this domain.
+         * Gives the score of this constraint, as computed by the solver.
          *
-         * @return The minimum value.
+         * @return The score of the constraint.
          */
-        [[nodiscard]] Universe::BigInteger min() const override;
-
-        /**
-         * Gives the maximum value of this domain.
-         *
-         * @return The maximum value.
-         */
-        [[nodiscard]] Universe::BigInteger max() const override;
-
-        /**
-         * Gives the list of values of this domain.
-         *
-         * @return The list of values.
-         */
-        [[nodiscard]] const std::vector<Universe::BigInteger> &getValues() override;
+        const double getScore() const override;
 
     };
 

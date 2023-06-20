@@ -55,28 +55,28 @@ namespace Universe {
          *
          * @param variable The variable to add.
          */
-        virtual void addVariable(IUniverseVariable *variable) = 0;
+        virtual void addVariable(Universe::IUniverseVariable *variable) = 0;
 
         /**
          * Gives the variables in this problem.
          *
          * @return The variables in this problem.
          */
-        [[nodiscard]] virtual const std::vector<Universe::IUniverseVariable *> &getVariables() const = 0;
+        [[nodiscard]] virtual const std::vector<Universe::IUniverseVariable *> &getVariables() = 0;
 
         /**
          * Adds a constraint to this problem.
          *
          * @param constraint The constraint to add.
          */
-        virtual void addConstraint(IUniverseConstraint *constraint) = 0;
+        virtual void addConstraint(Universe::IUniverseConstraint *constraint) = 0;
 
         /**
          * Gives the constraints in this problem.
          *
          * @return The constraints in this problem.
          */
-        [[nodiscard]] virtual const std::vector<Universe::IUniverseConstraint *> &getConstraints() const = 0;
+        [[nodiscard]] virtual const std::vector<Universe::IUniverseConstraint *> &getConstraints() = 0;
 
     };
 

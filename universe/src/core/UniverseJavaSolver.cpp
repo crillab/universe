@@ -32,8 +32,9 @@
 #include "../../../libs/easy-jni/easyjni/JavaVirtualMachineRegistry.h"
 
 #include "../../include/core/UniverseJavaSolver.hpp"
-#include "../../include/java/JavaMapOfString.hpp"
 #include "../../include/core/problem/UniverseJavaVariable.hpp"
+#include "../../include/java/JavaMapOfString.hpp"
+#include "../../include/listener/UniverseJavaSearchListener.hpp"
 #include "../../include/optim/JavaOptimizationSolver.hpp"
 
 using namespace easyjni;
@@ -73,8 +74,51 @@ const map<string, IUniverseVariable *> &UniverseJavaSolver::getVariablesMapping(
     return mapping;
 }
 
-void UniverseJavaSolver::decisionVariables(const vector<std::string> &variables) {
-    // TODO
+const vector<string> &UniverseJavaSolver::getAuxiliaryVariables() {
+    if (auxiliaryVariables.empty()) {
+        // Getting the variables as a Java list.
+        auto mtd = interface->getObjectMethod("getAuxiliaryVariables", METHOD(CLASS(java/util/List)));
+        auto obj = mtd.invoke(object);
+        auto jList = JavaList::of(obj);
+
+        // Converting the Java list to a C++ vector.
+        function<string(JavaObject)> fct = [] (JavaObject obj) {
+            return obj.toString();
+        };
+        auxiliaryVariables = jList.asVector(fct);
+    }
+
+    return auxiliaryVariables;
+}
+
+void UniverseJavaSolver::decisionVariables(const vector<string> &variables) {
+    // Converting the vector of variables to a Java list.
+    function<JavaObject (string)> fct = [] (const string &varName) {
+        return JavaVirtualMachineRegistry::get()->toJavaString(varName);
+    };
+    auto list = JavaList::from(variables, fct);
+
+    // Invoking the appropriate Java method.
+    auto mtd = interface->getMethod("decisionVariables", METHOD(VOID, CLASS(java/util/List)));
+    mtd.invoke(object, **list);
+}
+
+void UniverseJavaSolver::valueHeuristicStatic(const vector<string> &variables, const vector<BigInteger> &orderedValues) {
+    // Converting the vector of variables to a Java list.
+    function<JavaObject (string)> fctVariables = [] (const string &varName) {
+        return JavaVirtualMachineRegistry::get()->toJavaString(varName);
+    };
+    auto list = JavaList::from(variables, fctVariables);
+
+    // Converting the vector of values to a Java list.
+    function<JavaObject (BigInteger)> fctValues = [] (const BigInteger &value) {
+        return *JavaBigInteger::newInstance(value);
+    };
+    auto values = JavaList::from(orderedValues, fctValues);
+
+    // Invoking the appropriate Java method.
+    auto mtd = interface->getMethod("valueHeuristicStatic", METHOD(VOID, CLASS(java/util/List) CLASS(java/util/List)));
+    mtd.invoke(object, **list, **values);
 }
 
 int UniverseJavaSolver::nConstraints() {
@@ -82,6 +126,10 @@ int UniverseJavaSolver::nConstraints() {
     return mtd.invoke(object);
 }
 
+bool UniverseJavaSolver::isOptimization() {
+    auto mtd = interface->getBooleanMethod("isOptimization");
+    return mtd.invoke(object);
+}
 
 void UniverseJavaSolver::setTimeout(long seconds) {
     auto mtd = interface->getMethod("setTimeout", METHOD(VOID, LONG));
@@ -98,9 +146,30 @@ void UniverseJavaSolver::setVerbosity(int level) {
     mtd.invoke(object, level);
 }
 
-void UniverseJavaSolver::addSearchListener(Universe::IUniverseSearchListener *listener) {
-    // TODO
-    IUniverseSolver::addSearchListener(listener);
+void UniverseJavaSolver::addSearchListener(IUniverseSearchListener *listener) {
+    // Trying to convert the listener as a Java listener.
+    auto jListener = dynamic_cast<UniverseJavaSearchListener *>(listener);
+    if (jListener == nullptr) {
+        throw runtime_error("incompatible listener for Java solver");
+    }
+
+    // Invoking the appropriate Java method.
+    auto mtd = interface->getMethod("addSearchListener",
+             METHOD(VOID, CLASS(fr/univartois/cril/juniverse/listener/IUniverseSearchListener)));
+    mtd.invoke(object, ***jListener);
+}
+
+void UniverseJavaSolver::removeSearchListener(IUniverseSearchListener *listener) {
+    // Trying to convert the listener as a Java listener.
+    auto jListener = dynamic_cast<UniverseJavaSearchListener *>(listener);
+    if (jListener == nullptr) {
+        throw runtime_error("incompatible listener for Java solver");
+    }
+
+    // Invoking the appropriate Java method.
+    auto mtd = interface->getMethod("removeSearchListener",
+             METHOD(VOID, CLASS(fr/univartois/cril/juniverse/listener/IUniverseSearchListener)));
+    mtd.invoke(object, ***jListener);
 }
 
 void UniverseJavaSolver::setLogFile(const string &filename) {
@@ -109,21 +178,15 @@ void UniverseJavaSolver::setLogFile(const string &filename) {
     mtd.invoke(object, *str);
 }
 
+void UniverseJavaSolver::setLogStream(ostream &stream) {
+    throw runtime_error("Cannot set a C++ log stream to a Java solver");
+}
+
 void UniverseJavaSolver::loadInstance(const string &filename) {
     auto str = JavaVirtualMachineRegistry::get()->toJavaString(filename);
     auto mtd = interface->getMethod("loadInstance", METHOD(VOID, CLASS(java/lang/String)));
     mtd.invoke(object, *str);
 }
-
-bool UniverseJavaSolver::isOptimization() {
-    auto mtd = interface->getBooleanMethod("isOptimization");
-    return mtd.invoke(object);
-}
-void UniverseJavaSolver::setLogStream(ostream &stream) {
-    // TODO
-}
-
-
 
 UniverseSolverResult UniverseJavaSolver::solve() {
     auto mtd = interface->getObjectMethod("solve",
@@ -132,10 +195,10 @@ UniverseSolverResult UniverseJavaSolver::solve() {
     return toUniverseSolverResult(result);
 }
 
-UniverseSolverResult UniverseJavaSolver::solve(const std::string &filename) {
+UniverseSolverResult UniverseJavaSolver::solve(const string &filename) {
     auto str = JavaVirtualMachineRegistry::get()->toJavaString(filename);
     auto mtd = interface->getObjectMethod("solve",
-        METHOD(CLASS(fr/univartois/cril/juniverse/core/UniverseSolverResult), CLASS(java/lang/String)));
+            METHOD(CLASS(fr/univartois/cril/juniverse/core/UniverseSolverResult), CLASS(java/lang/String)));
     auto result = mtd.invoke(object, *str);
     return toUniverseSolverResult(result);
 }
@@ -148,9 +211,9 @@ UniverseSolverResult UniverseJavaSolver::solve(const vector<UniverseAssumption<B
     };
     JavaList list = toJavaAssumptions(assumptions, toBigInteger);
 
-    // Invoking the appropriate method.
+    // Invoking the appropriate Java method.
     auto mtd = interface->getObjectMethod("solve",
-        METHOD(CLASS(fr/univartois/cril/juniverse/core/UniverseSolverResult), CLASS(java/util/List)));
+            METHOD(CLASS(fr/univartois/cril/juniverse/core/UniverseSolverResult), CLASS(java/util/List)));
     auto result = mtd.invoke(object, **list);
     return toUniverseSolverResult(result);
 }
@@ -161,14 +224,15 @@ void UniverseJavaSolver::interrupt() {
 }
 
 std::vector<BigInteger> UniverseJavaSolver::solution() {
+    // Retrieving the Java solution list.
     auto mtd = interface->getObjectMethod("solution", METHOD(CLASS(java/util/List)));
     auto obj = mtd.invoke(object);
     auto list = JavaList::of(obj);
 
+    // Converting the Java list to a C++ vector.
     function<BigInteger(JavaObject)> toBigInteger = [] (JavaObject o) {
         return JavaBigInteger::of(o).asBigInteger();
     };
-
     return list.asVector(toBigInteger);
 }
 
@@ -178,7 +242,7 @@ map<string, BigInteger> UniverseJavaSolver::mapSolution() {
     auto obj = mtd.invoke(object);
     auto jMap = JavaMapOfString::of(obj);
 
-    // Converting the Java mpa to a C++ map.
+    // Converting the Java map to a C++ map.
     function<BigInteger(JavaObject)> toBigInteger = [] (JavaObject o) {
         return JavaBigInteger::of(o).asBigInteger();
     };
@@ -235,7 +299,3 @@ UniverseSolverResult UniverseJavaSolver::toUniverseSolverResult(JavaObject javaR
     }
     return UniverseSolverResult::UNKNOWN;
 }
-
-
-
-

@@ -97,6 +97,6 @@ BigInteger JavaOptimizationSolver::getCurrentBound() {
 void JavaOptimizationSolver::loadInterface() {
     if (interface == nullptr) {
         interface = new JavaClass(
-                JavaVirtualMachineRegistry::get()->loadClass("fr/univartois/cril/juniverse/optim/IOptimizationSolver"));
+                JavaVirtualMachineRegistry::get()->loadClass("fr/univartois/cril/juniverse/optim/IUniverseOptimizationSolver"));
     }
 }

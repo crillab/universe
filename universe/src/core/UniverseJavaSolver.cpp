@@ -148,28 +148,28 @@ void UniverseJavaSolver::setVerbosity(int level) {
 
 void UniverseJavaSolver::addSearchListener(IUniverseSearchListener *listener) {
     // Trying to convert the listener as a Java listener.
-    auto jListener = dynamic_cast<UniverseJavaSearchListener *>(listener);
-    if (jListener == nullptr) {
-        throw runtime_error("incompatible listener for Java solver");
-    }
-
-    // Invoking the appropriate Java method.
-    auto mtd = interface->getMethod("addSearchListener",
-             METHOD(VOID, CLASS(fr/univartois/cril/juniverse/listener/IUniverseSearchListener)));
-    mtd.invoke(object, ***jListener);
+//    auto jListener = dynamic_cast<UniverseJavaSearchListener *>(listener);
+//    if (jListener == nullptr) {
+//        throw runtime_error("incompatible listener for Java solver");
+//    }
+//
+//    // Invoking the appropriate Java method.
+//    auto mtd = interface->getMethod("addSearchListener",
+//             METHOD(VOID, CLASS(fr/univartois/cril/juniverse/listener/IUniverseSearchListener)));
+//    mtd.invoke(object, ***jListener);
 }
 
 void UniverseJavaSolver::removeSearchListener(IUniverseSearchListener *listener) {
     // Trying to convert the listener as a Java listener.
-    auto jListener = dynamic_cast<UniverseJavaSearchListener *>(listener);
-    if (jListener == nullptr) {
-        throw runtime_error("incompatible listener for Java solver");
-    }
-
-    // Invoking the appropriate Java method.
-    auto mtd = interface->getMethod("removeSearchListener",
-             METHOD(VOID, CLASS(fr/univartois/cril/juniverse/listener/IUniverseSearchListener)));
-    mtd.invoke(object, ***jListener);
+//    auto jListener = dynamic_cast<UniverseJavaSearchListener *>(listener);
+//    if (jListener == nullptr) {
+//        throw runtime_error("incompatible listener for Java solver");
+//    }
+//
+//    // Invoking the appropriate Java method.
+//    auto mtd = interface->getMethod("removeSearchListener",
+//             METHOD(VOID, CLASS(fr/univartois/cril/juniverse/listener/IUniverseSearchListener)));
+//    mtd.invoke(object, ***jListener);
 }
 
 void UniverseJavaSolver::setLogFile(const string &filename) {

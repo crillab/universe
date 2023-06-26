@@ -93,7 +93,7 @@ void UniverseJavaCspSolver::newVariable(const string &id, const vector<BigIntege
 }
 
 void UniverseJavaCspSolver::newVariableSymbolic(const string &id, const vector<string> &values) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addInstantiation(const string &variable, int value) {
@@ -137,7 +137,7 @@ void UniverseJavaCspSolver::addInstantiation(const vector<string> &variables, co
 
 void UniverseJavaCspSolver::addInstantiationSymbolic(
         const vector<string> &variables, const vector<string> &values) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addClause(const vector<string> &positive, const vector<string> &negative) {
@@ -223,7 +223,7 @@ void UniverseJavaCspSolver::addAllDifferentList(const vector<vector<string>> &va
 
 void UniverseJavaCspSolver::addAllDifferentList(
         const vector<vector<string>> &variableLists, const vector<vector<BigInteger>> &except) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addAllDifferentIntension(
@@ -404,13 +404,13 @@ void UniverseJavaCspSolver::addCountWithConstantValues(const vector<string> &var
 void UniverseJavaCspSolver::addCountWithConstantValues(
         const vector<string> &variables, const vector<BigInteger> &values, UniverseSetBelongingOperator op,
         const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCountWithConstantValues(
         const vector<string> &variables, const vector<BigInteger> &values, UniverseSetBelongingOperator op,
         const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCountWithVariableValues(const vector<string> &variables,
@@ -438,13 +438,13 @@ void UniverseJavaCspSolver::addCountWithVariableValues(const vector<string> &var
 void UniverseJavaCspSolver::addCountWithVariableValues(
         const vector<string> &variables, const vector<string> &values, UniverseSetBelongingOperator op,
         const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCountWithVariableValues(
         const vector<string> &variables, const vector<string> &values, UniverseSetBelongingOperator op,
         const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCountIntensionWithConstantValues(
@@ -475,14 +475,14 @@ void UniverseJavaCspSolver::addCountIntensionWithConstantValues(
         const vector<IUniverseIntensionConstraint *> &expressions,
         const vector<BigInteger> &values, UniverseSetBelongingOperator op,
         const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCountIntensionWithConstantValues(
         const vector<IUniverseIntensionConstraint *> &expressions,
         const vector<BigInteger> &values, UniverseSetBelongingOperator op,
         const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addNValues(
@@ -530,27 +530,27 @@ void UniverseJavaCspSolver::addNValuesExcept(const vector<string> &variables, Un
 void UniverseJavaCspSolver::addNValues(const vector<string> &variables,
                                        UniverseSetBelongingOperator op, const BigInteger &min,
                                        const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addNValuesExcept(const vector<string> &variables,
                                              UniverseSetBelongingOperator op, const BigInteger &min,
                                              const BigInteger &max,
                                              const vector<BigInteger> &except) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addNValues(const vector<string> &variables,
                                        UniverseSetBelongingOperator op,
                                        const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addNValuesExcept(const vector<string> &variables,
                                              UniverseSetBelongingOperator op,
                                              const vector<BigInteger> &set,
                                              const vector<BigInteger> &except) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addNValuesIntension(const vector<IUniverseIntensionConstraint *> &expressions,
@@ -576,52 +576,52 @@ void UniverseJavaCspSolver::addNValuesIntension(const vector<IUniverseIntensionC
 void UniverseJavaCspSolver::addNValuesIntension(const vector<IUniverseIntensionConstraint *> &expressions,
                                                 UniverseSetBelongingOperator op, const BigInteger &min,
                                                 const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addNValuesIntension(const vector<IUniverseIntensionConstraint *> &expressions,
                                                 UniverseSetBelongingOperator op,
                                                 const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addBinPacking(const vector<string> &variables, const vector<BigInteger> &sizes,
                                      UniverseRelationalOperator op, const BigInteger &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addBinPacking(const vector<string> &variables, const vector<BigInteger> &sizes,
                                      UniverseRelationalOperator op, const string &variable) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addBinPacking(const vector<string> &variables, const vector<BigInteger> &sizes,
                                      UniverseSetBelongingOperator op, const BigInteger &min,
                                      const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addBinPacking(const vector<string> &variables, const vector<BigInteger> &sizes,
                                      UniverseSetBelongingOperator op,
                                      const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addBinPackingWithConstantCapacities(const vector<string> &variables,
                                                                 const vector<BigInteger> &sizes,
                                                                 const vector<BigInteger> &capacities,
                                                                 bool loads) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addBinPackingWithVariableCapacities(const vector<string> &variables,
                                                                 const vector<BigInteger> &sizes,
                                                                 const vector<string> &capacities, bool loads) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(
@@ -683,7 +683,7 @@ void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(const ve
                                                                         const vector<BigInteger> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(const vector<string> &origins,
@@ -692,7 +692,7 @@ void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(const ve
                                                                         const vector<BigInteger> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(const vector<string> &origins,
@@ -700,7 +700,7 @@ void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(const ve
                                                                         const vector<BigInteger> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(const vector<string> &origins,
@@ -709,7 +709,7 @@ void UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights(const ve
                                                                         const vector<BigInteger> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(
@@ -771,7 +771,7 @@ void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(const ve
                                                                         const vector<string> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(const vector<string> &origins,
@@ -780,7 +780,7 @@ void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(const ve
                                                                         const vector<string> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(const vector<string> &origins,
@@ -788,7 +788,7 @@ void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(const ve
                                                                         const vector<string> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(const vector<string> &origins,
@@ -797,7 +797,7 @@ void UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights(const ve
                                                                         const vector<string> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(
@@ -845,7 +845,7 @@ void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(const ve
                                                                         const vector<BigInteger> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(const vector<string> &origins,
@@ -854,7 +854,7 @@ void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(const ve
                                                                         const vector<BigInteger> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(const vector<string> &origins,
@@ -862,7 +862,7 @@ void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(const ve
                                                                         const vector<BigInteger> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(const vector<string> &origins,
@@ -871,7 +871,7 @@ void UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights(const ve
                                                                         const vector<BigInteger> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(
@@ -947,7 +947,7 @@ void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(const ve
                                                                         const vector<string> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(const vector<string> &origins,
@@ -956,7 +956,7 @@ void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(const ve
                                                                         const vector<string> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(const vector<string> &origins,
@@ -964,7 +964,7 @@ void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(const ve
                                                                         const vector<string> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(const vector<string> &origins,
@@ -973,7 +973,7 @@ void UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights(const ve
                                                                         const vector<string> &heights,
                                                                         UniverseSetBelongingOperator op,
                                                                         const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 
@@ -982,7 +982,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    UniverseRelationalOperator wOperator, const BigInteger &wValue,
                                    const vector<BigInteger> &profits,
                                    UniverseRelationalOperator pOperator, const BigInteger &pValue) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -990,7 +990,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    UniverseRelationalOperator wOperator, const BigInteger &wValue,
                                    const vector<BigInteger> &profits,
                                    UniverseRelationalOperator pOperator, const string &pVariable) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -999,7 +999,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    const vector<BigInteger> &profits,
                                    UniverseSetBelongingOperator pOperator, const BigInteger &pMin,
                                    const BigInteger &pMax) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1008,7 +1008,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    const vector<BigInteger> &profits,
                                    UniverseSetBelongingOperator pOperator,
                                    const vector<BigInteger> &pSet) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1016,7 +1016,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    UniverseRelationalOperator wOperator, const string &wVariable,
                                    const vector<BigInteger> &profits,
                                    UniverseRelationalOperator pOperator, const BigInteger &pValue) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1024,7 +1024,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    UniverseRelationalOperator wOperator, const string &wVariable,
                                    const vector<BigInteger> &profits,
                                    UniverseRelationalOperator pOperator, const string &pVariable) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1033,7 +1033,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    const vector<BigInteger> &profits,
                                    UniverseSetBelongingOperator pOperator, const BigInteger &pMin,
                                    const BigInteger &pMax) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1042,7 +1042,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    const vector<BigInteger> &profits,
                                    UniverseSetBelongingOperator pOperator,
                                    const vector<BigInteger> &pSet) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1050,7 +1050,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    UniverseSetBelongingOperator wOperator, const BigInteger &wMin,
                                    const BigInteger &wMax, const vector<BigInteger> &profits,
                                    UniverseRelationalOperator pOperator, const BigInteger &pValue) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1058,7 +1058,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    UniverseSetBelongingOperator wOperator, const BigInteger &wMin,
                                    const BigInteger &wMax, const vector<BigInteger> &profits,
                                    UniverseRelationalOperator pOperator, const string &pVariable) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1067,7 +1067,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    const BigInteger &wMax, const vector<BigInteger> &profits,
                                    UniverseSetBelongingOperator pOperator, const BigInteger &pMin,
                                    const BigInteger &pMax) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1076,7 +1076,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    const BigInteger &wMax, const vector<BigInteger> &profits,
                                    UniverseSetBelongingOperator pOperator,
                                    const vector<BigInteger> &pSet) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1085,7 +1085,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    const vector<BigInteger> &wSet,
                                    const vector<BigInteger> &profits,
                                    UniverseRelationalOperator pOperator, const BigInteger &pValue) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1094,7 +1094,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    const vector<BigInteger> &wSet,
                                    const vector<BigInteger> &profits,
                                    UniverseRelationalOperator pOperator, const string &pVariable) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1104,7 +1104,7 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    const vector<BigInteger> &profits,
                                    UniverseSetBelongingOperator pOperator, const BigInteger &pMin,
                                    const BigInteger &pMax) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
@@ -1114,150 +1114,150 @@ UniverseJavaCspSolver::addKnapsack(const vector<string> &variables, const vector
                                    const vector<BigInteger> &profits,
                                    UniverseSetBelongingOperator pOperator,
                                    const vector<BigInteger> &pSet) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addStretch(const vector<string> &variables, const vector<BigInteger> &values,
                                        const vector<BigInteger> &widthsMin,
                                        const vector<BigInteger> &widthsMax) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addStretch(const vector<string> &variables, const vector<BigInteger> &values,
                                        const vector<BigInteger> &widthsMin,
                                        const vector<BigInteger> &widthsMax,
                                        const vector<vector<BigInteger>> &patterns) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElement(const vector<string> &variables, UniverseRelationalOperator op,
                                        const BigInteger &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElement(const vector<string> &variables, UniverseRelationalOperator op,
                                        const string &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElement(const vector<string> &variables, UniverseSetBelongingOperator op,
                                        const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElement(const vector<string> &variables, UniverseSetBelongingOperator op,
                                        const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElementConstantValues(const vector<BigInteger> &values, int startIndex,
                                                      const string &index, UniverseRelationalOperator op,
                                                      const BigInteger &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElementConstantValues(const vector<BigInteger> &values, int startIndex,
                                                      const string &index, UniverseRelationalOperator op,
                                                      const string &variable) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElementConstantValues(const vector<BigInteger> &values, int startIndex,
                                                      const string &index, UniverseSetBelongingOperator op,
                                                      const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElementConstantValues(const vector<BigInteger> &values, int startIndex,
                                                      const string &index, UniverseSetBelongingOperator op,
                                                      const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElement(const vector<string> &variables, int startIndex, const string &index,
                                        UniverseRelationalOperator op, const BigInteger &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElement(const vector<string> &variables, int startIndex, const string &index,
                                        UniverseRelationalOperator op, const string &variable) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElement(const vector<string> &variables, int startIndex, const string &index,
                                        UniverseSetBelongingOperator op, const BigInteger &min,
                                        const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElement(const vector<string> &variables, int startIndex, const string &index,
                                        UniverseSetBelongingOperator op,
                                        const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElementConstantMatrix(const vector<vector<BigInteger>> &matrix,
                                                      int startRowIndex, const string &rowIndex, int startColIndex,
                                                      const string &colIndex, UniverseRelationalOperator op,
                                                      const BigInteger &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElementConstantMatrix(const vector<vector<BigInteger>> &matrix,
                                                      int startRowIndex, const string &rowIndex, int startColIndex,
                                                      const string &colIndex, UniverseRelationalOperator op,
                                                      const string &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElementConstantMatrix(const vector<vector<BigInteger>> &matrix,
                                                      int startRowIndex, const string &rowIndex, int startColIndex,
                                                      const string &colIndex, UniverseSetBelongingOperator op,
                                                      const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElementConstantMatrix(const vector<vector<BigInteger>> &matrix,
                                                      int startRowIndex, const string &rowIndex, int startColIndex,
                                                      const string &colIndex, UniverseSetBelongingOperator op,
                                                      const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElementMatrix(const vector<vector<string>> &matrix, int startRowIndex,
                                              const string &rowIndex, int startColIndex, const string &colIndex,
                                              UniverseRelationalOperator op, const BigInteger &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElementMatrix(const vector<vector<string>> &matrix, int startRowIndex,
                                              const string &rowIndex, int startColIndex, const string &colIndex,
                                              UniverseRelationalOperator op, const string &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElementMatrix(const vector<vector<string>> &matrix, int startRowIndex,
                                              const string &rowIndex, int startColIndex, const string &colIndex,
                                              UniverseSetBelongingOperator op, const BigInteger &min,
                                              const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addElementMatrix(const vector<vector<string>> &matrix, int startRowIndex,
                                              const string &rowIndex, int startColIndex, const string &colIndex,
                                              UniverseSetBelongingOperator op,
                                              const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addPrecedence(const vector<string> &variables) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addPrecedence(const vector<string> &variables, const vector<BigInteger> &values,
                                      bool covered) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addSupport(const string &variable, const vector<BigInteger> &allowedValues,bool hasStar) {
@@ -1269,7 +1269,7 @@ void UniverseJavaCspSolver::addSupport(const string &variable, const vector<BigI
 }
 
 void UniverseJavaCspSolver::addSupportSymbolic(const string &variable, const vector<string> &allowedValues,bool hasStar) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addSupport(
@@ -1283,7 +1283,7 @@ void UniverseJavaCspSolver::addSupport(
 
 void UniverseJavaCspSolver::addSupportSymbolic(const vector<string> &variableTuple,
                                                const vector<vector<string>> &allowedValues,bool hasStar) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addConflicts(const string &variable, const vector<BigInteger> &forbiddenValues,bool hasStar) {
@@ -1295,7 +1295,7 @@ void UniverseJavaCspSolver::addConflicts(const string &variable, const vector<Bi
 }
 
 void UniverseJavaCspSolver::addConflictsSymbolic(const string &variable, const vector<string> &forbiddenValues,bool hasStar) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addConflicts(
@@ -1309,12 +1309,12 @@ void UniverseJavaCspSolver::addConflicts(
 
 void UniverseJavaCspSolver::addConflictsSymbolic(const vector<string> &variableTuple,
                                                  const vector<vector<string>> &forbiddenValues,bool hasStar) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addIntension(IUniverseIntensionConstraint *constr) {
     auto mtd = interface->getMethod("addIntension",
-                                    METHOD(VOID, CLASS(fr/univartois/cril/juniverse/csp/intension/IIntensionConstraint)));
+                                    METHOD(VOID, CLASS(fr/univartois/cril/juniverse/csp/intension/IUniverseIntensionConstraint)));
     auto jConstraint = (UniverseJavaIntensionConstraint *) constr;
     mtd.invoke(object, ***jConstraint);
 }
@@ -1430,34 +1430,34 @@ void UniverseJavaCspSolver::addMinimum(
 
 void UniverseJavaCspSolver::addMinimum(const vector<string> &variables, UniverseSetBelongingOperator op,
                                        const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMinimum(const vector<string> &variables, UniverseSetBelongingOperator op,
                                        const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMinimumIndex(const vector<string> &variables, int startIndex, const string &index,
                                             UniverseRelationalOperator op, const BigInteger &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMinimumIndex(const vector<string> &variables, int startIndex, const string &index,
                                             UniverseRelationalOperator op, const string &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMinimumIndex(const vector<string> &variables, int startIndex, const string &index,
                                             UniverseSetBelongingOperator op, const BigInteger &min,
                                             const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMinimumIndex(const vector<string> &variables, int startIndex, const string &index,
                                             UniverseSetBelongingOperator op,
                                             const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMinimumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
@@ -1484,60 +1484,60 @@ void
 UniverseJavaCspSolver::addMinimumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
                                            UniverseSetBelongingOperator op, const BigInteger &min,
                                            const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addMinimumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
                                            UniverseSetBelongingOperator op,
                                            const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMinimumArg(const vector<string> &variables, UniverseRelationalOperator op,
                                           const BigInteger &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMinimumArg(const vector<string> &variables, UniverseRelationalOperator op,
                                           const string &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addMinimumArg(const vector<string> &variables, UniverseSetBelongingOperator op,
                                      const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addMinimumArg(const vector<string> &variables, UniverseSetBelongingOperator op,
                                      const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMinimumArgIntension(
         const vector<IUniverseIntensionConstraint *> &intensionConstraints,
         UniverseRelationalOperator op, const BigInteger &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMinimumArgIntension(
         const vector<IUniverseIntensionConstraint *> &intensionConstraints,
         UniverseRelationalOperator op, const string &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMinimumArgIntension(
         const vector<IUniverseIntensionConstraint *> &intensionConstraints,
         UniverseSetBelongingOperator op, const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMinimumArgIntension(
         const vector<IUniverseIntensionConstraint *> &intensionConstraints,
         UniverseSetBelongingOperator op, const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximum(
@@ -1562,34 +1562,34 @@ void UniverseJavaCspSolver::addMaximum(
 
 void UniverseJavaCspSolver::addMaximum(const vector<string> &variables, UniverseSetBelongingOperator op,
                                        const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximum(const vector<string> &variables, UniverseSetBelongingOperator op,
                                        const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximumIndex(const vector<string> &variables, int startIndex, const string &index,
                                             UniverseRelationalOperator op, const BigInteger &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximumIndex(const vector<string> &variables, int startIndex, const string &index,
                                             UniverseRelationalOperator op, const string &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximumIndex(const vector<string> &variables, int startIndex, const string &index,
                                             UniverseSetBelongingOperator op, const BigInteger &min,
                                             const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximumIndex(const vector<string> &variables, int startIndex, const string &index,
                                             UniverseSetBelongingOperator op,
                                             const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
@@ -1616,60 +1616,60 @@ void
 UniverseJavaCspSolver::addMaximumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
                                            UniverseSetBelongingOperator op, const BigInteger &min,
                                            const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addMaximumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
                                            UniverseSetBelongingOperator op,
                                            const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximumArg(const vector<string> &variables, UniverseRelationalOperator op,
                                           const BigInteger &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximumArg(const vector<string> &variables, UniverseRelationalOperator op,
                                           const string &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addMaximumArg(const vector<string> &variables, UniverseSetBelongingOperator op,
                                      const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addMaximumArg(const vector<string> &variables, UniverseSetBelongingOperator op,
                                      const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximumArgIntension(
         const vector<IUniverseIntensionConstraint *> &intensionConstraints,
         UniverseRelationalOperator op, const BigInteger &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximumArgIntension(
         const vector<IUniverseIntensionConstraint *> &intensionConstraints,
         UniverseRelationalOperator op, const string &value) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximumArgIntension(
         const vector<IUniverseIntensionConstraint *> &intensionConstraints,
         UniverseSetBelongingOperator op, const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMaximumArgIntension(
         const vector<IUniverseIntensionConstraint *> &intensionConstraints,
         UniverseSetBelongingOperator op, const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addNoOverlap(const vector<string> &variables, const vector<BigInteger> &length) {
@@ -1711,14 +1711,14 @@ void UniverseJavaCspSolver::addBiDimensionalNoOverlap(const vector<string> &xVar
                                                       const vector<string> &yVariables,
                                                       const vector<string> &xLength,
                                                       const vector<BigInteger> &yLength) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addBiDimensionalNoOverlap(const vector<string> &xVariables,
                                                       const vector<string> &yVariables,
                                                       const vector<string> &xLength,
                                                       const vector<BigInteger> &yLength, bool zeroIgnored) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addMultiDimensionalNoOverlap(
@@ -1814,7 +1814,7 @@ void UniverseJavaCspSolver::addLex(const vector<vector<string>> &tuples, Univers
 void UniverseJavaCspSolver::addLex(const vector<vector<string>> &variables,
                                    const vector<vector<BigInteger>> &limit,
                                    UniverseRelationalOperator op) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addLexMatrix(const vector<vector<string>> &matrix, UniverseRelationalOperator op) {
@@ -1848,12 +1848,12 @@ void UniverseJavaCspSolver::addSum(const vector<string> &variables, const vector
 
 void UniverseJavaCspSolver::addSum(const vector<string> &variables, UniverseSetBelongingOperator op,
                                    const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addSum(const vector<string> &variables, UniverseSetBelongingOperator op,
                                    const vector<BigInteger> &values) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addSum(
@@ -1880,13 +1880,13 @@ void UniverseJavaCspSolver::addSum(const vector<string> &variables, const vector
 void
 UniverseJavaCspSolver::addSum(const vector<string> &variables, const vector<BigInteger> &coefficients,
                               UniverseSetBelongingOperator op, const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addSum(const vector<string> &variables, const vector<BigInteger> &coefficients,
                               UniverseSetBelongingOperator op, const vector<BigInteger> &values) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
@@ -1913,13 +1913,13 @@ void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConst
 void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConstraint *> &expressions,
                                             UniverseSetBelongingOperator op, const BigInteger &min,
                                             const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConstraint *> &expressions,
                                             UniverseSetBelongingOperator op,
                                             const vector<BigInteger> &values) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConstraint *> &intensionConstraints,
@@ -1947,14 +1947,14 @@ void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConst
                                             const vector<BigInteger> &coefficients,
                                             UniverseSetBelongingOperator op, const BigInteger &min,
                                             const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addSumIntension(const vector<IUniverseIntensionConstraint *> &expressions,
                                             const vector<BigInteger> &coefficients,
                                             UniverseSetBelongingOperator op,
                                             const vector<BigInteger> &values) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addSumWithVariableCoefficients(const vector<string> &variables,
@@ -1983,14 +1983,14 @@ void UniverseJavaCspSolver::addSumWithVariableCoefficients(const vector<string> 
                                                            const vector<string> &coefficients,
                                                            UniverseSetBelongingOperator op,
                                                            const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addSumWithVariableCoefficients(const vector<string> &variables,
                                                            const vector<string> &coefficients,
                                                            UniverseSetBelongingOperator op,
                                                            const vector<BigInteger> &values) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addSumIntensionWithVariableCoefficients(
@@ -2020,55 +2020,55 @@ void UniverseJavaCspSolver::addSumIntensionWithVariableCoefficients(
 void UniverseJavaCspSolver::addSumIntensionWithVariableCoefficients(
         const vector<IUniverseIntensionConstraint *> &expressions, const vector<string> &coefficients,
         UniverseSetBelongingOperator op, const BigInteger &min, const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addSumIntensionWithVariableCoefficients(
         const vector<IUniverseIntensionConstraint *> &expressions, const vector<string> &coefficients,
         UniverseSetBelongingOperator op, const vector<BigInteger> &values) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCircuit(const vector<string> &variables, int startIndex) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCircuit(const vector<string> &variables, int startIndex, const BigInteger &size) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addCircuit(const vector<string> &variables, int startIndex, const string &size) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addMDD(const vector<string> &variables, const vector<UniverseTransition> &transitions) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void
 UniverseJavaCspSolver::addRegular(const vector<string> &variables, const vector<UniverseTransition> &transitions,
                                   const string &startState, const vector<string> &finalStates) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addFlow(const vector<string> &variables, const vector<BigInteger> &balance,
                                     const vector<vector<BigInteger>> &edges) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addFlow(const vector<string> &variables, const vector<BigInteger> &balance,
                                     const vector<vector<BigInteger>> &edges,
                                     const vector<BigInteger> &weights,
                                     UniverseRelationalOperator op, const BigInteger &totalCost) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addFlow(const vector<string> &variables, const vector<BigInteger> &balance,
                                     const vector<vector<BigInteger>> &edges,
                                     const vector<BigInteger> &weights,
                                     UniverseRelationalOperator op, const string &totalCost) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addFlow(const vector<string> &variables, const vector<BigInteger> &balance,
@@ -2076,7 +2076,7 @@ void UniverseJavaCspSolver::addFlow(const vector<string> &variables, const vecto
                                     const vector<BigInteger> &weights,
                                     UniverseSetBelongingOperator op, const BigInteger &min,
                                     const BigInteger &max) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::addFlow(const vector<string> &variables, const vector<BigInteger> &balance,
@@ -2084,7 +2084,7 @@ void UniverseJavaCspSolver::addFlow(const vector<string> &variables, const vecto
                                     const vector<BigInteger> &weights,
                                     UniverseSetBelongingOperator op,
                                     const vector<BigInteger> &set) {
-    // TODO
+    throw runtime_error("Not implemented yet !"); // TODO
 }
 
 void UniverseJavaCspSolver::minimizeVariable(const string &variable) {

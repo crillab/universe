@@ -38,7 +38,7 @@
 #include "../../../include/java/JavaBigInteger.hpp"
 #include "../../../include/java/JavaList.hpp"
 
-#define INTENSION_CONSTR CLASS(fr/univartois/cril/juniverse/csp/intension/IIntensionConstraint)
+#define INTENSION_CONSTR CLASS(fr/univartois/cril/juniverse/csp/intension/IUniverseIntensionConstraint)
 #define UNIVERSE_OPERATOR CLASS(fr/univartois/cril/juniverse/csp/operator/UniverseOperator)
 
 using namespace easyjni;

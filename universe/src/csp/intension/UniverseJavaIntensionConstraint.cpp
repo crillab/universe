@@ -61,6 +61,6 @@ void UniverseJavaIntensionConstraint::accept(IUniverseIntensionConstraintVisitor
 void UniverseJavaIntensionConstraint::loadInterface() {
     if (interface == nullptr) {
         interface = new JavaClass(JavaVirtualMachineRegistry::get()->loadClass(
-                "fr/univartois/cril/juniverse/csp/intension/IIntensionConstraint"));
+                "fr/univartois/cril/juniverse/csp/intension/IUniverseIntensionConstraint"));
     }
 }

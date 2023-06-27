@@ -36,6 +36,7 @@
 #include "../../include/java/JavaMapOfString.hpp"
 #include "../../include/listener/UniverseJavaSearchListener.hpp"
 #include "../../include/optim/JavaOptimizationSolver.hpp"
+#include "../../include/core/problem/UniverseJavaConstraint.hpp"
 
 using namespace easyjni;
 using namespace std;
@@ -90,6 +91,25 @@ const vector<string> &UniverseJavaSolver::getAuxiliaryVariables() {
 
     return auxiliaryVariables;
 }
+
+
+const vector<IUniverseConstraint*> &UniverseJavaSolver::getConstraints() {
+    if (constraints.empty()) {
+        // Getting the variables as a Java list.
+        auto mtd = interface->getObjectMethod("getConstraints", METHOD(CLASS(java/util/List)));
+        auto obj = mtd.invoke(object);
+        auto jList = JavaList::of(obj);
+
+        // Converting the Java list to a C++ vector.
+        function<IUniverseConstraint*(JavaObject)> fct = [] (JavaObject obj) {
+            return UniverseJavaConstraint::of(obj);
+        };
+        constraints = jList.asVector(fct);
+    }
+
+    return constraints;
+}
+
 
 void UniverseJavaSolver::decisionVariables(const vector<string> &variables) {
     // Converting the vector of variables to a Java list.

@@ -86,6 +86,13 @@ namespace Universe {
         [[nodiscard]] virtual const std::vector<std::string> &getAuxiliaryVariables() = 0;
 
         /**
+         * Gives the list of the constraints in this solver.
+         *
+         * @return The list of the constraints.
+         */
+        [[nodiscard]] virtual const std::vector<IUniverseConstraint*> &getConstraints() = 0;
+
+        /**
          * Advises this solver to focus on some variables to make decisions.
          *
          * @param variables The variables on which to make decisions.

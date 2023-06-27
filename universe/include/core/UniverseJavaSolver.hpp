@@ -80,6 +80,11 @@ namespace Universe {
          */
         std::vector<std::string> auxiliaryVariables;
 
+        /**
+         * The constraints used by the solver.
+         */
+        std::vector<IUniverseConstraint*> constraints;
+
     public:
 
         /**
@@ -122,6 +127,12 @@ namespace Universe {
          * @return The list of the auxiliary variables, given by their name.
          */
         const std::vector<std::string> &getAuxiliaryVariables() override;
+        /**
+         * Gives the list of the constraints in this solver.
+         *
+         * @return The list of the constraints.
+         */
+        const vector<IUniverseConstraint*> &getConstraints() override;
 
         /**
          * Advises this solver to focus on some variables to make decisions.

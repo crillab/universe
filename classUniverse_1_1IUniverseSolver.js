@@ -6,6 +6,7 @@ var classUniverse_1_1IUniverseSolver =
     [ "checkSolution", "classUniverse_1_1IUniverseSolver.html#a0f5ece35aa374324673ca8307289d7e2", null ],
     [ "decisionVariables", "classUniverse_1_1IUniverseSolver.html#a2df7f50a3fb685fda9a19fd466bebc3c", null ],
     [ "getAuxiliaryVariables", "classUniverse_1_1IUniverseSolver.html#a331d7b66278d5180f2b909fa7375cbab", null ],
+    [ "getConstraints", "classUniverse_1_1IUniverseSolver.html#a538caf1798e6f6da8f9cbf47e2d28af6", null ],
     [ "getVariablesMapping", "classUniverse_1_1IUniverseSolver.html#ae083822fe0cc090e6f4dc5adf4fb59cc", null ],
     [ "interrupt", "classUniverse_1_1IUniverseSolver.html#ac0dc1989f6cb78a4310b7553c87fc5c2", null ],
     [ "isOptimization", "classUniverse_1_1IUniverseSolver.html#a517c70387547f9bc0363a6afdf382ff0", null ],

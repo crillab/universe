@@ -52,9 +52,9 @@ var NAVTREEINDEX =
 "AbstractUniverseIntensionConstraintFactory_8cpp.html",
 "classUniverse_1_1AbstractUniverseIntensionConstraintFactory.html#a9d37996b8c0499ddb9ce4f4fe6faf5a6",
 "classUniverse_1_1IUniverseCspSolver.html#ab25d68836d1adeec60b9632f9aeca991",
-"classUniverse_1_1UniverseConstantIntensionConstraint.html#a5431c83e476fe41303f7913baa318806",
-"classUniverse_1_1UniverseJavaCspSolver.html#ab17a162080750c2eeb889459ce5ffe97",
-"functions.html"
+"classUniverse_1_1UniverseConstantIntensionConstraint.html",
+"classUniverse_1_1UniverseJavaCspSolver.html#ab0c99a3ac54a24f21400fcf38dbfbe27",
+"classes.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

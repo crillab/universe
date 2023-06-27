@@ -131,6 +131,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2df7f50a3fb685fda9a19fd466bebc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a331d7b66278d5180f2b909fa7375cbab"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a331d7b66278d5180f2b909fa7375cbab">getAuxiliaryVariables</a> ()=0</td></tr>
 <tr class="separator:a331d7b66278d5180f2b909fa7375cbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a538caf1798e6f6da8f9cbf47e2d28af6"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseConstraint.html">IUniverseConstraint</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#a538caf1798e6f6da8f9cbf47e2d28af6">getConstraints</a> ()=0</td></tr>
+<tr class="separator:a538caf1798e6f6da8f9cbf47e2d28af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae083822fe0cc090e6f4dc5adf4fb59cc"><td class="memItemLeft" align="right" valign="top">virtual const std::map&lt; std::string, <a class="el" href="classUniverse_1_1IUniverseVariable.html">Universe::IUniverseVariable</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#ae083822fe0cc090e6f4dc5adf4fb59cc">getVariablesMapping</a> ()=0</td></tr>
 <tr class="separator:ae083822fe0cc090e6f4dc5adf4fb59cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac0dc1989f6cb78a4310b7553c87fc5c2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseSolver.html#ac0dc1989f6cb78a4310b7553c87fc5c2">interrupt</a> ()=0</td></tr>
@@ -369,6 +371,35 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>The list of the auxiliary variables, given by their name. </dd></dl>
 
 <p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ae1ec4dbc2fc10172db90949dfa810b00">Universe::UniverseJavaSolver</a>.</p>
+
+</div>
+</div>
+<a id="a538caf1798e6f6da8f9cbf47e2d28af6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a538caf1798e6f6da8f9cbf47e2d28af6">&#9670;&nbsp;</a></span>getConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::vector&lt;<a class="el" href="classUniverse_1_1IUniverseConstraint.html">IUniverseConstraint</a>*&gt;&amp; Universe::IUniverseSolver::getConstraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives the list of the constraints in this solver.</p>
+<dl class="section return"><dt>Returns</dt><dd>The list of the constraints. </dd></dl>
+
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ae791712bbfa35a08cf4488f0f4eed33e">Universe::UniverseJavaSolver</a>.</p>
 
 </div>
 </div>

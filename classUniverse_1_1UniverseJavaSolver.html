@@ -126,6 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a908a7645a8a5fda09ee1746d22bebbfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1ec4dbc2fc10172db90949dfa810b00"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ae1ec4dbc2fc10172db90949dfa810b00">getAuxiliaryVariables</a> () override</td></tr>
 <tr class="separator:ae1ec4dbc2fc10172db90949dfa810b00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae791712bbfa35a08cf4488f0f4eed33e"><td class="memItemLeft" align="right" valign="top">const vector&lt; <a class="el" href="classUniverse_1_1IUniverseConstraint.html">IUniverseConstraint</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ae791712bbfa35a08cf4488f0f4eed33e">getConstraints</a> () override</td></tr>
+<tr class="separator:ae791712bbfa35a08cf4488f0f4eed33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab238da06423c8060f7f6293cfb1fb2c0"><td class="memItemLeft" align="right" valign="top">const std::map&lt; std::string, <a class="el" href="classUniverse_1_1IUniverseVariable.html">Universe::IUniverseVariable</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#ab238da06423c8060f7f6293cfb1fb2c0">getVariablesMapping</a> () override</td></tr>
 <tr class="separator:ab238da06423c8060f7f6293cfb1fb2c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aee9cc3bde13f1c08b9ca24a3595a37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#a2aee9cc3bde13f1c08b9ca24a3595a37">interrupt</a> () override</td></tr>
@@ -184,6 +186,8 @@ Static Protected Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:abd063c84099ed4619f42e31eabc60c25"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#abd063c84099ed4619f42e31eabc60c25">auxiliaryVariables</a></td></tr>
 <tr class="separator:abd063c84099ed4619f42e31eabc60c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88845a5417e55cdf13f29ee6356845da"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseConstraint.html">IUniverseConstraint</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#a88845a5417e55cdf13f29ee6356845da">constraints</a></td></tr>
+<tr class="separator:a88845a5417e55cdf13f29ee6356845da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bc411feefd7c9d9abd8b62b4178dc4c"><td class="memItemLeft" align="right" valign="top">easyjni::JavaClass *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#a1bc411feefd7c9d9abd8b62b4178dc4c">interface</a></td></tr>
 <tr class="separator:a1bc411feefd7c9d9abd8b62b4178dc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a114bd970ca835f03282b7acd667f9fff"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="classUniverse_1_1IUniverseVariable.html">Universe::IUniverseVariable</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaSolver.html#a114bd970ca835f03282b7acd667f9fff">mapping</a></td></tr>
@@ -238,7 +242,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00044">44</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00045">45</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 </div>
 </div>
@@ -302,7 +306,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUniverse_1_1IUniverseSolver.html#a567425ff2b031b70fb813ce910318c8b">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00149">149</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00169">169</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 </div>
 </div>
@@ -333,7 +337,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a91ba2a683f6334d5cd9e29f2a471ac82">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00265">265</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00285">285</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>.</p>
 
@@ -373,7 +377,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a0f5ece35aa374324673ca8307289d7e2">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00270">270</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00290">290</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaMapOfString_8hpp_source.html#l00118">Universe::JavaMapOfString::from()</a>, <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, and <a class="el" href="JavaBigInteger_8cpp_source.html#l00053">Universe::JavaBigInteger::newInstance()</a>.</p>
 
@@ -412,7 +416,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a2df7f50a3fb685fda9a19fd466bebc3c">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00094">94</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00114">114</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaList_8hpp_source.html#l00119">Universe::JavaList::from()</a>, and <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>.</p>
 
@@ -445,9 +449,42 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a331d7b66278d5180f2b909fa7375cbab">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00077">77</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00078">78</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00081">auxiliaryVariables</a>, <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, and <a class="el" href="JavaList_8cpp_source.html#l00067">Universe::JavaList::of()</a>.</p>
+
+</div>
+</div>
+<a id="ae791712bbfa35a08cf4488f0f4eed33e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae791712bbfa35a08cf4488f0f4eed33e">&#9670;&nbsp;</a></span>getConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt; <a class="el" href="classUniverse_1_1IUniverseConstraint.html">IUniverseConstraint</a> * &gt; &amp; UniverseJavaSolver::getConstraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives the list of the constraints in this solver.</p>
+<dl class="section return"><dt>Returns</dt><dd>The list of the constraints. </dd></dl>
+
+<p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a538caf1798e6f6da8f9cbf47e2d28af6">Universe::IUniverseSolver</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00096">96</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00086">constraints</a>, <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, <a class="el" href="UniverseJavaConstraint_8cpp_source.html#l00057">Universe::UniverseJavaConstraint::of()</a>, and <a class="el" href="JavaList_8cpp_source.html#l00067">Universe::JavaList::of()</a>.</p>
 
 </div>
 </div>
@@ -478,7 +515,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#ae083822fe0cc090e6f4dc5adf4fb59cc">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00060">60</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00061">61</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00076">mapping</a>, <a class="el" href="JavaMapOfString_8cpp_source.html#l00065">Universe::JavaMapOfString::of()</a>, and <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00060">Universe::UniverseJavaVariable::of()</a>.</p>
 
@@ -510,7 +547,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#ac0dc1989f6cb78a4310b7553c87fc5c2">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00221">221</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00241">241</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>.</p>
 
@@ -543,7 +580,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a517c70387547f9bc0363a6afdf382ff0">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00129">129</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00149">149</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>.</p>
 
@@ -582,7 +619,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a7966c1dde6de26a852df04a988f991f1">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00185">185</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00205">205</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>.</p>
 
@@ -615,7 +652,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a87a9a73eb177019fa6af6184fe328c19">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00239">239</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00259">259</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaBigInteger_8cpp_source.html#l00076">Universe::JavaBigInteger::asBigInteger()</a>, <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, <a class="el" href="JavaBigInteger_8cpp_source.html#l00067">Universe::JavaBigInteger::of()</a>, and <a class="el" href="JavaMapOfString_8cpp_source.html#l00065">Universe::JavaMapOfString::of()</a>.</p>
 
@@ -655,7 +692,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a772581f6496bd4a1a8abf8b1292d692e">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00252">252</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00272">272</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaBigInteger_8cpp_source.html#l00076">Universe::JavaBigInteger::asBigInteger()</a>, <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, <a class="el" href="JavaBigInteger_8cpp_source.html#l00067">Universe::JavaBigInteger::of()</a>, and <a class="el" href="JavaMapOfString_8cpp_source.html#l00065">Universe::JavaMapOfString::of()</a>.</p>
 
@@ -688,7 +725,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a9656d32867b57556d3cf4837dce42d86">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00124">124</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00144">144</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>.</p>
 
@@ -721,7 +758,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a3825d87ddbdfb229a286d144c57b475d">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00055">55</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00056">56</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>.</p>
 
@@ -760,7 +797,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classUniverse_1_1IUniverseSolver.html#a70e988fc7fe99270fbf5ce2943b57fbd">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00162">162</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00182">182</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 </div>
 </div>
@@ -790,7 +827,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#adc17bd143d5a44ed9be59f5f6c54d4e8">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00050">50</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00051">51</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>.</p>
 
@@ -829,7 +866,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#ad459819c09ee1dcc1e6081361767d24d">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00175">175</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00195">195</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>.</p>
 
@@ -868,7 +905,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#ab88edebfbbefacfa62e116e0b789ba86">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00181">181</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00201">201</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 </div>
 </div>
@@ -905,7 +942,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#aab2de52dde22f996bfb19b57bb93e071">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00134">134</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00154">154</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>.</p>
 
@@ -944,7 +981,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#acb699799ca0af24d9cb5f565b2b86989">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00139">139</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00159">159</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>.</p>
 
@@ -983,7 +1020,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#aedf95a3d774a714d097ff4848cdafa52">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00144">144</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00164">164</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>.</p>
 
@@ -1016,7 +1053,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#ac299de70183cb0b98b7b9ad57a8bb479">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00226">226</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00246">246</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaBigInteger_8cpp_source.html#l00076">Universe::JavaBigInteger::asBigInteger()</a>, <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, <a class="el" href="JavaBigInteger_8cpp_source.html#l00067">Universe::JavaBigInteger::of()</a>, and <a class="el" href="JavaList_8cpp_source.html#l00067">Universe::JavaList::of()</a>.</p>
 
@@ -1049,9 +1086,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a59cf64167b8a989036770c6e06cde820">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00191">191</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00211">211</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00286">toUniverseSolverResult()</a>.</p>
+<p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00306">toUniverseSolverResult()</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02392">Universe::UniverseJavaCspSolver::solve()</a>, <a class="el" href="UniverseJavaPseudoBooleanSolver_8cpp_source.html#l00147">Universe::UniverseJavaPseudoBooleanSolver::solve()</a>, and <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00074">Universe::UniverseJavaSatSolver::solve()</a>.</p>
 
@@ -1091,9 +1128,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#af7e13a36b917799f9fc9237604b0cb8b">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00198">198</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00218">218</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00286">toUniverseSolverResult()</a>.</p>
+<p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00306">toUniverseSolverResult()</a>.</p>
 
 </div>
 </div>
@@ -1133,9 +1170,9 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="classUniverse_1_1UniverseJavaSatSolver.html#ad3ec031999e3ff2148052cb510f2740a">Universe::UniverseJavaSatSolver</a>, <a class="el" href="classUniverse_1_1UniverseJavaPseudoBooleanSolver.html#ac51c26c1c0799e25deb9af5da4b39bf6">Universe::UniverseJavaPseudoBooleanSolver</a>, and <a class="el" href="classUniverse_1_1UniverseJavaCspSolver.html#a25f5468f899b8818bfb0836beeadcc03">Universe::UniverseJavaCspSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00206">206</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00226">226</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, <a class="el" href="JavaBigInteger_8cpp_source.html#l00053">Universe::JavaBigInteger::newInstance()</a>, <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00314">toJavaAssumptions()</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00286">toUniverseSolverResult()</a>.</p>
+<p class="reference">References <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, <a class="el" href="JavaBigInteger_8cpp_source.html#l00053">Universe::JavaBigInteger::newInstance()</a>, <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00325">toJavaAssumptions()</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00306">toUniverseSolverResult()</a>.</p>
 
 </div>
 </div>
@@ -1190,11 +1227,11 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="classUniverse_1_1JavaList.html">JavaList</a> representing the assumptions. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00314">314</a> of file <a class="el" href="UniverseJavaSolver_8hpp_source.html">UniverseJavaSolver.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00325">325</a> of file <a class="el" href="UniverseJavaSolver_8hpp_source.html">UniverseJavaSolver.hpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaList_8hpp_source.html#l00119">Universe::JavaList::from()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00206">solve()</a>, and <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00060">Universe::UniverseJavaSatSolver::solveBoolean()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00226">solve()</a>, and <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00060">Universe::UniverseJavaSatSolver::solveBoolean()</a>.</p>
 
 </div>
 </div>
@@ -1225,7 +1262,7 @@ template&lt;typename T &gt; </div>
 
 <p>Reimplemented from <a class="el" href="classUniverse_1_1IUniverseSolver.html#a20fbb6964d1d6b5035e5849036dd776e">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00282">282</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00302">302</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="classUniverse_1_1JavaOptimizationSolver.html#a660781dad7c165e3c1b6578fd97b36f5">Universe::JavaOptimizationSolver::of()</a>.</p>
 
@@ -1263,9 +1300,9 @@ template&lt;typename T &gt; </div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The UniverseSolverResult corresponding to the given object. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00286">286</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00306">306</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00191">solve()</a>, <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00060">Universe::UniverseJavaSatSolver::solveBoolean()</a>, and <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00052">Universe::UniverseJavaSatSolver::solveDimacs()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00211">solve()</a>, <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00060">Universe::UniverseJavaSatSolver::solveBoolean()</a>, and <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00052">Universe::UniverseJavaSatSolver::solveDimacs()</a>.</p>
 
 </div>
 </div>
@@ -1313,7 +1350,7 @@ template&lt;typename T &gt; </div>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseSolver.html#a4828ae45a36ca7f5e37fc96cfe514c36">Universe::IUniverseSolver</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00106">106</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00126">126</a> of file <a class="el" href="UniverseJavaSolver_8cpp_source.html">UniverseJavaSolver.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="JavaList_8hpp_source.html#l00119">Universe::JavaList::from()</a>, <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">interface</a>, and <a class="el" href="JavaBigInteger_8cpp_source.html#l00053">Universe::JavaBigInteger::newInstance()</a>.</p>
 
@@ -1343,7 +1380,34 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00081">81</a> of file <a class="el" href="UniverseJavaSolver_8hpp_source.html">UniverseJavaSolver.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00077">getAuxiliaryVariables()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00078">getAuxiliaryVariables()</a>.</p>
+
+</div>
+</div>
+<a id="a88845a5417e55cdf13f29ee6356845da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88845a5417e55cdf13f29ee6356845da">&#9670;&nbsp;</a></span>constraints</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classUniverse_1_1IUniverseConstraint.html">IUniverseConstraint</a>*&gt; Universe::UniverseJavaSolver::constraints</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The constraints used by the solver. </p>
+
+<p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00086">86</a> of file <a class="el" href="UniverseJavaSolver_8hpp_source.html">UniverseJavaSolver.hpp</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02585">Universe::UniverseJavaCspSolver::asList()</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00096">getConstraints()</a>.</p>
 
 </div>
 </div>
@@ -1370,7 +1434,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00066">66</a> of file <a class="el" href="UniverseJavaSolver_8hpp_source.html">UniverseJavaSolver.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00191">Universe::UniverseJavaCspSolver::addAllDifferent()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00229">Universe::UniverseJavaCspSolver::addAllDifferentIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00218">Universe::UniverseJavaCspSolver::addAllDifferentList()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00204">Universe::UniverseJavaCspSolver::addAllDifferentMatrix()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01788">Universe::UniverseJavaCspSolver::addAllEqual()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01794">Universe::UniverseJavaCspSolver::addAllEqualIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00352">Universe::UniverseJavaCspSolver::addAmong()</a>, <a class="el" href="UniverseJavaPseudoBooleanSolver_8cpp_source.html#l00086">Universe::UniverseJavaPseudoBooleanSolver::addAtLeast()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00323">Universe::UniverseJavaCspSolver::addAtLeast()</a>, <a class="el" href="UniverseJavaPseudoBooleanSolver_8cpp_source.html#l00060">Universe::UniverseJavaPseudoBooleanSolver::addAtMost()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00372">Universe::UniverseJavaCspSolver::addAtMost()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00258">Universe::UniverseJavaCspSolver::addCardinalityWithConstantValuesAndConstantCounts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00269">Universe::UniverseJavaCspSolver::addCardinalityWithConstantValuesAndConstantIntervalCounts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00281">Universe::UniverseJavaCspSolver::addCardinalityWithConstantValuesAndVariableCounts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00291">Universe::UniverseJavaCspSolver::addCardinalityWithVariableValuesAndConstantCounts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00301">Universe::UniverseJavaCspSolver::addCardinalityWithVariableValuesAndConstantIntervalCounts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00313">Universe::UniverseJavaCspSolver::addCardinalityWithVariableValuesAndVariableCounts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00236">Universe::UniverseJavaCspSolver::addChannel()</a>, <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00046">Universe::UniverseJavaSatSolver::addClause()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00143">Universe::UniverseJavaCspSolver::addClause()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01289">Universe::UniverseJavaCspSolver::addConflicts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00450">Universe::UniverseJavaCspSolver::addCountIntensionWithConstantValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00382">Universe::UniverseJavaCspSolver::addCountWithConstantValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00416">Universe::UniverseJavaCspSolver::addCountWithVariableValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00627">Universe::UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00715">Universe::UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00803">Universe::UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00877">Universe::UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights()</a>, <a class="el" href="UniverseJavaPseudoBooleanSolver_8cpp_source.html#l00112">Universe::UniverseJavaPseudoBooleanSolver::addExactly()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00333">Universe::UniverseJavaCspSolver::addExactly()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00099">Universe::UniverseJavaCspSolver::addInstantiation()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01315">Universe::UniverseJavaCspSolver::addIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01806">Universe::UniverseJavaCspSolver::addLex()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01820">Universe::UniverseJavaCspSolver::addLexMatrix()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00151">Universe::UniverseJavaCspSolver::addLogical()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01543">Universe::UniverseJavaCspSolver::addMaximum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01595">Universe::UniverseJavaCspSolver::addMaximumIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01411">Universe::UniverseJavaCspSolver::addMinimum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01463">Universe::UniverseJavaCspSolver::addMinimumIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01724">Universe::UniverseJavaCspSolver::addMultiDimensionalNoOverlap()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01742">Universe::UniverseJavaCspSolver::addMultiDimensionalNoOverlapVariableLength()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01675">Universe::UniverseJavaCspSolver::addNoOverlap()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01692">Universe::UniverseJavaCspSolver::addNoOverlapVariableLength()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01800">Universe::UniverseJavaCspSolver::addNotAllEqual()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00488">Universe::UniverseJavaCspSolver::addNValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00498">Universe::UniverseJavaCspSolver::addNValuesExcept()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00556">Universe::UniverseJavaCspSolver::addNValuesIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01760">Universe::UniverseJavaCspSolver::addOrdered()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01768">Universe::UniverseJavaCspSolver::addOrderedWithConstantLength()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01778">Universe::UniverseJavaCspSolver::addOrderedWithVariableLength()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01322">Universe::UniverseJavaCspSolver::addPrimitive()</a>, <a class="el" href="UniverseJavaPseudoBooleanSolver_8cpp_source.html#l00050">Universe::UniverseJavaPseudoBooleanSolver::addPseudoBoolean()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01828">Universe::UniverseJavaCspSolver::addSum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01892">Universe::UniverseJavaCspSolver::addSumIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01996">Universe::UniverseJavaCspSolver::addSumIntensionWithVariableCoefficients()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01960">Universe::UniverseJavaCspSolver::addSumWithVariableCoefficients()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01263">Universe::UniverseJavaCspSolver::addSupport()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00265">checkSolution()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00094">decisionVariables()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00077">getAuxiliaryVariables()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00060">getVariablesMapping()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00221">interrupt()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00129">isOptimization()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00185">loadInstance()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00239">mapSolution()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02108">Universe::UniverseJavaCspSolver::maximizeExpression()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02316">Universe::UniverseJavaCspSolver::maximizeExpressionMaximum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02262">Universe::UniverseJavaCspSolver::maximizeExpressionMinimum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02370">Universe::UniverseJavaCspSolver::maximizeExpressionNValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02208">Universe::UniverseJavaCspSolver::maximizeExpressionProduct()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02154">Universe::UniverseJavaCspSolver::maximizeExpressionSum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02303">Universe::UniverseJavaCspSolver::maximizeMaximum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02249">Universe::UniverseJavaCspSolver::maximizeMinimum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02357">Universe::UniverseJavaCspSolver::maximizeNValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02195">Universe::UniverseJavaCspSolver::maximizeProduct()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02141">Universe::UniverseJavaCspSolver::maximizeSum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02096">Universe::UniverseJavaCspSolver::maximizeVariable()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02102">Universe::UniverseJavaCspSolver::minimizeExpression()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02289">Universe::UniverseJavaCspSolver::minimizeExpressionMaximum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02235">Universe::UniverseJavaCspSolver::minimizeExpressionMinimum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02343">Universe::UniverseJavaCspSolver::minimizeExpressionNValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02181">Universe::UniverseJavaCspSolver::minimizeExpressionProduct()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02127">Universe::UniverseJavaCspSolver::minimizeExpressionSum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02276">Universe::UniverseJavaCspSolver::minimizeMaximum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02222">Universe::UniverseJavaCspSolver::minimizeMinimum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02330">Universe::UniverseJavaCspSolver::minimizeNValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02168">Universe::UniverseJavaCspSolver::minimizeProduct()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02114">Universe::UniverseJavaCspSolver::minimizeSum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02090">Universe::UniverseJavaCspSolver::minimizeVariable()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00124">nConstraints()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00063">Universe::UniverseJavaCspSolver::newVariable()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00055">nVariables()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00050">reset()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00175">setLogFile()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00134">setTimeout()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00139">setTimeoutMs()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00144">setVerbosity()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00226">solution()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00191">solve()</a>, <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00060">Universe::UniverseJavaSatSolver::solveBoolean()</a>, <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00052">Universe::UniverseJavaSatSolver::solveDimacs()</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00106">valueHeuristicStatic()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00191">Universe::UniverseJavaCspSolver::addAllDifferent()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00229">Universe::UniverseJavaCspSolver::addAllDifferentIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00218">Universe::UniverseJavaCspSolver::addAllDifferentList()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00204">Universe::UniverseJavaCspSolver::addAllDifferentMatrix()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01788">Universe::UniverseJavaCspSolver::addAllEqual()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01794">Universe::UniverseJavaCspSolver::addAllEqualIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00352">Universe::UniverseJavaCspSolver::addAmong()</a>, <a class="el" href="UniverseJavaPseudoBooleanSolver_8cpp_source.html#l00086">Universe::UniverseJavaPseudoBooleanSolver::addAtLeast()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00323">Universe::UniverseJavaCspSolver::addAtLeast()</a>, <a class="el" href="UniverseJavaPseudoBooleanSolver_8cpp_source.html#l00060">Universe::UniverseJavaPseudoBooleanSolver::addAtMost()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00372">Universe::UniverseJavaCspSolver::addAtMost()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00258">Universe::UniverseJavaCspSolver::addCardinalityWithConstantValuesAndConstantCounts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00269">Universe::UniverseJavaCspSolver::addCardinalityWithConstantValuesAndConstantIntervalCounts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00281">Universe::UniverseJavaCspSolver::addCardinalityWithConstantValuesAndVariableCounts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00291">Universe::UniverseJavaCspSolver::addCardinalityWithVariableValuesAndConstantCounts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00301">Universe::UniverseJavaCspSolver::addCardinalityWithVariableValuesAndConstantIntervalCounts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00313">Universe::UniverseJavaCspSolver::addCardinalityWithVariableValuesAndVariableCounts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00236">Universe::UniverseJavaCspSolver::addChannel()</a>, <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00046">Universe::UniverseJavaSatSolver::addClause()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00143">Universe::UniverseJavaCspSolver::addClause()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01289">Universe::UniverseJavaCspSolver::addConflicts()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00450">Universe::UniverseJavaCspSolver::addCountIntensionWithConstantValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00382">Universe::UniverseJavaCspSolver::addCountWithConstantValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00416">Universe::UniverseJavaCspSolver::addCountWithVariableValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00627">Universe::UniverseJavaCspSolver::addCumulativeConstantLengthsConstantHeights()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00715">Universe::UniverseJavaCspSolver::addCumulativeConstantLengthsVariableHeights()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00803">Universe::UniverseJavaCspSolver::addCumulativeVariableLengthsConstantHeights()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00877">Universe::UniverseJavaCspSolver::addCumulativeVariableLengthsVariableHeights()</a>, <a class="el" href="UniverseJavaPseudoBooleanSolver_8cpp_source.html#l00112">Universe::UniverseJavaPseudoBooleanSolver::addExactly()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00333">Universe::UniverseJavaCspSolver::addExactly()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00099">Universe::UniverseJavaCspSolver::addInstantiation()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01315">Universe::UniverseJavaCspSolver::addIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01806">Universe::UniverseJavaCspSolver::addLex()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01820">Universe::UniverseJavaCspSolver::addLexMatrix()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00151">Universe::UniverseJavaCspSolver::addLogical()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01543">Universe::UniverseJavaCspSolver::addMaximum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01595">Universe::UniverseJavaCspSolver::addMaximumIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01411">Universe::UniverseJavaCspSolver::addMinimum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01463">Universe::UniverseJavaCspSolver::addMinimumIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01724">Universe::UniverseJavaCspSolver::addMultiDimensionalNoOverlap()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01742">Universe::UniverseJavaCspSolver::addMultiDimensionalNoOverlapVariableLength()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01675">Universe::UniverseJavaCspSolver::addNoOverlap()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01692">Universe::UniverseJavaCspSolver::addNoOverlapVariableLength()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01800">Universe::UniverseJavaCspSolver::addNotAllEqual()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00488">Universe::UniverseJavaCspSolver::addNValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00498">Universe::UniverseJavaCspSolver::addNValuesExcept()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00556">Universe::UniverseJavaCspSolver::addNValuesIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01760">Universe::UniverseJavaCspSolver::addOrdered()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01768">Universe::UniverseJavaCspSolver::addOrderedWithConstantLength()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01778">Universe::UniverseJavaCspSolver::addOrderedWithVariableLength()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01322">Universe::UniverseJavaCspSolver::addPrimitive()</a>, <a class="el" href="UniverseJavaPseudoBooleanSolver_8cpp_source.html#l00050">Universe::UniverseJavaPseudoBooleanSolver::addPseudoBoolean()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01828">Universe::UniverseJavaCspSolver::addSum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01892">Universe::UniverseJavaCspSolver::addSumIntension()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01996">Universe::UniverseJavaCspSolver::addSumIntensionWithVariableCoefficients()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01960">Universe::UniverseJavaCspSolver::addSumWithVariableCoefficients()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l01263">Universe::UniverseJavaCspSolver::addSupport()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00285">checkSolution()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00114">decisionVariables()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00078">getAuxiliaryVariables()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00096">getConstraints()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00061">getVariablesMapping()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00241">interrupt()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00149">isOptimization()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00205">loadInstance()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00259">mapSolution()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02108">Universe::UniverseJavaCspSolver::maximizeExpression()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02316">Universe::UniverseJavaCspSolver::maximizeExpressionMaximum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02262">Universe::UniverseJavaCspSolver::maximizeExpressionMinimum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02370">Universe::UniverseJavaCspSolver::maximizeExpressionNValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02208">Universe::UniverseJavaCspSolver::maximizeExpressionProduct()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02154">Universe::UniverseJavaCspSolver::maximizeExpressionSum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02303">Universe::UniverseJavaCspSolver::maximizeMaximum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02249">Universe::UniverseJavaCspSolver::maximizeMinimum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02357">Universe::UniverseJavaCspSolver::maximizeNValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02195">Universe::UniverseJavaCspSolver::maximizeProduct()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02141">Universe::UniverseJavaCspSolver::maximizeSum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02096">Universe::UniverseJavaCspSolver::maximizeVariable()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02102">Universe::UniverseJavaCspSolver::minimizeExpression()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02289">Universe::UniverseJavaCspSolver::minimizeExpressionMaximum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02235">Universe::UniverseJavaCspSolver::minimizeExpressionMinimum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02343">Universe::UniverseJavaCspSolver::minimizeExpressionNValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02181">Universe::UniverseJavaCspSolver::minimizeExpressionProduct()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02127">Universe::UniverseJavaCspSolver::minimizeExpressionSum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02276">Universe::UniverseJavaCspSolver::minimizeMaximum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02222">Universe::UniverseJavaCspSolver::minimizeMinimum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02330">Universe::UniverseJavaCspSolver::minimizeNValues()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02168">Universe::UniverseJavaCspSolver::minimizeProduct()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02114">Universe::UniverseJavaCspSolver::minimizeSum()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l02090">Universe::UniverseJavaCspSolver::minimizeVariable()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00144">nConstraints()</a>, <a class="el" href="UniverseJavaCspSolver_8cpp_source.html#l00063">Universe::UniverseJavaCspSolver::newVariable()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00056">nVariables()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00051">reset()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00195">setLogFile()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00154">setTimeout()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00159">setTimeoutMs()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00164">setVerbosity()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00246">solution()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00211">solve()</a>, <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00060">Universe::UniverseJavaSatSolver::solveBoolean()</a>, <a class="el" href="UniverseJavaSatSolver_8cpp_source.html#l00052">Universe::UniverseJavaSatSolver::solveDimacs()</a>, and <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00126">valueHeuristicStatic()</a>.</p>
 
 </div>
 </div>
@@ -1397,7 +1461,7 @@ template&lt;typename T &gt; </div>
 
 <p class="definition">Definition at line <a class="el" href="UniverseJavaSolver_8hpp_source.html#l00076">76</a> of file <a class="el" href="UniverseJavaSolver_8hpp_source.html">UniverseJavaSolver.hpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00060">getVariablesMapping()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00061">getVariablesMapping()</a>.</p>
 
 </div>
 </div>

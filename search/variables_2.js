@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mapping_888',['mapping',['../classUniverse_1_1UniverseJavaSolver.html#a114bd970ca835f03282b7acd667f9fff',1,'Universe::UniverseJavaSolver']]]
+  ['interface_889',['interface',['../classUniverse_1_1UniverseJavaSolver.html#a1bc411feefd7c9d9abd8b62b4178dc4c',1,'Universe::UniverseJavaSolver']]]
 ];

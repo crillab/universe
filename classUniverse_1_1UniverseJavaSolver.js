@@ -7,6 +7,7 @@ var classUniverse_1_1UniverseJavaSolver =
     [ "checkSolution", "classUniverse_1_1UniverseJavaSolver.html#aaec2d28d5de9e0dc99970877e34b9dde", null ],
     [ "decisionVariables", "classUniverse_1_1UniverseJavaSolver.html#a908a7645a8a5fda09ee1746d22bebbfd", null ],
     [ "getAuxiliaryVariables", "classUniverse_1_1UniverseJavaSolver.html#ae1ec4dbc2fc10172db90949dfa810b00", null ],
+    [ "getConstraints", "classUniverse_1_1UniverseJavaSolver.html#ae791712bbfa35a08cf4488f0f4eed33e", null ],
     [ "getVariablesMapping", "classUniverse_1_1UniverseJavaSolver.html#ab238da06423c8060f7f6293cfb1fb2c0", null ],
     [ "interrupt", "classUniverse_1_1UniverseJavaSolver.html#a2aee9cc3bde13f1c08b9ca24a3595a37", null ],
     [ "isOptimization", "classUniverse_1_1UniverseJavaSolver.html#a0fa943fef0268ebc8f350b076a072013", null ],
@@ -32,6 +33,7 @@ var classUniverse_1_1UniverseJavaSolver =
     [ "valueHeuristicStatic", "classUniverse_1_1UniverseJavaSolver.html#ad21606dbb9f371e17d5fd23416b52729", null ],
     [ "JavaOptimizationSolver", "classUniverse_1_1UniverseJavaSolver.html#a3f8a5e419ddd9e452098af843098e8de", null ],
     [ "auxiliaryVariables", "classUniverse_1_1UniverseJavaSolver.html#abd063c84099ed4619f42e31eabc60c25", null ],
+    [ "constraints", "classUniverse_1_1UniverseJavaSolver.html#a88845a5417e55cdf13f29ee6356845da", null ],
     [ "interface", "classUniverse_1_1UniverseJavaSolver.html#a1bc411feefd7c9d9abd8b62b4178dc4c", null ],
     [ "mapping", "classUniverse_1_1UniverseJavaSolver.html#a114bd970ca835f03282b7acd667f9fff", null ],
     [ "object", "classUniverse_1_1UniverseJavaSolver.html#acfe75f78942e49cd0f3024ba5251508d", null ]

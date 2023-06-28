@@ -114,45 +114,47 @@ $(document).ready(function(){initNavTree('UniverseJavaConstraint_8hpp_source.htm
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;../../../../libs/easy-jni/easyjni/JavaClass.h&quot;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IUniverseConstraint_8hpp.html">IUniverseConstraint.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">namespace </span>Universe {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseJavaConstraint.html">   44</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUniverse_1_1UniverseJavaConstraint.html">UniverseJavaConstraint</a> : <span class="keyword">public</span> <a class="code" href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a> {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">static</span> easyjni::JavaClass *constraintInterface;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        easyjni::JavaObject rawConstraint;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        std::vector&lt;Universe::IUniverseVariable *&gt; variables;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classUniverse_1_1UniverseJavaConstraint.html">UniverseJavaConstraint</a>(easyjni::JavaObject constraint);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> loadClass();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">static</span> <a class="code" href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a> *<a class="code" href="classUniverse_1_1UniverseJavaConstraint.html#aada72fcc64f22a5cc780d6e56e06a8b6">of</a>(easyjni::JavaObject constraint);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseJavaConstraint.html#a98d9ad933134a44ebce8d0684533ad49">   92</a></span>&#160;        <a class="code" href="classUniverse_1_1UniverseJavaConstraint.html#a98d9ad933134a44ebce8d0684533ad49">~UniverseJavaConstraint</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        easyjni::JavaObject <a class="code" href="classUniverse_1_1UniverseJavaConstraint.html#a5808e14d77d45d1e6580228f367da79d">operator*</a>();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keyword">const</span> std::vector&lt;Universe::IUniverseVariable *&gt; &amp;<a class="code" href="classUniverse_1_1UniverseJavaConstraint.html#abe33db2fce69825f624aa8bc8d0143e1">scope</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="classUniverse_1_1UniverseJavaConstraint.html#a091efa546afaffbfe83efa9825a62688">getScore</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    };</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IUniverseVariable_8hpp.html">IUniverseVariable.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">namespace </span>Universe {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseJavaConstraint.html">   45</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classUniverse_1_1UniverseJavaConstraint.html">UniverseJavaConstraint</a> : <span class="keyword">public</span> <a class="code" href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a> {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">static</span> easyjni::JavaClass *constraintInterface;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        easyjni::JavaObject rawConstraint;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        std::vector&lt;Universe::IUniverseVariable *&gt; variables;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">explicit</span> <a class="code" href="classUniverse_1_1UniverseJavaConstraint.html">UniverseJavaConstraint</a>(easyjni::JavaObject constraint);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">void</span> loadClass();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">static</span> <a class="code" href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a> *<a class="code" href="classUniverse_1_1UniverseJavaConstraint.html#aada72fcc64f22a5cc780d6e56e06a8b6">of</a>(easyjni::JavaObject constraint);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="classUniverse_1_1UniverseJavaConstraint.html#a98d9ad933134a44ebce8d0684533ad49">   93</a></span>&#160;        <a class="code" href="classUniverse_1_1UniverseJavaConstraint.html#a98d9ad933134a44ebce8d0684533ad49">~UniverseJavaConstraint</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        easyjni::JavaObject <a class="code" href="classUniverse_1_1UniverseJavaConstraint.html#a5808e14d77d45d1e6580228f367da79d">operator*</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keyword">const</span> std::vector&lt;Universe::IUniverseVariable *&gt; &amp;<a class="code" href="classUniverse_1_1UniverseJavaConstraint.html#abe33db2fce69825f624aa8bc8d0143e1">scope</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="classUniverse_1_1UniverseJavaConstraint.html#a091efa546afaffbfe83efa9825a62688">getScore</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    };</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;}</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aIUniverseConstraint_8hpp_html"><div class="ttname"><a href="IUniverseConstraint_8hpp.html">IUniverseConstraint.hpp</a></div><div class="ttdoc">Defines an interface for the constraints in a problem.</div></div>
+<div class="ttc" id="aIUniverseVariable_8hpp_html"><div class="ttname"><a href="IUniverseVariable_8hpp.html">IUniverseVariable.hpp</a></div><div class="ttdoc">Defines an interface for the variables in a problem.</div></div>
 <div class="ttc" id="aclassUniverse_1_1IUniverseConstraint_html"><div class="ttname"><a href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a></div><div class="ttdef"><b>Definition:</b> <a href="IUniverseConstraint_8hpp_source.html#l00041">IUniverseConstraint.hpp:41</a></div></div>
-<div class="ttc" id="aclassUniverse_1_1UniverseJavaConstraint_html"><div class="ttname"><a href="classUniverse_1_1UniverseJavaConstraint.html">Universe::UniverseJavaConstraint</a></div><div class="ttdef"><b>Definition:</b> <a href="UniverseJavaConstraint_8hpp_source.html#l00044">UniverseJavaConstraint.hpp:44</a></div></div>
+<div class="ttc" id="aclassUniverse_1_1UniverseJavaConstraint_html"><div class="ttname"><a href="classUniverse_1_1UniverseJavaConstraint.html">Universe::UniverseJavaConstraint</a></div><div class="ttdef"><b>Definition:</b> <a href="UniverseJavaConstraint_8hpp_source.html#l00045">UniverseJavaConstraint.hpp:45</a></div></div>
 <div class="ttc" id="aclassUniverse_1_1UniverseJavaConstraint_html_a091efa546afaffbfe83efa9825a62688"><div class="ttname"><a href="classUniverse_1_1UniverseJavaConstraint.html#a091efa546afaffbfe83efa9825a62688">Universe::UniverseJavaConstraint::getScore</a></div><div class="ttdeci">const double getScore() const override</div><div class="ttdef"><b>Definition:</b> <a href="UniverseJavaConstraint_8cpp_source.html#l00083">UniverseJavaConstraint.cpp:83</a></div></div>
 <div class="ttc" id="aclassUniverse_1_1UniverseJavaConstraint_html_a5808e14d77d45d1e6580228f367da79d"><div class="ttname"><a href="classUniverse_1_1UniverseJavaConstraint.html#a5808e14d77d45d1e6580228f367da79d">Universe::UniverseJavaConstraint::operator*</a></div><div class="ttdeci">easyjni::JavaObject operator*()</div><div class="ttdef"><b>Definition:</b> <a href="UniverseJavaConstraint_8cpp_source.html#l00062">UniverseJavaConstraint.cpp:62</a></div></div>
 <div class="ttc" id="aclassUniverse_1_1UniverseJavaConstraint_html_a98d9ad933134a44ebce8d0684533ad49"><div class="ttname"><a href="classUniverse_1_1UniverseJavaConstraint.html#a98d9ad933134a44ebce8d0684533ad49">Universe::UniverseJavaConstraint::~UniverseJavaConstraint</a></div><div class="ttdeci">~UniverseJavaConstraint() override=default</div></div>

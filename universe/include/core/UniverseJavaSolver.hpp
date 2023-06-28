@@ -132,7 +132,7 @@ namespace Universe {
          *
          * @return The list of the constraints.
          */
-        const vector<IUniverseConstraint*> &getConstraints() override;
+        const std::vector<Universe::IUniverseConstraint*> &getConstraints() override;
 
         /**
          * Advises this solver to focus on some variables to make decisions.

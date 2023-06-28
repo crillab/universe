@@ -61,6 +61,11 @@ namespace Universe {
          */
         std::string name;
 
+        /**
+         * The constraints containing this variable.
+         */
+        std::vector<Universe::IUniverseConstraint*> constraints;
+
     private:
 
         /**
@@ -120,6 +125,7 @@ namespace Universe {
          */
         [[nodiscard]] Universe::IUniverseDomain *getDomain() const override;
 
+        const std::vector<Universe::IUniverseConstraint *> &getConstraints() override;
     };
 
 }

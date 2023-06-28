@@ -69,30 +69,52 @@ size_t UniverseJavaDomain::size() const {
 }
 
 BigInteger UniverseJavaDomain::min() const {
-    auto mtd = domainInterface->getObjectMethod("min", METHOD(CLASS(java/math/BigInteger)));
+    auto mtd = domainInterface->getObjectMethod("min", METHOD(CLASS(java / math / BigInteger)));
     auto minValue = mtd.invoke(rawDomain);
     return JavaBigInteger::of(minValue).asBigInteger();
 }
 
 BigInteger UniverseJavaDomain::max() const {
-    auto mtd = domainInterface->getObjectMethod("max", METHOD(CLASS(java/math/BigInteger)));
+    auto mtd = domainInterface->getObjectMethod("max", METHOD(CLASS(java / math / BigInteger)));
     auto maxValue = mtd.invoke(rawDomain);
     return JavaBigInteger::of(maxValue).asBigInteger();
 }
 
 const vector<Universe::BigInteger> &UniverseJavaDomain::getValues() {
-    if (values.empty()) {
+    if (initialValues.empty()) {
         // Getting the values from the Java domain.
-        auto mtd = domainInterface->getObjectMethod("getValues", METHOD(CLASS(java/util/List)));
+        auto mtd = domainInterface->getObjectMethod("getValues", METHOD(CLASS(java / util / List)));
         auto list = mtd.invoke(rawDomain);
 
         // Filling the vector with the elements in the Java list.
         for (auto it = JavaIterator::forIterable(list); it.hasNext();) {
             auto next = it.next();
             auto value = JavaBigInteger::of(next);
-            values.push_back(value.asBigInteger());
+            initialValues.push_back(value.asBigInteger());
         }
     }
 
+    return initialValues;
+}
+
+const vector<Universe::BigInteger> &UniverseJavaDomain::getCurrentValues() {
+    values.clear();
+    // Getting the values from the Java domain.
+    auto mtd = domainInterface->getObjectMethod("getCurrentValues", METHOD(CLASS(java / util / List)));
+    auto list = mtd.invoke(rawDomain);
+
+    // Filling the vector with the elements in the Java list.
+    for (auto it = JavaIterator::forIterable(list); it.hasNext();) {
+        auto next = it.next();
+        auto value = JavaBigInteger::of(next);
+        values.push_back(value.asBigInteger());
+    }
+
+
     return values;
+}
+
+size_t UniverseJavaDomain::currentSize() const {
+    auto mtd = domainInterface->getLongMethod("currentSize");
+    return mtd.invoke(rawDomain);
 }

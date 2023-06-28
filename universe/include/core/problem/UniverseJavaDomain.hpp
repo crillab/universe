@@ -57,9 +57,15 @@ namespace Universe {
         easyjni::JavaObject rawDomain;
 
         /**
-         * The values in this domain.
+         * The initial values in this domain.
+         */
+        std::vector<Universe::BigInteger> initialValues;
+
+        /**
+         * The current values in this domain.
          */
         std::vector<Universe::BigInteger> values;
+
 
     private:
 
@@ -121,11 +127,20 @@ namespace Universe {
         [[nodiscard]] Universe::BigInteger max() const override;
 
         /**
-         * Gives the list of values of this domain.
+         * Gives the list of initial values of this domain.
          *
-         * @return The list of values.
+         * @return The list of initial values.
          */
         [[nodiscard]] const std::vector<Universe::BigInteger> &getValues() override;
+
+        /**
+         * Gives the list of current values of this domain.
+         *
+         * @return The list of current values.
+         */
+        const std::vector<Universe::BigInteger> &getCurrentValues() override;
+
+        size_t currentSize() const override;
 
     };
 

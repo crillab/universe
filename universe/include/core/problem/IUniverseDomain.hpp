@@ -51,11 +51,18 @@ namespace Universe {
         virtual ~IUniverseDomain() = default;
 
         /**
-         * Gives the size of this domain, measured in number of values.
+         * Gives the initial size of this domain, measured in number of values.
          *
          * @return The size of this domain.
          */
         [[nodiscard]] virtual size_t size() const = 0;
+
+        /**
+         * Gives the current size of this domain, measured in number of values.
+         *
+         * @return The current size of this domain.
+         */
+        [[nodiscard]] virtual size_t currentSize() const = 0;
 
         /**
          * Gives the minimum value of this domain.
@@ -72,11 +79,18 @@ namespace Universe {
         [[nodiscard]] virtual Universe::BigInteger max() const = 0;
 
         /**
-         * Gives the list of values of this domain.
+         * Gives the list of initial values of this domain.
          *
-         * @return The list of values.
+         * @return The list of initial values.
          */
         [[nodiscard]] virtual const std::vector<Universe::BigInteger> &getValues() = 0;
+
+        /**
+         * Gives the list of current values of this domain.
+         *
+         * @return The list of current values.
+         */
+        [[nodiscard]] virtual const std::vector<Universe::BigInteger> &getCurrentValues() = 0;
 
     };
 

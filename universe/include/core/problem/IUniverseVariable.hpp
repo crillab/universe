@@ -34,6 +34,7 @@
 #include <string>
 
 #include "IUniverseDomain.hpp"
+#include "IUniverseConstraint.hpp"
 
 namespace Universe {
 
@@ -69,6 +70,14 @@ namespace Universe {
          * @return The domain of this variable.
          */
         [[nodiscard]] virtual Universe::IUniverseDomain *getDomain() const = 0;
+
+
+        /**
+         * Gives the constraints containing this variable.
+         *
+         * @return The constraints of this variable.
+         */
+        virtual const std::vector<Universe::IUniverseConstraint*>& getConstraints() = 0;
 
     };
 

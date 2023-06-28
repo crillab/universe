@@ -36,6 +36,8 @@
 #include "../../../include/core/problem/IUniverseDomain.hpp"
 #include "../../../include/core/problem/UniverseJavaDomain.hpp"
 #include "../../../include/core/problem/UniverseJavaVariable.hpp"
+#include "../../../include/java/JavaIterator.hpp"
+#include "../../../include/core/problem/UniverseJavaConstraint.hpp"
 
 using namespace easyjni;
 using namespace std;
@@ -80,4 +82,21 @@ IUniverseDomain *UniverseJavaVariable::getDomain() const {
             METHOD(CLASS(fr/univartois/cril/juniverse/core/problem/IUniverseDomain)));
     auto domain = mtd.invoke(rawVariable);
     return UniverseJavaDomain::of(domain);
+}
+
+const vector<Universe::IUniverseConstraint *> &UniverseJavaVariable::getConstraints() {
+    if (constraints.empty()) {
+        // Getting the constraints in this problem.
+        auto mtd = variableInterface->getObjectMethod("getConstraints", METHOD(CLASS(java/util/List)));
+        auto list = mtd.invoke(rawVariable);
+
+        // Filling the vector with the elements in the Java list.
+        for (auto it = JavaIterator::forIterable(list); it.hasNext();) {
+            auto next = it.next();
+            auto constraint = UniverseJavaConstraint::of(next);
+            constraints.push_back(constraint);
+        }
+    }
+
+    return constraints;
 }

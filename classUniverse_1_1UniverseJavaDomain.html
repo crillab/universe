@@ -110,6 +110,10 @@ $(document).ready(function(){initNavTree('classUniverse_1_1UniverseJavaDomain.ht
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8a303ce56f04ec579acc4588d928582e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaDomain.html#a8a303ce56f04ec579acc4588d928582e">~UniverseJavaDomain</a> () override=default</td></tr>
 <tr class="separator:a8a303ce56f04ec579acc4588d928582e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98e82d071ed57dd1cdb4ad105ead9eae"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaDomain.html#a98e82d071ed57dd1cdb4ad105ead9eae">currentSize</a> () const override</td></tr>
+<tr class="separator:a98e82d071ed57dd1cdb4ad105ead9eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba7f68e06bf90b104e8ec78a54d7a64"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaDomain.html#adba7f68e06bf90b104e8ec78a54d7a64">getCurrentValues</a> () override</td></tr>
+<tr class="separator:adba7f68e06bf90b104e8ec78a54d7a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1aa0dd507a1505e0c35c8ce2d2f856f"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaDomain.html#ac1aa0dd507a1505e0c35c8ce2d2f856f">getValues</a> () override</td></tr>
 <tr class="separator:ac1aa0dd507a1505e0c35c8ce2d2f856f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa62cbcc16f8d9a952c0c971c6712d6d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaDomain.html#aa62cbcc16f8d9a952c0c971c6712d6d1">max</a> () const override</td></tr>
@@ -161,6 +165,70 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a98e82d071ed57dd1cdb4ad105ead9eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98e82d071ed57dd1cdb4ad105ead9eae">&#9670;&nbsp;</a></span>currentSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t UniverseJavaDomain::currentSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives the current size of this domain, measured in number of values.</p>
+<dl class="section return"><dt>Returns</dt><dd>The current size of this domain. </dd></dl>
+
+<p>Implements <a class="el" href="classUniverse_1_1IUniverseDomain.html#a0d72266d565c8bdeb759025f0ac7e601">Universe::IUniverseDomain</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="UniverseJavaDomain_8cpp_source.html#l00117">117</a> of file <a class="el" href="UniverseJavaDomain_8cpp_source.html">UniverseJavaDomain.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adba7f68e06bf90b104e8ec78a54d7a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba7f68e06bf90b104e8ec78a54d7a64">&#9670;&nbsp;</a></span>getCurrentValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp; UniverseJavaDomain::getCurrentValues </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives the list of current values of this domain.</p>
+<dl class="section return"><dt>Returns</dt><dd>The list of current values. </dd></dl>
+
+<p>Implements <a class="el" href="classUniverse_1_1IUniverseDomain.html#abee9b81ec676ba455c03890ef3e11845">Universe::IUniverseDomain</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="UniverseJavaDomain_8cpp_source.html#l00100">100</a> of file <a class="el" href="UniverseJavaDomain_8cpp_source.html">UniverseJavaDomain.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="JavaIterator_8cpp_source.html#l00056">Universe::JavaIterator::forIterable()</a>, <a class="el" href="JavaIterator_8cpp_source.html#l00072">Universe::JavaIterator::hasNext()</a>, and <a class="el" href="JavaBigInteger_8cpp_source.html#l00067">Universe::JavaBigInteger::of()</a>.</p>
+
+</div>
+</div>
 <a id="ac1aa0dd507a1505e0c35c8ce2d2f856f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac1aa0dd507a1505e0c35c8ce2d2f856f">&#9670;&nbsp;</a></span>getValues()</h2>
 
@@ -183,8 +251,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gives the list of values of this domain.</p>
-<dl class="section return"><dt>Returns</dt><dd>The list of values. </dd></dl>
+<p>Gives the list of initial values of this domain.</p>
+<dl class="section return"><dt>Returns</dt><dd>The list of initial values. </dd></dl>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseDomain.html#a593bc2532cffaa8d1fb12ca66c338c31">Universe::IUniverseDomain</a>.</p>
 
@@ -294,7 +362,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="UniverseJavaDomain_8cpp_source.html#l00057">57</a> of file <a class="el" href="UniverseJavaDomain_8cpp_source.html">UniverseJavaDomain.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00078">Universe::UniverseJavaVariable::getDomain()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00080">Universe::UniverseJavaVariable::getDomain()</a>.</p>
 
 </div>
 </div>

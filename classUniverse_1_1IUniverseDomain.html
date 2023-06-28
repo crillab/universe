@@ -109,6 +109,10 @@ $(document).ready(function(){initNavTree('classUniverse_1_1IUniverseDomain.html'
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a067f30005a11449df4bb82d4cbee40a4"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseDomain.html#a067f30005a11449df4bb82d4cbee40a4">~IUniverseDomain</a> ()=default</td></tr>
 <tr class="separator:a067f30005a11449df4bb82d4cbee40a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d72266d565c8bdeb759025f0ac7e601"><td class="memItemLeft" align="right" valign="top">virtual size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseDomain.html#a0d72266d565c8bdeb759025f0ac7e601">currentSize</a> () const =0</td></tr>
+<tr class="separator:a0d72266d565c8bdeb759025f0ac7e601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abee9b81ec676ba455c03890ef3e11845"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseDomain.html#abee9b81ec676ba455c03890ef3e11845">getCurrentValues</a> ()=0</td></tr>
+<tr class="separator:abee9b81ec676ba455c03890ef3e11845"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a593bc2532cffaa8d1fb12ca66c338c31"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseDomain.html#a593bc2532cffaa8d1fb12ca66c338c31">getValues</a> ()=0</td></tr>
 <tr class="separator:a593bc2532cffaa8d1fb12ca66c338c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab63d75ca3f820a859cfb8fa1f7ce07e0"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseDomain.html#ab63d75ca3f820a859cfb8fa1f7ce07e0">max</a> () const =0</td></tr>
@@ -150,6 +154,64 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0d72266d565c8bdeb759025f0ac7e601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d72266d565c8bdeb759025f0ac7e601">&#9670;&nbsp;</a></span>currentSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual size_t Universe::IUniverseDomain::currentSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives the current size of this domain, measured in number of values.</p>
+<dl class="section return"><dt>Returns</dt><dd>The current size of this domain. </dd></dl>
+
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaDomain.html#a98e82d071ed57dd1cdb4ad105ead9eae">Universe::UniverseJavaDomain</a>.</p>
+
+</div>
+</div>
+<a id="abee9b81ec676ba455c03890ef3e11845"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abee9b81ec676ba455c03890ef3e11845">&#9670;&nbsp;</a></span>getCurrentValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::vector&lt;<a class="el" href="UniverseType_8hpp.html#ae7505d353aae3b8b471df4cbb66ed82a">Universe::BigInteger</a>&gt;&amp; Universe::IUniverseDomain::getCurrentValues </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives the list of current values of this domain.</p>
+<dl class="section return"><dt>Returns</dt><dd>The list of current values. </dd></dl>
+
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaDomain.html#adba7f68e06bf90b104e8ec78a54d7a64">Universe::UniverseJavaDomain</a>.</p>
+
+</div>
+</div>
 <a id="a593bc2532cffaa8d1fb12ca66c338c31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a593bc2532cffaa8d1fb12ca66c338c31">&#9670;&nbsp;</a></span>getValues()</h2>
 
@@ -172,8 +234,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gives the list of values of this domain.</p>
-<dl class="section return"><dt>Returns</dt><dd>The list of values. </dd></dl>
+<p>Gives the list of initial values of this domain.</p>
+<dl class="section return"><dt>Returns</dt><dd>The list of initial values. </dd></dl>
 
 <p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaDomain.html#ac1aa0dd507a1505e0c35c8ce2d2f856f">Universe::UniverseJavaDomain</a>.</p>
 
@@ -259,7 +321,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Gives the size of this domain, measured in number of values.</p>
+<p>Gives the initial size of this domain, measured in number of values.</p>
 <dl class="section return"><dt>Returns</dt><dd>The size of this domain. </dd></dl>
 
 <p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaDomain.html#adbda50bba147028a5271a2c560ea605f">Universe::UniverseJavaDomain</a>.</p>

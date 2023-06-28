@@ -110,6 +110,8 @@ $(document).ready(function(){initNavTree('classUniverse_1_1UniverseJavaVariable.
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae9a9bdd18758e0afc97d5fc7552749a0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaVariable.html#ae9a9bdd18758e0afc97d5fc7552749a0">~UniverseJavaVariable</a> () override=default</td></tr>
 <tr class="separator:ae9a9bdd18758e0afc97d5fc7552749a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a966f175da3f1e721617a0f52d07c44ff"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaVariable.html#a966f175da3f1e721617a0f52d07c44ff">getConstraints</a> () override</td></tr>
+<tr class="separator:a966f175da3f1e721617a0f52d07c44ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1d50dc79862048f447edc76ba078b79e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classUniverse_1_1IUniverseDomain.html">Universe::IUniverseDomain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaVariable.html#a1d50dc79862048f447edc76ba078b79e">getDomain</a> () const override</td></tr>
 <tr class="separator:a1d50dc79862048f447edc76ba078b79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafa9a31752ea17304399b742bcf43e56"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1UniverseJavaVariable.html#aafa9a31752ea17304399b742bcf43e56">getId</a> () const override</td></tr>
@@ -159,6 +161,39 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a966f175da3f1e721617a0f52d07c44ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a966f175da3f1e721617a0f52d07c44ff">&#9670;&nbsp;</a></span>getConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const vector&lt; <a class="el" href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a> * &gt; &amp; UniverseJavaVariable::getConstraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives the constraints containing this variable.</p>
+<dl class="section return"><dt>Returns</dt><dd>The constraints of this variable. </dd></dl>
+
+<p>Implements <a class="el" href="classUniverse_1_1IUniverseVariable.html#a572ab47dbdfe7db8276d482e473c2e6b">Universe::IUniverseVariable</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00087">87</a> of file <a class="el" href="UniverseJavaVariable_8cpp_source.html">UniverseJavaVariable.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="JavaIterator_8cpp_source.html#l00056">Universe::JavaIterator::forIterable()</a>, <a class="el" href="JavaIterator_8cpp_source.html#l00072">Universe::JavaIterator::hasNext()</a>, and <a class="el" href="UniverseJavaConstraint_8cpp_source.html#l00057">Universe::UniverseJavaConstraint::of()</a>.</p>
+
+</div>
+</div>
 <a id="a1d50dc79862048f447edc76ba078b79e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d50dc79862048f447edc76ba078b79e">&#9670;&nbsp;</a></span>getDomain()</h2>
 
@@ -186,7 +221,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseVariable.html#ae2d3475193e2a172131948c3bd3bae5e">Universe::IUniverseVariable</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00078">78</a> of file <a class="el" href="UniverseJavaVariable_8cpp_source.html">UniverseJavaVariable.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00080">80</a> of file <a class="el" href="UniverseJavaVariable_8cpp_source.html">UniverseJavaVariable.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="UniverseJavaDomain_8cpp_source.html#l00057">Universe::UniverseJavaDomain::of()</a>.</p>
 
@@ -219,7 +254,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseVariable.html#ab051c2cd914c94d9a7296d00cc8e62a4">Universe::IUniverseVariable</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00073">73</a> of file <a class="el" href="UniverseJavaVariable_8cpp_source.html">UniverseJavaVariable.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00075">75</a> of file <a class="el" href="UniverseJavaVariable_8cpp_source.html">UniverseJavaVariable.cpp</a>.</p>
 
 </div>
 </div>
@@ -250,7 +285,7 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="classUniverse_1_1IUniverseVariable.html#a392981bcae8e2fd3e016d7774a2eb0bf">Universe::IUniverseVariable</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00069">69</a> of file <a class="el" href="UniverseJavaVariable_8cpp_source.html">UniverseJavaVariable.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00071">71</a> of file <a class="el" href="UniverseJavaVariable_8cpp_source.html">UniverseJavaVariable.cpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +321,7 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The wrapper for the object. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00060">60</a> of file <a class="el" href="UniverseJavaVariable_8cpp_source.html">UniverseJavaVariable.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00062">62</a> of file <a class="el" href="UniverseJavaVariable_8cpp_source.html">UniverseJavaVariable.cpp</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="UniverseJavaProblem_8cpp_source.html#l00073">Universe::UniverseJavaProblem::getVariables()</a>, <a class="el" href="UniverseJavaSolver_8cpp_source.html#l00061">Universe::UniverseJavaSolver::getVariablesMapping()</a>, and <a class="el" href="UniverseJavaConstraint_8cpp_source.html#l00066">Universe::UniverseJavaConstraint::scope()</a>.</p>
 
@@ -309,7 +344,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Gives the Java object that is wrapped in this <a class="el" href="classUniverse_1_1UniverseJavaVariable.html">UniverseJavaVariable</a>.</p>
 <dl class="section return"><dt>Returns</dt><dd>The wrapped Java object. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00065">65</a> of file <a class="el" href="UniverseJavaVariable_8cpp_source.html">UniverseJavaVariable.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="UniverseJavaVariable_8cpp_source.html#l00067">67</a> of file <a class="el" href="UniverseJavaVariable_8cpp_source.html">UniverseJavaVariable.cpp</a>.</p>
 
 </div>
 </div>

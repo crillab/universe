@@ -109,6 +109,8 @@ $(document).ready(function(){initNavTree('classUniverse_1_1IUniverseVariable.htm
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa4bf3c434e49685f613a49a62ff99cb1"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseVariable.html#aa4bf3c434e49685f613a49a62ff99cb1">~IUniverseVariable</a> ()=default</td></tr>
 <tr class="separator:aa4bf3c434e49685f613a49a62ff99cb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a572ab47dbdfe7db8276d482e473c2e6b"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a> * &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseVariable.html#a572ab47dbdfe7db8276d482e473c2e6b">getConstraints</a> ()=0</td></tr>
+<tr class="separator:a572ab47dbdfe7db8276d482e473c2e6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2d3475193e2a172131948c3bd3bae5e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classUniverse_1_1IUniverseDomain.html">Universe::IUniverseDomain</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseVariable.html#ae2d3475193e2a172131948c3bd3bae5e">getDomain</a> () const =0</td></tr>
 <tr class="separator:ae2d3475193e2a172131948c3bd3bae5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab051c2cd914c94d9a7296d00cc8e62a4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classUniverse_1_1IUniverseVariable.html#ab051c2cd914c94d9a7296d00cc8e62a4">getId</a> () const =0</td></tr>
@@ -119,7 +121,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="classUniverse_1_1IUniverseVariable.html">IUniverseVariable</a> class represents a variable in a constraint problem. </p>
 
-<p class="definition">Definition at line <a class="el" href="IUniverseVariable_8hpp_source.html#l00043">43</a> of file <a class="el" href="IUniverseVariable_8hpp_source.html">IUniverseVariable.hpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="IUniverseVariable_8hpp_source.html#l00044">44</a> of file <a class="el" href="IUniverseVariable_8hpp_source.html">IUniverseVariable.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa4bf3c434e49685f613a49a62ff99cb1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa4bf3c434e49685f613a49a62ff99cb1">&#9670;&nbsp;</a></span>~IUniverseVariable()</h2>
@@ -148,6 +150,35 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a572ab47dbdfe7db8276d482e473c2e6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a572ab47dbdfe7db8276d482e473c2e6b">&#9670;&nbsp;</a></span>getConstraints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::vector&lt;<a class="el" href="classUniverse_1_1IUniverseConstraint.html">Universe::IUniverseConstraint</a>*&gt;&amp; Universe::IUniverseVariable::getConstraints </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gives the constraints containing this variable.</p>
+<dl class="section return"><dt>Returns</dt><dd>The constraints of this variable. </dd></dl>
+
+<p>Implemented in <a class="el" href="classUniverse_1_1UniverseJavaVariable.html#a966f175da3f1e721617a0f52d07c44ff">Universe::UniverseJavaVariable</a>.</p>
+
+</div>
+</div>
 <a id="ae2d3475193e2a172131948c3bd3bae5e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae2d3475193e2a172131948c3bd3bae5e">&#9670;&nbsp;</a></span>getDomain()</h2>
 

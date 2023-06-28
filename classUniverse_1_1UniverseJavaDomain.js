@@ -1,6 +1,8 @@
 var classUniverse_1_1UniverseJavaDomain =
 [
     [ "~UniverseJavaDomain", "classUniverse_1_1UniverseJavaDomain.html#a8a303ce56f04ec579acc4588d928582e", null ],
+    [ "currentSize", "classUniverse_1_1UniverseJavaDomain.html#a98e82d071ed57dd1cdb4ad105ead9eae", null ],
+    [ "getCurrentValues", "classUniverse_1_1UniverseJavaDomain.html#adba7f68e06bf90b104e8ec78a54d7a64", null ],
     [ "getValues", "classUniverse_1_1UniverseJavaDomain.html#ac1aa0dd507a1505e0c35c8ce2d2f856f", null ],
     [ "max", "classUniverse_1_1UniverseJavaDomain.html#aa62cbcc16f8d9a952c0c971c6712d6d1", null ],
     [ "min", "classUniverse_1_1UniverseJavaDomain.html#a8d8c7de04eea4f31515d93d0d234c353", null ],

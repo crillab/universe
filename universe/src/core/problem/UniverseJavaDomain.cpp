@@ -75,7 +75,7 @@ BigInteger UniverseJavaDomain::min() const {
 }
 
 BigInteger UniverseJavaDomain::max() const {
-    auto mtd = domainInterface->getObjectMethod("max", METHOD(CLASS(java / math / BigInteger)));
+    auto mtd = domainInterface->getObjectMethod("max", METHOD(CLASS(java/math/BigInteger)));
     auto maxValue = mtd.invoke(rawDomain);
     return JavaBigInteger::of(maxValue).asBigInteger();
 }
@@ -83,7 +83,7 @@ BigInteger UniverseJavaDomain::max() const {
 const vector<Universe::BigInteger> &UniverseJavaDomain::getValues() {
     if (initialValues.empty()) {
         // Getting the values from the Java domain.
-        auto mtd = domainInterface->getObjectMethod("getValues", METHOD(CLASS(java / util / List)));
+        auto mtd = domainInterface->getObjectMethod("getValues", METHOD(CLASS(java/util/List)));
         auto list = mtd.invoke(rawDomain);
 
         // Filling the vector with the elements in the Java list.
@@ -100,7 +100,7 @@ const vector<Universe::BigInteger> &UniverseJavaDomain::getValues() {
 const vector<Universe::BigInteger> &UniverseJavaDomain::getCurrentValues() {
     values.clear();
     // Getting the values from the Java domain.
-    auto mtd = domainInterface->getObjectMethod("getCurrentValues", METHOD(CLASS(java / util / List)));
+    auto mtd = domainInterface->getObjectMethod("getCurrentValues", METHOD(CLASS(java/util/List)));
     auto list = mtd.invoke(rawDomain);
 
     // Filling the vector with the elements in the Java list.

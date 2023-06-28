@@ -34,6 +34,7 @@
 #include "../../../../libs/easy-jni/easyjni/JavaClass.h"
 
 #include "IUniverseConstraint.hpp"
+#include "IUniverseVariable.hpp"
 
 namespace Universe {
 

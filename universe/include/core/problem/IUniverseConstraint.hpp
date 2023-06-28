@@ -31,9 +31,9 @@
 #ifndef UNIVERSE_IUNIVERSECONSTRAINT_HPP
 #define UNIVERSE_IUNIVERSECONSTRAINT_HPP
 
-#include "IUniverseVariable.hpp"
-
 namespace Universe {
+
+    class IUniverseVariable;
 
     /**
      * The IUniverseConstraint class represents a constraint in constraint problem.

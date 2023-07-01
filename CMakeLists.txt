@@ -45,7 +45,7 @@ add_library(
 )
 
 add_library(crillab-universe::crillab-universe ALIAS crillab-universe_crillab-universe)
-target_link_libraries(crillab-universe_crillab-universe PRIVATE crillab-easyjni::crillab-easyjni)
+target_link_libraries(crillab-universe_crillab-universe crillab-easyjni::crillab-easyjni)
 
 if (COMPILE_GMP)
     pkg_check_modules(gmpxx REQUIRED IMPORTED_TARGET gmpxx)

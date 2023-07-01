@@ -1,6 +1,0 @@
-@startuml
-interface IUniverseSolverFactory
-IUniverseSolverFactory : IUniverseSatSolver createSatSolver()
-IUniverseSolverFactory : IUniversePseudoBooleanSolver createPseudoBooleanSolver()
-IUniverseSolverFactory :  IUniverseCspSolver createCspSolver()
-@enduml

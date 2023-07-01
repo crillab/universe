@@ -1,0 +1,15 @@
+{
+  "name": "crillab-universe",
+  "version-semver": "0.1.0",
+  "dependencies": [
+      "crillab-easyjni"
+  ],
+  "features": {
+    "arbitrary-precision": {
+      "description": "Dependencies for arbitrary precision.",
+      "dependencies": [
+          "gmp"
+      ]
+    }
+  }
+}

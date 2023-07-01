@@ -1,0 +1,44 @@
+@startuml
+interface       IUniverseSolver
+IUniverseSolver : solve()
+IUniverseSolver :  UniverseSolverResult solve(String filename)
+IUniverseSolver :  UniverseSolverResult solve(List<UniverseAssumption<BigInteger>> assumptions)
+IUniverseSolver :  void interrupt()
+IUniverseSolver :  void setVerbosity(int level)
+IUniverseSolver :  void setTimeout(long seconds)
+IUniverseSolver :  void setTimeoutMs(long mseconds)
+IUniverseSolver :  void reset()
+IUniverseSolver :  List<BigInteger> solution()
+IUniverseSolver :  int nVariables()
+IUniverseSolver :  int nConstraints()
+IUniverseSolver :  void setLogFile(String filename)
+
+interface IUniverseSatSolver
+IUniverseSatSolver : void addAllClauses(List<List<int>> clauses)
+IUniverseSatSolver : void addClause(List<int> literals)
+
+interface IUniversePseudoBooleanSolver
+IUniversePseudoBooleanSolver : void addPseudoBoolean(List<int> lits, List<BigInteger> coeffs,bool moreThan, BigInteger d)
+IUniversePseudoBooleanSolver : void addAtMost(List<int> literals, List<int> coeffs, int degree)
+IUniversePseudoBooleanSolver : void addAtMost(List<int> literals, List<BigInteger> coeffs, BigInteger degree)
+IUniversePseudoBooleanSolver : void addAtLeast(List<int> literals, List<int> coeffs, int degree)
+IUniversePseudoBooleanSolver : void addAtLeast(List<int> literals, List<BigInteger> coeffs,BigInteger degree)
+IUniversePseudoBooleanSolver : void addExactly(List<int> literals, List<int> coeffs, int weight)
+IUniversePseudoBooleanSolver : void addExactly(List<int> literals, List<BigInteger> coeffs, BigInteger weight)
+
+
+interface IUniverseCspSolver
+IUniverseCspSolver :  void newVariable(String id, int min, int max)
+IUniverseCspSolver : void newVariable(String id, BigInteger min, BigInteger max)
+IUniverseCspSolver : void newVariable(String id, List<int> values)
+IUniverseCspSolver :  void newVariable(String id, List<BigInteger> values)
+IUniverseCspSolver : void add*()
+
+
+IUniverseSolver <|-- IUniverseSatSolver
+IUniverseSatSolver <|-- IUniversePseudoBooleanSolver
+IUniversePseudoBooleanSolver <|-- IUniverseCspSolver
+
+
+
+@enduml

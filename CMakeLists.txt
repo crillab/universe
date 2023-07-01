@@ -70,7 +70,7 @@ set_target_properties(
 target_include_directories(
     crillab-universe_crillab-universe ${warning_guard}
     PUBLIC
-    "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/crillab-universe>"
+    "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/>"
 )
 
 target_include_directories(

@@ -106,6 +106,10 @@
             </dt>
             <dd></dd>
             <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a19581968e8dc2197dd45fc5d9a82b79e" class="m-doc">currentSize</a>(</span><span class="m-doc-wrap">) const -&gt; size_t <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a4f602998ecdc9f6a9d1ab62ed6d00663" class="m-doc">min</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a> <span class="m-label m-flat m-warning">override</span></span>
             </dt>
             <dd></dd>
@@ -122,7 +126,21 @@
             </dt>
             <dd></dd>
             <dt>
-              <span class="m-doc-wrap-bumper">auto <a href="#a19581968e8dc2197dd45fc5d9a82b79e" class="m-doc">currentSize</a>(</span><span class="m-doc-wrap">) const -&gt; size_t <span class="m-label m-flat m-warning">override</span></span>
+              <span class="m-doc-wrap-bumper">void <a href="#af055cc180974562b1519ba298015d79b" class="m-doc">keepValues</a>(</span><span class="m-doc-wrap">const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; min,
+              const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; max) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a6c29d0395bfca1d600b091e41a83c144" class="m-doc">keepValues</a>(</span><span class="m-doc-wrap">const std::vector&lt;<a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&gt;&amp; values) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a90ff872d9af02bae8f880e3085399668" class="m-doc">removeValues</a>(</span><span class="m-doc-wrap">const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; min,
+              const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; max) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a95b5b18865a215af3458197d6d8f1c36" class="m-doc">removeValues</a>(</span><span class="m-doc-wrap">const std::vector&lt;<a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&gt;&amp; values) <span class="m-label m-flat m-warning">override</span></span>
             </dt>
             <dd></dd>
           </dl>
@@ -186,6 +204,20 @@
             </table>
 <p>Gives the size of this domain, measured in number of values.</p>
           </div></section>
+          <section class="m-doc-details" id="a19581968e8dc2197dd45fc5d9a82b79e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">size_t Universe::<wbr />UniverseJavaDomain::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a19581968e8dc2197dd45fc5d9a82b79e" class="m-doc-self">currentSize</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>The current size of this domain.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Gives the current size of this domain, measured in number of values.</p>
+          </div></section>
           <section class="m-doc-details" id="a4f602998ecdc9f6a9d1ab62ed6d00663"><div>
             <h3>
               <span class="m-doc-wrap-bumper"><a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a> Universe::<wbr />UniverseJavaDomain::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a4f602998ecdc9f6a9d1ab62ed6d00663" class="m-doc-self">min</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-warning">override</span></span></span>
@@ -242,19 +274,83 @@
             </table>
 <p>Gives the list of current values of this domain.</p>
           </div></section>
-          <section class="m-doc-details" id="a19581968e8dc2197dd45fc5d9a82b79e"><div>
+          <section class="m-doc-details" id="af055cc180974562b1519ba298015d79b"><div>
             <h3>
-              <span class="m-doc-wrap-bumper">size_t Universe::<wbr />UniverseJavaDomain::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a19581968e8dc2197dd45fc5d9a82b79e" class="m-doc-self">currentSize</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-warning">override</span></span></span>
+              <span class="m-doc-wrap-bumper">void Universe::<wbr />UniverseJavaDomain::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af055cc180974562b1519ba298015d79b" class="m-doc-self">keepValues</a>(</span><span class="m-doc-wrap">const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; min,
+              const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; max) <span class="m-label m-warning">override</span></span></span>
             </h3>
             <table class="m-table m-fullwidth m-flat">
-              <tfoot>
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
                 <tr>
-                  <th style="width: 1%">Returns</th>
-                  <td>The current size of this domain.</td>
+                  <td style="width: 1%">min</td>
+                  <td>The minimum value to keep (included).</td>
                 </tr>
-              </tfoot>
+                <tr>
+                  <td>max</td>
+                  <td>The maximum value to keep (excluded).</td>
+                </tr>
+              </tbody>
             </table>
-<p>Gives the current size of this domain, measured in number of values.</p>
+<p>Keeps in this domain only the values between min and max.</p>
+          </div></section>
+          <section class="m-doc-details" id="a6c29d0395bfca1d600b091e41a83c144"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void Universe::<wbr />UniverseJavaDomain::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6c29d0395bfca1d600b091e41a83c144" class="m-doc-self">keepValues</a>(</span><span class="m-doc-wrap">const std::vector&lt;<a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&gt;&amp; values) <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">values</td>
+                  <td>The list of values to keep.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Keeps in this domain only the given values.</p>
+          </div></section>
+          <section class="m-doc-details" id="a90ff872d9af02bae8f880e3085399668"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void Universe::<wbr />UniverseJavaDomain::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a90ff872d9af02bae8f880e3085399668" class="m-doc-self">removeValues</a>(</span><span class="m-doc-wrap">const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; min,
+              const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; max) <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">min</td>
+                  <td>The minimum value to remove (included).</td>
+                </tr>
+                <tr>
+                  <td>max</td>
+                  <td>The maximum value to remove (excluded).</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Removes from this domain all the values between min and max.</p>
+          </div></section>
+          <section class="m-doc-details" id="a95b5b18865a215af3458197d6d8f1c36"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void Universe::<wbr />UniverseJavaDomain::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a95b5b18865a215af3458197d6d8f1c36" class="m-doc-self">removeValues</a>(</span><span class="m-doc-wrap">const std::vector&lt;<a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&gt;&amp; values) <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">values</td>
+                  <td>The list of values to remove.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Removes from this domain all the given values.</p>
           </div></section>
         </section>
       </div>

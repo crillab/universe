@@ -106,6 +106,14 @@
             </dt>
             <dd></dd>
             <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a8075479ca5edc41bd00693a30df414a8" class="m-doc">setIgnored</a>(</span><span class="m-doc-wrap">bool ignored) <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5654b27c025b39947884f0c347fe7529" class="m-doc">isIgnored</a>(</span><span class="m-doc-wrap">) const -&gt; const bool <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#ad788eb09b81eb6d21693652cb24ccf67" class="m-doc">getScore</a>(</span><span class="m-doc-wrap">) const -&gt; const double <span class="m-label m-flat m-warning">override</span></span>
             </dt>
             <dd></dd>
@@ -169,6 +177,37 @@
               </tfoot>
             </table>
 <p>Gives the scope of this constraint, i.e., the variables that appear in this constraint.</p>
+          </div></section>
+          <section class="m-doc-details" id="a8075479ca5edc41bd00693a30df414a8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void Universe::<wbr />UniverseJavaConstraint::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a8075479ca5edc41bd00693a30df414a8" class="m-doc-self">setIgnored</a>(</span><span class="m-doc-wrap">bool ignored) <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">ignored</td>
+                  <td>Whether the constraint should be ignored.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Sets whether this constraint must be ignored by the solver.</p>
+          </div></section>
+          <section class="m-doc-details" id="a5654b27c025b39947884f0c347fe7529"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">const bool Universe::<wbr />UniverseJavaConstraint::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5654b27c025b39947884f0c347fe7529" class="m-doc-self">isIgnored</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>Whether the constraint should be ignored.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Checks whether this constraint must be ignored by the solver.</p>
           </div></section>
           <section class="m-doc-details" id="ad788eb09b81eb6d21693652cb24ccf67"><div>
             <h3>

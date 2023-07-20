@@ -92,6 +92,14 @@
             </dt>
             <dd></dd>
             <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#abf6934017a56e19b757599cd22ca8ecd" class="m-doc">setIgnored</a>(</span><span class="m-doc-wrap">bool ignored) <span class="m-label m-flat m-warning">pure virtual</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a467fd7c873530f7632573b2c3b166b92" class="m-doc">isIgnored</a>(</span><span class="m-doc-wrap">) const -&gt; const bool <span class="m-label m-flat m-warning">pure virtual</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a993bfd9adb436a19c85671764810eff6" class="m-doc">getScore</a>(</span><span class="m-doc-wrap">) const -&gt; const double <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd></dd>
@@ -118,6 +126,37 @@
               </tfoot>
             </table>
 <p>Gives the scope of this constraint, i.e., the variables that appear in this constraint.</p>
+          </div></section>
+          <section class="m-doc-details" id="abf6934017a56e19b757599cd22ca8ecd"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void Universe::<wbr />IUniverseConstraint::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#abf6934017a56e19b757599cd22ca8ecd" class="m-doc-self">setIgnored</a>(</span><span class="m-doc-wrap">bool ignored) <span class="m-label m-warning">pure virtual</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">ignored</td>
+                  <td>Whether the constraint should be ignored.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Sets whether this constraint must be ignored by the solver.</p>
+          </div></section>
+          <section class="m-doc-details" id="a467fd7c873530f7632573b2c3b166b92"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">const bool Universe::<wbr />IUniverseConstraint::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a467fd7c873530f7632573b2c3b166b92" class="m-doc-self">isIgnored</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-warning">pure virtual</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>Whether the constraint should be ignored.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Checks whether this constraint must be ignored by the solver.</p>
           </div></section>
           <section class="m-doc-details" id="a993bfd9adb436a19c85671764810eff6"><div>
             <h3>

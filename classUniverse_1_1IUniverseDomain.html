@@ -111,6 +111,24 @@
               <span class="m-doc-wrap-bumper">auto <a href="#abee9b81ec676ba455c03890ef3e11845" class="m-doc">getCurrentValues</a>(</span><span class="m-doc-wrap">) -&gt; const std::vector&lt;<a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&gt;&amp; <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#ac7a5c62d0d67437d5b5144231852eb2b" class="m-doc">keepValues</a>(</span><span class="m-doc-wrap">const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; min,
+              const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; max) <span class="m-label m-flat m-warning">pure virtual</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#a94206541fd0f8594c666987dad985e3f" class="m-doc">keepValues</a>(</span><span class="m-doc-wrap">const std::vector&lt;<a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&gt;&amp; values) <span class="m-label m-flat m-warning">pure virtual</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#af79a5b5698f8e097d4dedf25b979150e" class="m-doc">removeValues</a>(</span><span class="m-doc-wrap">const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; min,
+              const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; max) <span class="m-label m-flat m-warning">pure virtual</span></span>
+            </dt>
+            <dd></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">void <a href="#ab643099f235e92d86d12cb37105ef1b2" class="m-doc">removeValues</a>(</span><span class="m-doc-wrap">const std::vector&lt;<a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&gt;&amp; values) <span class="m-label m-flat m-warning">pure virtual</span></span>
+            </dt>
+            <dd></dd>
           </dl>
         </section>
         <section>
@@ -204,6 +222,84 @@
               </tfoot>
             </table>
 <p>Gives the list of current values of this domain.</p>
+          </div></section>
+          <section class="m-doc-details" id="ac7a5c62d0d67437d5b5144231852eb2b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void Universe::<wbr />IUniverseDomain::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac7a5c62d0d67437d5b5144231852eb2b" class="m-doc-self">keepValues</a>(</span><span class="m-doc-wrap">const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; min,
+              const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; max) <span class="m-label m-warning">pure virtual</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">min</td>
+                  <td>The minimum value to keep (included).</td>
+                </tr>
+                <tr>
+                  <td>max</td>
+                  <td>The maximum value to keep (excluded).</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Keeps in this domain only the values between min and max.</p>
+          </div></section>
+          <section class="m-doc-details" id="a94206541fd0f8594c666987dad985e3f"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void Universe::<wbr />IUniverseDomain::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a94206541fd0f8594c666987dad985e3f" class="m-doc-self">keepValues</a>(</span><span class="m-doc-wrap">const std::vector&lt;<a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&gt;&amp; values) <span class="m-label m-warning">pure virtual</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">values</td>
+                  <td>The list of values to keep.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Keeps in this domain only the given values.</p>
+          </div></section>
+          <section class="m-doc-details" id="af79a5b5698f8e097d4dedf25b979150e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void Universe::<wbr />IUniverseDomain::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af79a5b5698f8e097d4dedf25b979150e" class="m-doc-self">removeValues</a>(</span><span class="m-doc-wrap">const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; min,
+              const <a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&amp; max) <span class="m-label m-warning">pure virtual</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">min</td>
+                  <td>The minimum value to remove (included).</td>
+                </tr>
+                <tr>
+                  <td>max</td>
+                  <td>The maximum value to remove (excluded).</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Removes from this domain all the values between min and max.</p>
+          </div></section>
+          <section class="m-doc-details" id="ab643099f235e92d86d12cb37105ef1b2"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper">void Universe::<wbr />IUniverseDomain::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab643099f235e92d86d12cb37105ef1b2" class="m-doc-self">removeValues</a>(</span><span class="m-doc-wrap">const std::vector&lt;<a href="namespaceUniverse.html#ae7505d353aae3b8b471df4cbb66ed82a" class="m-doc">Universe::<wbr />BigInteger</a>&gt;&amp; values) <span class="m-label m-warning">pure virtual</span></span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">values</td>
+                  <td>The list of values to remove.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>Removes from this domain all the given values.</p>
           </div></section>
         </section>
       </div>

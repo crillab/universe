@@ -28,7 +28,7 @@
  * @license This project is released under the GNU LGPL3 License.
  */
 
-#include "csp/UniverseTransition.hpp"
+#include <crillab-universe/csp/UniverseTransition.hpp>
 
 using namespace std;
 using namespace Universe;

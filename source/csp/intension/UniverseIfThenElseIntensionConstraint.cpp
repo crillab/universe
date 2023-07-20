@@ -28,7 +28,7 @@
  * @license This project is released under the GNU LGPL3 License.
  */
 
-#include "csp/intension/UniverseIfThenElseIntensionConstraint.hpp"
+#include <crillab-universe/csp/intension/UniverseIfThenElseIntensionConstraint.hpp>
 
 using namespace Universe;
 

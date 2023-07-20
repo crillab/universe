@@ -31,10 +31,10 @@
 #include <crillab-easyjni/JavaMethod.h>
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "core/problem/UniverseJavaDomain.hpp"
-#include "java/JavaBigInteger.hpp"
-#include "java/JavaIterator.hpp"
-#include "java/JavaList.hpp"
+#include <crillab-universe/core/problem/UniverseJavaDomain.hpp>
+#include <crillab-universe/java/JavaBigInteger.hpp>
+#include <crillab-universe/java/JavaIterator.hpp>
+#include <crillab-universe/java/JavaList.hpp>
 
 using namespace easyjni;
 using namespace std;

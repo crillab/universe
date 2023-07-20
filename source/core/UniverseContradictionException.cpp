@@ -30,8 +30,7 @@
 
 #include <utility>
 
-#include "core/UniverseContradictionException.hpp"
-
+#include <crillab-universe/core/UniverseContradictionException.hpp>
 using namespace std;
 using namespace Universe;
 

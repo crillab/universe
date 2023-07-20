@@ -31,7 +31,7 @@
 #include <crillab-easyjni/JavaMethod.h>
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "java/JavaMapOfString.hpp"
+#include <crillab-universe/java/JavaMapOfString.hpp>
 
 using namespace easyjni;
 using namespace std;

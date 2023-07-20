@@ -31,12 +31,12 @@
 #include <crillab-easyjni/JavaMethod.h>
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "core/UniverseJavaSolver.hpp"
-#include "core/problem/UniverseJavaVariable.hpp"
-#include "java/JavaMapOfString.hpp"
-#include "listener/UniverseJavaSearchListener.hpp"
-#include "optim/JavaOptimizationSolver.hpp"
-#include "core/problem/UniverseJavaConstraint.hpp"
+#include <crillab-universe/core/UniverseJavaSolver.hpp>
+#include <crillab-universe/core/problem/UniverseJavaVariable.hpp>
+#include <crillab-universe/java/JavaMapOfString.hpp>
+#include <crillab-universe/listener/UniverseJavaSearchListener.hpp>
+#include <crillab-universe/optim/JavaOptimizationSolver.hpp>
+#include <crillab-universe/core/problem/UniverseJavaConstraint.hpp>
 
 using namespace easyjni;
 using namespace std;

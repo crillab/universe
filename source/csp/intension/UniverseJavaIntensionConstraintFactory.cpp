@@ -32,11 +32,11 @@
 #include <crillab-easyjni/JavaMethod.h>
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "csp/intension/UniverseJavaIntensionConstraint.hpp"
-#include "csp/intension/UniverseJavaIntensionConstraintFactory.hpp"
+#include <crillab-universe/csp/intension/UniverseJavaIntensionConstraint.hpp>
+#include <crillab-universe/csp/intension/UniverseJavaIntensionConstraintFactory.hpp>
 
-#include "java/JavaBigInteger.hpp"
-#include "java/JavaList.hpp"
+#include <crillab-universe/java/JavaBigInteger.hpp>
+#include <crillab-universe/java/JavaList.hpp>
 
 #define INTENSION_CONSTR CLASS(fr/univartois/cril/juniverse/csp/intension/IUniverseIntensionConstraint)
 #define UNIVERSE_OPERATOR CLASS(fr/univartois/cril/juniverse/csp/operator/UniverseOperator)

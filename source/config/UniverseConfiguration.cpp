@@ -30,7 +30,7 @@
 
 #include <utility>
 
-#include "config/UniverseConfiguration.hpp"
+#include <crillab-universe/config/UniverseConfiguration.hpp>
 
 using namespace std;
 using namespace Universe;

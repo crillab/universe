@@ -28,7 +28,7 @@
  * @license This project is released under the GNU LGPL3 License.
  */
 
-#include "optim/JavaOptimizationSolver.hpp"
+#include <crillab-universe/optim/JavaOptimizationSolver.hpp>
 
 using namespace easyjni;
 using namespace Universe;

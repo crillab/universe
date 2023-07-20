@@ -33,10 +33,10 @@
 #include <crillab-easyjni/JavaVirtualMachineBuilder.h>
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "csp/UniverseJavaCspSolver.hpp"
-#include "pb/UniverseJavaPseudoBooleanSolver.hpp"
-#include "sat/UniverseJavaSatSolver.hpp"
-#include "utils/UniverseJavaSolverFactory.hpp"
+#include <crillab-universe/csp/UniverseJavaCspSolver.hpp>
+#include <crillab-universe/pb/UniverseJavaPseudoBooleanSolver.hpp>
+#include <crillab-universe/sat/UniverseJavaSatSolver.hpp>
+#include <crillab-universe/utils/UniverseJavaSolverFactory.hpp>
 
 #define SAT_SOLVER      "fr/univartois/cril/juniverse/sat/IUniverseSatSolver"
 #define PB_SOLVER       "fr/univartois/cril/juniverse/pb/IUniversePseudoBooleanSolver"

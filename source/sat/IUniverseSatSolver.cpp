@@ -31,7 +31,7 @@
 #include <stdexcept>
 #include <string>
 
-#include "sat/IUniverseSatSolver.hpp"
+#include <crillab-universe/sat/IUniverseSatSolver.hpp>
 
 using namespace std;
 using namespace Universe;

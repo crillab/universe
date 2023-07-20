@@ -28,7 +28,7 @@
  * @license This project is released under the GNU LGPL3 License.
  */
 
-#include "core/UniverseType.hpp"
+#include <crillab-universe/core/UniverseType.hpp>
 
 using namespace std;
 using namespace Universe;

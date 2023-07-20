@@ -28,7 +28,7 @@
  * @license This project is released under the GNU LGPL3 License.
  */
 
-#include "listener/IUniverseSearchListener.hpp"
+#include <crillab-universe/listener/IUniverseSearchListener.hpp>
 
 using namespace std;
 using namespace Universe;

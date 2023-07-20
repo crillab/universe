@@ -31,7 +31,7 @@
 #include <crillab-easyjni/JavaMethod.h>
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "java/JavaList.hpp"
+#include <crillab-universe/java/JavaList.hpp>
 
 using namespace easyjni;
 using namespace Universe;

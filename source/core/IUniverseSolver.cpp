@@ -30,7 +30,7 @@
 
 #include <stdexcept>
 
-#include "core/IUniverseSolver.hpp"
+#include <crillab-universe/core/IUniverseSolver.hpp>
 
 using namespace std;
 using namespace Universe;

@@ -30,7 +30,7 @@
 
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "listener/UniverseJavaSearchListener.hpp"
+#include <crillab-universe/listener/UniverseJavaSearchListener.hpp>
 
 using namespace easyjni;
 using namespace std;

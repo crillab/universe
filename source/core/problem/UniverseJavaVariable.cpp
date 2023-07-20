@@ -33,11 +33,11 @@
 #include <crillab-easyjni/JavaMethod.h>
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "core/problem/IUniverseDomain.hpp"
-#include "core/problem/UniverseJavaDomain.hpp"
-#include "core/problem/UniverseJavaVariable.hpp"
-#include "java/JavaIterator.hpp"
-#include "core/problem/UniverseJavaConstraint.hpp"
+#include <crillab-universe/core/problem/IUniverseDomain.hpp>
+#include <crillab-universe/core/problem/UniverseJavaDomain.hpp>
+#include <crillab-universe/core/problem/UniverseJavaVariable.hpp>
+#include <crillab-universe/java/JavaIterator.hpp>
+#include <crillab-universe/core/problem/UniverseJavaConstraint.hpp>
 
 using namespace easyjni;
 using namespace std;

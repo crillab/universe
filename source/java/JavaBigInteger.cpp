@@ -31,7 +31,7 @@
 #include <crillab-easyjni/JavaMethod.h>
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "java/JavaBigInteger.hpp"
+#include <crillab-universe/java/JavaBigInteger.hpp>
 
 using namespace easyjni;
 using namespace Universe;

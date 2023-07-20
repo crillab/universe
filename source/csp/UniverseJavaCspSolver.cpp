@@ -34,10 +34,10 @@
 #include <crillab-easyjni/JavaMethod.h>
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "csp/UniverseJavaCspSolver.hpp"
-#include "csp/intension/UniverseJavaIntensionConstraint.hpp"
-#include "java/JavaBigInteger.hpp"
-#include "java/JavaList.hpp"
+#include <crillab-universe/csp/UniverseJavaCspSolver.hpp>
+#include <crillab-universe/csp/intension/UniverseJavaIntensionConstraint.hpp>
+#include <crillab-universe/java/JavaBigInteger.hpp>
+#include <crillab-universe/java/JavaList.hpp>
 
 #define J_UNIVERSE_TRANSITION       "fr/univartois/cril/juniverse/csp/UniverseTransition"
 #define J_BOOLEAN_OPERATOR          "fr/univartois/cril/juniverse/csp/operator/UniverseBooleanOperator"

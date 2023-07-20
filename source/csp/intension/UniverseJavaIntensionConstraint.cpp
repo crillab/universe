@@ -32,7 +32,7 @@
 
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "csp/intension/UniverseJavaIntensionConstraint.hpp"
+#include <crillab-universe/csp/intension/UniverseJavaIntensionConstraint.hpp>
 
 using namespace easyjni;
 using namespace std;

@@ -31,8 +31,8 @@
 #include <crillab-easyjni/JavaMethod.h>
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "java/JavaList.hpp"
-#include "sat/UniverseJavaSatSolver.hpp"
+#include <crillab-universe/java/JavaList.hpp>
+#include <crillab-universe/sat/UniverseJavaSatSolver.hpp>
 
 using namespace easyjni;
 using namespace std;

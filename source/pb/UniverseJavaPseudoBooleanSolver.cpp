@@ -35,7 +35,7 @@
 #include <crillab-easyjni/JavaMethod.h>
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "pb/UniverseJavaPseudoBooleanSolver.hpp"
+#include <crillab-universe/pb/UniverseJavaPseudoBooleanSolver.hpp>
 
 using namespace easyjni;
 using namespace std;

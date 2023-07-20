@@ -28,7 +28,7 @@
  * @license This project is released under the GNU LGPL3 License.
  */
 
-#include "csp/intension/UniverseNaryIntensionConstraint.hpp"
+#include <crillab-universe/csp/intension/UniverseNaryIntensionConstraint.hpp>
 
 using namespace std;
 using namespace Universe;

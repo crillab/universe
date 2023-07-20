@@ -31,7 +31,7 @@
 #include <crillab-easyjni/JavaMethod.h>
 #include <crillab-easyjni/JavaVirtualMachineRegistry.h>
 
-#include "java/JavaIterator.hpp"
+#include <crillab-universe/java/JavaIterator.hpp>
 
 using namespace easyjni;
 using namespace Universe;

@@ -113,6 +113,13 @@ namespace Universe {
         [[nodiscard]] size_t size() const override;
 
         /**
+         * Gives the current size of this domain, measured in number of values.
+         *
+         * @return The current size of this domain.
+         */
+        size_t currentSize() const override;
+
+        /**
          * Gives the minimum value of this domain.
          *
          * @return The minimum value.
@@ -140,7 +147,35 @@ namespace Universe {
          */
         const std::vector<Universe::BigInteger> &getCurrentValues() override;
 
-        size_t currentSize() const override;
+        /**
+         * Keeps in this domain only the values between min and max.
+         *
+         * @param min The minimum value to keep (included).
+         * @param max The maximum value to keep (excluded).
+         */
+        void keepValues(const Universe::BigInteger &min, const Universe::BigInteger &max) override;
+
+        /**
+         * Keeps in this domain only the given values.
+         *
+         * @param values The list of values to keep.
+         */
+        void keepValues(const std::vector<Universe::BigInteger> &values) override;
+
+        /**
+         * Removes from this domain all the values between min and max.
+         *
+         * @param min The minimum value to remove (included).
+         * @param max The maximum value to remove (excluded).
+         */
+        void removeValues(const Universe::BigInteger &min, const Universe::BigInteger &max) override;
+
+        /**
+         * Removes from this domain all the given values.
+         *
+         * @param values The list of values to remove.
+         */
+        void removeValues(const std::vector<Universe::BigInteger> &values) override;
 
     };
 

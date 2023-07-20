@@ -108,6 +108,20 @@ namespace Universe {
         const std::vector<Universe::IUniverseVariable *> &scope() override;
 
         /**
+         * Sets whether this constraint must be ignored by the solver.
+         *
+         * @param ignored Whether the constraint should be ignored.
+         */
+        void setIgnored(bool ignored) override;
+
+        /**
+         * Checks whether this constraint must be ignored by the solver.
+         *
+         * @return Whether the constraint should be ignored.
+         */
+        [[nodiscard]] const bool isIgnored() const override;
+
+        /**
          * Gives the score of this constraint, as computed by the solver.
          *
          * @return The score of the constraint.

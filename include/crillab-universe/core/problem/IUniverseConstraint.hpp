@@ -56,6 +56,20 @@ namespace Universe {
         [[nodiscard]] virtual const std::vector<Universe::IUniverseVariable *> &scope() = 0;
 
         /**
+         * Sets whether this constraint must be ignored by the solver.
+         *
+         * @param ignored Whether the constraint should be ignored.
+         */
+        virtual void setIgnored(bool ignored) = 0;
+
+        /**
+         * Checks whether this constraint must be ignored by the solver.
+         *
+         * @return Whether the constraint should be ignored.
+         */
+        [[nodiscard]] virtual const bool isIgnored() const = 0;
+
+        /**
          * Gives the score of this constraint, as computed by the solver.
          *
          * @return The score of the constraint.

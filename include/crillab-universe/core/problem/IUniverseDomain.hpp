@@ -92,6 +92,36 @@ namespace Universe {
          */
         [[nodiscard]] virtual const std::vector<Universe::BigInteger> &getCurrentValues() = 0;
 
+        /**
+         * Keeps in this domain only the values between min and max.
+         *
+         * @param min The minimum value to keep (included).
+         * @param max The maximum value to keep (excluded).
+         */
+        virtual void keepValues(const Universe::BigInteger &min, const Universe::BigInteger &max) = 0;
+
+        /**
+         * Keeps in this domain only the given values.
+         *
+         * @param values The list of values to keep.
+         */
+        virtual void keepValues(const std::vector<Universe::BigInteger> &values) = 0;
+
+        /**
+         * Removes from this domain all the values between min and max.
+         *
+         * @param min The minimum value to remove (included).
+         * @param max The maximum value to remove (excluded).
+         */
+        virtual void removeValues(const Universe::BigInteger &min, const Universe::BigInteger &max) = 0;
+
+        /**
+         * Removes from this domain all the given values.
+         *
+         * @param values The list of values to remove.
+         */
+        virtual void removeValues(const std::vector<Universe::BigInteger> &values) = 0;
+
     };
 
 }

@@ -68,8 +68,13 @@ size_t UniverseJavaDomain::size() const {
     return mtd.invoke(rawDomain);
 }
 
+size_t UniverseJavaDomain::currentSize() const {
+    auto mtd = domainInterface->getLongMethod("currentSize");
+    return mtd.invoke(rawDomain);
+}
+
 BigInteger UniverseJavaDomain::min() const {
-    auto mtd = domainInterface->getObjectMethod("min", METHOD(CLASS(java / math / BigInteger)));
+    auto mtd = domainInterface->getObjectMethod("min", METHOD(CLASS(java/math/BigInteger)));
     auto minValue = mtd.invoke(rawDomain);
     return JavaBigInteger::of(minValue).asBigInteger();
 }
@@ -114,7 +119,36 @@ const vector<Universe::BigInteger> &UniverseJavaDomain::getCurrentValues() {
     return values;
 }
 
-size_t UniverseJavaDomain::currentSize() const {
-    auto mtd = domainInterface->getLongMethod("currentSize");
-    return mtd.invoke(rawDomain);
+void UniverseJavaDomain::keepValues(const BigInteger &min, const BigInteger &max) {
+    auto mtd = domainInterface->getMethod(
+            "keepValues", METHOD(VOID, CLASS(java/math/BigInteger) CLASS(java/math/BigInteger)));
+    auto jMin = JavaBigInteger::newInstance(min);
+    auto jMax = JavaBigInteger::newInstance(max);
+    mtd.invoke(rawDomain, **jMin, **jMax);
+}
+
+void UniverseJavaDomain::keepValues(const vector<BigInteger> &values) {
+    auto mtd = domainInterface->getMethod("keepValues", METHOD(VOID, CLASS(java/util/List)));
+    function<JavaObject (BigInteger)> fctValues = [] (const BigInteger &value) {
+        return *JavaBigInteger::newInstance(value);
+    };
+    auto jValues = JavaList::from(values, fctValues);
+    mtd.invoke(rawDomain, **jValues);
+}
+
+void UniverseJavaDomain::removeValues(const BigInteger &min, const BigInteger &max) {
+    auto mtd = domainInterface->getMethod(
+            "removeValues", METHOD(VOID, CLASS(java/math/BigInteger) CLASS(java/math/BigInteger)));
+    auto jMin = JavaBigInteger::newInstance(min);
+    auto jMax = JavaBigInteger::newInstance(max);
+    mtd.invoke(rawDomain, **jMin, **jMax);
+}
+
+void UniverseJavaDomain::removeValues(const vector<BigInteger> &values) {
+    auto mtd = domainInterface->getMethod("removeValues", METHOD(VOID, CLASS(java/util/List)));
+    function<JavaObject (BigInteger)> fctValues = [] (const BigInteger &value) {
+        return *JavaBigInteger::newInstance(value);
+    };
+    auto jValues = JavaList::from(values, fctValues);
+    mtd.invoke(rawDomain, **jValues);
 }

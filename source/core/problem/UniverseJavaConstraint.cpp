@@ -80,6 +80,16 @@ const vector<IUniverseVariable *> &UniverseJavaConstraint::scope() {
     return variables;
 }
 
+void UniverseJavaConstraint::setIgnored(bool ignored) {
+    auto mtd = constraintInterface->getMethod("setIgnored", METHOD(VOID, BOOLEAN));
+    mtd.invoke(rawConstraint, (jboolean) ignored);
+}
+
+const bool UniverseJavaConstraint::isIgnored() const {
+    auto mtd = constraintInterface->getBooleanMethod("isIgnored");
+    return mtd.invoke(rawConstraint);
+}
+
 const double UniverseJavaConstraint::getScore() const {
     auto mtd = constraintInterface->getDoubleMethod("getScore");
     return mtd.invoke(rawConstraint);

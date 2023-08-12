@@ -1,6 +1,6 @@
 {
   "name": "crillab-universe",
-  "version-semver": "0.1.2",
+  "version-semver": "0.1.4",
   "dependencies": [
       "crillab-easyjni"
   ],

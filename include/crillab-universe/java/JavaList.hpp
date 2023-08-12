@@ -173,7 +173,8 @@ namespace Universe {
         template<typename T>
         std::vector<T> asVector(std::function<T(easyjni::JavaObject)> fct) {
             int nbElems = size();
-            std::vector<T> v(nbElems);
+            std::vector<T> v();
+            v.reserve(nbElems);
             for (int i = 0; i < nbElems; i++) {
                 v.push_back(fct(get(i)));
             }
